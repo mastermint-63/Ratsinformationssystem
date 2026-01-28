@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+termine_*.html
+launchd.log
