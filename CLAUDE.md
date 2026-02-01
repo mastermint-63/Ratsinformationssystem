@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Projektbeschreibung
 
-Ratstermine-Dashboard für das Münsterland. Sammelt Sitzungstermine von 29 Ratsinformationssystemen und generiert verlinkte HTML-Dashboards mit Monatsnavigation.
+Ratstermine-Dashboard für das Münsterland. Sammelt Sitzungstermine von 70 Gemeinden (49 mit Scraper-Unterstützung) und generiert verlinkte HTML-Dashboards mit Monatsnavigation.
 
 ## Struktur
 
@@ -64,13 +64,13 @@ launchctl start de.ratstermine.update      # Manuell auslösen
 
 ### Scraper-Typen
 
-**SessionNet** (19 Städte):
+**SessionNet** (21 Städte):
 - URL-Format: `https://example.com/si0046.asp?__cjahr=2026&__cmonat=1`
 - Parsing-Strategie: 3-stufig (Tabellen → zk-Struktur → Text-basiert)
 - Herausforderung: Verschiedene HTML-Strukturen pro Stadt
 - Fallback: Link zur Monatsübersicht wenn kein Detail-Link gefunden
 
-**Ratsinfomanagement.net** (10 Städte):
+**Ratsinfomanagement.net** (28 Städte):
 - URL-Format: `https://stadt.ratsinfomanagement.net/termine/ics/SD.NET_RIM.ics`
 - Methode: iCal-Parsing (VEVENT-Blöcke mit DTSTART, SUMMARY, LOCATION, URL)
 - Vorteil: Strukturierte Daten, alle Termine auf einmal
@@ -87,9 +87,9 @@ launchctl start de.ratstermine.update      # Manuell auslösen
 
 | System | Anzahl | Methode |
 |--------|--------|---------|
-| SessionNet (si0046) | 19 | HTML-Parsing mit BeautifulSoup (lxml) |
-| Ratsinfomanagement.net | 10 | iCal-Export parsen (Regex) |
-| Nicht unterstützt | 4 | Bocholt, Ahlen, Ochtrup (defekt), Ladbergen |
+| SessionNet (si0046) | 21 | HTML-Parsing mit BeautifulSoup (lxml) |
+| Ratsinfomanagement.net | 28 | iCal-Export parsen (Regex) |
+| Nicht unterstützt | 21 | Ahaus, Ahlen, Billerbeck, Bocholt, Borken, u.a. |
 
 ## Neuen Scraper hinzufügen
 
