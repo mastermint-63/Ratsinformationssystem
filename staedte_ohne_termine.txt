@@ -1,0 +1,17 @@
+Städte ohne Termine (Feb–Apr 2026)
+
+Mit Scraper, aber 0 Termine:
+Nordkirchen
+Rosendahl
+
+Ohne Scraper-Unterstützung:
+Ahaus
+Ahlen
+Bocholt
+Ennigerloh
+Ochtrup
+Oelde
+Olfen
+Rhede
+Sendenhorst
+Südlohn
