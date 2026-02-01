@@ -11,6 +11,7 @@ Verwendung:
 
 import os
 import webbrowser
+import calendar
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -58,6 +59,33 @@ def hole_alle_termine(jahr: int, monat: int) -> list[Termin]:
     return termine
 
 
+def generiere_kalender(jahr: int, monat: int, tage_mit_terminen: set[int]) -> str:
+    """Generiert ein Kalenderblatt als HTML-Tabelle."""
+    cal = calendar.Calendar(firstweekday=0)  # Montag = 0
+    wochen = cal.monthdayscalendar(jahr, monat)
+
+    html = '<table class="kalender" id="kalender">\n'
+    html += '<tr>'
+    for tag_name in ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']:
+        html += f'<th>{tag_name}</th>'
+    html += '</tr>\n'
+
+    for woche in wochen:
+        html += '<tr>'
+        for tag in woche:
+            if tag == 0:
+                html += '<td></td>'
+            elif tag in tage_mit_terminen:
+                datum_key = f"{jahr}-{monat:02d}-{tag:02d}"
+                html += f'<td><a href="#datum-{datum_key}" class="kal-link">{tag}</a></td>'
+            else:
+                html += f'<td class="kal-leer">{tag}</td>'
+        html += '</tr>\n'
+
+    html += '</table>'
+    return html
+
+
 def generiere_html(termine: list[Termin], jahr: int, monat: int,
                    verfuegbare_monate: list[tuple[int, int]]) -> str:
     """Generiert das HTML-Dashboard.
@@ -92,7 +120,7 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
         datum_formatiert = tage_termine[0].datum_formatiert()
 
         termine_html += f'''
-        <div class="datum-gruppe">
+        <div class="datum-gruppe" id="datum-{datum_key}">
             <div class="datum-header">{datum_formatiert}</div>
             <div class="termine-liste">
         '''
@@ -116,6 +144,7 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
 
         termine_html += '''
             </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
         </div>
         '''
 
@@ -139,6 +168,10 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
 
     prev_class = "" if prev_verfuegbar else " disabled"
     next_class = "" if next_verfuegbar else " disabled"
+
+    # Kalenderblatt generieren
+    tage_mit_terminen = set(int(k.split('-')[2]) for k in termine_nach_datum.keys())
+    kalender_html = generiere_kalender(jahr, monat, tage_mit_terminen)
 
     html = f'''<!DOCTYPE html>
 <html lang="de">
@@ -335,6 +368,64 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
             font-style: italic;
         }}
 
+        .kalender {{
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 25px;
+            border-collapse: collapse;
+            text-align: center;
+        }}
+
+        .kalender th {{
+            padding: 6px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }}
+
+        .kalender td {{
+            padding: 6px;
+            font-size: 14px;
+            border-radius: 6px;
+        }}
+
+        .kalender .kal-leer {{
+            color: var(--text-secondary);
+            opacity: 0.5;
+        }}
+
+        .kalender .kal-link {{
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }}
+
+        .kalender .kal-link:hover {{
+            opacity: 0.8;
+        }}
+
+        .zurueck-link {{
+            text-align: right;
+            padding: 6px 15px;
+            font-size: 13px;
+        }}
+
+        .zurueck-link a {{
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }}
+
+        .zurueck-link a:hover {{
+            color: var(--accent-color);
+        }}
+
         .keine-termine {{
             text-align: center;
             padding: 40px;
@@ -364,6 +455,8 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
                 <a href="{next_link}" class="nav-btn{next_class}">{monatsnamen[next_monat]} &rarr;</a>
             </div>
         </header>
+
+        {kalender_html}
 
         <div class="filter-bar">
             <select id="stadt-filter" onchange="filterTermine()">
