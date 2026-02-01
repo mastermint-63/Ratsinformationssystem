@@ -89,7 +89,7 @@ launchctl start de.ratstermine.update      # Manuell auslösen
 |--------|--------|---------|
 | SessionNet (si0046) | 27 | HTML-Parsing mit BeautifulSoup (lxml) |
 | Ratsinfomanagement.net | 33 | iCal-Export parsen (Regex) |
-| Nicht unterstützt | 10 | Ahaus, Ahlen, Bocholt, Ennigerloh, Ochtrup, Oelde, Olfen, Rhede, Sendenhorst, Südlohn |
+| Nicht unterstützt | 10 | ALLRIS: Ahlen · SD.NET RIM: Bocholt · more!rubin: Ochtrup, Rhede, Südlohn · Kein System: Ennigerloh, Oelde, Sendenhorst · Nicht erreichbar: Ahaus, Olfen |
 
 ## Neuen Scraper hinzufügen
 
@@ -125,7 +125,8 @@ launchctl start de.ratstermine.update      # Manuell auslösen
 
 ## Dependencies
 
-- `requests` - HTTP-Requests
+Installieren mit `pip install -r requirements.txt`:
+- `requests` - HTTP-Requests (Timeout: SessionNet 15s, Ratsinfo 30s)
 - `beautifulsoup4` + `lxml` - HTML-Parsing (SessionNet)
 - Keine `icalendar`-Library - Ratsinfo-Scraper verwendet Regex-basiertes Parsing
 

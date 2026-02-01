@@ -26,13 +26,9 @@ class SessionNetScraper(BaseScraper):
         """Holt alle Termine für einen bestimmten Monat."""
         url = f"{self.termine_url}?__cjahr={jahr}&__cmonat={monat}"
 
-        try:
-            response = requests.get(url, headers=self.HEADERS, timeout=15)
-            response.raise_for_status()
-            response.encoding = 'utf-8'
-        except requests.RequestException as e:
-            print(f"Fehler beim Abrufen von {self.stadt_name}: {e}")
-            return []
+        response = requests.get(url, headers=self.HEADERS, timeout=15)
+        response.raise_for_status()
+        response.encoding = 'utf-8'
 
         return self._parse_html(response.text, jahr, monat)
 

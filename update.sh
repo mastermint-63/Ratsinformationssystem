@@ -18,5 +18,16 @@ TERMINE=$(echo "$OUTPUT" | grep -o '[0-9]* Dateien generiert' | grep -o '[0-9]*'
     -sound Glass \
     -execute "osascript -e 'tell application \"Terminal\" to do script \"tail -20 \\\"$LOGFILE\\\"\"'"
 
+# Warnung bei nicht erreichbaren Städten
+FEHLER=$(echo "$OUTPUT" | grep '^FEHLER:')
+if [ -n "$FEHLER" ]; then
+    /opt/homebrew/bin/terminal-notifier \
+        -title "⚠ Ratstermine Warnung" \
+        -subtitle "Städte nicht erreichbar" \
+        -message "$FEHLER" \
+        -sound Basso \
+        -execute "osascript -e 'tell application \"Terminal\" to do script \"tail -30 \\\"$LOGFILE\\\"\"'"
+fi
+
 echo "Aktualisiert: $(date)"
 echo "$OUTPUT"

@@ -23,13 +23,9 @@ class RatsinfoScraper(BaseScraper):
 
     def hole_termine(self, jahr: int, monat: int) -> list[Termin]:
         """Holt alle Termine für einen bestimmten Monat aus dem iCal-Feed."""
-        try:
-            response = requests.get(self.ical_url, headers=self.HEADERS, timeout=30)
-            response.raise_for_status()
-            response.encoding = 'utf-8'
-        except requests.RequestException as e:
-            print(f"Fehler beim Abrufen von {self.stadt_name}: {e}")
-            return []
+        response = requests.get(self.ical_url, headers=self.HEADERS, timeout=30)
+        response.raise_for_status()
+        response.encoding = 'utf-8'
 
         return self._parse_ical(response.text, jahr, monat)
 

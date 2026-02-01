@@ -24,9 +24,14 @@ def dateiname_fuer_monat(jahr: int, monat: int) -> str:
     return f"termine_{jahr}_{monat:02d}.html"
 
 
-def hole_alle_termine(jahr: int, monat: int) -> list[Termin]:
-    """Holt Termine von allen unterstützten Städten parallel."""
+def hole_alle_termine(jahr: int, monat: int) -> tuple[list[Termin], list[str]]:
+    """Holt Termine von allen unterstützten Städten parallel.
+
+    Returns:
+        Tuple aus (Termine-Liste, Liste fehlgeschlagener Städtenamen)
+    """
     termine = []
+    fehler_staedte = []
     scraper_aufgaben = []
 
     # SessionNet-Städte
@@ -53,10 +58,11 @@ def hole_alle_termine(jahr: int, monat: int) -> list[Termin]:
                     print(f"  {scraper.stadt_name}: {len(result)} Termine")
             except Exception as e:
                 print(f"  Fehler bei {scraper.stadt_name}: {e}")
+                fehler_staedte.append(scraper.stadt_name)
 
     # Nach Datum sortieren
     termine.sort()
-    return termine
+    return termine, fehler_staedte
 
 
 def generiere_kalender(jahr: int, monat: int, tage_mit_terminen: set[int]) -> str:
@@ -542,13 +548,15 @@ def main():
 
     basis_pfad = os.path.dirname(__file__)
     erster_dateiname = None
+    alle_fehler = []
 
     for idx, (j, m) in enumerate(monate_liste):
         monatsnamen = ['', 'Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun',
                        'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez']
         print(f"\n[{idx+1}/{anzahl_monate}] {monatsnamen[m]} {j}:")
 
-        termine = hole_alle_termine(j, m)
+        termine, fehler_staedte = hole_alle_termine(j, m)
+        alle_fehler.extend(fehler_staedte)
         print(f"  → {len(termine)} Termine gefunden")
 
         # HTML generieren
@@ -565,6 +573,11 @@ def main():
 
     print("\n" + "=" * 50)
     print(f"Fertig! {anzahl_monate} Dateien generiert.")
+
+    # Fehlerbericht ausgeben
+    if alle_fehler:
+        eindeutige_fehler = sorted(set(alle_fehler))
+        print(f"\nFEHLER: {len(eindeutige_fehler)} Städte nicht erreichbar: {', '.join(eindeutige_fehler)}")
 
     # Ersten Monat im Browser öffnen (außer bei --no-browser)
     if erster_dateiname and not no_browser:
