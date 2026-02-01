@@ -55,8 +55,10 @@ launchctl start de.ratstermine.update      # Manuell auslösen
 2. Scraper werden parallel ausgeführt (ThreadPoolExecutor, 10 Workers)
 3. Jeder Scraper erbt von `BaseScraper` und implementiert `hole_termine(jahr, monat)`
 4. Rückgabe: Liste von `Termin`-Dataclass-Objekten
-5. `app.py:generiere_html()` gruppiert Termine nach Datum und generiert HTML mit:
+5. `app.py:generiere_kalender()` erzeugt Monatskalender-Tabelle mit Anker-Links
+6. `app.py:generiere_html()` gruppiert Termine nach Datum (`id="datum-YYYY-MM-DD"`) und generiert HTML mit:
    - Apple-Design mit Dark Mode Support
+   - Kalenderblatt mit klickbaren Tagen und Rücksprunglinks
    - Stadt-Filter (JavaScript)
    - Monatsnavigation (nur verfügbare Monate verlinkt)
 
@@ -75,6 +77,7 @@ launchctl start de.ratstermine.update      # Manuell auslösen
 
 ### HTML-Dashboard-Features
 - Responsive Design (max-width: 900px)
+- Kalenderblatt (Mo–So) oberhalb der Termine (`id="kalender"`), Tage mit Sitzungen als blaue Kreise anklickbar, springt per Anker (`#datum-YYYY-MM-DD`) zum jeweiligen Datum; jede Datumsgruppe hat einen „↑ Kalender"-Rücksprunglink
 - Filter nach Stadt (JavaScript, versteckt leere Datum-Gruppen)
 - Abgesagte Termine: Durchgestrichen, 50% Opacity
 - Automatische Link-Konvertierung (relativ → absolut)
