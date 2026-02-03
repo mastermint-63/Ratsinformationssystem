@@ -11,7 +11,7 @@ Ratstermine-Dashboard für das Münsterland. Sammelt Sitzungstermine von 70 Geme
 ```
 ├── app.py                    # Hauptanwendung - Scraper + HTML-Generator
 ├── config.py                 # Städte-Konfiguration (Name, URL, SystemTyp)
-├── update.sh                 # Wrapper für automatische Aktualisierung (mit terminal-notifier)
+├── ratsinfos_upd_fs.sh                 # Wrapper für automatische Aktualisierung (mit terminal-notifier)
 ├── scraper/
 │   ├── __init__.py           # Exports: Termin, SessionNetScraper, RatsinfoScraper
 │   ├── base.py               # Termin-Dataclass und BaseScraper (ABC)
@@ -30,7 +30,7 @@ python3 app.py 2026 2             # 3 Monate ab Feb 2026
 python3 app.py 2026 1 12          # 12 Monate (ganzes Jahr)
 python3 app.py --no-browser       # Ohne Browser öffnen (für Cronjobs)
 
-./update.sh                       # Manuell aktualisieren (mit Benachrichtigung)
+./ratsinfos_upd_fs.sh                       # Manuell aktualisieren (mit Benachrichtigung)
 tail -20 launchd.log              # Letzte Aktualisierungen anzeigen
 ```
 
@@ -42,7 +42,7 @@ Vollautomatischer Workflow via macOS launchd:
 06:00 Uhr (oder Mac wacht auf)
         │
         ▼
-┌─ update.sh ─────────────────────────────┐
+┌─ ratsinfos_upd_fs.sh ─────────────────────────────┐
 │  1. Scraping: Alle Kommunen abfragen    │
 │  2. HTML-Dateien generieren             │
 │  3. git add/commit/push (bei Änderung)  │
@@ -69,10 +69,10 @@ https://ms-raete.reporter.ruhr ist aktuell
 ```bash
 launchctl list | grep ratstermine          # Status prüfen
 launchctl start de.ratstermine.update      # Manuell auslösen
-./update.sh                                 # Direkt ausführen (mit Push)
+./ratsinfos_upd_fs.sh                                 # Direkt ausführen (mit Push)
 ```
 
-**Wichtig:** `update.sh` verwendet hardcodierte Pfade:
+**Wichtig:** `ratsinfos_upd_fs.sh` verwendet hardcodierte Pfade:
 - Python: `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3`
 - terminal-notifier: `/opt/homebrew/bin/terminal-notifier`
 
@@ -166,11 +166,11 @@ Installieren mit `pip install -r requirements.txt`:
 - **Repo:** `github.com/mastermint-63/Ratsinformationssystem` (öffentlich)
 - **Workflow:** `.github/workflows/deploy.yml` – deployed automatisch bei Push von HTML-Dateien
 
-**Automatisch:** `update.sh` (via launchd) scrapt täglich und pusht zu GitHub.
+**Automatisch:** `ratsinfos_upd_fs.sh` (via launchd) scrapt täglich und pusht zu GitHub.
 
 **Manuell:** Falls nötig, kann manuell aktualisiert werden:
 ```bash
-./update.sh                                # Scrapen + Push (empfohlen)
+./ratsinfos_upd_fs.sh                                # Scrapen + Push (empfohlen)
 # oder einzeln:
 python3 app.py --no-browser && git add termine_*.html index.html && git commit -m "Termine aktualisiert" && git push
 ```
