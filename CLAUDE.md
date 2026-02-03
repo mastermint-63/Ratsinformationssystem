@@ -132,27 +132,29 @@ Installieren mit `pip install -r requirements.txt`:
 
 ## GitHub Pages Deployment
 
-Das Dashboard wird über GitHub Pages unter `ms-raete.reporter.ruhr` öffentlich bereitgestellt.
-Ein GitHub Actions Workflow führt den Scraper täglich aus und deployed die generierten HTML-Dateien.
+Das Dashboard wird über GitHub Pages öffentlich bereitgestellt.
 
-- **URL:** `https://ms-raete.reporter.ruhr`
-- **Repo:** `github.com/mastermint-63/Ratsinformationssystem` (privat)
-- **Workflow:** `.github/workflows/deploy.yml` – täglich 5:00 UTC + manuell auslösbar
-- **Einstiegsseite:** `index.html` leitet automatisch auf den aktuellen Monat weiter
+- **URL:** `https://ms-raete.reporter.ruhr/` (Custom Domain)
+- **Repo:** `github.com/mastermint-63/Ratsinformationssystem` (öffentlich)
+- **Workflow:** `.github/workflows/deploy.yml` – deployed bei Push von HTML-Dateien
+
+**Wichtig:** Ratsinfomanagement.net blockiert GitHub Actions IPs (503-Fehler). Daher müssen Termine **lokal generiert** und die HTML-Dateien gepusht werden:
+
+```bash
+python3 app.py --no-browser               # Termine lokal scrapen
+git add termine_*.html index.html         # HTML-Dateien stagen
+git commit -m "Termine aktualisiert"      # Committen
+git push                                   # Push löst automatisch Deployment aus
+```
 
 ```bash
 gh workflow run deploy.yml                 # Workflow manuell auslösen
 gh run list --workflow=deploy.yml          # Deployment-Status prüfen
 ```
 
-**DNS-Konfiguration** bei Domain-Provider für `reporter.ruhr`:
-- `ms-raete` CNAME → `mastermint-63.github.io`
-- `ms-termine` CNAME → `mastermint-63.github.io` (separates Projekt)
-
-**Hinweis:** Das Repo ist privat, GitHub Pages ist trotzdem öffentlich erreichbar. Da es sich nur um öffentlich einsehbare Ratstermine handelt, ist das unproblematisch.
-
 ## Bekannte Probleme
 
+- **Ratsinfomanagement.net blockiert Cloud-IPs** - GitHub Actions, AWS etc. bekommen 503-Fehler → Termine müssen lokal generiert werden
 - DNS-Fehler bei Netzwerkproblemen führen zu 0 Terminen für betroffene Städte
 - SessionNet HTML-Struktur variiert stark → Multi-Strategie-Parsing nötig
 - Relative Links manchmal schwer zu erkennen → Heuristiken in Scrapern
