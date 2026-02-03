@@ -119,11 +119,10 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 |--------|--------|---------|
 | SessionNet (si0046) | 27 | HTML-Parsing mit BeautifulSoup (lxml) |
 | Ratsinfomanagement.net | 33 | iCal-Export parsen (Regex) |
-| Nicht unterstützt | 8 | ALLRIS: Ahlen · SD.NET RIM: Bocholt · more!rubin: Ochtrup, Rhede, Südlohn · Kein System: Ennigerloh, Oelde, Sendenhorst |
+| Nicht unterstützt | 9 | ALLRIS: Ahlen · SD.NET RIM: Bocholt · more!rubin: Ochtrup, Rhede, Südlohn · Kein System: Ennigerloh, Oelde, Sendenhorst · Nicht erreichbar: Olfen |
 
 ### Aktualisierungen
 *   **03. Feb 2026:** Ahaus (SessionNet) wurde erfolgreich in die Konfiguration aufgenommen und wird nun gescrapt.
-*   **03. Feb 2026:** Olfen (Ratsinfomanagement.net) wurde erfolgreich in die Konfiguration aufgenommen und wird nun gescrapt.
 
 ## Neuen Scraper hinzufügen
 

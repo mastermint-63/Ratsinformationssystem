@@ -75,7 +75,7 @@ STAEDTE = [
     Stadt("Nottuln", 19672, "https://www.nottuln.de/sessionnet/sessionnetbi/si0046.php", SystemTyp.SESSIONNET),
     Stadt("Ochtrup", 19893, "", SystemTyp.NICHT_UNTERSTUETZT),
     Stadt("Oelde", 29500, "", SystemTyp.NICHT_UNTERSTUETZT),
-    Stadt("Olfen", 13175, "https://ratsinfo.olpe.de", SystemTyp.RATSINFO),
+    Stadt("Olfen", 13175, "", SystemTyp.NICHT_UNTERSTUETZT),
     Stadt("Ostbevern", 11000, "https://www.ostbevern.de/sessionnet/sessionnetbi/si0046.php", SystemTyp.SESSIONNET),
     Stadt("Raesfeld", 11709, "https://raesfeld.ratsinfomanagement.net/", SystemTyp.RATSINFO),
     Stadt("Recke", 11370, "https://recke.ratsinfomanagement.net/", SystemTyp.RATSINFO),
