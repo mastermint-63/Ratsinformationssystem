@@ -36,7 +36,32 @@ tail -20 launchd.log              # Letzte Aktualisierungen anzeigen
 
 ## Automatische Aktualisierung
 
-Launchd-Job läuft täglich um 6:00 Uhr (oder beim Aufwachen aus Ruhezustand):
+Vollautomatischer Workflow via macOS launchd:
+
+```
+06:00 Uhr (oder Mac wacht auf)
+        │
+        ▼
+┌─ update.sh ─────────────────────────────┐
+│  1. Scraping: Alle Kommunen abfragen    │
+│  2. HTML-Dateien generieren             │
+│  3. git add/commit/push (bei Änderung)  │
+│  4. macOS Benachrichtigung anzeigen     │
+└─────────────────────────────────────────┘
+        │
+        ▼
+GitHub Actions deployed automatisch
+        │
+        ▼
+https://ms-raete.reporter.ruhr ist aktuell
+```
+
+**Warum lokal?** Ratsinfomanagement.net blockiert Cloud-IPs (GitHub Actions bekommt 503-Fehler). Dein Mac hat eine normale IP und wird nicht blockiert.
+
+**Voraussetzung:** Mac muss um 6:00 Uhr an oder im Ruhezustand sein (nicht ausgeschaltet).
+
+### Konfiguration
+
 - Plist: `~/Library/LaunchAgents/de.ratstermine.update.plist`
 - Log: `launchd.log`
 - Benachrichtigung: Klickbar via `terminal-notifier` (öffnet Terminal mit Log)
@@ -44,9 +69,14 @@ Launchd-Job läuft täglich um 6:00 Uhr (oder beim Aufwachen aus Ruhezustand):
 ```bash
 launchctl list | grep ratstermine          # Status prüfen
 launchctl start de.ratstermine.update      # Manuell auslösen
+./update.sh                                 # Direkt ausführen (mit Push)
 ```
 
-**Wichtig:** `update.sh` verwendet den hardcodierten Python-Pfad `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3` und `terminal-notifier` unter `/opt/homebrew/bin/terminal-notifier`. Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werden.
+**Wichtig:** `update.sh` verwendet hardcodierte Pfade:
+- Python: `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3`
+- terminal-notifier: `/opt/homebrew/bin/terminal-notifier`
+
+Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werden.
 
 ## Architektur
 
@@ -132,23 +162,20 @@ Installieren mit `pip install -r requirements.txt`:
 
 ## GitHub Pages Deployment
 
-Das Dashboard wird über GitHub Pages öffentlich bereitgestellt.
-
 - **URL:** `https://ms-raete.reporter.ruhr/` (Custom Domain)
 - **Repo:** `github.com/mastermint-63/Ratsinformationssystem` (öffentlich)
-- **Workflow:** `.github/workflows/deploy.yml` – deployed bei Push von HTML-Dateien
+- **Workflow:** `.github/workflows/deploy.yml` – deployed automatisch bei Push von HTML-Dateien
 
-**Wichtig:** Ratsinfomanagement.net blockiert GitHub Actions IPs (503-Fehler). Daher müssen Termine **lokal generiert** und die HTML-Dateien gepusht werden:
+**Automatisch:** `update.sh` (via launchd) scrapt täglich und pusht zu GitHub.
 
+**Manuell:** Falls nötig, kann manuell aktualisiert werden:
 ```bash
-python3 app.py --no-browser               # Termine lokal scrapen
-git add termine_*.html index.html         # HTML-Dateien stagen
-git commit -m "Termine aktualisiert"      # Committen
-git push                                   # Push löst automatisch Deployment aus
+./update.sh                                # Scrapen + Push (empfohlen)
+# oder einzeln:
+python3 app.py --no-browser && git add termine_*.html index.html && git commit -m "Termine aktualisiert" && git push
 ```
 
 ```bash
-gh workflow run deploy.yml                 # Workflow manuell auslösen
 gh run list --workflow=deploy.yml          # Deployment-Status prüfen
 ```
 
