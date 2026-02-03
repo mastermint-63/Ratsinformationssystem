@@ -1,0 +1,65 @@
+name: Generate and Deploy Dashboard
+
+on:
+  # Täglich um 5:00 UTC (6:00 deutscher Zeit)
+  schedule:
+    - cron: '0 5 * * *'
+  # Manuell auslösbar
+  workflow_dispatch:
+  # Bei Push auf main (optional, für Tests)
+  push:
+    branches: [main]
+
+# Berechtigungen für GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Dependencies installieren
+        run: pip install -r requirements.txt
+
+      - name: Termine scrapen und HTML generieren
+        run: python app.py --no-browser
+
+      - name: Index-Seite erstellen
+        run: |
+          # Aktuellen Monat ermitteln und Weiterleitung erstellen
+          CURRENT_FILE=$(ls termine_*.html | head -1)
+          cat > index.html << EOF
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="refresh" content="0; url=${CURRENT_FILE}">
+            <title>Ratstermine Münsterland</title>
+          </head>
+          <body>
+            <p>Weiterleitung zu <a href="${CURRENT_FILE}">${CURRENT_FILE}</a></p>
+          </body>
+          </html>
+          EOF
+
+      - name: GitHub Pages konfigurieren
+        uses: actions/configure-pages@v4
+
+      - name: Dateien für Pages vorbereiten
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Auf GitHub Pages deployen
+        uses: actions/deploy-pages@v4
