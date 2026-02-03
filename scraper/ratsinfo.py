@@ -11,7 +11,11 @@ class RatsinfoScraper(BaseScraper):
     """Scraper für Ratsinfomanagement.net-basierte Ratsinformationssysteme."""
 
     HEADERS = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/calendar,text/plain,*/*',
+        'Accept-Language': 'de-DE,de;q=0.9,en;q=0.8',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Connection': 'keep-alive',
     }
 
     def __init__(self, stadt_name: str, base_url: str):
