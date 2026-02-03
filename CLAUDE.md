@@ -130,6 +130,27 @@ Installieren mit `pip install -r requirements.txt`:
 - `beautifulsoup4` + `lxml` - HTML-Parsing (SessionNet)
 - Keine `icalendar`-Library - Ratsinfo-Scraper verwendet Regex-basiertes Parsing
 
+## GitHub Pages Deployment
+
+Das Dashboard wird über GitHub Pages unter `ms-raete.reporter.ruhr` öffentlich bereitgestellt.
+Ein GitHub Actions Workflow führt den Scraper täglich aus und deployed die generierten HTML-Dateien.
+
+- **URL:** `https://ms-raete.reporter.ruhr`
+- **Repo:** `github.com/mastermint-63/Ratsinformationssystem` (privat)
+- **Workflow:** `.github/workflows/deploy.yml` – täglich 5:00 UTC + manuell auslösbar
+- **Einstiegsseite:** `index.html` leitet automatisch auf den aktuellen Monat weiter
+
+```bash
+gh workflow run deploy.yml                 # Workflow manuell auslösen
+gh run list --workflow=deploy.yml          # Deployment-Status prüfen
+```
+
+**DNS-Konfiguration** bei Domain-Provider für `reporter.ruhr`:
+- `ms-raete` CNAME → `mastermint-63.github.io`
+- `ms-termine` CNAME → `mastermint-63.github.io` (separates Projekt)
+
+**Hinweis:** Das Repo ist privat, GitHub Pages ist trotzdem öffentlich erreichbar. Da es sich nur um öffentlich einsehbare Ratstermine handelt, ist das unproblematisch.
+
 ## Bekannte Probleme
 
 - DNS-Fehler bei Netzwerkproblemen führen zu 0 Terminen für betroffene Städte
