@@ -1,6 +1,5 @@
 __pycache__/
 *.pyc
-termine_*.html
 launchd.log
 .DS_Store
 staedte_ohne_termine.txt
