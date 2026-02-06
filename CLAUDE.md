@@ -10,7 +10,7 @@ Ratstermine-Dashboard für das Münsterland. Sammelt Sitzungstermine von 70 Geme
 
 ```
 ├── app.py                    # Hauptanwendung - Scraper + HTML-Generator
-├── config.py                 # Städte-Konfiguration (Name, URL, SystemTyp)
+├── config.py                 # Städte-Konfiguration (Name, URL, SystemTyp, Kreis)
 ├── ratsinfos_upd_fs.sh                 # Wrapper für automatische Aktualisierung (mit terminal-notifier)
 ├── scraper/
 │   ├── __init__.py           # Exports: Termin, SessionNetScraper, RatsinfoScraper
@@ -108,7 +108,9 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 ### HTML-Dashboard-Features
 - Responsive Design (max-width: 900px)
 - Kalenderblatt (Mo–So) oberhalb der Termine (`id="kalender"`), Tage mit Sitzungen als blaue Kreise anklickbar, springt per Anker (`#datum-YYYY-MM-DD`) zum jeweiligen Datum; jede Datumsgruppe hat einen „↑ Kalender"-Rücksprunglink
-- Filter nach Stadt (JavaScript, versteckt leere Datum-Gruppen)
+- Kreis-basierte Filter: 5 Dropdowns (Münster, Steinfurt, Borken, Coesfeld, Warendorf)
+- Kombiniertes Filtern: Mehrere Kommunen gleichzeitig auswählbar
+- Aktive Filter als Tags mit Entfernen-Button, "Alle zurücksetzen"-Button
 - Abgesagte Termine: Durchgestrichen, 50% Opacity
 - Automatische Link-Konvertierung (relativ → absolut)
 - Generierungs-Timestamp im Footer
@@ -122,7 +124,8 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 | Nicht unterstützt | 9 | ALLRIS: Ahlen · SD.NET RIM: Bocholt · more!rubin: Ochtrup, Rhede, Südlohn · Kein System: Ennigerloh, Oelde, Sendenhorst · Nicht erreichbar: Olfen |
 
 ### Aktualisierungen
-*   **03. Feb 2026:** Ahaus (SessionNet) wurde erfolgreich in die Konfiguration aufgenommen und wird nun gescrapt.
+*   **06. Feb 2026:** Kreis-basierte Filter-Dropdowns eingeführt (5 Dropdowns statt "Alle Städte"), kombiniertes Filtern möglich
+*   **03. Feb 2026:** Ahaus (SessionNet) wurde erfolgreich in die Konfiguration aufgenommen und wird nun gescrapt
 
 ## Neuen Scraper hinzufügen
 
@@ -132,7 +135,7 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
        NEUES_SYSTEM = "neues_system"
    ```
 
-2. **Stadt(e) zur STAEDTE-Liste** hinzufügen mit neuem SystemTyp
+2. **Stadt(e) zur STAEDTE-Liste** hinzufügen mit SystemTyp und Kreis (z.B. `Kreis.STEINFURT`)
 
 3. **Scraper-Klasse erstellen** in `scraper/neues_system.py`:
    ```python
