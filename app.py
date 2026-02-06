@@ -15,7 +15,7 @@ import calendar
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from config import STAEDTE, SystemTyp, get_staedte_nach_typ
+from config import STAEDTE, SystemTyp, Kreis, get_staedte_nach_typ
 from scraper import SessionNetScraper, RatsinfoScraper, Termin
 
 
@@ -118,6 +118,14 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
     # Alle Städte für Filter sammeln
     alle_staedte = sorted(set(t.stadt for t in termine))
 
+    # Kreiszuordnung erstellen (für Städte mit Terminen)
+    stadt_zu_kreis = {s.name: s.kreis for s in STAEDTE}
+    kreis_staedte = {kreis: [] for kreis in Kreis}
+    for stadt in alle_staedte:
+        kreis = stadt_zu_kreis.get(stadt)
+        if kreis:
+            kreis_staedte[kreis].append(stadt)
+
     # Termine-HTML generieren
     termine_html = ""
     for datum_key in sorted(termine_nach_datum.keys()):
@@ -154,10 +162,38 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
         </div>
         '''
 
-    # Filter-Optionen generieren
-    filter_html = '<option value="">Alle Städte</option>'
-    for stadt in alle_staedte:
-        filter_html += f'<option value="{stadt}">{stadt}</option>'
+    # Filter-Optionen pro Kreis generieren
+    def generiere_dropdown(label: str, staedte: list[str], dropdown_id: str) -> str:
+        """Generiert ein einzelnes Filter-Dropdown."""
+        options = f'<option value="">{label}</option>'
+        for stadt in sorted(staedte):
+            options += f'<option value="{stadt}">{stadt}</option>'
+        return f'''
+            <div class="filter-group">
+                <label class="filter-label">{label}</label>
+                <select class="kreis-filter" id="{dropdown_id}" onchange="filterTermine()">
+                    {options}
+                </select>
+            </div>'''
+
+    # Stadt Münster Dropdown
+    filter_dropdowns = ""
+    if "Stadt Münster" in alle_staedte:
+        filter_dropdowns += generiere_dropdown("Stadt Münster", ["Stadt Münster"], "filter-muenster")
+
+    # Dropdowns pro Kreis (inkl. Kreisverwaltung)
+    kreis_labels = {
+        Kreis.STEINFURT: "Kreis Steinfurt",
+        Kreis.BORKEN: "Kreis Borken",
+        Kreis.COESFELD: "Kreis Coesfeld",
+        Kreis.WARENDORF: "Kreis Warendorf"
+    }
+    for kreis, label in kreis_labels.items():
+        # Alle Städte des Kreises (inkl. Kreisverwaltung, ohne Stadt Münster)
+        staedte_im_kreis = [s for s in kreis_staedte.get(kreis, []) if s != "Stadt Münster"]
+        if staedte_im_kreis:
+            dropdown_id = f"filter-{kreis.name.lower()}"
+            filter_dropdowns += generiere_dropdown(label, staedte_im_kreis, dropdown_id)
 
     # Monatsnavigation
     prev_monat = monat - 1 if monat > 1 else 12
@@ -272,29 +308,113 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
             font-weight: 500;
         }}
 
-        .filter-bar {{
+        .filter-container {{
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            gap: 12px;
             margin-bottom: 20px;
-            padding: 10px 15px;
+            padding: 15px;
             background: var(--card-bg);
             border-radius: 10px;
             border: 1px solid var(--border-color);
         }}
 
-        .filter-bar select {{
-            padding: 8px 12px;
+        .filter-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }}
+
+        .filter-header h3 {{
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-color);
+        }}
+
+        .filter-reset {{
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            font-size: 13px;
+            cursor: pointer;
+            padding: 4px 8px;
+        }}
+
+        .filter-reset:hover {{
+            text-decoration: underline;
+        }}
+
+        .filter-dropdowns {{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }}
+
+        .filter-group {{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+            min-width: 140px;
+        }}
+
+        .filter-label {{
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }}
+
+        .kreis-filter {{
+            width: 100%;
+            padding: 6px 8px;
             border: 1px solid var(--border-color);
             border-radius: 6px;
             background: var(--bg-color);
             color: var(--text-color);
-            font-size: 14px;
+            font-size: 13px;
+        }}
+
+        .filter-stats {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 5px;
         }}
 
         .stats {{
-            font-size: 14px;
+            font-size: 13px;
             color: var(--text-secondary);
+        }}
+
+        .active-filters {{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }}
+
+        .filter-tag {{
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 8px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 12px;
+            font-size: 12px;
+        }}
+
+        .filter-tag button {{
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 1;
+            padding: 0;
+            margin-left: 2px;
         }}
 
         .datum-gruppe {{
@@ -464,12 +584,19 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
 
         {kalender_html}
 
-        <div class="filter-bar">
-            <select id="stadt-filter" onchange="filterTermine()">
-                {filter_html}
-            </select>
-            <div class="stats">
-                <span id="termine-count">{len(termine)}</span> Termine von <span id="staedte-count">{len(alle_staedte)}</span> Kommunen
+        <div class="filter-container">
+            <div class="filter-header">
+                <h3>Filter nach Kommune</h3>
+                <button class="filter-reset" onclick="resetFilter()">Alle zurücksetzen</button>
+            </div>
+            <div class="filter-dropdowns">
+                {filter_dropdowns}
+            </div>
+            <div class="filter-stats">
+                <div class="active-filters" id="active-filters"></div>
+                <div class="stats">
+                    <span id="termine-count">{len(termine)}</span> von {len(termine)} Terminen
+                </div>
             </div>
         </div>
 
@@ -485,17 +612,25 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
 
     <script>
         function filterTermine() {{
-            const filter = document.getElementById('stadt-filter').value;
+            // Alle ausgewählten Städte aus allen Dropdowns sammeln
+            const selects = document.querySelectorAll('.kreis-filter');
+            const gewaehlteStaedte = [];
+
+            selects.forEach(select => {{
+                if (select.value) {{
+                    gewaehlteStaedte.push(select.value);
+                }}
+            }});
+
+            // Termine filtern
             const termine = document.querySelectorAll('.termin');
             let sichtbar = 0;
 
             termine.forEach(t => {{
-                if (!filter || t.dataset.stadt === filter) {{
-                    t.classList.remove('hidden');
-                    sichtbar++;
-                }} else {{
-                    t.classList.add('hidden');
-                }}
+                const zeigen = gewaehlteStaedte.length === 0 ||
+                               gewaehlteStaedte.includes(t.dataset.stadt);
+                t.classList.toggle('hidden', !zeigen);
+                if (zeigen) sichtbar++;
             }});
 
             document.getElementById('termine-count').textContent = sichtbar;
@@ -505,6 +640,37 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
                 const sichtbareTermine = g.querySelectorAll('.termin:not(.hidden)');
                 g.classList.toggle('hidden', sichtbareTermine.length === 0);
             }});
+
+            // Aktive Filter als Tags anzeigen
+            updateFilterTags(gewaehlteStaedte);
+        }}
+
+        function updateFilterTags(staedte) {{
+            const container = document.getElementById('active-filters');
+            if (staedte.length === 0) {{
+                container.innerHTML = '';
+                return;
+            }}
+            container.innerHTML = staedte.map(stadt =>
+                `<span class="filter-tag">${{stadt}}<button onclick="removeFilter('${{stadt}}')">&times;</button></span>`
+            ).join('');
+        }}
+
+        function removeFilter(stadt) {{
+            // Finde das Dropdown mit dieser Stadt und setze es zurück
+            document.querySelectorAll('.kreis-filter').forEach(select => {{
+                if (select.value === stadt) {{
+                    select.value = '';
+                }}
+            }});
+            filterTermine();
+        }}
+
+        function resetFilter() {{
+            document.querySelectorAll('.kreis-filter').forEach(select => {{
+                select.value = '';
+            }});
+            filterTermine();
         }}
     </script>
 </body>
