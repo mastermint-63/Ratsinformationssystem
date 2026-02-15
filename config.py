@@ -7,16 +7,17 @@ from dataclasses import dataclass
 class SystemTyp(Enum):
     SESSIONNET = "sessionnet"
     RATSINFO = "ratsinfo"
+    ALLRIS = "allris"
     NICHT_UNTERSTUETZT = "nicht_unterstuetzt"
 
 
 class Kreis(Enum):
     """Kreise und kreisfreie Städte im Münsterland."""
+    MUENSTER = "Münsterland"
     STEINFURT = "Kreis Steinfurt"
     BORKEN = "Kreis Borken"
     COESFELD = "Kreis Coesfeld"
     WARENDORF = "Kreis Warendorf"
-    MUENSTER = "Stadt Münster"
 
 
 @dataclass
@@ -39,13 +40,13 @@ def erkenne_systemtyp(url: str) -> SystemTyp:
 
 # Alle Städte aus der HTML-Datei
 STAEDTE = [
-    # Kreisverwaltungen
-    Stadt("Kreis Steinfurt", 462800, "https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp", SystemTyp.SESSIONNET, Kreis.STEINFURT),
-    Stadt("Kreis Borken", 380112, "https://secure.kreis-borken.de/BI/si0046.asp", SystemTyp.SESSIONNET, Kreis.BORKEN),
-    Stadt("Kreis Warendorf", 182500, "https://www.kreis-warendorf.de/w1/sessionnet/bi/si0046.php", SystemTyp.SESSIONNET, Kreis.WARENDORF),
-    Stadt("Kreis Coesfeld", 113000, "https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0046.php", SystemTyp.SESSIONNET, Kreis.COESFELD),
-    # Stadt Münster (kreisfrei)
+    # Münsterland (überregionale Einheiten)
     Stadt("Stadt Münster", 325000, "https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php", SystemTyp.SESSIONNET, Kreis.MUENSTER),
+    Stadt("LWL", 0, "https://allris.lwl.org/public/", SystemTyp.ALLRIS, Kreis.MUENSTER),
+    Stadt("Kreis Steinfurt", 462800, "https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp", SystemTyp.SESSIONNET, Kreis.MUENSTER),
+    Stadt("Kreis Borken", 380112, "https://secure.kreis-borken.de/BI/si0046.asp", SystemTyp.SESSIONNET, Kreis.MUENSTER),
+    Stadt("Kreis Warendorf", 182500, "https://www.kreis-warendorf.de/w1/sessionnet/bi/si0046.php", SystemTyp.SESSIONNET, Kreis.MUENSTER),
+    Stadt("Kreis Coesfeld", 113000, "https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0046.php", SystemTyp.SESSIONNET, Kreis.MUENSTER),
     # Kreis Steinfurt - Gemeinden
     Stadt("Altenberge", 10415, "https://altenberge.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.STEINFURT),
     Stadt("Emsdetten", 35927, "https://emsdetten.ratsinfomanagement.net/termine", SystemTyp.RATSINFO, Kreis.STEINFURT),

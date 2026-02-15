@@ -16,7 +16,7 @@ from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from config import STAEDTE, SystemTyp, Kreis, get_staedte_nach_typ
-from scraper import SessionNetScraper, RatsinfoScraper, Termin
+from scraper import SessionNetScraper, RatsinfoScraper, AllrisScraper, Termin
 
 
 def dateiname_fuer_monat(jahr: int, monat: int) -> str:
@@ -41,6 +41,10 @@ def hole_alle_termine(jahr: int, monat: int) -> tuple[list[Termin], list[str]]:
     # Ratsinfomanagement-Städte
     for stadt in get_staedte_nach_typ(SystemTyp.RATSINFO):
         scraper_aufgaben.append((RatsinfoScraper(stadt.name, stadt.url), jahr, monat))
+
+    # ALLRIS-Städte
+    for stadt in get_staedte_nach_typ(SystemTyp.ALLRIS):
+        scraper_aufgaben.append((AllrisScraper(stadt.name, stadt.url), jahr, monat))
 
     # Parallel abrufen
     with ThreadPoolExecutor(max_workers=10) as executor:
@@ -176,22 +180,12 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
                 </select>
             </div>'''
 
-    # Stadt Münster Dropdown
+    # Dropdowns pro Kreis generieren
     filter_dropdowns = ""
-    if "Stadt Münster" in alle_staedte:
-        filter_dropdowns += generiere_dropdown("Stadt Münster", ["Stadt Münster"], "filter-muenster")
-
-    # Dropdowns pro Kreis (inkl. Kreisverwaltung)
-    kreis_labels = {
-        Kreis.STEINFURT: "Kreis Steinfurt",
-        Kreis.BORKEN: "Kreis Borken",
-        Kreis.COESFELD: "Kreis Coesfeld",
-        Kreis.WARENDORF: "Kreis Warendorf"
-    }
-    for kreis, label in kreis_labels.items():
-        # Alle Städte des Kreises (inkl. Kreisverwaltung, ohne Stadt Münster)
-        staedte_im_kreis = [s for s in kreis_staedte.get(kreis, []) if s != "Stadt Münster"]
+    for kreis in Kreis:
+        staedte_im_kreis = kreis_staedte.get(kreis, [])
         if staedte_im_kreis:
+            label = kreis.value
             dropdown_id = f"filter-{kreis.name.lower()}"
             filter_dropdowns += generiere_dropdown(label, staedte_im_kreis, dropdown_id)
 
