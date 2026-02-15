@@ -604,7 +604,8 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
 
         <footer>
             Generiert am {datetime.now().strftime('%d.%m.%Y um %H:%M Uhr')}<br>
-            Daten aus {len(alle_staedte)} Ratsinformationssystemen
+            Daten aus {len(alle_staedte)} Ratsinformationssystemen<br>
+            <a href="feed.xml" style="color: var(--accent); text-decoration: none;">&#x25CF; RSS-Feed</a>
         </footer>
     </div>
 
