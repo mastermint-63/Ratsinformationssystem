@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Projektbeschreibung
 
-Ratstermine-Dashboard für das Münsterland. Sammelt Sitzungstermine von 70 Gemeinden (60 mit Scraper-Unterstützung) und generiert verlinkte HTML-Dashboards mit Monatsnavigation.
+Ratstermine-Dashboard für das Münsterland. Sammelt Sitzungstermine von 70 Gemeinden und dem LWL (61 mit Scraper-Unterstützung) und generiert verlinkte HTML-Dashboards mit Monatsnavigation.
 
 ## Struktur
 
@@ -13,10 +13,12 @@ Ratstermine-Dashboard für das Münsterland. Sammelt Sitzungstermine von 70 Geme
 ├── config.py                 # Städte-Konfiguration (Name, URL, SystemTyp, Kreis)
 ├── ratsinfos_upd_fs.sh                 # Wrapper für automatische Aktualisierung (mit terminal-notifier)
 ├── scraper/
-│   ├── __init__.py           # Exports: Termin, SessionNetScraper, RatsinfoScraper
+│   ├── __init__.py           # Exports: Termin, SessionNetScraper, RatsinfoScraper, AllrisScraper
 │   ├── base.py               # Termin-Dataclass und BaseScraper (ABC)
 │   ├── sessionnet.py         # SessionNet-Scraper (si0046.asp/php)
-│   └── ratsinfo.py           # Ratsinfomanagement-Scraper (iCal)
+│   ├── ratsinfo.py           # Ratsinfomanagement-Scraper (iCal)
+│   └── allris.py             # ALLRIS net-Scraper (Wicket-AJAX)
+├── feed.xml                  # RSS-Feed (aktueller Monat, automatisch generiert)
 ├── termine_YYYY_MM.html      # Generierte Dashboards (pro Monat)
 ├── launchd.log               # Log der automatischen Aktualisierungen
 └── Kreise und Städte...html  # Original-Linkliste
@@ -105,14 +107,20 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 - Methode: iCal-Parsing (VEVENT-Blöcke mit DTSTART, SUMMARY, LOCATION, URL)
 - Vorteil: Strukturierte Daten, alle Termine auf einmal
 
+**ALLRIS net** (1 – LWL):
+- URL: `https://allris.lwl.org/public/si010`
+- Methode: Wicket-AJAX (Session starten → Timer-AJAX → Monat/Jahr navigieren → HTML-Tabelle parsen)
+- Besonderheit: Kalender lädt per AJAX nach, benötigt Session-Cookie (JSESSIONID)
+
 ### HTML-Dashboard-Features
 - Responsive Design (max-width: 900px)
 - Kalenderblatt (Mo–So) oberhalb der Termine (`id="kalender"`), Tage mit Sitzungen als blaue Kreise anklickbar, springt per Anker (`#datum-YYYY-MM-DD`) zum jeweiligen Datum; jede Datumsgruppe hat einen „↑ Kalender"-Rücksprunglink
-- Kreis-basierte Filter: 5 Dropdowns (Münster, Steinfurt, Borken, Coesfeld, Warendorf)
+- Kreis-basierte Filter: 5 Dropdowns (Münsterland, Steinfurt, Borken, Coesfeld, Warendorf)
 - Kombiniertes Filtern: Mehrere Kommunen gleichzeitig auswählbar
 - Aktive Filter als Tags mit Entfernen-Button, "Alle zurücksetzen"-Button
 - Abgesagte Termine: Durchgestrichen, 50% Opacity
 - Automatische Link-Konvertierung (relativ → absolut)
+- RSS-Feed (`feed.xml`) für den aktuellen Monat, auto-discoverable via `<link rel="alternate">`
 - Generierungs-Timestamp im Footer
 
 ## Unterstützte Systeme
@@ -121,9 +129,11 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 |--------|--------|---------|
 | SessionNet (si0046) | 27 | HTML-Parsing mit BeautifulSoup (lxml) |
 | Ratsinfomanagement.net | 33 | iCal-Export parsen (Regex) |
+| ALLRIS net | 1 | Wicket-AJAX mit Session-Cookie + HTML-Parsing (LWL) |
 | Nicht unterstützt | 9 | ALLRIS: Ahlen · SD.NET RIM: Bocholt · more!rubin: Ochtrup, Rhede, Südlohn · Kein System: Ennigerloh, Oelde, Sendenhorst · Nicht erreichbar: Olfen |
 
 ### Aktualisierungen
+*   **15. Feb 2026:** LWL (ALLRIS net) integriert, Kreisverwaltungen und Stadt Münster ins "Münsterland"-Dropdown zusammengefasst
 *   **06. Feb 2026:** Kreis-basierte Filter-Dropdowns eingeführt (5 Dropdowns statt "Alle Städte"), kombiniertes Filtern möglich
 *   **03. Feb 2026:** Ahaus (SessionNet) wurde erfolgreich in die Konfiguration aufgenommen und wird nun gescrapt
 
@@ -162,8 +172,8 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 ## Dependencies
 
 Installieren mit `pip install -r requirements.txt`:
-- `requests` - HTTP-Requests (Timeout: SessionNet 15s, Ratsinfo 30s)
-- `beautifulsoup4` + `lxml` - HTML-Parsing (SessionNet)
+- `requests` - HTTP-Requests (Timeout: SessionNet 15s, Ratsinfo 30s, ALLRIS 15s)
+- `beautifulsoup4` + `lxml` - HTML-Parsing (SessionNet, ALLRIS)
 - Keine `icalendar`-Library - Ratsinfo-Scraper verwendet Regex-basiertes Parsing
 
 ## GitHub Pages Deployment
@@ -178,7 +188,7 @@ Installieren mit `pip install -r requirements.txt`:
 ```bash
 ./ratsinfos_upd_fs.sh                                # Scrapen + Push (empfohlen)
 # oder einzeln:
-python3 app.py --no-browser && git add termine_*.html index.html && git commit -m "Termine aktualisiert" && git push
+python3 app.py --no-browser && git add termine_*.html index.html feed.xml && git commit -m "Termine aktualisiert" && git push
 ```
 
 ```bash

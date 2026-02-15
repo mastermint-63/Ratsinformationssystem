@@ -15,6 +15,9 @@ import calendar
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+from email.utils import format_datetime
+from zoneinfo import ZoneInfo
+
 from config import STAEDTE, SystemTyp, Kreis, get_staedte_nach_typ
 from scraper import SessionNetScraper, RatsinfoScraper, AllrisScraper, Termin
 
@@ -215,6 +218,7 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ratstermine {monatsnamen[monat]} {jahr}</title>
+    <link rel="alternate" type="application/rss+xml" title="Ratstermine Münsterland" href="feed.xml">
     <style>
         :root {{
             --bg-color: #f5f5f7;
@@ -673,6 +677,53 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
     return html
 
 
+def generiere_rss(alle_termine: list[Termin], jahr: int, monat: int) -> str:
+    """Generiert einen RSS-Feed aus allen Terminen eines Monats."""
+    monatsnamen = [
+        '', 'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+        'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'
+    ]
+    tz = ZoneInfo("Europe/Berlin")
+    build_date = format_datetime(datetime.now(tz))
+
+    items = ""
+    for t in alle_termine:
+        datum_mit_tz = t.datum.replace(tzinfo=tz)
+        pub_date = format_datetime(datum_mit_tz)
+        gremium_clean = t.gremium.replace('[ABGESAGT]', '').strip()
+        abgesagt_prefix = "[ABGESAGT] " if '[ABGESAGT]' in t.gremium else ""
+        title = f"{abgesagt_prefix}{gremium_clean} – {t.stadt}"
+        beschreibung = f"{t.datum_formatiert()}, {t.uhrzeit} Uhr"
+        if t.ort:
+            beschreibung += f" | {t.ort}"
+        # XML-Escaping
+        for char, esc in [('&', '&amp;'), ('<', '&lt;'), ('>', '&gt;'), ('"', '&quot;')]:
+            title = title.replace(char, esc)
+            beschreibung = beschreibung.replace(char, esc)
+        link_esc = t.link.replace('&', '&amp;')
+
+        items += f"""    <item>
+      <title>{title}</title>
+      <link>{link_esc}</link>
+      <description>{beschreibung}</description>
+      <pubDate>{pub_date}</pubDate>
+      <guid isPermaLink="false">{t.stadt}-{t.datum.strftime('%Y%m%d')}-{t.uhrzeit}-{gremium_clean[:30].replace('&', '&amp;')}</guid>
+    </item>
+"""
+
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ratstermine Münsterland – {monatsnamen[monat]} {jahr}</title>
+    <link>https://ms-raete.reporter.ruhr/{dateiname_fuer_monat(jahr, monat)}</link>
+    <description>Sitzungstermine aus Ratsinformationssystemen im Münsterland</description>
+    <language>de-de</language>
+    <lastBuildDate>{build_date}</lastBuildDate>
+    <atom:link href="https://ms-raete.reporter.ruhr/feed.xml" rel="self" type="application/rss+xml"/>
+{items}  </channel>
+</rss>"""
+
+
 def berechne_monate(start_jahr: int, start_monat: int, anzahl: int) -> list[tuple[int, int]]:
     """Berechnet eine Liste von (jahr, monat) Tupeln."""
     monate = []
@@ -728,8 +779,14 @@ def main():
         with open(ausgabe_pfad, 'w', encoding='utf-8') as f:
             f.write(html)
 
+        # RSS-Feed für den aktuellen Monat generieren
         if idx == 0:
             erster_dateiname = ausgabe_pfad
+            rss = generiere_rss(termine, j, m)
+            rss_pfad = os.path.join(basis_pfad, 'feed.xml')
+            with open(rss_pfad, 'w', encoding='utf-8') as f:
+                f.write(rss)
+            print(f"  → RSS-Feed: feed.xml ({len(termine)} Einträge)")
 
     print("\n" + "=" * 50)
     print(f"Fertig! {anzahl_monate} Dateien generiert.")
