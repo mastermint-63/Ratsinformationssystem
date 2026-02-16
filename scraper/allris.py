@@ -1,10 +1,13 @@
 """Scraper für ALLRIS net 4.x-Systeme (via Wicket-AJAX)."""
 
 import re
+import warnings
 import requests
 from datetime import datetime
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
 from .base import BaseScraper, Termin
+
+warnings.filterwarnings('ignore', category=XMLParsedAsHTMLWarning)
 
 
 class AllrisScraper(BaseScraper):
