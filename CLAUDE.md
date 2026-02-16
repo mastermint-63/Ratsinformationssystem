@@ -130,9 +130,10 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 | SessionNet (si0046) | 27 | HTML-Parsing mit BeautifulSoup (lxml) |
 | Ratsinfomanagement.net | 33 | iCal-Export parsen (Regex) |
 | ALLRIS net | 1 | Wicket-AJAX mit Session-Cookie + HTML-Parsing (LWL) |
-| Nicht unterstützt | 9 | ALLRIS: Ahlen · SD.NET RIM: Bocholt · more!rubin: Ochtrup, Rhede, Südlohn · Kein System: Ennigerloh, Oelde, Sendenhorst · Nicht erreichbar: Olfen |
+| Nicht unterstützt | 8 | ALLRIS: Ahlen · more!rubin: Ochtrup, Rhede, Südlohn · Kein System: Ennigerloh, Oelde, Sendenhorst · Nicht erreichbar: Olfen |
 
 ### Aktualisierungen
+*   **16. Feb 2026:** Bocholt (SD.NET RIM via iCal) integriert – iCal-URL `ratsinfo.bocholt.de/termine/ics/SD.NET_RIM.ics` funktioniert mit bestehendem `RatsinfoScraper`
 *   **15. Feb 2026:** LWL (ALLRIS net) integriert, Kreisverwaltungen und Stadt Münster ins "Münsterland"-Dropdown zusammengefasst
 *   **06. Feb 2026:** Kreis-basierte Filter-Dropdowns eingeführt (5 Dropdowns statt "Alle Städte"), kombiniertes Filtern möglich
 *   **03. Feb 2026:** Ahaus (SessionNet) wurde erfolgreich in die Konfiguration aufgenommen und wird nun gescrapt

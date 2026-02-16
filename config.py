@@ -74,7 +74,7 @@ STAEDTE = [
     Stadt("Wettringen", 8261, "https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0046.asp", SystemTyp.SESSIONNET, Kreis.STEINFURT),
     # Kreis Borken - Gemeinden
     Stadt("Ahaus", 40176, "https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp", SystemTyp.SESSIONNET, Kreis.BORKEN),
-    Stadt("Bocholt", 71074, "https://ratsinfo.bocholt.de/", SystemTyp.NICHT_UNTERSTUETZT, Kreis.BORKEN),
+    Stadt("Bocholt", 71074, "https://ratsinfo.bocholt.de/", SystemTyp.RATSINFO, Kreis.BORKEN),
     Stadt("Borken", 43035, "https://bi.borken.de/si0046.asp", SystemTyp.SESSIONNET, Kreis.BORKEN),
     Stadt("Gescher", 17433, "https://gescher.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.BORKEN),
     Stadt("Gronau", 49031, "https://gronau.ratsinfomanagement.net/termine", SystemTyp.RATSINFO, Kreis.BORKEN),
