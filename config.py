@@ -43,6 +43,7 @@ def erkenne_systemtyp(url: str) -> SystemTyp:
 STAEDTE = [
     # Münsterland (überregionale Einheiten)
     Stadt("Stadt Münster", 325000, "https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php", SystemTyp.SESSIONNET, Kreis.MUENSTER),
+    Stadt("Bezirksregierung Münster", 0, "https://www.regionalrat-muenster.nrw.de/", SystemTyp.RATSINFO, Kreis.MUENSTER),
     Stadt("LWL", 0, "https://allris.lwl.org/public/", SystemTyp.ALLRIS, Kreis.MUENSTER),
     Stadt("Kreis Steinfurt", 462800, "https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp", SystemTyp.SESSIONNET, Kreis.MUENSTER),
     Stadt("Kreis Borken", 380112, "https://secure.kreis-borken.de/BI/si0046.asp", SystemTyp.SESSIONNET, Kreis.MUENSTER),

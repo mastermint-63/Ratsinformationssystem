@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Projektbeschreibung
 
-Ratstermine-Dashboard für das Münsterland. Sammelt Sitzungstermine von 70 Gemeinden und dem LWL (61 mit Scraper-Unterstützung) und generiert verlinkte HTML-Dashboards mit Monatsnavigation.
+Ratstermine-Dashboard für das Münsterland. Sammelt Sitzungstermine von 72 Kommunen (70 Gemeinden, LWL, Bezirksregierung Münster) mit vollständiger Scraper-Unterstützung und generiert verlinkte HTML-Dashboards mit Monatsnavigation.
 
 ## Struktur
 
@@ -102,8 +102,8 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 - Herausforderung: Verschiedene HTML-Strukturen pro Stadt
 - Fallback: Link zur Monatsübersicht wenn kein Detail-Link gefunden
 
-**Ratsinfomanagement.net / SD.NET RIM via iCal** (34 Städte):
-- URL-Format: `https://stadt.ratsinfomanagement.net/termine/ics/SD.NET_RIM.ics` (oder eigene Domain wie `ratsinfo.bocholt.de`)
+**Ratsinfomanagement.net / SD.NET RIM via iCal** (35 Kommunen):
+- URL-Format: `https://stadt.ratsinfomanagement.net/termine/ics/SD.NET_RIM.ics` (oder eigene Domain wie `ratsinfo.bocholt.de`, `regionalrat-muenster.nrw.de`)
 - Methode: iCal-Parsing (VEVENT-Blöcke mit DTSTART, SUMMARY, LOCATION, URL/DESCRIPTION)
 - DTSTART ist UTC (Z-Suffix), wird als Lokalzeit interpretiert (1–2h Abweichung toleriert)
 
@@ -133,11 +133,12 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 | System | Anzahl | Methode |
 |--------|--------|---------|
 | SessionNet (si0046) | 31 | HTML-Parsing mit BeautifulSoup (lxml) |
-| Ratsinfomanagement.net / SD.NET RIM | 34 | iCal-Export parsen (Regex) |
+| Ratsinfomanagement.net / SD.NET RIM | 35 | iCal-Export parsen (Regex) |
 | ALLRIS net | 2 | Wicket-AJAX mit Session-Cookie + HTML-Parsing (LWL, Ahlen) |
 | more!rubin (gremien.info) | 4 | WebCalendar-API: `api.php?id=calendar&action=webcalendar` |
 
 ### Aktualisierungen
+*   **16. Feb 2026:** Bezirksregierung Münster (SD.NET RIM via iCal) integriert – Regionalrat-Termine über `regionalrat-muenster.nrw.de/termine/ics/SD.NET_RIM.ics`
 *   **16. Feb 2026:** Ahlen (ALLRIS/sitzung-online.de), Ennigerloh + Oelde (SessionNet/owl-it.de), Sendenhorst (gremien.info), Olfen (SessionNet/ratsinfo.olfen.de) integriert – alle Gemeinden nun vollständig abgedeckt
 *   **16. Feb 2026:** Rhede + Südlohn (more!rubin/gremien.info) integriert – `GremienInfoScraper` (Subklasse RatsinfoScraper), iCal via `api.php?id=calendar&action=webcalendar`
 *   **16. Feb 2026:** Bocholt (SD.NET RIM via iCal) integriert – iCal-URL `ratsinfo.bocholt.de/termine/ics/SD.NET_RIM.ics` funktioniert mit bestehendem `RatsinfoScraper`
