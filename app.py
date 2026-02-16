@@ -19,7 +19,7 @@ from email.utils import format_datetime
 from zoneinfo import ZoneInfo
 
 from config import STAEDTE, SystemTyp, Kreis, get_staedte_nach_typ
-from scraper import SessionNetScraper, RatsinfoScraper, AllrisScraper, Termin
+from scraper import SessionNetScraper, RatsinfoScraper, AllrisScraper, GremienInfoScraper, Termin
 
 
 def dateiname_fuer_monat(jahr: int, monat: int) -> str:
@@ -48,6 +48,10 @@ def hole_alle_termine(jahr: int, monat: int) -> tuple[list[Termin], list[str]]:
     # ALLRIS-Städte
     for stadt in get_staedte_nach_typ(SystemTyp.ALLRIS):
         scraper_aufgaben.append((AllrisScraper(stadt.name, stadt.url), jahr, monat))
+
+    # GremienInfo-Städte (more!rubin auf gremien.info)
+    for stadt in get_staedte_nach_typ(SystemTyp.GREMIENINFO):
+        scraper_aufgaben.append((GremienInfoScraper(stadt.name, stadt.url), jahr, monat))
 
     # Parallel abrufen
     with ThreadPoolExecutor(max_workers=10) as executor:

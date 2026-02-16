@@ -8,6 +8,7 @@ class SystemTyp(Enum):
     SESSIONNET = "sessionnet"
     RATSINFO = "ratsinfo"
     ALLRIS = "allris"
+    GREMIENINFO = "gremieninfo"
     NICHT_UNTERSTUETZT = "nicht_unterstuetzt"
 
 
@@ -84,10 +85,10 @@ STAEDTE = [
     Stadt("Legden", 7511, "https://legden.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.BORKEN),
     Stadt("Raesfeld", 11709, "https://raesfeld.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.BORKEN),
     Stadt("Reken", 15109, "https://reken.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.BORKEN),
-    Stadt("Rhede", 19674, "", SystemTyp.NICHT_UNTERSTUETZT, Kreis.BORKEN),
+    Stadt("Rhede", 19674, "https://rhede.gremien.info/", SystemTyp.GREMIENINFO, Kreis.BORKEN),
     Stadt("Schöppingen", 6623, "https://schoeppingen.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.BORKEN),
     Stadt("Stadtlohn", 20946, "https://stadtlohn.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.BORKEN),
-    Stadt("Südlohn", 9861, "", SystemTyp.NICHT_UNTERSTUETZT, Kreis.BORKEN),
+    Stadt("Südlohn", 9861, "https://suedlohn.gremien.info/", SystemTyp.GREMIENINFO, Kreis.BORKEN),
     Stadt("Velen", 12678, "https://velen.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.BORKEN),
     Stadt("Vreden", 22758, "https://vreden.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.BORKEN),
     # Kreis Coesfeld - Gemeinden
