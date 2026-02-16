@@ -131,9 +131,10 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 | Ratsinfomanagement.net | 33 | iCal-Export parsen (Regex) |
 | ALLRIS net | 1 | Wicket-AJAX mit Session-Cookie + HTML-Parsing (LWL) |
 | more!rubin (gremien.info) | 3 | WebCalendar-API: `api.php?id=calendar&action=webcalendar` |
-| Nicht unterstützt | 5 | ALLRIS: Ahlen · Kein System: Ennigerloh, Oelde, Sendenhorst · Nicht erreichbar: Olfen |
+| Nicht unterstützt | 0 | – alle Gemeinden integriert |
 
 ### Aktualisierungen
+*   **16. Feb 2026:** Ahlen (ALLRIS/sitzung-online.de), Ennigerloh + Oelde (SessionNet/owl-it.de), Sendenhorst (gremien.info), Olfen (SessionNet/ratsinfo.olfen.de) integriert – alle Gemeinden nun vollständig abgedeckt
 *   **16. Feb 2026:** Rhede + Südlohn (more!rubin/gremien.info) integriert – `GremienInfoScraper` (Subklasse RatsinfoScraper), iCal via `api.php?id=calendar&action=webcalendar`
 *   **16. Feb 2026:** Bocholt (SD.NET RIM via iCal) integriert – iCal-URL `ratsinfo.bocholt.de/termine/ics/SD.NET_RIM.ics` funktioniert mit bestehendem `RatsinfoScraper`
 *   **15. Feb 2026:** LWL (ALLRIS net) integriert, Kreisverwaltungen und Stadt Münster ins "Münsterland"-Dropdown zusammengefasst
