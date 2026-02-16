@@ -11,17 +11,17 @@ Ratstermine-Dashboard für das Münsterland. Sammelt Sitzungstermine von 70 Geme
 ```
 ├── app.py                    # Hauptanwendung - Scraper + HTML-Generator
 ├── config.py                 # Städte-Konfiguration (Name, URL, SystemTyp, Kreis)
-├── ratsinfos_upd_fs.sh                 # Wrapper für automatische Aktualisierung (mit terminal-notifier)
+├── ratsinfos_upd_fs.sh       # Wrapper für automatische Aktualisierung (mit terminal-notifier)
 ├── scraper/
-│   ├── __init__.py           # Exports: Termin, SessionNetScraper, RatsinfoScraper, AllrisScraper
+│   ├── __init__.py           # Exports: Termin, SessionNetScraper, RatsinfoScraper, AllrisScraper, GremienInfoScraper
 │   ├── base.py               # Termin-Dataclass und BaseScraper (ABC)
 │   ├── sessionnet.py         # SessionNet-Scraper (si0046.asp/php)
-│   ├── ratsinfo.py           # Ratsinfomanagement-Scraper (iCal)
-│   └── allris.py             # ALLRIS net-Scraper (Wicket-AJAX)
+│   ├── ratsinfo.py           # Ratsinfomanagement-Scraper (iCal/SD.NET RIM)
+│   ├── allris.py             # ALLRIS net-Scraper (Wicket-AJAX)
+│   └── gremieninfo.py        # more!rubin-Scraper (gremien.info WebCalendar-API)
 ├── feed.xml                  # RSS-Feed (aktueller Monat, automatisch generiert)
 ├── termine_YYYY_MM.html      # Generierte Dashboards (pro Monat)
-├── launchd.log               # Log der automatischen Aktualisierungen
-└── Kreise und Städte...html  # Original-Linkliste
+└── launchd.log               # Log der automatischen Aktualisierungen
 ```
 
 ## Ausführung
@@ -96,21 +96,26 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 
 ### Scraper-Typen
 
-**SessionNet** (27 Städte):
+**SessionNet** (31 Städte):
 - URL-Format: `https://example.com/si0046.asp?__cjahr=2026&__cmonat=1`
 - Parsing-Strategie: 3-stufig (Tabellen → zk-Struktur → Text-basiert)
 - Herausforderung: Verschiedene HTML-Strukturen pro Stadt
 - Fallback: Link zur Monatsübersicht wenn kein Detail-Link gefunden
 
-**Ratsinfomanagement.net** (33 Städte):
-- URL-Format: `https://stadt.ratsinfomanagement.net/termine/ics/SD.NET_RIM.ics`
-- Methode: iCal-Parsing (VEVENT-Blöcke mit DTSTART, SUMMARY, LOCATION, URL)
-- Vorteil: Strukturierte Daten, alle Termine auf einmal
+**Ratsinfomanagement.net / SD.NET RIM via iCal** (34 Städte):
+- URL-Format: `https://stadt.ratsinfomanagement.net/termine/ics/SD.NET_RIM.ics` (oder eigene Domain wie `ratsinfo.bocholt.de`)
+- Methode: iCal-Parsing (VEVENT-Blöcke mit DTSTART, SUMMARY, LOCATION, URL/DESCRIPTION)
+- DTSTART ist UTC (Z-Suffix), wird als Lokalzeit interpretiert (1–2h Abweichung toleriert)
 
-**ALLRIS net** (1 – LWL):
-- URL: `https://allris.lwl.org/public/si010`
+**ALLRIS net** (2 – LWL + Ahlen):
+- URLs: `https://allris.lwl.org/public/` und `https://www.ahlen.sitzung-online.de/public/`
 - Methode: Wicket-AJAX (Session starten → Timer-AJAX → Monat/Jahr navigieren → HTML-Tabelle parsen)
 - Besonderheit: Kalender lädt per AJAX nach, benötigt Session-Cookie (JSESSIONID)
+
+**more!rubin / gremien.info** (4 – Rhede, Südlohn, Ochtrup, Sendenhorst):
+- URL-Format: `https://stadtname.gremien.info/api.php?id=calendar&action=webcalendar`
+- Methode: `GremienInfoScraper` ist eine Subklasse von `RatsinfoScraper` – identisches iCal-Parsing, nur andere URL-Konstruktion
+- Entdeckung: Subdomain `stadtname.gremien.info` prüfen; `api.php?id=system&action=index` liefert System-Info ohne Auth
 
 ### HTML-Dashboard-Features
 - Responsive Design (max-width: 900px)
@@ -127,11 +132,10 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 
 | System | Anzahl | Methode |
 |--------|--------|---------|
-| SessionNet (si0046) | 27 | HTML-Parsing mit BeautifulSoup (lxml) |
-| Ratsinfomanagement.net | 33 | iCal-Export parsen (Regex) |
-| ALLRIS net | 1 | Wicket-AJAX mit Session-Cookie + HTML-Parsing (LWL) |
-| more!rubin (gremien.info) | 3 | WebCalendar-API: `api.php?id=calendar&action=webcalendar` |
-| Nicht unterstützt | 0 | – alle Gemeinden integriert |
+| SessionNet (si0046) | 31 | HTML-Parsing mit BeautifulSoup (lxml) |
+| Ratsinfomanagement.net / SD.NET RIM | 34 | iCal-Export parsen (Regex) |
+| ALLRIS net | 2 | Wicket-AJAX mit Session-Cookie + HTML-Parsing (LWL, Ahlen) |
+| more!rubin (gremien.info) | 4 | WebCalendar-API: `api.php?id=calendar&action=webcalendar` |
 
 ### Aktualisierungen
 *   **16. Feb 2026:** Ahlen (ALLRIS/sitzung-online.de), Ennigerloh + Oelde (SessionNet/owl-it.de), Sendenhorst (gremien.info), Olfen (SessionNet/ratsinfo.olfen.de) integriert – alle Gemeinden nun vollständig abgedeckt
@@ -198,6 +202,18 @@ python3 app.py --no-browser && git add termine_*.html index.html feed.xml && git
 ```bash
 gh run list --workflow=deploy.yml          # Deployment-Status prüfen
 ```
+
+## Neues System identifizieren
+
+Wenn eine Stadt noch kein System hat oder als `NICHT_UNTERSTUETZT` gelistet ist:
+
+1. `stadtname.ratsinfomanagement.net` → Redirect zu `sitzungsdienst.net`? → Dann gremien.info testen: `stadtname.gremien.info/api.php?id=calendar&action=webcalendar`
+2. Gemeinde-Website → Seite "Ratsinformation" oder "Rat und Ausschüsse" → externen Link prüfen
+3. `sessionnet.owl-it.de/stadtname/bi/si0046.asp` direkt testen
+4. `stadtname.gremien.info`, `ratsinfo.stadtname.de` als URL-Muster ausprobieren
+5. Wenn `BEGIN:VCALENDAR` zurückkommt → iCal-kompatibel → `RatsinfoScraper` oder `GremienInfoScraper` nutzbar
+6. Wenn SessionNet-HTML zurückkommt → `SessionNetScraper` nutzbar
+7. Wenn Wicket-AJAX (`si010`-Pfad) → `AllrisScraper` nutzbar
 
 ## Bekannte Probleme
 
