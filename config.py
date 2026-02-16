@@ -65,7 +65,7 @@ STAEDTE = [
     Stadt("Mettingen", 12000, "https://mettingen.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.STEINFURT),
     Stadt("Neuenkirchen", 14072, "https://neuenkirchen.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.STEINFURT),
     Stadt("Nordwalde", 9807, "https://nordwalde.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.STEINFURT),
-    Stadt("Ochtrup", 19893, "", SystemTyp.NICHT_UNTERSTUETZT, Kreis.STEINFURT),
+    Stadt("Ochtrup", 19893, "https://ochtrup.gremien.info/", SystemTyp.GREMIENINFO, Kreis.STEINFURT),
     Stadt("Recke", 11370, "https://recke.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.STEINFURT),
     Stadt("Rheine", 76948, "https://www.rheine-buergerinfo.de/si0046.asp", SystemTyp.SESSIONNET, Kreis.STEINFURT),
     Stadt("Saerbeck", 7128, "https://saerbeck.ratsinfomanagement.net/", SystemTyp.RATSINFO, Kreis.STEINFURT),
