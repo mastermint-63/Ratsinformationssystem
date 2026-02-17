@@ -14,6 +14,7 @@ import webbrowser
 import calendar
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from urllib.parse import quote
 
 from email.utils import format_datetime
 from zoneinfo import ZoneInfo
@@ -154,12 +155,20 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
             abgesagt_class = ' abgesagt' if '[ABGESAGT]' in t.gremium else ''
             gremium_clean = t.gremium.replace('[ABGESAGT]', '').strip()
 
+            # KI-Analyse-Button nur bei Terminen mit Link
+            ki_button = ''
+            if t.link and t.link.strip():
+                # URL für KI-Tool (später: https://ki-ms.reporter.ruhr)
+                ki_url = f"https://pension-placing-landscapes-academics.trycloudflare.com/?url={quote(t.link)}"
+                ki_button = f'<a href="{ki_url}" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>'
+
             termine_html += f'''
                 <div class="termin{abgesagt_class}" data-stadt="{t.stadt}">
                     <div class="termin-zeit">{t.uhrzeit}</div>
                     <div class="termin-info">
                         <div class="termin-gremium">
                             <a href="{t.link}" target="_blank">{gremium_clean}</a>
+                            {ki_button}
                         </div>
                         <div class="termin-stadt">{t.stadt}</div>
                         {f'<div class="termin-ort">{t.ort}</div>' if t.ort else ''}
@@ -483,6 +492,21 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
         .termin-gremium a:hover {{
             color: var(--accent-color);
             text-decoration: underline;
+        }}
+
+        .ki-btn {{
+            margin-left: 8px;
+            text-decoration: none;
+            font-size: 0.9em;
+            opacity: 0.6;
+            transition: opacity 0.2s, transform 0.2s;
+            display: inline-block;
+        }}
+
+        .ki-btn:hover {{
+            opacity: 1;
+            transform: scale(1.2);
+            text-decoration: none;
         }}
 
         .termin-stadt {{
