@@ -159,7 +159,7 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
             ki_button = ''
             if t.link and t.link.strip():
                 # URL für KI-Tool (später: https://ki-ms.reporter.ruhr)
-                ki_url = f"https://pension-placing-landscapes-academics.trycloudflare.com/?url={quote(t.link)}"
+                ki_url = f"https://claimed-affair-contributing-partnerships.trycloudflare.com/?url={quote(t.link)}"
                 ki_button = f'<a href="{ki_url}" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>'
 
             termine_html += f'''
