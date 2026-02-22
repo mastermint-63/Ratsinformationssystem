@@ -820,6 +820,16 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
         );
         observer.observe(filterContainer);
 
+        // scroll-margin-top dynamisch setzen, damit Datumsgruppen nicht hinter dem Filter verschwinden
+        function updateScrollMargins() {{
+            const offset = filterContainer.offsetHeight + 12;
+            document.querySelectorAll('.datum-gruppe').forEach(el => {{
+                el.style.scrollMarginTop = offset + 'px';
+            }});
+        }}
+        updateScrollMargins();
+        window.addEventListener('resize', updateScrollMargins);
+
         // Zum heutigen oder nächsten Datum mit Terminen springen (nur wenn kein Anker in der URL)
         if (!window.location.hash) {{
             const heute = new Date();
