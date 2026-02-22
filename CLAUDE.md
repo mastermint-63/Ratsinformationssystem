@@ -4,25 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Projektbeschreibung
 
-**Politikradar Münsterland** – Dashboard für Ratstermine im Münsterland. Sammelt Sitzungstermine von 72 Kommunen (70 Gemeinden, LWL, Bezirksregierung Münster) mit vollständiger Scraper-Unterstützung und generiert verlinkte HTML-Dashboards mit Monatsnavigation.
+**Politikradar Münsterland** – Dashboard für Ratstermine im Münsterland. Sammelt Sitzungstermine von 72 Kommunen (70 Gemeinden, LWL, Bezirksregierung Münster) und generiert verlinkte HTML-Dashboards mit Monatsnavigation.
 
-## Struktur
-
-```
-├── app.py                    # Hauptanwendung - Scraper + HTML-Generator
-├── config.py                 # Städte-Konfiguration (Name, URL, SystemTyp, Kreis)
-├── ratsinfos_upd_fs.sh       # Wrapper für automatische Aktualisierung (mit terminal-notifier)
-├── scraper/
-│   ├── __init__.py           # Exports: Termin, SessionNetScraper, RatsinfoScraper, AllrisScraper, GremienInfoScraper
-│   ├── base.py               # Termin-Dataclass und BaseScraper (ABC)
-│   ├── sessionnet.py         # SessionNet-Scraper (si0046.asp/php)
-│   ├── ratsinfo.py           # Ratsinfomanagement-Scraper (iCal/SD.NET RIM)
-│   ├── allris.py             # ALLRIS net-Scraper (Wicket-AJAX)
-│   └── gremieninfo.py        # more!rubin-Scraper (gremien.info WebCalendar-API)
-├── feed.xml                  # RSS-Feed (aktueller Monat, automatisch generiert)
-├── termine_YYYY_MM.html      # Generierte Dashboards (pro Monat)
-└── launchd.log               # Log der automatischen Aktualisierungen
-```
+- **Repo:** `github.com/mastermint-63/Ratsinformationssystem`
+- **Live:** `https://ms-raete.reporter.ruhr`
+- **Schwester-Projekt:** `../ratsinfo_el/` (Politikradar Emscher-Lippe) – gleiche Codebasis, eigene config.py
+- **Container:** Dieses Repo liegt in `/Users/fs/claude/ratsinfo/ratsinfo_ms/` – das Elternverzeichnis ist kein Git-Repo
 
 ## Ausführung
 
@@ -30,305 +17,99 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 python3 app.py                    # 3 Monate ab heute, öffnet Browser
 python3 app.py 2026 2             # 3 Monate ab Feb 2026
 python3 app.py 2026 1 12          # 12 Monate (ganzes Jahr)
-python3 app.py --no-browser       # Ohne Browser öffnen (für Cronjobs)
+python3 app.py --no-browser       # Ohne Browser (für Cronjobs)
 
-./ratsinfos_upd_fs.sh                       # Manuell aktualisieren (mit Benachrichtigung)
+./ratsinfos_upd_fs.sh             # Manuell aktualisieren (Scraping + Push + Benachrichtigung)
 tail -20 launchd.log              # Letzte Aktualisierungen anzeigen
 ```
 
 ## Automatische Aktualisierung
 
-Vollautomatischer Workflow via macOS launchd:
-
-```
-06:00 Uhr (oder Mac wacht auf)
-        │
-        ▼
-┌─ ratsinfos_upd_fs.sh ─────────────────────────────┐
-│  1. Scraping: Alle Kommunen abfragen    │
-│  2. HTML-Dateien generieren             │
-│  3. git add/commit/push (bei Änderung)  │
-│  4. macOS Benachrichtigung anzeigen     │
-└─────────────────────────────────────────┘
-        │
-        ▼
-GitHub Actions deployed automatisch
-        │
-        ▼
-https://ms-raete.reporter.ruhr ist aktuell
-```
-
-**Warum lokal?** Ratsinfomanagement.net blockiert Cloud-IPs (GitHub Actions bekommt 503-Fehler). Dein Mac hat eine normale IP und wird nicht blockiert.
-
-**Voraussetzung:** Mac muss um 6:00 Uhr an oder im Ruhezustand sein (nicht ausgeschaltet).
-
-### Konfiguration
-
-- Plist: `~/Library/LaunchAgents/de.ratstermine.update.plist`
-- Log: `launchd.log`
-- Benachrichtigung: Klickbar via `terminal-notifier` (öffnet Terminal mit Log)
+- **launchd-Job:** `de.ratstermine.update` – täglich 06:00 Uhr
+- **Plist:** `~/Library/LaunchAgents/de.ratstermine.update.plist`
+- **Python:** `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3`
+- **terminal-notifier:** `/opt/homebrew/bin/terminal-notifier`
+- **Warum lokal?** Ratsinfomanagement.net blockiert Cloud-IPs (503-Fehler bei GitHub Actions)
 
 ```bash
 launchctl list | grep ratstermine          # Status prüfen
 launchctl start de.ratstermine.update      # Manuell auslösen
-./ratsinfos_upd_fs.sh                                 # Direkt ausführen (mit Push)
+gh run list --workflow=deploy.yml          # Deployment-Status prüfen
 ```
-
-**Wichtig:** `ratsinfos_upd_fs.sh` verwendet hardcodierte Pfade:
-- Python: `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3`
-- terminal-notifier: `/opt/homebrew/bin/terminal-notifier`
-
-Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werden.
 
 ## Architektur
 
 ### Datenfluss
-1. `app.py:hole_alle_termine()` erstellt Scraper-Instanzen basierend auf `config.py:STAEDTE`
-2. Scraper werden parallel ausgeführt (ThreadPoolExecutor, 10 Workers)
-3. Jeder Scraper erbt von `BaseScraper` und implementiert `hole_termine(jahr, monat)`
-4. Rückgabe: Liste von `Termin`-Dataclass-Objekten
-5. `app.py:generiere_kalender()` erzeugt Monatskalender-Tabelle mit Anker-Links
-6. `app.py:generiere_html()` gruppiert Termine nach Datum (`id="datum-YYYY-MM-DD"`) und generiert HTML mit:
-   - Apple-Design mit Dark Mode Support
-   - Kalenderblatt mit klickbaren Tagen und Rücksprunglinks
-   - Stadt-Filter (JavaScript)
-   - Monatsnavigation (nur verfügbare Monate verlinkt)
+1. `app.py:hole_alle_termine()` erstellt Scraper-Instanzen aus `config.py:STAEDTE`, führt sie parallel aus (ThreadPoolExecutor, 10 Workers)
+2. Jeder Scraper erbt von `BaseScraper` und implementiert `hole_termine(jahr, monat)` → gibt `Termin`-Dataclass-Objekte zurück
+3. `app.py:generiere_kalender()` erzeugt Monatskalender-Tabelle mit Anker-Links
+4. `app.py:generiere_html()` gruppiert Termine nach Datum (`id="datum-YYYY-MM-DD"`) und generiert vollständiges HTML inkl. CSS + JS
 
 ### Scraper-Typen
 
-**SessionNet** (31 Städte):
-- URL-Format: `https://example.com/si0046.asp?__cjahr=2026&__cmonat=1`
-- Parsing-Strategie: 3-stufig (Tabellen → zk-Struktur → Text-basiert)
-- Herausforderung: Verschiedene HTML-Strukturen pro Stadt
-- Fallback: Link zur Monatsübersicht wenn kein Detail-Link gefunden
+| System | Anzahl | Klasse | Methode |
+|--------|--------|--------|---------|
+| SessionNet (si0046) | 31 | `SessionNetScraper` | HTML-Parsing, 3-stufig: Tabellen → zk-Struktur → Text |
+| Ratsinfomanagement / SD.NET RIM | 35 | `RatsinfoScraper` | iCal-Export (`/termine/ics/SD.NET_RIM.ics`), Regex-Parsing |
+| ALLRIS net | 2 (LWL, Ahlen) | `AllrisScraper` | Wicket-AJAX, Session-Cookie (JSESSIONID) nötig |
+| more!rubin (gremien.info) | 4 (Rhede, Südlohn, Ochtrup, Sendenhorst) | `GremienInfoScraper` | iCal via `api.php?id=calendar&action=webcalendar` |
 
-**Ratsinfomanagement.net / SD.NET RIM via iCal** (35 Kommunen):
-- URL-Format: `https://stadt.ratsinfomanagement.net/termine/ics/SD.NET_RIM.ics` (oder eigene Domain wie `ratsinfo.bocholt.de`, `regionalrat-muenster.nrw.de`)
-- Methode: iCal-Parsing (VEVENT-Blöcke mit DTSTART, SUMMARY, LOCATION, URL/DESCRIPTION)
-- DTSTART ist UTC (Z-Suffix), wird als Lokalzeit interpretiert (1–2h Abweichung toleriert)
+`GremienInfoScraper` ist eine Subklasse von `RatsinfoScraper` – identisches iCal-Parsing, andere URL-Konstruktion.
 
-**ALLRIS net** (2 – LWL + Ahlen):
-- URLs: `https://allris.lwl.org/public/` und `https://www.ahlen.sitzung-online.de/public/`
-- Methode: Wicket-AJAX (Session starten → Timer-AJAX → Monat/Jahr navigieren → HTML-Tabelle parsen)
-- Besonderheit: Kalender lädt per AJAX nach, benötigt Session-Cookie (JSESSIONID)
+ALLRIS-URLs brauchen `/public/`-Suffix: `https://allris.lwl.org/public/` → `base_url/si010` ist der Wicket-Endpunkt.
 
-**more!rubin / gremien.info** (4 – Rhede, Südlohn, Ochtrup, Sendenhorst):
-- URL-Format: `https://stadtname.gremien.info/api.php?id=calendar&action=webcalendar`
-- Methode: `GremienInfoScraper` ist eine Subklasse von `RatsinfoScraper` – identisches iCal-Parsing, nur andere URL-Konstruktion
-- Entdeckung: Subdomain `stadtname.gremien.info` prüfen; `api.php?id=system&action=index` liefert System-Info ohne Auth
+### HTML-Dashboard
 
-### HTML-Dashboard-Features
-- Responsive Design (max-width: 900px)
-- Kalenderblatt (Mo–So) oberhalb der Termine (`id="kalender"`), Tage mit Sitzungen als blaue Kreise anklickbar, springt per Anker (`#datum-YYYY-MM-DD`) zum jeweiligen Datum; jede Datumsgruppe hat einen „↑ Kalender"-Rücksprunglink
-- Kreis-basierte Filter: 5 Dropdowns (Münsterland, Steinfurt, Borken, Coesfeld, Warendorf)
-- Kombiniertes Filtern: Mehrere Kommunen gleichzeitig auswählbar
-- Aktive Filter als Tags mit Entfernen-Button, "Alle zurücksetzen"-Button
-- Abgesagte Termine: Durchgestrichen, 50% Opacity
-- Automatische Link-Konvertierung (relativ → absolut)
-- RSS-Feed (`feed.xml`) für den aktuellen Monat, auto-discoverable via `<link rel="alternate">`
-- Generierungs-Timestamp im Footer
-- **Sticky Filterleiste**: `position: sticky; top: 0`, Glaseffekt via `backdrop-filter: blur(12px)`, 50% transparent (Light: `rgba(255,255,255,0.5)`, Dark: `rgba(45,45,47,0.5)`), `is-sticky`-Klasse via IntersectionObserver für Box-Shadow
-- **Auto-Scroll**: Beim Laden springt die Seite zum nächsten Datum ≥ heute mit Terminen; Scroll-Offset via `window.scrollTo()` + `getBoundingClientRect()` – kein `scrollIntoView`, da `scroll-margin-top` per JS unzuverlässig
+Das gesamte HTML-Template in `app.py:generiere_html()` ist ein einziger f-string:
+- CSS und JavaScript müssen geschweifte Klammern **verdoppeln**: `{{` und `}}` statt `{` und `}`
+- Bereits generierte `termine_*.html` werden bei app.py-Änderungen **nicht** automatisch neu generiert → neuen Scraper-Lauf starten
 
-## Unterstützte Systeme
+**Features:**
+- Apple-Design, Dark Mode via `prefers-color-scheme`, max-width 900px
+- Kalenderblatt (Mo–So) mit klickbaren Tagen (`#datum-YYYY-MM-DD`), Rücksprunglinks
+- 5 Kreis-Dropdowns, kombiniertes Filtern, aktive Filter als Tags
+- Sticky Filterleiste: `position:sticky; top:0`, Glaseffekt via `backdrop-filter:blur(12px)`, `rgba(255,255,255,0.5)` / `rgba(45,45,47,0.5)`, `is-sticky`-Klasse via IntersectionObserver
+- Auto-Scroll: `window.scrollTo()` + `getBoundingClientRect()` zum nächsten Datum ≥ heute (kein `scrollIntoView` – `scroll-margin-top` per JS unzuverlässig)
 
-| System | Anzahl | Methode |
-|--------|--------|---------|
-| SessionNet (si0046) | 31 | HTML-Parsing mit BeautifulSoup (lxml) |
-| Ratsinfomanagement.net / SD.NET RIM | 35 | iCal-Export parsen (Regex) |
-| ALLRIS net | 2 | Wicket-AJAX mit Session-Cookie + HTML-Parsing (LWL, Ahlen) |
-| more!rubin (gremien.info) | 4 | WebCalendar-API: `api.php?id=calendar&action=webcalendar` |
+## Scraper testen
 
-### Aktualisierungen
-*   **16. Feb 2026:** Bezirksregierung Münster (SD.NET RIM via iCal) integriert – Regionalrat-Termine über `regionalrat-muenster.nrw.de/termine/ics/SD.NET_RIM.ics`
-*   **16. Feb 2026:** Ahlen (ALLRIS/sitzung-online.de), Ennigerloh + Oelde (SessionNet/owl-it.de), Sendenhorst (gremien.info), Olfen (SessionNet/ratsinfo.olfen.de) integriert – alle Gemeinden nun vollständig abgedeckt
-*   **16. Feb 2026:** Rhede + Südlohn (more!rubin/gremien.info) integriert – `GremienInfoScraper` (Subklasse RatsinfoScraper), iCal via `api.php?id=calendar&action=webcalendar`
-*   **16. Feb 2026:** Bocholt (SD.NET RIM via iCal) integriert – iCal-URL `ratsinfo.bocholt.de/termine/ics/SD.NET_RIM.ics` funktioniert mit bestehendem `RatsinfoScraper`
-*   **15. Feb 2026:** LWL (ALLRIS net) integriert, Kreisverwaltungen und Stadt Münster ins "Münsterland"-Dropdown zusammengefasst
-*   **06. Feb 2026:** Kreis-basierte Filter-Dropdowns eingeführt (5 Dropdowns statt "Alle Städte"), kombiniertes Filtern möglich
-*   **22. Feb 2026:** Umbenennung zu "Politikradar Münsterland"; Sticky Filterleiste mit Glaseffekt; Auto-Scroll zum nächsten Termin ab heute
-*   **03. Feb 2026:** Ahaus (SessionNet) wurde erfolgreich in die Konfiguration aufgenommen und wird nun gescrapt
-
-## Neuen Scraper hinzufügen
-
-1. **SystemTyp definieren** in `config.py`:
-   ```python
-   class SystemTyp(Enum):
-       NEUES_SYSTEM = "neues_system"
-   ```
-
-2. **Stadt(e) zur STAEDTE-Liste** hinzufügen mit SystemTyp und Kreis (z.B. `Kreis.STEINFURT`)
-
-3. **Scraper-Klasse erstellen** in `scraper/neues_system.py`:
-   ```python
-   from .base import BaseScraper, Termin
-
-   class NeuesScraper(BaseScraper):
-       def hole_termine(self, jahr: int, monat: int) -> list[Termin]:
-           # Termine abrufen und als Termin-Objekte zurückgeben
-           pass
-   ```
-
-4. **Export** in `scraper/__init__.py`:
-   ```python
-   from .neues_system import NeuesScraper
-   __all__ = [..., 'NeuesScraper']
-   ```
-
-5. **Integration** in `app.py:hole_alle_termine()`:
-   ```python
-   for stadt in get_staedte_nach_typ(SystemTyp.NEUES_SYSTEM):
-       scraper_aufgaben.append((NeuesScraper(stadt.name, stadt.url), jahr, monat))
-   ```
-
-## Dependencies
-
-Installieren mit `pip install -r requirements.txt`:
-- `requests` - HTTP-Requests (Timeout: SessionNet 15s, Ratsinfo 30s, ALLRIS 15s)
-- `beautifulsoup4` + `lxml` - HTML-Parsing (SessionNet, ALLRIS)
-- Keine `icalendar`-Library - Ratsinfo-Scraper verwendet Regex-basiertes Parsing
-
-## Debugging und Testing
-
-**Einzelnen Scraper testen:**
 ```python
-from config import STAEDTE, SystemTyp
+from config import STAEDTE
 from scraper import RatsinfoScraper, SessionNetScraper, AllrisScraper, GremienInfoScraper
 
-# Beispiel: Bezirksregierung Münster testen
 stadt = next(s for s in STAEDTE if 'Bezirksregierung' in s.name)
 scraper = RatsinfoScraper(stadt.name, stadt.url)
-termine = scraper.hole_termine(2026, 3)  # März 2026
-for t in termine:
-    print(f"{t.datum.strftime('%d.%m.%Y')} {t.uhrzeit} - {t.gremium}")
+for t in scraper.hole_termine(2026, 3):
+    print(f"{t.datum.strftime('%d.%m.%Y')} {t.uhrzeit} – {t.gremium}")
 ```
 
-**Fehlerbehandlung:**
-- Bei Scraping-Fehlern (Timeout, Netzwerkfehler) läuft das Programm weiter
-- Fehlerhafte Städte werden gesammelt und am Ende als Liste ausgegeben
-- ThreadPoolExecutor mit 10 parallelen Workers (anpassbar in `app.py:hole_alle_termine()`)
-
-## GitHub Pages Deployment
-
-- **URL:** `https://ms-raete.reporter.ruhr/` (Custom Domain)
-- **Repo:** `github.com/mastermint-63/Ratsinformationssystem` (öffentlich)
-- **Workflow:** `.github/workflows/deploy.yml` – deployed automatisch bei Push von HTML-Dateien
-
-**Automatisch:** `ratsinfos_upd_fs.sh` (via launchd) scrapt täglich und pusht zu GitHub.
-
-**Manuell:** Falls nötig, kann manuell aktualisiert werden:
-```bash
-./ratsinfos_upd_fs.sh                                # Scrapen + Push (empfohlen)
-# oder einzeln:
-python3 app.py --no-browser && git add termine_*.html index.html feed.xml && git commit -m "Termine aktualisiert" && git push
-```
-
-```bash
-gh run list --workflow=deploy.yml          # Deployment-Status prüfen
-```
+Fehlerhafte Städte werden gesammelt und am Ende als `FEHLER:`-Zeile ausgegeben – der Lauf läuft weiter.
 
 ## Neues System identifizieren
 
-Wenn eine Stadt noch kein System hat oder als `NICHT_UNTERSTUETZT` gelistet ist:
+1. `stadtname.ratsinfomanagement.net` → iCal? → `RatsinfoScraper`; Redirect zu `sitzungsdienst.net`? → gremien.info testen
+2. `sessionnet.owl-it.de/stadtname/bi/si0046.asp` → `SessionNetScraper`
+3. `stadtname.gremien.info/api.php?id=calendar&action=webcalendar` → `GremienInfoScraper`
+4. `/public/` mit Wicket-AJAX (`si010`) → `AllrisScraper`
+5. `api.php?id=system&action=index` liefert System-Info ohne Auth (more!rubin-Erkennung)
 
-1. `stadtname.ratsinfomanagement.net` → Redirect zu `sitzungsdienst.net`? → Dann gremien.info testen: `stadtname.gremien.info/api.php?id=calendar&action=webcalendar`
-2. Gemeinde-Website → Seite "Ratsinformation" oder "Rat und Ausschüsse" → externen Link prüfen
-3. `sessionnet.owl-it.de/stadtname/bi/si0046.asp` direkt testen
-4. `stadtname.gremien.info`, `ratsinfo.stadtname.de` als URL-Muster ausprobieren
-5. Wenn `BEGIN:VCALENDAR` zurückkommt → iCal-kompatibel → `RatsinfoScraper` oder `GremienInfoScraper` nutzbar
-6. Wenn SessionNet-HTML zurückkommt → `SessionNetScraper` nutzbar
-7. Wenn Wicket-AJAX (`si010`-Pfad) → `AllrisScraper` nutzbar
+## Neuen Scraper hinzufügen
 
-## Wichtige Architektur-Hinweise
+1. `config.py`: `SystemTyp`-Enum erweitern, Stadt zur `STAEDTE`-Liste hinzufügen
+2. `scraper/neues_system.py`: Klasse mit `hole_termine(jahr, monat) → list[Termin]`
+3. `scraper/__init__.py`: Export ergänzen
+4. `app.py:hole_alle_termine()`: Schleife für neuen Typ ergänzen
 
-### HTML/CSS/JS ist in Python f-strings eingebettet
-Das gesamte HTML-Template in `app.py:generiere_html()` ist ein einziger f-string. Das hat zwei Konsequenzen:
-- CSS und JavaScript müssen geschweifte Klammern **verdoppeln**: `{{` und `}}` statt `{` und `}` (sonst interpretiert Python sie als f-string-Ausdrücke)
-- Python-Variablen werden mit einfachen `{variable}` eingesetzt
+## Dependencies
 
-### Bereits generierte HTML-Dateien separat aktualisieren
-Bei UI-Änderungen (CSS, JS, HTML-Struktur) in `app.py` werden die bereits vorhandenen `termine_*.html`-Dateien **nicht automatisch** neu generiert. Sie müssen entweder:
-- Manuell via Python-Skript mit `str.replace()` aktualisiert werden, oder
-- Durch einen neuen Scraper-Lauf (`python3 app.py --no-browser`) komplett neu erzeugt werden
+```bash
+pip install -r requirements.txt   # requests, beautifulsoup4, lxml
+```
+
+Keine `icalendar`-Library – iCal wird per Regex geparst.
 
 ## Bekannte Probleme
 
-- **Ratsinfomanagement.net blockiert Cloud-IPs** - GitHub Actions, AWS etc. bekommen 503-Fehler → Termine müssen lokal generiert werden
-- DNS-Fehler bei Netzwerkproblemen führen zu 0 Terminen für betroffene Städte
-- SessionNet HTML-Struktur variiert stark → Multi-Strategie-Parsing nötig
-- Relative Links manchmal schwer zu erkennen → Heuristiken in Scrapern
-
-## KI-Integration (Geplante Erweiterung)
-
-**Schwester-Projekt:** `/Users/fs/claude/ki-liest-ratsinfos/` (https://ki-ms.reporter.ruhr – in Entwicklung)
-
-### Idee
-
-Neben jedem Termin-Link im Dashboard erscheint ein **"🔍 KI-Analyse"-Button**, der die Sitzungsdokumente automatisch analysiert:
-
-```
-Termin-Link → Klick auf 🔍 → Weiterleitung zu ki-ms.reporter.ruhr → KI liest PDFs → Zusammenfassung mit Relevanz-Bewertung
-```
-
-### Workflow
-
-1. **Nutzer sieht Termin** auf ms-raete.reporter.ruhr
-2. **Klickt auf 🔍-Icon** neben dem Termin
-3. **Wird weitergeleitet** zu `https://ki-ms.reporter.ruhr/?url=<encoded-url>`
-4. **KI-Analyse startet automatisch** (URL-Parameter wird erkannt)
-5. **Erhält strukturierte Zusammenfassung:**
-   - Gesamtüberblick der Sitzung
-   - Tagesordnungspunkte mit Kernfakten
-   - Journalistische Relevanz-Einschätzung (Hoch 🔴 / Mittel 🟡 / Routine ⚪)
-   - Recherche-Hinweise für Follow-ups
-
-### Technische Umsetzung
-
-**HTML-Erweiterung in `app.py:generiere_html()`:**
-```python
-# Für jeden Termin mit Link zu Dokumenten
-termin_url = termin.link  # z.B. greven.ratsinfomanagement.net/tops/?__=...
-ki_url = f"https://ki-ms.reporter.ruhr/?url={quote(termin_url)}"
-
-html += f'''
-<a href="{termin.link}" class="termin-link">{termin.gremium}</a>
-<a href="{ki_url}"
-   class="ki-analyse-btn"
-   title="Dokumente mit KI analysieren"
-   target="_blank">🔍</a>
-'''
-```
-
-**CSS-Styling:**
-```css
-.ki-analyse-btn {
-    margin-left: 8px;
-    text-decoration: none;
-    font-size: 0.9em;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-}
-.ki-analyse-btn:hover {
-    opacity: 1;
-}
-```
-
-### Vorteile
-
-- **Kein Copy&Paste:** Ein Klick statt manuelles Kopieren der URL
-- **Selektiv:** Button erscheint nur bei Terminen mit Dokumenten-Links
-- **Kontext-erhaltend:** Termin-Metadaten (Stadt, Gremium, Datum) werden mit übergeben
-- **Cache-freundlich:** Bereits analysierte Sitzungen laden sofort aus SQLite-Cache
-
-### Umsetzungs-Zeitpunkt
-
-- **Phase 3+** des KI-Projekts (wenn beide Tools stabil laufen)
-- Erst KI-Analyse-Tool perfektionieren, dann Dashboard erweitern
-- Minimal-Änderung im HTML-Generator: ca. 20 Zeilen Code
-
-### Alternative: Browser-Extension
-
-Falls direkte HTML-Integration nicht gewünscht:
-- Bookmarklet oder Browser-Extension
-- Erkennt Ratsinformations-URLs automatisch
-- Zeigt Analyse-Button nur auf erkannten RIS-Seiten
+- Ratsinfomanagement.net blockiert Cloud-IPs → Scraping muss lokal laufen
+- SessionNet HTML-Struktur variiert stark → 3-stufiges Parsing nötig
+- DTSTART in iCal ist UTC (Z-Suffix), wird als Lokalzeit interpretiert (1–2h Abweichung toleriert)
