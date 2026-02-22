@@ -4502,29 +4502,21 @@
         );
         observer.observe(filterContainer);
 
-        // scroll-margin-top setzen + Auto-Scroll nach vollständigem Laden
-        function updateScrollMargins() {
-            const offset = filterContainer.offsetHeight + 12;
-            document.querySelectorAll('.datum-gruppe').forEach(el => {
-                el.style.scrollMarginTop = offset + 'px';
-            });
-        }
-        window.addEventListener('resize', updateScrollMargins);
-
-        window.addEventListener('load', function() {
-            updateScrollMargins();
-            if (!window.location.hash) {
-                const heute = new Date();
-                heute.setHours(0, 0, 0, 0);
-                const gruppen = Array.from(document.querySelectorAll('.datum-gruppe'))
-                    .map(el => ({ el, datum: new Date(el.id.replace('datum-', '')) }))
-                    .filter(x => x.datum >= heute)
-                    .sort((a, b) => a.datum - b.datum);
-                if (gruppen.length > 0) {
-                    gruppen[0].el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+        // Zum heutigen oder nächsten Datum mit Terminen springen (nur wenn kein Anker in der URL)
+        if (!window.location.hash) {
+            const heute = new Date();
+            heute.setHours(0, 0, 0, 0);
+            const gruppen = Array.from(document.querySelectorAll('.datum-gruppe'))
+                .map(el => ({ el, datum: new Date(el.id.replace('datum-', '')) }))
+                .filter(x => x.datum >= heute)
+                .sort((a, b) => a.datum - b.datum);
+            if (gruppen.length > 0) {
+                const ziel = gruppen[0].el;
+                const offset = filterContainer.offsetHeight + 12;
+                const top = ziel.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
             }
-        });
+        }
     </script>
 </body>
 </html>
