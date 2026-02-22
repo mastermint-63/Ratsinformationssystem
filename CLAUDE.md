@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Projektbeschreibung
 
-Ratstermine-Dashboard für das Münsterland. Sammelt Sitzungstermine von 72 Kommunen (70 Gemeinden, LWL, Bezirksregierung Münster) mit vollständiger Scraper-Unterstützung und generiert verlinkte HTML-Dashboards mit Monatsnavigation.
+**Politikradar Münsterland** – Dashboard für Ratstermine im Münsterland. Sammelt Sitzungstermine von 72 Kommunen (70 Gemeinden, LWL, Bezirksregierung Münster) mit vollständiger Scraper-Unterstützung und generiert verlinkte HTML-Dashboards mit Monatsnavigation.
 
 ## Struktur
 
@@ -127,6 +127,8 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 - Automatische Link-Konvertierung (relativ → absolut)
 - RSS-Feed (`feed.xml`) für den aktuellen Monat, auto-discoverable via `<link rel="alternate">`
 - Generierungs-Timestamp im Footer
+- **Sticky Filterleiste**: `position: sticky; top: 0`, Glaseffekt via `backdrop-filter: blur(12px)`, 50% transparent (Light: `rgba(255,255,255,0.5)`, Dark: `rgba(45,45,47,0.5)`), `is-sticky`-Klasse via IntersectionObserver für Box-Shadow
+- **Auto-Scroll**: Beim Laden springt die Seite zum nächsten Datum ≥ heute mit Terminen; Scroll-Offset via `window.scrollTo()` + `getBoundingClientRect()` – kein `scrollIntoView`, da `scroll-margin-top` per JS unzuverlässig
 
 ## Unterstützte Systeme
 
@@ -144,6 +146,7 @@ Bei Python-Updates oder auf anderen Systemen müssen diese Pfade angepasst werde
 *   **16. Feb 2026:** Bocholt (SD.NET RIM via iCal) integriert – iCal-URL `ratsinfo.bocholt.de/termine/ics/SD.NET_RIM.ics` funktioniert mit bestehendem `RatsinfoScraper`
 *   **15. Feb 2026:** LWL (ALLRIS net) integriert, Kreisverwaltungen und Stadt Münster ins "Münsterland"-Dropdown zusammengefasst
 *   **06. Feb 2026:** Kreis-basierte Filter-Dropdowns eingeführt (5 Dropdowns statt "Alle Städte"), kombiniertes Filtern möglich
+*   **22. Feb 2026:** Umbenennung zu "Politikradar Münsterland"; Sticky Filterleiste mit Glaseffekt; Auto-Scroll zum nächsten Termin ab heute
 *   **03. Feb 2026:** Ahaus (SessionNet) wurde erfolgreich in die Konfiguration aufgenommen und wird nun gescrapt
 
 ## Neuen Scraper hinzufügen
@@ -185,6 +188,26 @@ Installieren mit `pip install -r requirements.txt`:
 - `beautifulsoup4` + `lxml` - HTML-Parsing (SessionNet, ALLRIS)
 - Keine `icalendar`-Library - Ratsinfo-Scraper verwendet Regex-basiertes Parsing
 
+## Debugging und Testing
+
+**Einzelnen Scraper testen:**
+```python
+from config import STAEDTE, SystemTyp
+from scraper import RatsinfoScraper, SessionNetScraper, AllrisScraper, GremienInfoScraper
+
+# Beispiel: Bezirksregierung Münster testen
+stadt = next(s for s in STAEDTE if 'Bezirksregierung' in s.name)
+scraper = RatsinfoScraper(stadt.name, stadt.url)
+termine = scraper.hole_termine(2026, 3)  # März 2026
+for t in termine:
+    print(f"{t.datum.strftime('%d.%m.%Y')} {t.uhrzeit} - {t.gremium}")
+```
+
+**Fehlerbehandlung:**
+- Bei Scraping-Fehlern (Timeout, Netzwerkfehler) läuft das Programm weiter
+- Fehlerhafte Städte werden gesammelt und am Ende als Liste ausgegeben
+- ThreadPoolExecutor mit 10 parallelen Workers (anpassbar in `app.py:hole_alle_termine()`)
+
 ## GitHub Pages Deployment
 
 - **URL:** `https://ms-raete.reporter.ruhr/` (Custom Domain)
@@ -216,9 +239,96 @@ Wenn eine Stadt noch kein System hat oder als `NICHT_UNTERSTUETZT` gelistet ist:
 6. Wenn SessionNet-HTML zurückkommt → `SessionNetScraper` nutzbar
 7. Wenn Wicket-AJAX (`si010`-Pfad) → `AllrisScraper` nutzbar
 
+## Wichtige Architektur-Hinweise
+
+### HTML/CSS/JS ist in Python f-strings eingebettet
+Das gesamte HTML-Template in `app.py:generiere_html()` ist ein einziger f-string. Das hat zwei Konsequenzen:
+- CSS und JavaScript müssen geschweifte Klammern **verdoppeln**: `{{` und `}}` statt `{` und `}` (sonst interpretiert Python sie als f-string-Ausdrücke)
+- Python-Variablen werden mit einfachen `{variable}` eingesetzt
+
+### Bereits generierte HTML-Dateien separat aktualisieren
+Bei UI-Änderungen (CSS, JS, HTML-Struktur) in `app.py` werden die bereits vorhandenen `termine_*.html`-Dateien **nicht automatisch** neu generiert. Sie müssen entweder:
+- Manuell via Python-Skript mit `str.replace()` aktualisiert werden, oder
+- Durch einen neuen Scraper-Lauf (`python3 app.py --no-browser`) komplett neu erzeugt werden
+
 ## Bekannte Probleme
 
 - **Ratsinfomanagement.net blockiert Cloud-IPs** - GitHub Actions, AWS etc. bekommen 503-Fehler → Termine müssen lokal generiert werden
 - DNS-Fehler bei Netzwerkproblemen führen zu 0 Terminen für betroffene Städte
 - SessionNet HTML-Struktur variiert stark → Multi-Strategie-Parsing nötig
 - Relative Links manchmal schwer zu erkennen → Heuristiken in Scrapern
+
+## KI-Integration (Geplante Erweiterung)
+
+**Schwester-Projekt:** `/Users/fs/claude/ki-liest-ratsinfos/` (https://ki-ms.reporter.ruhr – in Entwicklung)
+
+### Idee
+
+Neben jedem Termin-Link im Dashboard erscheint ein **"🔍 KI-Analyse"-Button**, der die Sitzungsdokumente automatisch analysiert:
+
+```
+Termin-Link → Klick auf 🔍 → Weiterleitung zu ki-ms.reporter.ruhr → KI liest PDFs → Zusammenfassung mit Relevanz-Bewertung
+```
+
+### Workflow
+
+1. **Nutzer sieht Termin** auf ms-raete.reporter.ruhr
+2. **Klickt auf 🔍-Icon** neben dem Termin
+3. **Wird weitergeleitet** zu `https://ki-ms.reporter.ruhr/?url=<encoded-url>`
+4. **KI-Analyse startet automatisch** (URL-Parameter wird erkannt)
+5. **Erhält strukturierte Zusammenfassung:**
+   - Gesamtüberblick der Sitzung
+   - Tagesordnungspunkte mit Kernfakten
+   - Journalistische Relevanz-Einschätzung (Hoch 🔴 / Mittel 🟡 / Routine ⚪)
+   - Recherche-Hinweise für Follow-ups
+
+### Technische Umsetzung
+
+**HTML-Erweiterung in `app.py:generiere_html()`:**
+```python
+# Für jeden Termin mit Link zu Dokumenten
+termin_url = termin.link  # z.B. greven.ratsinfomanagement.net/tops/?__=...
+ki_url = f"https://ki-ms.reporter.ruhr/?url={quote(termin_url)}"
+
+html += f'''
+<a href="{termin.link}" class="termin-link">{termin.gremium}</a>
+<a href="{ki_url}"
+   class="ki-analyse-btn"
+   title="Dokumente mit KI analysieren"
+   target="_blank">🔍</a>
+'''
+```
+
+**CSS-Styling:**
+```css
+.ki-analyse-btn {
+    margin-left: 8px;
+    text-decoration: none;
+    font-size: 0.9em;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.ki-analyse-btn:hover {
+    opacity: 1;
+}
+```
+
+### Vorteile
+
+- **Kein Copy&Paste:** Ein Klick statt manuelles Kopieren der URL
+- **Selektiv:** Button erscheint nur bei Terminen mit Dokumenten-Links
+- **Kontext-erhaltend:** Termin-Metadaten (Stadt, Gremium, Datum) werden mit übergeben
+- **Cache-freundlich:** Bereits analysierte Sitzungen laden sofort aus SQLite-Cache
+
+### Umsetzungs-Zeitpunkt
+
+- **Phase 3+** des KI-Projekts (wenn beide Tools stabil laufen)
+- Erst KI-Analyse-Tool perfektionieren, dann Dashboard erweitern
+- Minimal-Änderung im HTML-Generator: ca. 20 Zeilen Code
+
+### Alternative: Browser-Extension
+
+Falls direkte HTML-Integration nicht gewünscht:
+- Bookmarklet oder Browser-Extension
+- Erkennt Ratsinformations-URLs automatisch
+- Zeigt Analyse-Button nur auf erkannten RIS-Seiten
