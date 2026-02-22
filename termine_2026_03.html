@@ -4502,15 +4502,16 @@
         );
         observer.observe(filterContainer);
 
-        // Zum heutigen Datum springen (nur wenn kein Anker in der URL)
+        // Zum heutigen oder nächsten Datum mit Terminen springen (nur wenn kein Anker in der URL)
         if (!window.location.hash) {
             const heute = new Date();
-            const datumKey = heute.getFullYear() + '-' +
-                String(heute.getMonth() + 1).padStart(2, '0') + '-' +
-                String(heute.getDate()).padStart(2, '0');
-            const el = document.getElementById('datum-' + datumKey);
-            if (el) {
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            heute.setHours(0, 0, 0, 0);
+            const gruppen = Array.from(document.querySelectorAll('.datum-gruppe'))
+                .map(el => ({ el, datum: new Date(el.id.replace('datum-', '')) }))
+                .filter(x => x.datum >= heute)
+                .sort((a, b) => a.datum - b.datum);
+            if (gruppen.length > 0) {
+                gruppen[0].el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
     </script>
