@@ -158,8 +158,8 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
             # KI-Analyse-Button nur bei Terminen mit Link
             ki_button = ''
             if t.link and t.link.strip():
-                # URL für KI-Tool (später: https://ki-ms.reporter.ruhr)
-                ki_url = f"https://claimed-affair-contributing-partnerships.trycloudflare.com/?url={quote(t.link)}"
+                # URL für KI-Tool (lokal für Testing)
+                ki_url = f"http://localhost:8000/?url={quote(t.link)}"
                 ki_button = f'<a href="{ki_url}" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>'
 
             termine_html += f'''
@@ -231,7 +231,7 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ratstermine {monatsnamen[monat]} {jahr}</title>
-    <link rel="alternate" type="application/rss+xml" title="Ratstermine Münsterland" href="feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="Politikradar Münsterland" href="feed.xml">
     <style>
         :root {{
             --bg-color: #f5f5f7;
@@ -325,9 +325,26 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
             gap: 12px;
             margin-bottom: 20px;
             padding: 15px;
-            background: var(--card-bg);
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-radius: 10px;
             border: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: box-shadow 0.2s;
+        }}
+
+        @media (prefers-color-scheme: dark) {{
+            .filter-container {{
+                background: rgba(45, 45, 47, 0.5);
+            }}
+        }}
+
+        .filter-container.is-sticky {{
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            border-radius: 0 0 10px 10px;
         }}
 
         .filter-header {{
@@ -354,6 +371,37 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
 
         .filter-reset:hover {{
             text-decoration: underline;
+        }}
+
+        .filter-search {{
+            position: relative;
+            margin-bottom: 10px;
+        }}
+
+        .filter-search input {{
+            width: 100%;
+            padding: 10px 40px 10px 15px;
+            font-size: 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+        }}
+
+        .filter-search input:focus {{
+            outline: none;
+            border-color: var(--accent-color);
+        }}
+
+        .filter-search .search-icon {{
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            opacity: 0.5;
+            pointer-events: none;
         }}
 
         .filter-dropdowns {{
@@ -600,7 +648,7 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
 <body>
     <div class="container">
         <header>
-            <h1>Ratstermine Münsterland</h1>
+            <h1>Politikradar Münsterland</h1>
             <div class="nav">
                 <a href="{prev_link}" class="nav-btn{prev_class}">&larr; {monatsnamen[prev_monat]}</a>
                 <span class="monat-titel">{monatsnamen[monat]} {jahr}</span>
@@ -615,6 +663,17 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
                 <h3>Filter nach Kommune</h3>
                 <button class="filter-reset" onclick="resetFilter()">Alle zurücksetzen</button>
             </div>
+
+            <!-- Suchfeld -->
+            <div class="filter-search">
+                <input type="text"
+                       id="search-input"
+                       placeholder="Schnellsuche: Stadt eingeben (z.B. Greven, Münster...)"
+                       oninput="searchTermine()"
+                       autocomplete="off">
+                <span class="search-icon">🔍</span>
+            </div>
+
             <div class="filter-dropdowns">
                 {filter_dropdowns}
             </div>
@@ -697,7 +756,80 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
             document.querySelectorAll('.kreis-filter').forEach(select => {{
                 select.value = '';
             }});
+            document.getElementById('search-input').value = '';
             filterTermine();
+        }}
+
+        function searchTermine() {{
+            const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
+
+            // Wenn Suchfeld leer ist, nutze normale Dropdown-Filter
+            if (searchTerm === '') {{
+                filterTermine();
+                return;
+            }}
+
+            // Alle Dropdowns zurücksetzen wenn gesucht wird
+            document.querySelectorAll('.kreis-filter').forEach(select => {{
+                select.value = '';
+            }});
+
+            // Filter nach Suchbegriff
+            const allTermine = document.querySelectorAll('.termin');
+            let visibleCount = 0;
+
+            allTermine.forEach(termin => {{
+                const stadt = termin.getAttribute('data-stadt').toLowerCase();
+
+                if (stadt.includes(searchTerm)) {{
+                    termin.style.display = '';
+                    visibleCount++;
+                }} else {{
+                    termin.style.display = 'none';
+                }}
+            }});
+
+            // Datum-Gruppen ausblenden, wenn alle Termine darin versteckt sind
+            document.querySelectorAll('.datum-gruppe').forEach(gruppe => {{
+                const sichtbareTermine = gruppe.querySelectorAll('.termin:not([style*="display: none"])');
+                if (sichtbareTermine.length === 0) {{
+                    gruppe.style.display = 'none';
+                }} else {{
+                    gruppe.style.display = '';
+                }}
+            }});
+
+            // Zähler aktualisieren
+            const totalCount = allTermine.length;
+            document.getElementById('termine-count').textContent = visibleCount;
+
+            // Active Filter anzeigen (Suchbegriff als Tag)
+            const container = document.getElementById('active-filters');
+            if (searchTerm) {{
+                container.innerHTML = `<span class="filter-tag">Suche: ${{searchTerm}}<button onclick="document.getElementById('search-input').value=''; filterTermine();">&times;</button></span>`;
+            }} else {{
+                container.innerHTML = '';
+            }}
+        }}
+
+        // Sticky-Shadow für Filterleiste
+        const filterContainer = document.querySelector('.filter-container');
+        const observer = new IntersectionObserver(
+            ([e]) => filterContainer.classList.toggle('is-sticky', e.intersectionRatio < 1),
+            {{ threshold: [1] }}
+        );
+        observer.observe(filterContainer);
+
+        // Zum heutigen Datum springen (nur wenn kein Anker in der URL)
+        if (!window.location.hash) {{
+            const heute = new Date();
+            const datumKey = heute.getFullYear() + '-' +
+                String(heute.getMonth() + 1).padStart(2, '0') + '-' +
+                String(heute.getDate()).padStart(2, '0');
+            const el = document.getElementById('datum-' + datumKey);
+            if (el) {{
+                el.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
+            }}
         }}
     </script>
 </body>
@@ -743,7 +875,7 @@ def generiere_rss(alle_termine: list[Termin], jahr: int, monat: int) -> str:
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ratstermine Münsterland – {monatsnamen[monat]} {jahr}</title>
+    <title>Politikradar Münsterland – {monatsnamen[monat]} {jahr}</title>
     <link>https://ms-raete.reporter.ruhr/{dateiname_fuer_monat(jahr, monat)}</link>
     <description>Sitzungstermine aus Ratsinformationssystemen im Münsterland</description>
     <language>de-de</language>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ratstermine Februar 2026</title>
-    <link rel="alternate" type="application/rss+xml" title="Ratstermine Münsterland" href="feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="Politikradar Münsterland" href="feed.xml">
     <style>
         :root {
             --bg-color: #f5f5f7;
@@ -98,9 +98,26 @@
             gap: 12px;
             margin-bottom: 20px;
             padding: 15px;
-            background: var(--card-bg);
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-radius: 10px;
             border: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: box-shadow 0.2s;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .filter-container {
+                background: rgba(45, 45, 47, 0.5);
+            }
+        }
+
+        .filter-container.is-sticky {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            border-radius: 0 0 10px 10px;
         }
 
         .filter-header {
@@ -404,7 +421,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>Ratstermine Münsterland</h1>
+            <h1>Politikradar Münsterland</h1>
             <div class="nav">
                 <a href="#" class="nav-btn disabled">&larr; Januar</a>
                 <span class="monat-titel">Februar 2026</span>
@@ -4894,6 +4911,25 @@
                 container.innerHTML = `<span class="filter-tag">Suche: ${searchTerm}<button onclick="document.getElementById('search-input').value=''; filterTermine();">&times;</button></span>`;
             } else {
                 container.innerHTML = '';
+            }
+        }
+        // Sticky-Shadow für Filterleiste
+        const filterContainer = document.querySelector('.filter-container');
+        const observer = new IntersectionObserver(
+            ([e]) => filterContainer.classList.toggle('is-sticky', e.intersectionRatio < 1),
+            { threshold: [1] }
+        );
+        observer.observe(filterContainer);
+
+        // Zum heutigen Datum springen (nur wenn kein Anker in der URL)
+        if (!window.location.hash) {
+            const heute = new Date();
+            const datumKey = heute.getFullYear() + '-' +
+                String(heute.getMonth() + 1).padStart(2, '0') + '-' +
+                String(heute.getDate()).padStart(2, '0');
+            const el = document.getElementById('datum-' + datumKey);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
     </script>
