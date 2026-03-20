@@ -108,6 +108,14 @@ pip install -r requirements.txt   # requests, beautifulsoup4, lxml
 
 Keine `icalendar`-Library – iCal wird per Regex geparst.
 
+## Mac mini Setup (2026-03-14)
+
+Migration MacBook Pro → Mac mini M4:
+
+- **Git-Remote auf SSH umgestellt**: `git remote set-url origin git@github.com:mastermint-63/Ratsinformationssystem.git`
+- **Force-Push nötig**: MacBook hatte heute Morgen noch 3 Commits gepusht (DNS-Fehler beim Netz, aber Push lief durch). Mac-mini-Lauf (20:14 Uhr) hatte aktuellere Daten → `git push --force origin main`
+- **DNS-Fehler beim ersten Lauf**: launchd-Run um 06:00 Uhr schlug fehl weil Mac mini direkt nach Start noch kein Netz hatte. Im Dauerbetrieb kein Problem – kein Fix nötig.
+
 ## Bekannte Probleme
 
 - Ratsinfomanagement.net blockiert Cloud-IPs → Scraping muss lokal laufen
