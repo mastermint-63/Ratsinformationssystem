@@ -155,9 +155,9 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
             abgesagt_class = ' abgesagt' if '[ABGESAGT]' in t.gremium else ''
             gremium_clean = t.gremium.replace('[ABGESAGT]', '').strip()
 
-            # KI-Analyse-Button nur bei Terminen mit Link
+            # KI-Analyse-Button nur bei spezifischen Sitzungs-URLs (nicht si0046-Monatsübersichten)
             ki_button = ''
-            if t.link and t.link.strip():
+            if t.link and t.link.strip() and 'si0046' not in t.link:
                 ki_url = f"https://ratsinfo-lesen.reporter.ruhr/?url={quote(t.link)}"
                 ki_button = f'<a href="{ki_url}" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>'
 
