@@ -9,6 +9,7 @@ Verwendung:
     python3 app.py 2026 2 6     # Generiert 6 Monate ab Februar 2026
 """
 
+import html as html_mod
 import os
 import webbrowser
 import calendar
@@ -161,16 +162,17 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
                 ki_url = f"https://ratsinfo-lesen.reporter.ruhr/?url={quote(t.link)}"
                 ki_button = f'<a href="{ki_url}" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>'
 
+            esc = html_mod.escape
             termine_html += f'''
-                <div class="termin{abgesagt_class}" data-stadt="{t.stadt}">
-                    <div class="termin-zeit">{t.uhrzeit}</div>
+                <div class="termin{abgesagt_class}" data-stadt="{esc(t.stadt)}">
+                    <div class="termin-zeit">{esc(t.uhrzeit)}</div>
                     <div class="termin-info">
                         <div class="termin-gremium">
-                            <a href="{t.link}" target="_blank">{gremium_clean}</a>
+                            <a href="{esc(t.link)}" target="_blank">{esc(gremium_clean)}</a>
                             {ki_button}
                         </div>
-                        <div class="termin-stadt">{t.stadt}</div>
-                        {f'<div class="termin-ort">{t.ort}</div>' if t.ort else ''}
+                        <div class="termin-stadt">{esc(t.stadt)}</div>
+                        {f'<div class="termin-ort">{esc(t.ort)}</div>' if t.ort else ''}
                     </div>
                 </div>
             '''
