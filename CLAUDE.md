@@ -29,7 +29,7 @@ tail -20 launchd.log              # Letzte Aktualisierungen anzeigen
 - **Plist:** `~/Library/LaunchAgents/de.ratstermine.update.plist`
 - **Python:** `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3`
 - **terminal-notifier:** `/opt/homebrew/bin/terminal-notifier`
-- **Warum lokal?** Ratsinfomanagement.net blockiert Cloud-IPs (503-Fehler bei GitHub Actions)
+- **Warum lokal?** Ratsinfomanagement.net blockiert bestimmte Cloud-IPs (GitHub Actions/Azure → 503; Hetzner Falkenstein war 04/2026 OK – kann sich ändern)
 
 ```bash
 launchctl list | grep ratstermine          # Status prüfen
@@ -118,6 +118,6 @@ Migration MacBook Pro → Mac mini M4:
 
 ## Bekannte Probleme
 
-- Ratsinfomanagement.net blockiert Cloud-IPs → Scraping muss lokal laufen
+- Ratsinfomanagement.net blockiert bestimmte Cloud-IPs (GitHub Actions/Azure → 503; Hetzner Falkenstein 04/2026 OK, kann sich ändern)
 - SessionNet HTML-Struktur variiert stark → 3-stufiges Parsing nötig
 - DTSTART in iCal ist UTC (Z-Suffix), wird als Lokalzeit interpretiert (1–2h Abweichung toleriert)

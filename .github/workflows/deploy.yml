@@ -9,6 +9,7 @@ on:
     paths:
       - 'termine_*.html'
       - 'index.html'
+      - 'feed.xml'
 
 # Berechtigungen für GitHub Pages
 permissions:

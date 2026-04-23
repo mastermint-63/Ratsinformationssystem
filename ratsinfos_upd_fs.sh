@@ -17,12 +17,12 @@ echo "$OUTPUT"
 MONATE=$(echo "$OUTPUT" | grep -o '[0-9]* Dateien generiert' | grep -o '[0-9]*')
 
 # Zu GitHub pushen (nur wenn Änderungen vorhanden)
-if git diff --quiet termine_*.html 2>/dev/null; then
+if git diff --quiet termine_*.html feed.xml 2>/dev/null; then
     echo "Keine Änderungen - kein Push nötig"
     PUSH_STATUS="Keine Änderungen"
 else
     echo "Änderungen gefunden - pushe zu GitHub..."
-    git add termine_*.html index.html 2>/dev/null
+    git add termine_*.html index.html feed.xml 2>/dev/null
     git commit -m "Termine aktualisiert $DATUM" 2>&1
 
     if git push 2>&1; then
