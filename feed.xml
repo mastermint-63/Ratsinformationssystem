@@ -5,7 +5,7 @@
     <link>https://ms-raete.reporter.ruhr/termine_2026_04.html</link>
     <description>Sitzungstermine aus Ratsinformationssystemen im Münsterland</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 23 Apr 2026 06:00:06 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2026 06:00:11 +0200</lastBuildDate>
     <atom:link href="https://ms-raete.reporter.ruhr/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Die Linke - Fraktion – Ennigerloh</title>
@@ -22,18 +22,18 @@
       <guid isPermaLink="false">Ennigerloh-20260410-15:00 Uhr-Ältestenrat</guid>
     </item>
     <item>
-      <title>Sitzung des Ausschusses für Digitalisierung – Kreis Warendorf</title>
-      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0057.php?__ksinr=103752</link>
-      <description>Mo, 13.04.2026, 09:00 Uhr Uhr</description>
-      <pubDate>Mon, 13 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Warendorf-20260413-09:00 Uhr-Sitzung des Ausschusses für Di</guid>
-    </item>
-    <item>
       <title>Jugendrat – Stadt Münster</title>
       <link>https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0057.php?__ksinr=14410</link>
       <description>Mo, 13.04.2026, 17:00 Uhr Uhr</description>
       <pubDate>Mon, 13 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Stadt Münster-20260413-17:00 Uhr-Jugendrat</guid>
+    </item>
+    <item>
+      <title>Sitzung des Ausschusses für Digitalisierung – Kreis Warendorf</title>
+      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0057.php?__ksinr=103752</link>
+      <description>Mo, 13.04.2026, 09:00 Uhr Uhr</description>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Warendorf-20260413-09:00 Uhr-Sitzung des Ausschusses für Di</guid>
     </item>
     <item>
       <title>Seniorenbeirat – Havixbeck</title>
@@ -43,11 +43,11 @@
       <guid isPermaLink="false">Havixbeck-20260413-15:00 Uhr-Seniorenbeirat</guid>
     </item>
     <item>
-      <title>Inklusionsbeirat – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
-      <description>Mo, 13.04.2026, 16:00 Uhr Uhr</description>
+      <title>SPD-Fraktion – Borken</title>
+      <link>https://bi.borken.de/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
+      <description>Mo, 13.04.2026, 17:30 Uhr Uhr</description>
       <pubDate>Mon, 13 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260413-16:00 Uhr-Inklusionsbeirat</guid>
+      <guid isPermaLink="false">Borken-20260413-17:30 Uhr-SPD-Fraktion</guid>
     </item>
     <item>
       <title>FDP-Fraktion im Rat der Stadt Beckum – Beckum</title>
@@ -64,18 +64,18 @@
       <guid isPermaLink="false">Sassenberg-20260413-19:00 Uhr-Ortsausschuss Füchtorf</guid>
     </item>
     <item>
+      <title>Inklusionsbeirat – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
+      <description>Mo, 13.04.2026, 16:00 Uhr Uhr</description>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Steinfurt-20260413-16:00 Uhr-Inklusionsbeirat</guid>
+    </item>
+    <item>
       <title>Volt-Fraktion – Oelde</title>
       <link>https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
       <description>Mo, 13.04.2026, 20:00 Uhr Uhr</description>
       <pubDate>Mon, 13 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Oelde-20260413-20:00 Uhr-Volt-Fraktion</guid>
-    </item>
-    <item>
-      <title>SPD-Fraktion – Borken</title>
-      <link>https://bi.borken.de/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
-      <description>Mo, 13.04.2026, 17:30 Uhr Uhr</description>
-      <pubDate>Mon, 13 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Borken-20260413-17:30 Uhr-SPD-Fraktion</guid>
     </item>
     <item>
       <title>CDU-Fraktion – Stadtlohn</title>
@@ -113,13 +113,6 @@
       <guid isPermaLink="false">Stadtlohn-20260413-17:00 Uhr-SPD-Fraktion</guid>
     </item>
     <item>
-      <title>Sitzung des Bauausschusses – Kreis Warendorf</title>
-      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0057.php?__ksinr=103753</link>
-      <description>Di, 14.04.2026, 09:00 Uhr Uhr</description>
-      <pubDate>Tue, 14 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Warendorf-20260414-09:00 Uhr-Sitzung des Bauausschusses</guid>
-    </item>
-    <item>
       <title>Konferenz Alter und Pflege – Stadt Münster</title>
       <link>https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0057.php?__ksinr=14444</link>
       <description>Di, 14.04.2026, 15:00 Uhr Uhr</description>
@@ -127,11 +120,11 @@
       <guid isPermaLink="false">Stadt Münster-20260414-15:00 Uhr-Konferenz Alter und Pflege</guid>
     </item>
     <item>
-      <title>Arbeitskreis Ahaus-Haaksbergen – Ahaus</title>
-      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
-      <description>Di, 14.04.2026, 16:00 Uhr Uhr</description>
+      <title>Sitzung des Bauausschusses – Kreis Warendorf</title>
+      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0057.php?__ksinr=103753</link>
+      <description>Di, 14.04.2026, 09:00 Uhr Uhr</description>
       <pubDate>Tue, 14 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ahaus-20260414-16:00 Uhr-Arbeitskreis Ahaus-Haaksbergen</guid>
+      <guid isPermaLink="false">Kreis Warendorf-20260414-09:00 Uhr-Sitzung des Bauausschusses</guid>
     </item>
     <item>
       <title>Ausschuss für Bauen, Planung und Wirtschaft – Havixbeck</title>
@@ -139,13 +132,6 @@
       <description>Di, 14.04.2026, 19:00 Uhr Uhr</description>
       <pubDate>Tue, 14 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Havixbeck-20260414-19:00 Uhr-Ausschuss für Bauen, Planung u</guid>
-    </item>
-    <item>
-      <title>Stadtteilbeirat Eschendorf – Rheine</title>
-      <link>https://www.rheine-buergerinfo.de/si0057.asp?__ksinr=7451</link>
-      <description>Di, 14.04.2026, 18:30 Uhr Uhr</description>
-      <pubDate>Tue, 14 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Rheine-20260414-18:30 Uhr-Stadtteilbeirat Eschendorf</guid>
     </item>
     <item>
       <title>Haupt- und Finanzausschuss – Nottuln</title>
@@ -160,6 +146,20 @@
       <description>Di, 14.04.2026, 18:00 Uhr Uhr</description>
       <pubDate>Tue, 14 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Olfen-20260414-18:00 Uhr-Bau- und Umweltausschuss</guid>
+    </item>
+    <item>
+      <title>Stadtteilbeirat Eschendorf – Rheine</title>
+      <link>https://www.rheine-buergerinfo.de/si0057.asp?__ksinr=7451</link>
+      <description>Di, 14.04.2026, 18:30 Uhr Uhr</description>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Rheine-20260414-18:30 Uhr-Stadtteilbeirat Eschendorf</guid>
+    </item>
+    <item>
+      <title>Arbeitskreis Ahaus-Haaksbergen – Ahaus</title>
+      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
+      <description>Di, 14.04.2026, 16:00 Uhr Uhr</description>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ahaus-20260414-16:00 Uhr-Arbeitskreis Ahaus-Haaksbergen</guid>
     </item>
     <item>
       <title>Umwelt- und Planungsausschuss – Ostbevern</title>
@@ -183,18 +183,18 @@
       <guid isPermaLink="false">Stadtlohn-20260414-09:00 Uhr-Fraktion Bündnis90/Die Grünen</guid>
     </item>
     <item>
-      <title>Ausschuss für Wirtschaft, Handel und Tourismus – Bocholt</title>
-      <link>https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZf8llxPSTaRfhfA6-kbK0hk</link>
-      <description>Di, 14.04.2026, 15:00 Uhr Uhr | Rent.Group Bocholt Party Rent Bomers GmbH, 46395 Bocholt, Besprechungsraum</description>
-      <pubDate>Tue, 14 Apr 2026 15:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Bocholt-20260414-15:00 Uhr-Ausschuss für Wirtschaft, Hand</guid>
-    </item>
-    <item>
       <title>Planungs-, Umwelt- und Bauausschuss – Reken</title>
       <link>https://reken.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZYqKFtNYh4OVjofnYLNhgpU</link>
       <description>Di, 14.04.2026, 15:00 Uhr Uhr | Rathaus, 48734 Reken, Sitzungszimmer</description>
       <pubDate>Tue, 14 Apr 2026 15:00:00 +0200</pubDate>
       <guid isPermaLink="false">Reken-20260414-15:00 Uhr-Planungs-, Umwelt- und Bauauss</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Wirtschaft, Handel und Tourismus – Bocholt</title>
+      <link>https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZf8llxPSTaRfhfA6-kbK0hk</link>
+      <description>Di, 14.04.2026, 15:00 Uhr Uhr | Rent.Group Bocholt Party Rent Bomers GmbH, 46395 Bocholt, Besprechungsraum</description>
+      <pubDate>Tue, 14 Apr 2026 15:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Bocholt-20260414-15:00 Uhr-Ausschuss für Wirtschaft, Hand</guid>
     </item>
     <item>
       <title>Sport-, Kultur- und Sozialausschuss – Stadtlohn</title>
@@ -246,13 +246,6 @@
       <guid isPermaLink="false">Recke-20260414-16:35 Uhr-Rat</guid>
     </item>
     <item>
-      <title>Sitzung der Kommunalen Konferenz Alter und Pflege – Kreis Warendorf</title>
-      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0057.php?__ksinr=103828</link>
-      <description>Mi, 15.04.2026, 14:30 Uhr Uhr</description>
-      <pubDate>Wed, 15 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Warendorf-20260415-14:30 Uhr-Sitzung der Kommunalen Konfere</guid>
-    </item>
-    <item>
       <title>Wohn+Stadtbau GmbH, Aufsichtsrat – Stadt Münster</title>
       <link>https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=4</link>
       <description>Mi, 15.04.2026, 17:00 Uhr Uhr</description>
@@ -260,18 +253,18 @@
       <guid isPermaLink="false">Stadt Münster-20260415-17:00 Uhr-Wohn+Stadtbau GmbH, Aufsichtsr</guid>
     </item>
     <item>
+      <title>Sitzung der Kommunalen Konferenz Alter und Pflege – Kreis Warendorf</title>
+      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0057.php?__ksinr=103828</link>
+      <description>Mi, 15.04.2026, 14:30 Uhr Uhr</description>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Warendorf-20260415-14:30 Uhr-Sitzung der Kommunalen Konfere</guid>
+    </item>
+    <item>
       <title>Ausschuss für Kultur, Schule und Sport – Coesfeld</title>
       <link>https://buergerinfo.coesfeld.de/si0057.php?__ksinr=12653</link>
       <description>Mi, 15.04.2026, 18:00 Uhr Uhr</description>
       <pubDate>Wed, 15 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Coesfeld-20260415-18:00 Uhr-Ausschuss für Kultur, Schule u</guid>
-    </item>
-    <item>
-      <title>Ahaus Marketing &amp; Touristik GmbH - Gesellschafterversammlung – Ahaus</title>
-      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
-      <description>Mi, 15.04.2026, 16:30 Uhr Uhr</description>
-      <pubDate>Wed, 15 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ahaus-20260415-16:30 Uhr-Ahaus Marketing &amp; Touristik Gm</guid>
     </item>
     <item>
       <title>Ausschuss für Umwelt- und Klimaschutz, Mobilität, Energie und Nachhaltigkeit – Havixbeck</title>
@@ -288,13 +281,6 @@
       <guid isPermaLink="false">Nottuln-20260415-19:00 Uhr-Betriebsausschuss</guid>
     </item>
     <item>
-      <title>SPD-Fraktion – Ennigerloh</title>
-      <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
-      <description>Mi, 15.04.2026, 18:30 Uhr Uhr</description>
-      <pubDate>Wed, 15 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ennigerloh-20260415-18:30 Uhr-SPD-Fraktion</guid>
-    </item>
-    <item>
       <title>Rat der Stadt Borken – Borken</title>
       <link>https://bi.borken.de/si0057.asp?__ksinr=5313</link>
       <description>Mi, 15.04.2026, 17:01 Uhr Uhr</description>
@@ -302,11 +288,18 @@
       <guid isPermaLink="false">Borken-20260415-17:01 Uhr-Rat der Stadt Borken</guid>
     </item>
     <item>
-      <title>Sondersitzung Bau- und Klimaausschuss – Heiden</title>
-      <link>https://heiden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZUS9s2Ib7zH8IY32149JcRo</link>
-      <description>Mi, 15.04.2026, 15:00 Uhr Uhr | Rathaus, 46359 Heiden, Sitzungssaal</description>
-      <pubDate>Wed, 15 Apr 2026 15:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Heiden-20260415-15:00 Uhr-Sondersitzung Bau- und Klimaau</guid>
+      <title>Ahaus Marketing &amp; Touristik GmbH - Gesellschafterversammlung – Ahaus</title>
+      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
+      <description>Mi, 15.04.2026, 16:30 Uhr Uhr</description>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ahaus-20260415-16:30 Uhr-Ahaus Marketing &amp; Touristik Gm</guid>
+    </item>
+    <item>
+      <title>SPD-Fraktion – Ennigerloh</title>
+      <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
+      <description>Mi, 15.04.2026, 18:30 Uhr Uhr</description>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ennigerloh-20260415-18:30 Uhr-SPD-Fraktion</guid>
     </item>
     <item>
       <title>Ausschuss für Vergabe – Isselburg</title>
@@ -314,6 +307,13 @@
       <description>Mi, 15.04.2026, 15:00 Uhr Uhr | Bürgerhalle Herzebocholt, 46419 Isselburg, Saal</description>
       <pubDate>Wed, 15 Apr 2026 15:00:00 +0200</pubDate>
       <guid isPermaLink="false">Isselburg-20260415-15:00 Uhr-Ausschuss für Vergabe</guid>
+    </item>
+    <item>
+      <title>Sondersitzung Bau- und Klimaausschuss – Heiden</title>
+      <link>https://heiden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZUS9s2Ib7zH8IY32149JcRo</link>
+      <description>Mi, 15.04.2026, 15:00 Uhr Uhr | Rathaus, 46359 Heiden, Sitzungssaal</description>
+      <pubDate>Wed, 15 Apr 2026 15:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Heiden-20260415-15:00 Uhr-Sondersitzung Bau- und Klimaau</guid>
     </item>
     <item>
       <title>Haupt- und Finanzausschuss – Bocholt</title>
@@ -400,13 +400,6 @@
       <guid isPermaLink="false">Havixbeck-20260416-19:02 Uhr-Ausschuss für Soziales, Bildun</guid>
     </item>
     <item>
-      <title>Kreistag – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=9011</link>
-      <description>Do, 16.04.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Thu, 16 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260416-17:00 Uhr-Kreistag</guid>
-    </item>
-    <item>
       <title>Betriebsausschuss – Billerbeck</title>
       <link>https://ratsinfo.billerbeck.de/bi/si0057.asp?__ksinr=2661</link>
       <description>Do, 16.04.2026, 18:00 Uhr Uhr</description>
@@ -419,6 +412,13 @@
       <description>Do, 16.04.2026, 17:00 Uhr Uhr</description>
       <pubDate>Thu, 16 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Sassenberg-20260416-17:00 Uhr-Infrastrukturausschuss</guid>
+    </item>
+    <item>
+      <title>Kreistag – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=9011</link>
+      <description>Do, 16.04.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Steinfurt-20260416-17:00 Uhr-Kreistag</guid>
     </item>
     <item>
       <title>Aufsichtsrat StEG GmbH – Steinfurt</title>
@@ -512,13 +512,6 @@
       <guid isPermaLink="false">Ahlen-20260416-17:02 Uhr-Sitzung des Begleitausschusses</guid>
     </item>
     <item>
-      <title>Sitzung des Finanzausschusses – Kreis Warendorf</title>
-      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0057.php?__ksinr=103754</link>
-      <description>Fr, 17.04.2026, 09:00 Uhr Uhr</description>
-      <pubDate>Fri, 17 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Warendorf-20260417-09:00 Uhr-Sitzung des Finanzausschusses</guid>
-    </item>
-    <item>
       <title>Messe und Congress Centrum Halle Münsterland GmbH, Aufsichtsrat – Stadt Münster</title>
       <link>https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=4</link>
       <description>Fr, 17.04.2026, 15:00 Uhr Uhr</description>
@@ -526,11 +519,25 @@
       <guid isPermaLink="false">Stadt Münster-20260417-15:00 Uhr-Messe und Congress Centrum Hal</guid>
     </item>
     <item>
+      <title>Sitzung des Finanzausschusses – Kreis Warendorf</title>
+      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0057.php?__ksinr=103754</link>
+      <description>Fr, 17.04.2026, 09:00 Uhr Uhr</description>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Warendorf-20260417-09:00 Uhr-Sitzung des Finanzausschusses</guid>
+    </item>
+    <item>
       <title>Theaterhaus Pumpenhaus gGmbH, Beirat – Stadt Münster</title>
       <link>https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=4</link>
       <description>Mo, 20.04.2026, 16:00 Uhr Uhr</description>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Stadt Münster-20260420-16:00 Uhr-Theaterhaus Pumpenhaus gGmbH, </guid>
+    </item>
+    <item>
+      <title>SPD-Fraktion – Borken</title>
+      <link>https://bi.borken.de/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
+      <description>Mo, 20.04.2026, 17:30 Uhr Uhr</description>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Borken-20260420-17:30 Uhr-SPD-Fraktion</guid>
     </item>
     <item>
       <title>FWG-Fraktion im Rat der Stadt Beckum – Beckum</title>
@@ -552,13 +559,6 @@
       <description>Mo, 20.04.2026, 18:00 Uhr Uhr</description>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Oelde-20260420-18:00 Uhr-Volt-Fraktion</guid>
-    </item>
-    <item>
-      <title>SPD-Fraktion – Borken</title>
-      <link>https://bi.borken.de/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
-      <description>Mo, 20.04.2026, 17:30 Uhr Uhr</description>
-      <pubDate>Mon, 20 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Borken-20260420-17:30 Uhr-SPD-Fraktion</guid>
     </item>
     <item>
       <title>BEIRAT Ü60 – Emsdetten</title>
@@ -666,18 +666,18 @@
       <guid isPermaLink="false">Altenberge-20260420-18:38 Uhr-Ausschuss für Klima-, Arten- u</guid>
     </item>
     <item>
-      <title>Sitzung des Beirates nach dem Naturschutzgesetz – Kreis Warendorf</title>
-      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0057.php?__ksinr=103825</link>
-      <description>Di, 21.04.2026, 16:00 Uhr Uhr</description>
-      <pubDate>Tue, 21 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Warendorf-20260421-16:00 Uhr-Sitzung des Beirates nach dem </guid>
-    </item>
-    <item>
       <title>Bezirksvertretung Münster-Südost – Stadt Münster</title>
       <link>https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0057.php?__ksinr=14419</link>
       <description>Di, 21.04.2026, 17:00 Uhr Uhr</description>
       <pubDate>Tue, 21 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Stadt Münster-20260421-17:00 Uhr-Bezirksvertretung Münster-Südo</guid>
+    </item>
+    <item>
+      <title>Sitzung des Beirates nach dem Naturschutzgesetz – Kreis Warendorf</title>
+      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0057.php?__ksinr=103825</link>
+      <description>Di, 21.04.2026, 16:00 Uhr Uhr</description>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Warendorf-20260421-16:00 Uhr-Sitzung des Beirates nach dem </guid>
     </item>
     <item>
       <title>Bezirksausschuss – Coesfeld</title>
@@ -687,18 +687,18 @@
       <guid isPermaLink="false">Coesfeld-20260421-18:00 Uhr-Bezirksausschuss</guid>
     </item>
     <item>
-      <title>Ausschuss für Stadtentwicklung, Planen, Bauen und Landwirtschaft – Ahaus</title>
-      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0057.asp?__ksinr=1755</link>
-      <description>Di, 21.04.2026, 19:00 Uhr Uhr</description>
-      <pubDate>Tue, 21 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ahaus-20260421-19:00 Uhr-Ausschuss für Stadtentwicklung</guid>
-    </item>
-    <item>
       <title>Betriebsausschuss Abwasserwerk – Lüdinghausen</title>
       <link>https://www.stadt-luedinghausen.de/sessionnet/buergerinfo/si0057.php?__ksinr=2332</link>
       <description>Di, 21.04.2026, 18:00 Uhr Uhr</description>
       <pubDate>Tue, 21 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Lüdinghausen-20260421-18:00 Uhr-Betriebsausschuss Abwasserwerk</guid>
+    </item>
+    <item>
+      <title>Bezirksausschuss – Billerbeck</title>
+      <link>https://ratsinfo.billerbeck.de/bi/si0057.asp?__ksinr=2662</link>
+      <description>Di, 21.04.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Billerbeck-20260421-18:00 Uhr-Bezirksausschuss</guid>
     </item>
     <item>
       <title>Rechnungsprüfungsausschuss – Rheine</title>
@@ -708,18 +708,18 @@
       <guid isPermaLink="false">Rheine-20260421-17:00 Uhr-Rechnungsprüfungsausschuss</guid>
     </item>
     <item>
-      <title>Ausschuss für Umwelt, Klima, Naturschutz, Energie und Entsorgung – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8774</link>
-      <description>Di, 21.04.2026, 17:00 Uhr Uhr</description>
+      <title>Ausschuss für Stadtentwicklung, Planen, Bauen und Landwirtschaft – Ahaus</title>
+      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0057.asp?__ksinr=1755</link>
+      <description>Di, 21.04.2026, 19:00 Uhr Uhr</description>
       <pubDate>Tue, 21 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260421-17:00 Uhr-Ausschuss für Umwelt, Klima, N</guid>
+      <guid isPermaLink="false">Ahaus-20260421-19:00 Uhr-Ausschuss für Stadtentwicklung</guid>
     </item>
     <item>
-      <title>Bezirksausschuss – Billerbeck</title>
-      <link>https://ratsinfo.billerbeck.de/bi/si0057.asp?__ksinr=2662</link>
-      <description>Di, 21.04.2026, 18:00 Uhr Uhr</description>
+      <title>Ausschuss für Familie, Bildung, Ehrenamt und Soziales – Nordkirchen</title>
+      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4630</link>
+      <description>Di, 21.04.2026, 17:30 Uhr Uhr</description>
       <pubDate>Tue, 21 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Billerbeck-20260421-18:00 Uhr-Bezirksausschuss</guid>
+      <guid isPermaLink="false">Nordkirchen-20260421-17:30 Uhr-Ausschuss für Familie, Bildung</guid>
     </item>
     <item>
       <title>Rechnungsprüfungsausschuss – Sassenberg</title>
@@ -736,6 +736,13 @@
       <guid isPermaLink="false">Ostbevern-20260421-18:00 Uhr-Bildungs-, Generationen- und S</guid>
     </item>
     <item>
+      <title>Ausschuss für Umwelt, Klima, Naturschutz, Energie und Entsorgung – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8774</link>
+      <description>Di, 21.04.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Steinfurt-20260421-17:00 Uhr-Ausschuss für Umwelt, Klima, N</guid>
+    </item>
+    <item>
       <title>Bezirksausschuss Stromberg – Oelde</title>
       <link>https://sessionnet.owl-it.de/oelde/bi/si0057.asp?__ksinr=4182</link>
       <description>Di, 21.04.2026, 17:30 Uhr Uhr</description>
@@ -750,11 +757,11 @@
       <guid isPermaLink="false">Warendorf-20260421-17:00 Uhr-Betriebsausschuss</guid>
     </item>
     <item>
-      <title>Ausschuss für Familie, Bildung, Ehrenamt und Soziales – Nordkirchen</title>
-      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4630</link>
-      <description>Di, 21.04.2026, 17:30 Uhr Uhr</description>
-      <pubDate>Tue, 21 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nordkirchen-20260421-17:30 Uhr-Ausschuss für Familie, Bildung</guid>
+      <title>Schlossausschuss – Raesfeld</title>
+      <link>https://raesfeld.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZX8GWFy8xD84l3GSZu-bdYU</link>
+      <description>Di, 21.04.2026, 15:00 Uhr Uhr | Rathaus, 46348 Raesfeld, Großer Sitzungssaal des Rathauses</description>
+      <pubDate>Tue, 21 Apr 2026 15:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Raesfeld-20260421-15:00 Uhr-Schlossausschuss</guid>
     </item>
     <item>
       <title>Bauausschuss – Stadtlohn</title>
@@ -762,13 +769,6 @@
       <description>Di, 21.04.2026, 15:00 Uhr Uhr | Rathaus, 48703 Stadtlohn, Großer Sitzungssaal, 1. OG</description>
       <pubDate>Tue, 21 Apr 2026 15:00:00 +0200</pubDate>
       <guid isPermaLink="false">Stadtlohn-20260421-15:00 Uhr-Bauausschuss</guid>
-    </item>
-    <item>
-      <title>Schlossausschuss – Raesfeld</title>
-      <link>https://raesfeld.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZX8GWFy8xD84l3GSZu-bdYU</link>
-      <description>Di, 21.04.2026, 15:00 Uhr Uhr | Rathaus, 46348 Raesfeld, Großer Sitzungssaal des Rathauses</description>
-      <pubDate>Tue, 21 Apr 2026 15:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Raesfeld-20260421-15:00 Uhr-Schlossausschuss</guid>
     </item>
     <item>
       <title>Ältestenrat – Gronau</title>
@@ -813,18 +813,18 @@
       <guid isPermaLink="false">Nordwalde-20260421-16:30 Uhr-Haupt- und Finanzausschuss</guid>
     </item>
     <item>
-      <title>Sitzung des Ortsausschusses Vorhelm – Ahlen</title>
-      <link>https://www.ahlen.sitzung-online.de/public/to010?SILFDNR=1001026&amp;refresh=false</link>
-      <description>Di, 21.04.2026, 17:00 Uhr Uhr | Bürgerhaus Vorhelm</description>
-      <pubDate>Tue, 21 Apr 2026 17:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ahlen-20260421-17:00 Uhr-Sitzung des Ortsausschusses Vo</guid>
-    </item>
-    <item>
       <title>Gesellschafterversammlung der Wirtschaftsförderungs- und Stadtmarketing Gesellschaft Bocholt mbH &amp; C – Bocholt</title>
       <link>https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZZi-34SBDJ4ltBM1XDckvi8</link>
       <description>Di, 21.04.2026, 17:00 Uhr Uhr | Volksbank Bocholt eG, 46395 Bocholt, Besprechungsraum</description>
       <pubDate>Tue, 21 Apr 2026 17:00:00 +0200</pubDate>
       <guid isPermaLink="false">Bocholt-20260421-17:00 Uhr-Gesellschafterversammlung der </guid>
+    </item>
+    <item>
+      <title>Sitzung des Ortsausschusses Vorhelm – Ahlen</title>
+      <link>https://www.ahlen.sitzung-online.de/public/to010?SILFDNR=1001026&amp;refresh=false</link>
+      <description>Di, 21.04.2026, 17:00 Uhr Uhr | Bürgerhaus Vorhelm</description>
+      <pubDate>Tue, 21 Apr 2026 17:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ahlen-20260421-17:00 Uhr-Sitzung des Ortsausschusses Vo</guid>
     </item>
     <item>
       <title>Betriebsausschuss Münster Marketing – Stadt Münster</title>
@@ -834,11 +834,11 @@
       <guid isPermaLink="false">Stadt Münster-20260422-16:00 Uhr-Betriebsausschuss Münster Mark</guid>
     </item>
     <item>
-      <title>Kalender – Ascheberg</title>
-      <link>https://sessionnet.owl-it.de/ascheberg/bi/si0040.asp</link>
-      <description>Mi, 22.04.2026, 15:52 Uhr Uhr</description>
+      <title>Kommunale Konferenz Alter und Pflege für den Kreis Borken – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15399</link>
+      <description>Mi, 22.04.2026, 14:00 Uhr Uhr</description>
       <pubDate>Wed, 22 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ascheberg-20260422-15:52 Uhr-Kalender</guid>
+      <guid isPermaLink="false">Kreis Borken-20260422-14:00 Uhr-Kommunale Konferenz Alter und </guid>
     </item>
     <item>
       <title>Umweltausschuss – Coesfeld</title>
@@ -855,13 +855,6 @@
       <guid isPermaLink="false">Havixbeck-20260422-18:00 Uhr-Anne-Frank-Gesamtschulausschus</guid>
     </item>
     <item>
-      <title>Ausschuss für Stadtentwicklung, Umwelt und Klimaschutz – Rheine</title>
-      <link>https://www.rheine-buergerinfo.de/si0057.asp?__ksinr=7469</link>
-      <description>Mi, 22.04.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Rheine-20260422-17:00 Uhr-Ausschuss für Stadtentwicklung</guid>
-    </item>
-    <item>
       <title>Haupt- und Finanzausschuss – Olfen</title>
       <link>https://ratsinfo.olfen.de/bi/si0057.asp?__ksinr=5156</link>
       <description>Mi, 22.04.2026, 18:00 Uhr Uhr</description>
@@ -869,18 +862,25 @@
       <guid isPermaLink="false">Olfen-20260422-18:00 Uhr-Haupt- und Finanzausschuss</guid>
     </item>
     <item>
+      <title>Ausschuss für Planen und Bauen – Borken</title>
+      <link>https://bi.borken.de/si0057.asp?__ksinr=5569</link>
+      <description>Mi, 22.04.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Borken-20260422-17:00 Uhr-Ausschuss für Planen und Bauen</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Stadtentwicklung, Umwelt und Klimaschutz – Rheine</title>
+      <link>https://www.rheine-buergerinfo.de/si0057.asp?__ksinr=7469</link>
+      <description>Mi, 22.04.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Rheine-20260422-17:00 Uhr-Ausschuss für Stadtentwicklung</guid>
+    </item>
+    <item>
       <title>Fachkommission Kunst in der Region (Jury) – Kreis Steinfurt</title>
       <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
       <description>Mi, 22.04.2026, 10:00 Uhr Uhr</description>
       <pubDate>Wed, 22 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Kreis Steinfurt-20260422-10:00 Uhr-Fachkommission Kunst in der Re</guid>
-    </item>
-    <item>
-      <title>Kommunale Konferenz Alter und Pflege für den Kreis Borken – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15399</link>
-      <description>Mi, 22.04.2026, 14:00 Uhr Uhr</description>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20260422-14:00 Uhr-Kommunale Konferenz Alter und </guid>
     </item>
     <item>
       <title>VHS-Ausschuss – Ennigerloh</title>
@@ -897,25 +897,11 @@
       <guid isPermaLink="false">Oelde-20260422-17:30 Uhr-Volkshochschulausschuss</guid>
     </item>
     <item>
-      <title>Ausschuss für Planen und Bauen – Borken</title>
-      <link>https://bi.borken.de/si0057.asp?__ksinr=5569</link>
-      <description>Mi, 22.04.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Borken-20260422-17:00 Uhr-Ausschuss für Planen und Bauen</guid>
-    </item>
-    <item>
       <title>Ausschuss für Umwelt, Energie und Landschaft – Wadersloh</title>
       <link>https://sessionnet.owl-it.de/wadersloh/bi/si0057.asp?__ksinr=2654</link>
       <description>Mi, 22.04.2026, 17:30 Uhr Uhr</description>
       <pubDate>Wed, 22 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Wadersloh-20260422-17:30 Uhr-Ausschuss für Umwelt, Energie </guid>
-    </item>
-    <item>
-      <title>Betriebsausschuss – Greven</title>
-      <link>https://greven.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZXG0QdyVnuf5Frd3mg9eyzQ</link>
-      <description>Mi, 22.04.2026, 15:00 Uhr Uhr | Rathaus der Stadt Greven, Rathausstraße 6, 48268 Greven, Großer Sitzungssaal</description>
-      <pubDate>Wed, 22 Apr 2026 15:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Greven-20260422-15:00 Uhr-Betriebsausschuss</guid>
     </item>
     <item>
       <title>Ausschuss für Chancengerechtigkeit und Integration – Bocholt</title>
@@ -930,6 +916,13 @@
       <description>Mi, 22.04.2026, 15:00 Uhr Uhr | Rathaus, 48703 Stadtlohn, Großer Sitzungssaal, 1. OG</description>
       <pubDate>Wed, 22 Apr 2026 15:00:00 +0200</pubDate>
       <guid isPermaLink="false">Stadtlohn-20260422-15:00 Uhr-Haupt- und Finanzausschuss</guid>
+    </item>
+    <item>
+      <title>Betriebsausschuss – Greven</title>
+      <link>https://greven.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZXG0QdyVnuf5Frd3mg9eyzQ</link>
+      <description>Mi, 22.04.2026, 15:01 Uhr Uhr | Rathaus der Stadt Greven, Rathausstraße 6, 48268 Greven, Großer Sitzungssaal</description>
+      <pubDate>Wed, 22 Apr 2026 15:01:00 +0200</pubDate>
+      <guid isPermaLink="false">Greven-20260422-15:01 Uhr-Betriebsausschuss</guid>
     </item>
     <item>
       <title>Ausschuss für Digitales und Medien – Mettingen</title>
@@ -953,18 +946,18 @@
       <guid isPermaLink="false">Steinfurt-20260422-16:00 Uhr-Ausschuss für Soziales, Gesell</guid>
     </item>
     <item>
-      <title>Ausschuss für Bauen, Planen und Stadtentwicklung – Gescher</title>
-      <link>https://gescher.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZUBG2e7OKMBrs8SoCpmlKTE</link>
-      <description>Mi, 22.04.2026, 16:00 Uhr Uhr | Rathaus, 48712 Gescher, Großer Sitzungssaal des Rathauses</description>
-      <pubDate>Wed, 22 Apr 2026 16:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Gescher-20260422-16:00 Uhr-Ausschuss für Bauen, Planen un</guid>
-    </item>
-    <item>
       <title>Ausschuss für Bauen und Planen – Heek</title>
       <link>https://heek.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZaDtujMHU7hy-MtM33nnZfE</link>
       <description>Mi, 22.04.2026, 16:00 Uhr Uhr | Gemeindeverwaltung, 48619 Heek, Sitzungssaal</description>
       <pubDate>Wed, 22 Apr 2026 16:00:00 +0200</pubDate>
       <guid isPermaLink="false">Heek-20260422-16:00 Uhr-Ausschuss für Bauen und Planen</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Bauen, Planen und Stadtentwicklung – Gescher</title>
+      <link>https://gescher.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZUBG2e7OKMBrs8SoCpmlKTE</link>
+      <description>Mi, 22.04.2026, 16:00 Uhr Uhr | Rathaus, 48712 Gescher, Großer Sitzungssaal des Rathauses</description>
+      <pubDate>Wed, 22 Apr 2026 16:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Gescher-20260422-16:00 Uhr-Ausschuss für Bauen, Planen un</guid>
     </item>
     <item>
       <title>Rat der Stadt Vreden – Vreden</title>
@@ -988,18 +981,18 @@
       <guid isPermaLink="false">Legden-20260422-16:30 Uhr-Rechnungsprüfungsausschuss Sch</guid>
     </item>
     <item>
-      <title>Arbeitskreis Dorfentwicklung – Heiden</title>
-      <link>https://heiden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZY8GMVz22EUKa591BkDq6os</link>
-      <description>Mi, 22.04.2026, 17:00 Uhr Uhr | Rathaus, 46359 Heiden, Sitzungssaal</description>
-      <pubDate>Wed, 22 Apr 2026 17:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Heiden-20260422-17:00 Uhr-Arbeitskreis Dorfentwicklung</guid>
-    </item>
-    <item>
       <title>Zweckverbandsversammlung des Schulzweckverbandes Legden Rosendahl – Legden</title>
       <link>https://legden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZaXzHeZ3vrz5K2aylUWCMuU</link>
       <description>Mi, 22.04.2026, 17:00 Uhr Uhr | Rathaus der Gemeinde Rosendahl, 48720 Rosendahl, Sitzungssaal</description>
       <pubDate>Wed, 22 Apr 2026 17:00:00 +0200</pubDate>
       <guid isPermaLink="false">Legden-20260422-17:00 Uhr-Zweckverbandsversammlung des S</guid>
+    </item>
+    <item>
+      <title>Arbeitskreis Dorfentwicklung – Heiden</title>
+      <link>https://heiden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZY8GMVz22EUKa591BkDq6os</link>
+      <description>Mi, 22.04.2026, 17:00 Uhr Uhr | Rathaus, 46359 Heiden, Sitzungssaal</description>
+      <pubDate>Wed, 22 Apr 2026 17:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Heiden-20260422-17:00 Uhr-Arbeitskreis Dorfentwicklung</guid>
     </item>
     <item>
       <title>2. Sitzung des Ausschusses für Soziales, Bildung und Sport – Rhede</title>
@@ -1030,11 +1023,11 @@
       <guid isPermaLink="false">Coesfeld-20260423-18:00 Uhr-Ausschuss für Planen und Bauen</guid>
     </item>
     <item>
-      <title>Ältestenrat – Ahaus</title>
-      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
-      <description>Do, 23.04.2026, 18:00 Uhr Uhr</description>
+      <title>Kalender – Ascheberg</title>
+      <link>https://sessionnet.owl-it.de/ascheberg/bi/si0040.asp</link>
+      <description>Do, 23.04.2026, 19:00 Uhr Uhr</description>
       <pubDate>Thu, 23 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ahaus-20260423-18:00 Uhr-Ältestenrat</guid>
+      <guid isPermaLink="false">Ascheberg-20260423-19:00 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Haupt- und Finanzausschuss – Havixbeck</title>
@@ -1065,6 +1058,13 @@
       <guid isPermaLink="false">Beckum-20260423-16:30 Uhr-Haupt-, Finanz- und Digitalaus</guid>
     </item>
     <item>
+      <title>Ältestenrat – Ahaus</title>
+      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
+      <description>Do, 23.04.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ahaus-20260423-18:00 Uhr-Ältestenrat</guid>
+    </item>
+    <item>
       <title>Ausschuss für Wirtschaft, Energie, Tourismus, Umwelt und gemeindliche Entwicklung – Nordkirchen</title>
       <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4631</link>
       <description>Do, 23.04.2026, 17:30 Uhr Uhr</description>
@@ -1079,18 +1079,18 @@
       <guid isPermaLink="false">Greven-20260423-15:00 Uhr-Ausschuss für Stadtentwicklung</guid>
     </item>
     <item>
-      <title>Internationaler Beratungsausschuss und Städtepartnerschaften – Bocholt</title>
-      <link>https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZbyb2CYExO5rekkVKO1VtDs</link>
-      <description>Do, 23.04.2026, 15:00 Uhr Uhr | Kulturhus Dinxperlo, 7091 CV Dinxperlo (Niederlande), Café NOABERZ</description>
-      <pubDate>Thu, 23 Apr 2026 15:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Bocholt-20260423-15:00 Uhr-Internationaler Beratungsaussc</guid>
-    </item>
-    <item>
       <title>Gemeinderat – Reken</title>
       <link>https://reken.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZaiqAcNyQaimBltzl5UOaJg</link>
       <description>Do, 23.04.2026, 15:00 Uhr Uhr | RekenForum, 48734 Reken, Sitzungssaal</description>
       <pubDate>Thu, 23 Apr 2026 15:00:00 +0200</pubDate>
       <guid isPermaLink="false">Reken-20260423-15:00 Uhr-Gemeinderat</guid>
+    </item>
+    <item>
+      <title>Internationaler Beratungsausschuss und Städtepartnerschaften – Bocholt</title>
+      <link>https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZbyb2CYExO5rekkVKO1VtDs</link>
+      <description>Do, 23.04.2026, 15:00 Uhr Uhr | Kulturhus Dinxperlo, 7091 CV Dinxperlo (Niederlande), Café NOABERZ</description>
+      <pubDate>Thu, 23 Apr 2026 15:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Bocholt-20260423-15:00 Uhr-Internationaler Beratungsaussc</guid>
     </item>
     <item>
       <title>Betriebsausschuss des Abwasserwerks – Gronau</title>
@@ -1121,11 +1121,11 @@
       <guid isPermaLink="false">Lotte-20260423-16:00 Uhr-Verkehrs- und Umweltausschuss</guid>
     </item>
     <item>
-      <title>Ausschuss für Umwelt und Nachhaltigkeit – Lienen</title>
-      <link>https://lienen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZRKhvZ_wbg8iSY0KsgZYnFk</link>
-      <description>Do, 23.04.2026, 16:00 Uhr Uhr | Haus des Gastes, 49536 Lienen, Sitzungsraum im Haus des Gastes</description>
+      <title>Ausschuss für Planen, Bauen, Umwelt und Sport – Recke</title>
+      <link>https://recke.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZdcUFAIPyXNBluQ5lm7JzQs</link>
+      <description>Do, 23.04.2026, 16:00 Uhr Uhr | Rathaus Recke, 49509 Recke, Großer Sitzungssaal</description>
       <pubDate>Thu, 23 Apr 2026 16:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Lienen-20260423-16:00 Uhr-Ausschuss für Umwelt und Nachh</guid>
+      <guid isPermaLink="false">Recke-20260423-16:00 Uhr-Ausschuss für Planen, Bauen, U</guid>
     </item>
     <item>
       <title>Haupt- und Finanzausschuss – Westerkappeln</title>
@@ -1135,11 +1135,11 @@
       <guid isPermaLink="false">Westerkappeln-20260423-16:00 Uhr-Haupt- und Finanzausschuss</guid>
     </item>
     <item>
-      <title>Ausschuss für Planen, Bauen, Umwelt und Sport – Recke</title>
-      <link>https://recke.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZdcUFAIPyXNBluQ5lm7JzQs</link>
-      <description>Do, 23.04.2026, 16:00 Uhr Uhr | Rathaus Recke, 49509 Recke, Großer Sitzungssaal</description>
+      <title>Ausschuss für Umwelt und Nachhaltigkeit – Lienen</title>
+      <link>https://lienen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZRKhvZ_wbg8iSY0KsgZYnFk</link>
+      <description>Do, 23.04.2026, 16:00 Uhr Uhr | Haus des Gastes, 49536 Lienen, Sitzungsraum im Haus des Gastes</description>
       <pubDate>Thu, 23 Apr 2026 16:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Recke-20260423-16:00 Uhr-Ausschuss für Planen, Bauen, U</guid>
+      <guid isPermaLink="false">Lienen-20260423-16:00 Uhr-Ausschuss für Umwelt und Nachh</guid>
     </item>
     <item>
       <title>Aufsichtsrat der Stadtwerke Gronau – Gronau</title>
@@ -1205,18 +1205,11 @@
       <guid isPermaLink="false">Stadt Münster-20260427-09:00 Uhr-Kommunale Seniorenvertretung</guid>
     </item>
     <item>
-      <title>Ausschuss für Bildung, Kultur, Sport und Ehrenamt – Ahaus</title>
-      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0057.asp?__ksinr=1740</link>
-      <description>Mo, 27.04.2026, 19:00 Uhr Uhr</description>
+      <title>SPD-Fraktion – Borken</title>
+      <link>https://bi.borken.de/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
+      <description>Mo, 27.04.2026, 17:30 Uhr Uhr</description>
       <pubDate>Mon, 27 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ahaus-20260427-19:00 Uhr-Ausschuss für Bildung, Kultur,</guid>
-    </item>
-    <item>
-      <title>Entsorgungsgesellschaft Steinfurt mbH (Aufsichtsrat) – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
-      <description>Mo, 27.04.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Mon, 27 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260427-17:00 Uhr-Entsorgungsgesellschaft Steinf</guid>
+      <guid isPermaLink="false">Borken-20260427-17:30 Uhr-SPD-Fraktion</guid>
     </item>
     <item>
       <title>Fraktion Bündnis 90/Die Grünen im Rat der Stadt Beckum – Beckum</title>
@@ -1224,6 +1217,27 @@
       <description>Mo, 27.04.2026, 18:00 Uhr Uhr</description>
       <pubDate>Mon, 27 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Beckum-20260427-18:00 Uhr-Fraktion Bündnis 90/Die Grünen</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Bildung, Kultur, Sport und Ehrenamt – Ahaus</title>
+      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0057.asp?__ksinr=1740</link>
+      <description>Mo, 27.04.2026, 19:00 Uhr Uhr</description>
+      <pubDate>Mon, 27 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ahaus-20260427-19:00 Uhr-Ausschuss für Bildung, Kultur,</guid>
+    </item>
+    <item>
+      <title>Bau- und Planungsausschuss – Wettringen</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0057.asp?__ksinr=8889</link>
+      <description>Mo, 27.04.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Mon, 27 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Wettringen-20260427-18:00 Uhr-Bau- und Planungsausschuss</guid>
+    </item>
+    <item>
+      <title>Entsorgungsgesellschaft Steinfurt mbH (Aufsichtsrat) – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
+      <description>Mo, 27.04.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Mon, 27 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Steinfurt-20260427-17:00 Uhr-Entsorgungsgesellschaft Steinf</guid>
     </item>
     <item>
       <title>Ausschuss für Stadtentwicklung, Bau und Umwelt – Drensteinfurt</title>
@@ -1247,20 +1261,6 @@
       <guid isPermaLink="false">Oelde-20260427-18:30 Uhr-CDU-Fraktion im Rat</guid>
     </item>
     <item>
-      <title>Bau- und Planungsausschuss – Wettringen</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0057.asp?__ksinr=8889</link>
-      <description>Mo, 27.04.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Mon, 27 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Wettringen-20260427-18:00 Uhr-Bau- und Planungsausschuss</guid>
-    </item>
-    <item>
-      <title>SPD-Fraktion – Borken</title>
-      <link>https://bi.borken.de/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
-      <description>Mo, 27.04.2026, 17:30 Uhr Uhr</description>
-      <pubDate>Mon, 27 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Borken-20260427-17:30 Uhr-SPD-Fraktion</guid>
-    </item>
-    <item>
       <title>Ausschuss für Jugend, Familie, Soziales und Inklusion – Wadersloh</title>
       <link>https://sessionnet.owl-it.de/wadersloh/bi/si0057.asp?__ksinr=2674</link>
       <description>Mo, 27.04.2026, 18:00 Uhr Uhr</description>
@@ -1268,18 +1268,18 @@
       <guid isPermaLink="false">Wadersloh-20260427-18:00 Uhr-Ausschuss für Jugend, Familie,</guid>
     </item>
     <item>
-      <title>Betriebsausschuss Kurverwaltung – Tecklenburg</title>
-      <link>https://tecklenburg.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZe3eCFgHAmm--oFxnmWNNTg</link>
-      <description>Mo, 27.04.2026, 15:00 Uhr Uhr | Haus des Gastes Tecklenburg, 49545 Tecklenburg, Saal</description>
-      <pubDate>Mon, 27 Apr 2026 15:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Tecklenburg-20260427-15:00 Uhr-Betriebsausschuss Kurverwaltun</guid>
-    </item>
-    <item>
       <title>Hauptausschuss – Raesfeld</title>
       <link>https://raesfeld.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZVtRXLCl3d8WZvc5strsKMc</link>
       <description>Mo, 27.04.2026, 15:00 Uhr Uhr | Rathaus, 46348 Raesfeld, Großer Sitzungssaal des Rathauses</description>
       <pubDate>Mon, 27 Apr 2026 15:00:00 +0200</pubDate>
       <guid isPermaLink="false">Raesfeld-20260427-15:00 Uhr-Hauptausschuss</guid>
+    </item>
+    <item>
+      <title>Betriebsausschuss Kurverwaltung – Tecklenburg</title>
+      <link>https://tecklenburg.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZe3eCFgHAmm--oFxnmWNNTg</link>
+      <description>Mo, 27.04.2026, 15:00 Uhr Uhr | Haus des Gastes Tecklenburg, 49545 Tecklenburg, Saal</description>
+      <pubDate>Mon, 27 Apr 2026 15:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Tecklenburg-20260427-15:00 Uhr-Betriebsausschuss Kurverwaltun</guid>
     </item>
     <item>
       <title>Schul-, Sport-, Kultur- und Sozialausschuss – Velen</title>
@@ -1310,13 +1310,6 @@
       <guid isPermaLink="false">Stadt Münster-20260428-17:00 Uhr-Ausschuss für Schule und Weite</guid>
     </item>
     <item>
-      <title>Arbeitskreis Migration und Integration Ahaus – Ahaus</title>
-      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0057.asp?__ksinr=1795</link>
-      <description>Di, 28.04.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ahaus-20260428-17:00 Uhr-Arbeitskreis Migration und Int</guid>
-    </item>
-    <item>
       <title>Ausschuss für Stadtentwicklung und Bauerschaften – Lüdinghausen</title>
       <link>https://www.stadt-luedinghausen.de/sessionnet/buergerinfo/si0057.php?__ksinr=2334</link>
       <description>Di, 28.04.2026, 17:00 Uhr Uhr</description>
@@ -1331,13 +1324,6 @@
       <guid isPermaLink="false">Nottuln-20260428-19:00 Uhr-Rat</guid>
     </item>
     <item>
-      <title>Rat der Stadt Olfen – Olfen</title>
-      <link>https://ratsinfo.olfen.de/bi/si0057.asp?__ksinr=5157</link>
-      <description>Di, 28.04.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Olfen-20260428-18:00 Uhr-Rat der Stadt Olfen</guid>
-    </item>
-    <item>
       <title>Stadtentwicklungs- und Bauausschuss – Billerbeck</title>
       <link>https://ratsinfo.billerbeck.de/bi/si0057.asp?__ksinr=2663</link>
       <description>Di, 28.04.2026, 18:00 Uhr Uhr</description>
@@ -1345,11 +1331,25 @@
       <guid isPermaLink="false">Billerbeck-20260428-18:00 Uhr-Stadtentwicklungs- und Bauauss</guid>
     </item>
     <item>
-      <title>Ausschuss für Familie, Jugend, Senioren und Soziales – Drensteinfurt</title>
-      <link>https://sessionnet.owl-it.de/drensteinfurt/bi/si0057.asp?__ksinr=767</link>
+      <title>Rat der Stadt Olfen – Olfen</title>
+      <link>https://ratsinfo.olfen.de/bi/si0057.asp?__ksinr=5157</link>
       <description>Di, 28.04.2026, 18:00 Uhr Uhr</description>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Drensteinfurt-20260428-18:00 Uhr-Ausschuss für Familie, Jugend,</guid>
+      <guid isPermaLink="false">Olfen-20260428-18:00 Uhr-Rat der Stadt Olfen</guid>
+    </item>
+    <item>
+      <title>Arbeitskreis Migration und Integration Ahaus – Ahaus</title>
+      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0057.asp?__ksinr=1795</link>
+      <description>Di, 28.04.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ahaus-20260428-17:00 Uhr-Arbeitskreis Migration und Int</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Bauen und Planung – Nordkirchen</title>
+      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4583</link>
+      <description>Di, 28.04.2026, 17:30 Uhr Uhr</description>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Nordkirchen-20260428-17:30 Uhr-Ausschuss für Bauen und Planun</guid>
     </item>
     <item>
       <title>Haupt- und Finanzausschuss – Sassenberg</title>
@@ -1366,25 +1366,11 @@
       <guid isPermaLink="false">Ostbevern-20260428-18:00 Uhr-Gemeinderat</guid>
     </item>
     <item>
-      <title>Umweltausschuss – Oelde</title>
-      <link>https://sessionnet.owl-it.de/oelde/bi/si0057.asp?__ksinr=4192</link>
-      <description>Di, 28.04.2026, 17:30 Uhr Uhr</description>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Oelde-20260428-17:30 Uhr-Umweltausschuss</guid>
-    </item>
-    <item>
       <title>Haupt- und Finanzausschuss – Wettringen</title>
       <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
       <description>Di, 28.04.2026, 18:00 Uhr Uhr</description>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Wettringen-20260428-18:00 Uhr-Haupt- und Finanzausschuss</guid>
-    </item>
-    <item>
-      <title>Bezirksausschuss Freckenhorst-Hoetmar – Warendorf</title>
-      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8970</link>
-      <description>Di, 28.04.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Warendorf-20260428-17:00 Uhr-Bezirksausschuss Freckenhorst-</guid>
     </item>
     <item>
       <title>Bau- und Planungsausschuss – Senden</title>
@@ -1394,11 +1380,25 @@
       <guid isPermaLink="false">Senden-20260428-18:00 Uhr-Bau- und Planungsausschuss</guid>
     </item>
     <item>
-      <title>Ausschuss für Bauen und Planung – Nordkirchen</title>
-      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4583</link>
+      <title>Ausschuss für Familie, Jugend, Senioren und Soziales – Drensteinfurt</title>
+      <link>https://sessionnet.owl-it.de/drensteinfurt/bi/si0057.asp?__ksinr=767</link>
+      <description>Di, 28.04.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Drensteinfurt-20260428-18:00 Uhr-Ausschuss für Familie, Jugend,</guid>
+    </item>
+    <item>
+      <title>Umweltausschuss – Oelde</title>
+      <link>https://sessionnet.owl-it.de/oelde/bi/si0057.asp?__ksinr=4192</link>
       <description>Di, 28.04.2026, 17:30 Uhr Uhr</description>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nordkirchen-20260428-17:30 Uhr-Ausschuss für Bauen und Planun</guid>
+      <guid isPermaLink="false">Oelde-20260428-17:30 Uhr-Umweltausschuss</guid>
+    </item>
+    <item>
+      <title>Bezirksausschuss Freckenhorst-Hoetmar – Warendorf</title>
+      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8970</link>
+      <description>Di, 28.04.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Warendorf-20260428-17:00 Uhr-Bezirksausschuss Freckenhorst-</guid>
     </item>
     <item>
       <title>Ausschuss für Klima, Umwelt und Energie – Bocholt</title>
@@ -1471,18 +1471,18 @@
       <guid isPermaLink="false">Coesfeld-20260429-18:00 Uhr-Haupt- und Finanzausschuss</guid>
     </item>
     <item>
+      <title>Sozialausschuss – Rheine</title>
+      <link>https://www.rheine-buergerinfo.de/si0057.asp?__ksinr=7449</link>
+      <description>Mi, 29.04.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Rheine-20260429-17:00 Uhr-Sozialausschuss</guid>
+    </item>
+    <item>
       <title>Rat – Ahaus</title>
       <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0057.asp?__ksinr=1712</link>
       <description>Mi, 29.04.2026, 19:00 Uhr Uhr</description>
       <pubDate>Wed, 29 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Ahaus-20260429-19:00 Uhr-Rat</guid>
-    </item>
-    <item>
-      <title>Sozialausschuss – Rheine</title>
-      <link>https://www.rheine-buergerinfo.de/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
-      <description>Mi, 29.04.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Wed, 29 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Rheine-20260429-17:00 Uhr-Sozialausschuss</guid>
     </item>
     <item>
       <title>Planungsausschuss – Oelde</title>
@@ -1499,18 +1499,18 @@
       <guid isPermaLink="false">Warendorf-20260429-17:00 Uhr-Bezirksausschuss Einen-Müssing</guid>
     </item>
     <item>
-      <title>Schul- und Sportausschuss – Ibbenbüren</title>
-      <link>https://ibbenbueren.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZTi1AhGjmgk9SvVZonbOcJQ</link>
-      <description>Mi, 29.04.2026, 15:00 Uhr Uhr | Freizeithof Bögel-Windmeyer, Am Sportzentrum 30, 49479 Ibbenbüren</description>
-      <pubDate>Wed, 29 Apr 2026 15:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ibbenbüren-20260429-15:00 Uhr-Schul- und Sportausschuss</guid>
-    </item>
-    <item>
       <title>Haupt-/Finanz- und Wirtschaftsausschuss – Greven</title>
       <link>https://greven.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZfBoBUzB90AYMdYYGUtSvW8</link>
       <description>Mi, 29.04.2026, 15:00 Uhr Uhr | Rathaus der Stadt Greven, Rathausstraße 6, 48268 Greven, Großer Sitzungssaal</description>
       <pubDate>Wed, 29 Apr 2026 15:00:00 +0200</pubDate>
       <guid isPermaLink="false">Greven-20260429-15:00 Uhr-Haupt-/Finanz- und Wirtschafts</guid>
+    </item>
+    <item>
+      <title>Schul- und Sportausschuss – Ibbenbüren</title>
+      <link>https://ibbenbueren.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZTi1AhGjmgk9SvVZonbOcJQ</link>
+      <description>Mi, 29.04.2026, 15:00 Uhr Uhr | Freizeithof Bögel-Windmeyer, Am Sportzentrum 30, 49479 Ibbenbüren</description>
+      <pubDate>Wed, 29 Apr 2026 15:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ibbenbüren-20260429-15:00 Uhr-Schul- und Sportausschuss</guid>
     </item>
     <item>
       <title>Rat der Gemeinde Heiden – Heiden</title>
@@ -1569,18 +1569,18 @@
       <guid isPermaLink="false">Gronau-20260429-16:00 Uhr-Rat</guid>
     </item>
     <item>
-      <title>1. Sitzung des Ausschusses für Ordnung, Verkehr und Wirtschaft – Rhede</title>
-      <link>https://rhede.gremien.info/meeting?id=2026-OVWA-3</link>
-      <description>Mi, 29.04.2026, 18:00 Uhr Uhr | Rats- u. Kultursaal des Rathauses im 1. OG</description>
-      <pubDate>Wed, 29 Apr 2026 18:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Rhede-20260429-18:00 Uhr-1. Sitzung des Ausschusses für</guid>
-    </item>
-    <item>
       <title>5. Sitzung Gemeinderates – Südlohn</title>
       <link>https://suedlohn.gremien.info/meeting?id=2026-Rat-49</link>
       <description>Mi, 29.04.2026, 18:00 Uhr Uhr | Großer Sitzungssaal</description>
       <pubDate>Wed, 29 Apr 2026 18:00:00 +0200</pubDate>
       <guid isPermaLink="false">Südlohn-20260429-18:00 Uhr-5. Sitzung Gemeinderates</guid>
+    </item>
+    <item>
+      <title>1. Sitzung des Ausschusses für Ordnung, Verkehr und Wirtschaft – Rhede</title>
+      <link>https://rhede.gremien.info/meeting?id=2026-OVWA-3</link>
+      <description>Mi, 29.04.2026, 18:00 Uhr Uhr | Rats- u. Kultursaal des Rathauses im 1. OG</description>
+      <pubDate>Wed, 29 Apr 2026 18:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Rhede-20260429-18:00 Uhr-1. Sitzung des Ausschusses für</guid>
     </item>
     <item>
       <title>Sportausschuss – Stadt Münster</title>
@@ -1590,18 +1590,18 @@
       <guid isPermaLink="false">Stadt Münster-20260430-17:00 Uhr-Sportausschuss</guid>
     </item>
     <item>
+      <title>Familienbeirat – Rheine</title>
+      <link>https://www.rheine-buergerinfo.de/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
+      <description>Do, 30.04.2026, 19:00 Uhr Uhr</description>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Rheine-20260430-19:00 Uhr-Familienbeirat</guid>
+    </item>
+    <item>
       <title>Städte- und Gemeindebund NRW e.V. - Mitgliederversammlung – Ahaus</title>
       <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=4</link>
       <description>Do, 30.04.2026, 12:30 Uhr Uhr</description>
       <pubDate>Thu, 30 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Ahaus-20260430-12:30 Uhr-Städte- und Gemeindebund NRW e</guid>
-    </item>
-    <item>
-      <title>Ausschuss für Schule, Sport und Kultur – Drensteinfurt</title>
-      <link>https://sessionnet.owl-it.de/drensteinfurt/bi/si0057.asp?__ksinr=768</link>
-      <description>Do, 30.04.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Thu, 30 Apr 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Drensteinfurt-20260430-18:00 Uhr-Ausschuss für Schule, Sport un</guid>
     </item>
     <item>
       <title>Ausschuss für Bildung, Soziales, Kultur und Sport – Everswinkel</title>
@@ -1616,6 +1616,13 @@
       <description>Do, 30.04.2026, 17:00 Uhr Uhr</description>
       <pubDate>Thu, 30 Apr 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Telgte-20260430-17:00 Uhr-Rat der Stadt Telgte</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Schule, Sport und Kultur – Drensteinfurt</title>
+      <link>https://sessionnet.owl-it.de/drensteinfurt/bi/si0057.asp?__ksinr=768</link>
+      <description>Do, 30.04.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Drensteinfurt-20260430-18:00 Uhr-Ausschuss für Schule, Sport un</guid>
     </item>
     <item>
       <title>1. Sitzung des Landesjugendhilfeausschusses – LWL</title>
