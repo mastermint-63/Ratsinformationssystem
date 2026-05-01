@@ -1,0 +1,3078 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratstermine Juli 2026</title>
+    <link rel="alternate" type="application/rss+xml" title="Politikradar Münsterland" href="feed.xml">
+    <style>
+        :root {
+            --bg-color: #f5f5f7;
+            --card-bg: #ffffff;
+            --text-color: #1d1d1f;
+            --text-secondary: #86868b;
+            --border-color: #d2d2d7;
+            --accent-color: #0066cc;
+            --hover-color: #f0f0f5;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1d1d1f;
+                --card-bg: #2d2d2f;
+                --text-color: #f5f5f7;
+                --text-secondary: #a1a1a6;
+                --border-color: #424245;
+                --accent-color: #2997ff;
+                --hover-color: #3a3a3c;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .nav-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--accent-color);
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .nav-btn:hover {
+            background: var(--hover-color);
+        }
+
+        .nav-btn.disabled {
+            opacity: 0.3;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .monat-titel {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .filter-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: box-shadow 0.2s;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .filter-container {
+                background: rgba(45, 45, 47, 0.5);
+            }
+        }
+
+        .filter-container.is-sticky {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            border-radius: 0 0 10px 10px;
+        }
+
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .filter-header h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .filter-reset {
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            font-size: 13px;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        .filter-reset:hover {
+            text-decoration: underline;
+        }
+
+        .filter-search {
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .filter-search input {
+            width: 100%;
+            padding: 10px 40px 10px 15px;
+            font-size: 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+        }
+
+        .filter-search input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .filter-search .search-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .filter-dropdowns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .filter-label {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .kreis-filter {
+            width: 100%;
+            padding: 6px 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-size: 13px;
+        }
+
+        .filter-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 5px;
+        }
+
+        .stats {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .active-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .filter-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 8px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        .filter-tag button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 1;
+            padding: 0;
+            margin-left: 2px;
+        }
+
+        .datum-gruppe {
+            margin-bottom: 20px;
+        }
+
+        .datum-header {
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 10px 15px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .termine-liste {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .termin {
+            display: flex;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s;
+        }
+
+        .termin:last-child {
+            border-bottom: none;
+        }
+
+        .termin:hover {
+            background: var(--hover-color);
+        }
+
+        .termin.abgesagt {
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+
+        .termin-zeit {
+            width: 80px;
+            font-weight: 500;
+            color: var(--accent-color);
+            flex-shrink: 0;
+        }
+
+        .termin-info {
+            flex: 1;
+        }
+
+        .termin-gremium {
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .termin-gremium a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .termin-gremium a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .ki-btn {
+            margin-left: 8px;
+            text-decoration: none;
+            font-size: 0.9em;
+            opacity: 0.6;
+            transition: opacity 0.2s, transform 0.2s;
+            display: inline-block;
+        }
+
+        .ki-btn:hover {
+            opacity: 1;
+            transform: scale(1.2);
+            text-decoration: none;
+        }
+
+        .termin-stadt {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .termin-ort {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .kalender {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 25px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .kalender th {
+            padding: 6px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .kalender td {
+            padding: 6px;
+            font-size: 14px;
+            border-radius: 6px;
+        }
+
+        .kalender .kal-leer {
+            color: var(--text-secondary);
+            opacity: 0.5;
+        }
+
+        .kalender .kal-link {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .kalender .kal-link:hover {
+            opacity: 0.8;
+        }
+
+        .zurueck-link {
+            text-align: right;
+            padding: 6px 15px;
+            font-size: 13px;
+        }
+
+        .zurueck-link a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .zurueck-link a:hover {
+            color: var(--accent-color);
+        }
+
+        .keine-termine {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Politikradar Münsterland</h1>
+            <div class="nav">
+                <a href="termine_2026_06.html" class="nav-btn">&larr; Juni</a>
+                <span class="monat-titel">Juli 2026</span>
+                <a href="#" class="nav-btn disabled">August &rarr;</a>
+            </div>
+        </header>
+
+        <table class="kalender" id="kalender">
+<tr><th>Mo</th><th>Di</th><th>Mi</th><th>Do</th><th>Fr</th><th>Sa</th><th>So</th></tr>
+<tr><td></td><td></td><td><a href="#datum-2026-07-01" class="kal-link">1</a></td><td><a href="#datum-2026-07-02" class="kal-link">2</a></td><td><a href="#datum-2026-07-03" class="kal-link">3</a></td><td class="kal-leer">4</td><td class="kal-leer">5</td></tr>
+<tr><td><a href="#datum-2026-07-06" class="kal-link">6</a></td><td><a href="#datum-2026-07-07" class="kal-link">7</a></td><td><a href="#datum-2026-07-08" class="kal-link">8</a></td><td><a href="#datum-2026-07-09" class="kal-link">9</a></td><td><a href="#datum-2026-07-10" class="kal-link">10</a></td><td class="kal-leer">11</td><td class="kal-leer">12</td></tr>
+<tr><td><a href="#datum-2026-07-13" class="kal-link">13</a></td><td><a href="#datum-2026-07-14" class="kal-link">14</a></td><td><a href="#datum-2026-07-15" class="kal-link">15</a></td><td><a href="#datum-2026-07-16" class="kal-link">16</a></td><td><a href="#datum-2026-07-17" class="kal-link">17</a></td><td class="kal-leer">18</td><td class="kal-leer">19</td></tr>
+<tr><td class="kal-leer">20</td><td class="kal-leer">21</td><td class="kal-leer">22</td><td class="kal-leer">23</td><td class="kal-leer">24</td><td class="kal-leer">25</td><td class="kal-leer">26</td></tr>
+<tr><td class="kal-leer">27</td><td class="kal-leer">28</td><td class="kal-leer">29</td><td><a href="#datum-2026-07-30" class="kal-link">30</a></td><td class="kal-leer">31</td><td></td><td></td></tr>
+</table>
+
+        <div class="filter-container">
+            <div class="filter-header">
+                <h3>Filter nach Kommune</h3>
+                <button class="filter-reset" onclick="resetFilter()">Alle zurücksetzen</button>
+            </div>
+
+            <!-- Suchfeld -->
+            <div class="filter-search">
+                <input type="text"
+                       id="search-input"
+                       placeholder="Schnellsuche: Stadt eingeben (z.B. Greven, Münster...)"
+                       oninput="searchTermine()"
+                       autocomplete="off">
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <div class="filter-dropdowns">
+                
+            <div class="filter-group">
+                <label class="filter-label">Münsterland</label>
+                <select class="kreis-filter" id="filter-muenster" onchange="filterTermine()">
+                    <option value="">Münsterland</option><option value="Kreis Coesfeld">Kreis Coesfeld</option><option value="Kreis Steinfurt">Kreis Steinfurt</option><option value="Kreis Warendorf">Kreis Warendorf</option><option value="LWL">LWL</option><option value="Stadt Münster">Stadt Münster</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label class="filter-label">Kreis Steinfurt</label>
+                <select class="kreis-filter" id="filter-steinfurt" onchange="filterTermine()">
+                    <option value="">Kreis Steinfurt</option><option value="Altenberge">Altenberge</option><option value="Emsdetten">Emsdetten</option><option value="Greven">Greven</option><option value="Hopsten">Hopsten</option><option value="Horstmar">Horstmar</option><option value="Hörstel">Hörstel</option><option value="Ibbenbüren">Ibbenbüren</option><option value="Ladbergen">Ladbergen</option><option value="Lengerich">Lengerich</option><option value="Lienen">Lienen</option><option value="Lotte">Lotte</option><option value="Metelen">Metelen</option><option value="Mettingen">Mettingen</option><option value="Neuenkirchen">Neuenkirchen</option><option value="Nordwalde">Nordwalde</option><option value="Ochtrup">Ochtrup</option><option value="Recke">Recke</option><option value="Rheine">Rheine</option><option value="Saerbeck">Saerbeck</option><option value="Steinfurt">Steinfurt</option><option value="Tecklenburg">Tecklenburg</option><option value="Westerkappeln">Westerkappeln</option><option value="Wettringen">Wettringen</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label class="filter-label">Kreis Borken</label>
+                <select class="kreis-filter" id="filter-borken" onchange="filterTermine()">
+                    <option value="">Kreis Borken</option><option value="Ahaus">Ahaus</option><option value="Bocholt">Bocholt</option><option value="Borken">Borken</option><option value="Gescher">Gescher</option><option value="Gronau">Gronau</option><option value="Heek">Heek</option><option value="Heiden">Heiden</option><option value="Isselburg">Isselburg</option><option value="Legden">Legden</option><option value="Raesfeld">Raesfeld</option><option value="Reken">Reken</option><option value="Rhede">Rhede</option><option value="Schöppingen">Schöppingen</option><option value="Stadtlohn">Stadtlohn</option><option value="Velen">Velen</option><option value="Vreden">Vreden</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label class="filter-label">Kreis Coesfeld</label>
+                <select class="kreis-filter" id="filter-coesfeld" onchange="filterTermine()">
+                    <option value="">Kreis Coesfeld</option><option value="Ascheberg">Ascheberg</option><option value="Billerbeck">Billerbeck</option><option value="Coesfeld">Coesfeld</option><option value="Havixbeck">Havixbeck</option><option value="Lüdinghausen">Lüdinghausen</option><option value="Nordkirchen">Nordkirchen</option><option value="Nottuln">Nottuln</option><option value="Olfen">Olfen</option><option value="Rosendahl">Rosendahl</option><option value="Senden">Senden</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label class="filter-label">Kreis Warendorf</label>
+                <select class="kreis-filter" id="filter-warendorf" onchange="filterTermine()">
+                    <option value="">Kreis Warendorf</option><option value="Ahlen">Ahlen</option><option value="Beckum">Beckum</option><option value="Beelen">Beelen</option><option value="Drensteinfurt">Drensteinfurt</option><option value="Ennigerloh">Ennigerloh</option><option value="Oelde">Oelde</option><option value="Ostbevern">Ostbevern</option><option value="Sendenhorst">Sendenhorst</option><option value="Telgte">Telgte</option><option value="Wadersloh">Wadersloh</option><option value="Warendorf">Warendorf</option>
+                </select>
+            </div>
+            </div>
+            <div class="filter-stats">
+                <div class="active-filters" id="active-filters"></div>
+                <div class="stats">
+                    <span id="termine-count">193</span> von 193 Terminen
+                </div>
+            </div>
+        </div>
+
+        <main id="termine-container">
+            
+        <div class="datum-gruppe" id="datum-2026-04-30">
+            <div class="datum-header">Do, 30.04.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="Wettringen">
+                    <div class="termin-zeit">14:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0040.asp" target="_blank">Kalender</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0040.asp" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Wettringen</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ascheberg">
+                    <div class="termin-zeit">7:57 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/ascheberg/bi/si0040.asp" target="_blank">Kalender</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//sessionnet.owl-it.de/ascheberg/bi/si0040.asp" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ascheberg</div>
+                        
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        <div class="datum-gruppe" id="datum-2026-07-01">
+            <div class="datum-header">Mi, 01.07.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="LWL">
+                    <div class="termin-zeit">10:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://allris.lwl.org/public/si010" target="_blank">2. Sitzung des Ausschusses für Jugendhilfeeinrichtungen</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//allris.lwl.org/public/si010" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">LWL</div>
+                        <div class="termin-ort">Ausschusszimmer</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ibbenbüren">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ibbenbueren.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZdCV0fy8xbZ3qoyHh5zZhjQ" target="_blank">Betriebsausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ibbenbueren.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZdCV0fy8xbZ3qoyHh5zZhjQ" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ibbenbüren</div>
+                        <div class="termin-ort">Freizeithof Bögel-Windmeyer, Am Sportzentrum 30, 49479 Ibbenbüren</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Bocholt">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZchz7L_duu3iUbXtT33isTQ" target="_blank">Aufsichtsrat EWIBO GmbH</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ratsinfo.bocholt.de/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZchz7L_duu3iUbXtT33isTQ" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Bocholt</div>
+                        <div class="termin-ort">Europa-Haus Bocholt, 46399 Bocholt, Raum Spanien</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Isselburg">
+                    <div class="termin-zeit">15:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://isselburg.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZY3F0ktZZOc7vPwf2yaCjGo" target="_blank">Ausschuss für Bauen, Umwelt und Abwasser</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//isselburg.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZY3F0ktZZOc7vPwf2yaCjGo" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Isselburg</div>
+                        <div class="termin-ort">Bürgerhalle Herzebocholt, 46419 Isselburg, Saal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Velen">
+                    <div class="termin-zeit">15:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://velen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZUpqNthp7dN0PkBN2ZCj5u4" target="_blank">Planungsausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//velen.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZUpqNthp7dN0PkBN2ZCj5u4" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Velen</div>
+                        <div class="termin-ort">Rathaus Velen, 46342 Velen, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Hauptausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Heek">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://heek.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZeWG_arQb-QY23gopjT0wmw" target="_blank">Haupt- Finanz- und Wirtschaftsförderungsausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//heek.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZeWG_arQb-QY23gopjT0wmw" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Heek</div>
+                        <div class="termin-ort">Gemeindeverwaltung, 48619 Heek, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Legden">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://legden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZXlr0SF0SKcI0iWLJgzT5uQ" target="_blank">Schul-, Sport-, Jugend- und Kulturausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//legden.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZXlr0SF0SKcI0iWLJgzT5uQ" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Legden</div>
+                        <div class="termin-ort">Feuerwehrgerätehaus Legden, 48739 Legden, Schulungsraum</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Gescher">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://gescher.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZQ1dZfAWXgy48U_7khHb6PQ" target="_blank">Ausschuss für Bauen, Planen und Stadtentwicklung</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//gescher.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZQ1dZfAWXgy48U_7khHb6PQ" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Gescher</div>
+                        <div class="termin-ort">Rathaus, 48712 Gescher, Großer Sitzungssaal des Rathauses</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Gronau">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://gronau.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZfgbTa-irgpCYM8ug-2zTBQ" target="_blank">Haupt- und Finanzausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//gronau.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZfgbTa-irgpCYM8ug-2zTBQ" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Gronau</div>
+                        <div class="termin-ort">Wirtschaftszentrum Gronau, Fabrikstraße 3, 48599 Gronau, Ratssaal, 1. OG</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Steinfurt">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Ausschuss für Arbeit, Soziales, Pflege, Integration und Demografie</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Steinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Borken">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://bi.borken.de/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Haupt- und Finanzausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Warendorf">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/warendorf/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Stadtentwicklungsausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Warendorf</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Beckum">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/beckum/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Ausschuss für Kinder, Jugendliche und Familien</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Beckum</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Oelde">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Planungsausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Oelde</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Coesfeld">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Umweltausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Drensteinfurt">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/drensteinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Ausschuss für Familie, Jugend, Senioren und Soziales</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Drensteinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ochtrup">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ochtrup.gremien.info/meeting?id=2025-HuF-85" target="_blank">Sitzung des Haupt- und Finanzausschusses</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ochtrup.gremien.info/meeting%3Fid%3D2025-HuF-85" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ochtrup</div>
+                        <div class="termin-ort">Rathaus II</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Rhede">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://rhede.gremien.info/meeting?id=2026-SBSA-110" target="_blank">3. Sitzung des Ausschusses für Soziales, Bildung und Sport</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//rhede.gremien.info/meeting%3Fid%3D2026-SBSA-110" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Rhede</div>
+                        <div class="termin-ort">Rats- u. Kultursaal des Rathauses im 1. OG</div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        <div class="datum-gruppe" id="datum-2026-07-02">
+            <div class="datum-header">Do, 02.07.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="LWL">
+                    <div class="termin-zeit">10:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://allris.lwl.org/public/si010" target="_blank">2. Sitzung des Auschusses für Gesundheit, Krankenhäuser und Maßregelvollzug</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//allris.lwl.org/public/si010" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">LWL</div>
+                        <div class="termin-ort">Plenarsaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ibbenbüren">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ibbenbueren.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZaKca4d7VpVeCirdNXUtmvY" target="_blank">Haupt- und Finanzausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ibbenbueren.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZaKca4d7VpVeCirdNXUtmvY" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ibbenbüren</div>
+                        <div class="termin-ort">Freizeithof Bögel-Windmeyer, Am Sportzentrum 30, 49479 Ibbenbüren</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Greven">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://greven.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZeBRxBxivnvttg_PBRszqNo" target="_blank">Schulausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//greven.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZeBRxBxivnvttg_PBRszqNo" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Greven</div>
+                        <div class="termin-ort">Rathaus der Stadt Greven, Rathausstraße 6, 48268 Greven, Großer Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Bocholt">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZXSth5F9VOA0YELXJrIOh1s" target="_blank">Ausschuss für Wirtschaft, Handel und Tourismus</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ratsinfo.bocholt.de/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZXSth5F9VOA0YELXJrIOh1s" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Bocholt</div>
+                        <div class="termin-ort">Historischen Rathaus, 46399 Bocholt, Ratssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Bocholt">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZT0oh3Q38snXCPMzfKZLBAk" target="_blank">Aufsichtsrat der Wirtschaftsförderungs- und Stadtmarketing Gesellschaft Bocholt mbH &amp; Co. KG</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ratsinfo.bocholt.de/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZT0oh3Q38snXCPMzfKZLBAk" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Bocholt</div>
+                        <div class="termin-ort">Historischen Rathaus, 46399 Bocholt, Ratssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Tecklenburg">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://tecklenburg.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZRo8UaQEPmNFVG8cytSlZE4" target="_blank">Stadtrat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//tecklenburg.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZRo8UaQEPmNFVG8cytSlZE4" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Tecklenburg</div>
+                        <div class="termin-ort">Historische Gaststätte Franz in Brochterbeck, 49545 Tecklenburg, Saal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Gronau">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://gronau.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZe5gDb5JNx4K9TWMisxorbY" target="_blank">Betriebsausschuss des Abwasserwerks</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//gronau.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZe5gDb5JNx4K9TWMisxorbY" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Gronau</div>
+                        <div class="termin-ort">Stadtwerke Gronau, Laubstiege 19, 48599 Gronau, Raum Dinkel (3. OG)</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Emsdetten">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://emsdetten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZQ7o1xJxTX78ZShvTEMs-uA" target="_blank">Haupt-, Finanz- und Steuerungsausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//emsdetten.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZQ7o1xJxTX78ZShvTEMs-uA" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Emsdetten</div>
+                        <div class="termin-ort">Rathaus, 48282 Emsdetten, Ratssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Horstmar">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://horstmar.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZW_tl6brmXABlHcELLnMWbc" target="_blank">Ausschuss für Bauen, Stadtentwicklung, Klima und Mobilität</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//horstmar.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZW_tl6brmXABlHcELLnMWbc" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Horstmar</div>
+                        <div class="termin-ort">Historisches Rathaus, 48612 Horstmar, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Lotte">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://lotte.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZYtBh1d6Ig9UpJo8ozQxx5A" target="_blank">Finanz- und Personalausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//lotte.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZYtBh1d6Ig9UpJo8ozQxx5A" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Lotte</div>
+                        <div class="termin-ort">Rathaus, 49504 Lotte, Ratssaal, Westerkappelner Str. 19, 49504 Lotte</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Steinfurt">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://steinfurt.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZUA5E-ODrCk_iMwow7x-uVg" target="_blank">Haupt-, Finanz-, Digital- und Steuerungsausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//steinfurt.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZUA5E-ODrCk_iMwow7x-uVg" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Steinfurt</div>
+                        <div class="termin-ort">Rathaus, 48565 Steinfurt, Sitzungssaal I (großer Saal)</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Westerkappeln">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://westerkappeln.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZfgUGhDZWPEzhb5-dlCZAko" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//westerkappeln.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZfgUGhDZWPEzhb5-dlCZAko" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Westerkappeln</div>
+                        <div class="termin-ort">Rathaus, 49492 Westerkappeln, Ratssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Legden">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://legden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZcZIg0pWN__4gKYOhJZ4G5k" target="_blank">Betriebsausschuss der Gemeindewerke Legden</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//legden.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZcZIg0pWN__4gKYOhJZ4G5k" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Legden</div>
+                        <div class="termin-ort">Feuerwehrgerätehaus Legden, 48739 Legden, Schulungsraum</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Vreden">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://vreden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZQWbYcQxsmUqybRL9ABHuDw" target="_blank">Rat der Stadt Vreden</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//vreden.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZQWbYcQxsmUqybRL9ABHuDw" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Vreden</div>
+                        <div class="termin-ort">Rathaus der Stadt Vreden, 48691 Vreden, Ratssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Gronau">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://gronau.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZQfKoMe7RzX_qnE8XbOvmuk" target="_blank">Aufsichtsrat der Stadtwerke Gronau</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//gronau.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZQfKoMe7RzX_qnE8XbOvmuk" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Gronau</div>
+                        <div class="termin-ort">Stadtwerke Gronau, Laubstiege 19, 48599 Gronau, Raum Dinkel (3. OG)</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Nordwalde">
+                    <div class="termin-zeit">16:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://nordwalde.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZZ52ou6eAKWAD6UJ25bZM5Y" target="_blank">Betriebsausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//nordwalde.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZZ52ou6eAKWAD6UJ25bZM5Y" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Nordwalde</div>
+                        <div class="termin-ort">Bürgerzentrum, 48356 Nordwalde, Bürgersaal inkl. Foyer</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Wohn+Stadtbau GmbH, Aufsichtsrat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Steinfurt">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Personal- und Gleichstellungsausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Steinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Warendorf">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/warendorf/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Sozialausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Warendorf</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ladbergen">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ladbergen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZVetT-ewWAAVzjp8rBjF63s" target="_blank">Planungs- und Bauausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ladbergen.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZVetT-ewWAAVzjp8rBjF63s" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ladbergen</div>
+                        <div class="termin-ort">Rathaus, 49549 Ladbergen, Großer Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ahlen">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.ahlen.sitzung-online.de/public/si010" target="_blank">Sitzung des Stadtplanungs- und Bauausschusses</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//www.ahlen.sitzung-online.de/public/si010" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ahlen</div>
+                        <div class="termin-ort">Ratssaal des Rathauses</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Nordkirchen">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/nordkirchen/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Ausschuss für Bauen und Planung</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Nordkirchen</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Beckum">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/beckum/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Haupt-, Finanz- und Digitalausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Beckum</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Oelde">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Jugendhilfeausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Oelde</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Coesfeld">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Ausschuss für Planen und Bauen</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Lüdinghausen">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-luedinghausen.de/sessionnet/buergerinfo/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Betriebsausschuss Abwasserwerk</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Lüdinghausen</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Beelen">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/beelen/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Haupt- und Finanzausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Beelen</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Billerbeck">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.billerbeck.de/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rechnungsprüfungsausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Billerbeck</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Drensteinfurt">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/drensteinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Ausschuss für Schule, Sport und Kultur</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Drensteinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ennigerloh">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/ennigerloh/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Betriebsausschuss &quot;Eigenbetriebe&quot;</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ennigerloh</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Senden">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/gemeinde-senden/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Haupt- und Finanzausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Senden</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ahaus">
+                    <div class="termin-zeit">19:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Ausschuss für Stadtentwicklung, Planen, Bauen und Landwirtschaft</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ahaus</div>
+                        
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        <div class="datum-gruppe" id="datum-2026-07-03">
+            <div class="datum-header">Fr, 03.07.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="Kreis Warendorf">
+                    <div class="termin-zeit">09:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.kreis-warendorf.de/w1/sessionnet/bi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Sitzung des Kreisausschusses</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Warendorf</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Bocholt">
+                    <div class="termin-zeit">12:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZXhulSLYafq63rPTotWpnQk" target="_blank">Aufsichtsrat EWIBO GmbH</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ratsinfo.bocholt.de/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZXhulSLYafq63rPTotWpnQk" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Bocholt</div>
+                        <div class="termin-ort">Europa-Haus Bocholt, 46399 Bocholt, Raum Spanien</div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        <div class="datum-gruppe" id="datum-2026-07-06">
+            <div class="datum-header">Mo, 06.07.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="LWL">
+                    <div class="termin-zeit">10:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://allris.lwl.org/public/si010" target="_blank">2. Sitzung des Schulausschusses</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//allris.lwl.org/public/si010" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">LWL</div>
+                        <div class="termin-ort">Plenarsaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Havixbeck">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.ris-havixbeck.de/bi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Seniorenbeirat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Havixbeck</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Emsdetten">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://emsdetten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZQQ0J6d2okpB0LMQfscyTtg" target="_blank">Verbandsversammlung VHS Emsd./Greven/Saerbeck</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//emsdetten.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZQQ0J6d2okpB0LMQfscyTtg" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Emsdetten</div>
+                        <div class="termin-ort">Stiftung St. Josef, 48282 Emsdetten, Seminarraum</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Velen">
+                    <div class="termin-zeit">15:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://velen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZccsvlbX-oVlUAASRmKc2Qw" target="_blank">Stadtrat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//velen.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZccsvlbX-oVlUAASRmKc2Qw" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Velen</div>
+                        <div class="termin-ort">Burg Ramsdorf, 46342 Velen, Burgsaal Ramsdorf</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Legden">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://legden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZTowllEvUgvhyfs7XhLfylU" target="_blank">Gemeinderat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//legden.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZTowllEvUgvhyfs7XhLfylU" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Legden</div>
+                        <div class="termin-ort">Feuerwehrgerätehaus Legden, 48739 Legden, Schulungsraum</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadtlohn">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://stadtlohn.ratsinfomanagement.net/termine" target="_blank">CDU-Fraktion</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//stadtlohn.ratsinfomanagement.net/termine" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Stadtlohn</div>
+                        <div class="termin-ort">Rathaus, 48703 Stadtlohn, Großer Sitzungssaal, 1. OG</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadtlohn">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://stadtlohn.ratsinfomanagement.net/termine" target="_blank">UWG-Fraktion</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//stadtlohn.ratsinfomanagement.net/termine" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Stadtlohn</div>
+                        <div class="termin-ort">Haus Hakenfort, 48703 Stadtlohn, Scheune</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadtlohn">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://stadtlohn.ratsinfomanagement.net/termine" target="_blank">FDP-Fraktion</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//stadtlohn.ratsinfomanagement.net/termine" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Stadtlohn</div>
+                        <div class="termin-ort">Rathaus, 48703 Stadtlohn, Raum 134, Besprechungsraum 1. OG</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Metelen">
+                    <div class="termin-zeit">16:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://metelen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZVLI53V-gZI7er7KhMqhSS8" target="_blank">Gemeinderat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//metelen.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZVLI53V-gZI7er7KhMqhSS8" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Metelen</div>
+                        <div class="termin-ort">Altes Amtshaus, 48629 Metelen, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadtlohn">
+                    <div class="termin-zeit">16:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://stadtlohn.ratsinfomanagement.net/termine" target="_blank">Fraktion Bündnis90/Die Grünen</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//stadtlohn.ratsinfomanagement.net/termine" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Stadtlohn</div>
+                        <div class="termin-ort">Rathaus, 48703 Stadtlohn, Raum 129, Besprechungsraum 1. OG</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Jugendrat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Warendorf">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/warendorf/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Haupt-, Finanz- und Wirtschaftsausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Warendorf</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ahlen">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.ahlen.sitzung-online.de/public/si010" target="_blank">Sitzung des Betriebsausschusses</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//www.ahlen.sitzung-online.de/public/si010" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ahlen</div>
+                        <div class="termin-ort">Ratssaal des Rathauses</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadtlohn">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://stadtlohn.ratsinfomanagement.net/termine" target="_blank">SPD-Fraktion</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//stadtlohn.ratsinfomanagement.net/termine" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Stadtlohn</div>
+                        <div class="termin-ort">Rathaus, 48703 Stadtlohn, Kleiner Sitzungssaal, 2. OG</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Borken">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://bi.borken.de/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">SPD-Fraktion</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Oelde">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Finanzausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Oelde</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Beckum">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/beckum/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">FWG-Fraktion im Rat der Stadt Beckum</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Beckum</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ennigerloh">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/ennigerloh/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat der Stadt Ennigerloh</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ennigerloh</div>
+                        
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        <div class="datum-gruppe" id="datum-2026-07-07">
+            <div class="datum-header">Di, 07.07.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="Hörstel">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://hoerstel.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZbpVBb5P0BuCWjH4fUBgRGk" target="_blank">Haupt- und Finanzausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//hoerstel.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZbpVBb5P0BuCWjH4fUBgRGk" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Hörstel</div>
+                        <div class="termin-ort">Rathaus Riesenbeck, 48477 Hörstel, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadtlohn">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://stadtlohn.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZTkBY632XAnI2Y5dK2eaKXU" target="_blank">Ausschuss für Wirtschaftsförderung, Stadtentwicklung, Klima- und Umweltschutz</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//stadtlohn.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZTkBY632XAnI2Y5dK2eaKXU" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Stadtlohn</div>
+                        <div class="termin-ort">Rathaus, 48703 Stadtlohn, Großer Sitzungssaal, 1. OG</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Bocholt">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZfi7MTe75rdNUPEpNuzJ0dI" target="_blank">Ausschuss für Planung, Bau und Verkehr</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ratsinfo.bocholt.de/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZfi7MTe75rdNUPEpNuzJ0dI" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Bocholt</div>
+                        <div class="termin-ort">LernWerk Bocholt, 46395 Bocholt, Raum 1.01 Veranstaltung</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Bocholt">
+                    <div class="termin-zeit">15:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZbx8H_lTFKucKQucxyYhwSQ" target="_blank">Rechnungsprüfungsausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ratsinfo.bocholt.de/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZbx8H_lTFKucKQucxyYhwSQ" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Bocholt</div>
+                        <div class="termin-ort">Gesamtschule Bocholt, 46395 Bocholt, Mensa</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Steinfurt">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Gesellschafterversammlung der Beteiligungsgesellschaft des Kreises Steinfurt mbH</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Steinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Altenberge">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://altenberge.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZTSGcGI5G8aCxpKUpZMA07c" target="_blank">Haupt-, Wirtschafts-, Finanz- und Digitalisierungsausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//altenberge.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZTSGcGI5G8aCxpKUpZMA07c" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Altenberge</div>
+                        <div class="termin-ort">Bürgerhaus, 48341 Altenberge, Mehrzwecksaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Horstmar">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://horstmar.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZXwfsxjU8aoDqX8Uh0z8gu0" target="_blank">Haupt- und Finanzausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//horstmar.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZXwfsxjU8aoDqX8Uh0z8gu0" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Horstmar</div>
+                        <div class="termin-ort">Historisches Rathaus, 48612 Horstmar, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Lotte">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://lotte.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZbDxQ-EpTx_jvfuQzAPcew8" target="_blank">Hauptausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//lotte.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZbDxQ-EpTx_jvfuQzAPcew8" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Lotte</div>
+                        <div class="termin-ort">Rathaus, 49504 Lotte, Ratssaal, Westerkappelner Str. 19, 49504 Lotte</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Steinfurt">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://steinfurt.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZWVcbXjtIiQFZmAFCjyuU0k" target="_blank">Ausschuss für Bildung, Schule, Kultur und Sport</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//steinfurt.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZWVcbXjtIiQFZmAFCjyuU0k" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Steinfurt</div>
+                        <div class="termin-ort">Rathaus, 48565 Steinfurt, Sitzungssaal I (großer Saal)</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Recke">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://recke.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZXUZcE60o-GL8tKvaieUMps" target="_blank">Ausschuss Digitalbau Overbergschule</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//recke.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZXUZcE60o-GL8tKvaieUMps" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Recke</div>
+                        <div class="termin-ort">Rathaus Recke, 49509 Recke, Großer Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Gronau">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://gronau.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZX67HaZWNX5hERdAdGCFa4E" target="_blank">Ausschuss für Gesundheit, medizinische Versorgung, Sport und Ehrenamt</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//gronau.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZX67HaZWNX5hERdAdGCFa4E" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Gronau</div>
+                        <div class="termin-ort">Wirtschaftszentrum Gronau, Fabrikstraße 3, 48599 Gronau, Ratssaal, 1. OG</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Nordwalde">
+                    <div class="termin-zeit">16:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://nordwalde.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZa5HOXOtIkTXEwP9Hj8S24A" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//nordwalde.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZa5HOXOtIkTXEwP9Hj8S24A" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Nordwalde</div>
+                        <div class="termin-ort">Bürgerzentrum, 48356 Nordwalde, Bürgersaal inkl. Foyer</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Betriebsausschuss der Abfallwirtschaftsbetriebe</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Warendorf">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/warendorf/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Betriebsausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Warendorf</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ahlen">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.ahlen.sitzung-online.de/public/si010" target="_blank">Sitzung des Finanz- und Personalausschusses</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//www.ahlen.sitzung-online.de/public/si010" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ahlen</div>
+                        <div class="termin-ort">Ratssaal des Rathauses</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Nordkirchen">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/nordkirchen/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Haupt- und Finanzausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Nordkirchen</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Lüdinghausen">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-luedinghausen.de/sessionnet/buergerinfo/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Ausschuss für Bauen und Mobilität</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Lüdinghausen</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Olfen">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.olfen.de/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat der Stadt Olfen</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Olfen</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Billerbeck">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.billerbeck.de/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat der Stadt</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Billerbeck</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Drensteinfurt">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/drensteinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Haupt- und Finanzausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Drensteinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Oelde">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Fraktion Volt Oelde im Rat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Oelde</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ostbevern">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.ostbevern.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Umwelt- und Planungsausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ostbevern</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ochtrup">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ochtrup.gremien.info/meeting?id=2026-AInfrastru-14" target="_blank">Sitzung des Ausschusses für Infrastruktur</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ochtrup.gremien.info/meeting%3Fid%3D2026-AInfrastru-14" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ochtrup</div>
+                        <div class="termin-ort">Rathaus II</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ahaus">
+                    <div class="termin-zeit">19:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Ausschuss für Bildung, Kultur, Sport und Ehrenamt</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ahaus</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Nottuln">
+                    <div class="termin-zeit">19:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.nottuln.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Nottuln</div>
+                        
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        <div class="datum-gruppe" id="datum-2026-07-08">
+            <div class="datum-header">Mi, 08.07.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="Hörstel">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://hoerstel.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZZ1DS_Y9Wp5mxTeU2yewn0I" target="_blank">Ausschuss für Stadtplanung und Infrastruktur</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//hoerstel.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZZ1DS_Y9Wp5mxTeU2yewn0I" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Hörstel</div>
+                        <div class="termin-ort">Rathaus Riesenbeck, 48477 Hörstel, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Greven">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://greven.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZcM4HwQWRsqNdE235NHTiSU" target="_blank">Haupt-/Finanz- und Wirtschaftsausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//greven.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZcM4HwQWRsqNdE235NHTiSU" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Greven</div>
+                        <div class="termin-ort">Rathaus der Stadt Greven, Rathausstraße 6, 48268 Greven, Großer Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Greven">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://greven.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZY-1KRBruv1PG3gHx_GbGkA" target="_blank">Rechnungsprüfungsausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//greven.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZY-1KRBruv1PG3gHx_GbGkA" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Greven</div>
+                        <div class="termin-ort">Rathaus der Stadt Greven, Rathausstraße 6, 48268 Greven, Großer Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Heiden">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://heiden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZXqvZJLMfzKcxpogVls4PDM" target="_blank">Rat der Gemeinde Heiden</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//heiden.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZXqvZJLMfzKcxpogVls4PDM" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Heiden</div>
+                        <div class="termin-ort">Rathaus, 46359 Heiden, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Bocholt">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZfjRXyry1snHUcrWvF2A3-Y" target="_blank">Ausschuss für Arbeit, Gesundheit, Soziales, Inklusion und Gleichstellung</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ratsinfo.bocholt.de/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZfjRXyry1snHUcrWvF2A3-Y" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Bocholt</div>
+                        <div class="termin-ort">LernWerk Bocholt, 46395 Bocholt, Raum 1.01 Veranstaltung</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Mettingen">
+                    <div class="termin-zeit">15:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://mettingen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZUppuOZ329EoNA_rYgGyXiY" target="_blank">Haupt- und Finanzausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//mettingen.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZUppuOZ329EoNA_rYgGyXiY" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Mettingen</div>
+                        <div class="termin-ort">Rathaus, Markt 6 - 8, 49497 Mettingen, Ratssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Isselburg">
+                    <div class="termin-zeit">15:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://isselburg.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZd7xMiE0LkIcxdfEBfNHRYc" target="_blank">Ausschuss für Planung, Verkehr und Sicherheit</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//isselburg.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZd7xMiE0LkIcxdfEBfNHRYc" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Isselburg</div>
+                        <div class="termin-ort">Bürgerhalle Herzebocholt, 46419 Isselburg, Saal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Lengerich">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://lengerich.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZVqwG3kV_StefCJmYT_Oxdk" target="_blank">Stadtrat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//lengerich.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZVqwG3kV_StefCJmYT_Oxdk" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Lengerich</div>
+                        <div class="termin-ort">Stadtsparkasse Lengerich, 49525 Lengerich, Veranstaltungsraum</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Saerbeck">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://saerbeck.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZV0KYuyzRmU8Jjs0RkGK3ms" target="_blank">Planungs-, Bau-, Umwelt- und Klimaausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//saerbeck.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZV0KYuyzRmU8Jjs0RkGK3ms" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Saerbeck</div>
+                        <div class="termin-ort">Bürgerhaus, 48369 Saerbeck, Bürgersaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Steinfurt">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://steinfurt.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZdKQ0wq6ImRtQ4KV5OtnCyw" target="_blank">Ausschuss für Wirtschaft, Wohnungswesen und Liegenschaften</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//steinfurt.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZdKQ0wq6ImRtQ4KV5OtnCyw" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Steinfurt</div>
+                        <div class="termin-ort">Rathaus, 48565 Steinfurt, Sitzungssaal I (großer Saal)</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Vreden">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://vreden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZRJG8LdEWzRGk-Oc0W05h-Q" target="_blank">Bau-, Planungs- und Umweltausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//vreden.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZRJG8LdEWzRGk-Oc0W05h-Q" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Vreden</div>
+                        <div class="termin-ort">Rathaus der Stadt Vreden, 48691 Vreden, Ratssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadtlohn">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://stadtlohn.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZaTsR0rZDJY7Osw3RDpEYMY" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//stadtlohn.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZaTsR0rZDJY7Osw3RDpEYMY" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Stadtlohn</div>
+                        <div class="termin-ort">Rathaus, 48703 Stadtlohn, Großer Sitzungssaal, 1. OG</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">KonvOY GmbH, Aufsichtsrat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Steinfurt">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Gesellschafterversammlung der WEStmbH</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Steinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Borken">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://bi.borken.de/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat der Stadt Borken</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Warendorf">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/warendorf/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rechnungsprüfungsausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Warendorf</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Wadersloh">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/wadersloh/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Wadersloh</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ahaus">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Ältestenrat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ahaus</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Drensteinfurt">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/drensteinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Betriebsausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Drensteinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ochtrup">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ochtrup.gremien.info/meeting?id=2025-AussPlaBau-93" target="_blank">Sitzung des Ausschusses für Planen und Bauen</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ochtrup.gremien.info/meeting%3Fid%3D2025-AussPlaBau-93" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ochtrup</div>
+                        <div class="termin-ort">Rathaus II</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Rhede">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://rhede.gremien.info/meeting?id=2026-SPUA-5" target="_blank">4. Sitzung des Ausschusses für Stadtentwicklung, Planung und Umwelt</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//rhede.gremien.info/meeting%3Fid%3D2026-SPUA-5" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Rhede</div>
+                        <div class="termin-ort">Rats- u. Kultursaal des Rathauses im 1. OG</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Havixbeck">
+                    <div class="termin-zeit">18:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.ris-havixbeck.de/bi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Integrationsbeirat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Havixbeck</div>
+                        
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        <div class="datum-gruppe" id="datum-2026-07-09">
+            <div class="datum-header">Do, 09.07.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="Hörstel">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://hoerstel.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZUXm4pMEwRjEsooYo5ROf0I" target="_blank">Ausschuss für Bildung, Sport und Kultur</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//hoerstel.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZUXm4pMEwRjEsooYo5ROf0I" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Hörstel</div>
+                        <div class="termin-ort">Rathaus Riesenbeck, 48477 Hörstel, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Greven">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://greven.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZVOvqPI_8TBaghUSoTgULJ0" target="_blank">Planungs- und Bauausschuss für den Rathausneubau</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//greven.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZVOvqPI_8TBaghUSoTgULJ0" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Greven</div>
+                        <div class="termin-ort">Rathaus der Stadt Greven, Rathausstraße 6, 48268 Greven, Großer Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Reken">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://reken.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZYXxzQPXYEBl-i4QAtyoXkQ" target="_blank">Gemeinderat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//reken.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZYXxzQPXYEBl-i4QAtyoXkQ" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Reken</div>
+                        <div class="termin-ort">RekenForum, 48734 Reken, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Bocholt">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZYTjJsFF6OcigFbrGlhI9DA" target="_blank">Internationaler Beratungsausschuss und Städtepartnerschaften</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ratsinfo.bocholt.de/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZYTjJsFF6OcigFbrGlhI9DA" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Bocholt</div>
+                        <div class="termin-ort">(noch nicht bekannt),</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Bocholt">
+                    <div class="termin-zeit">15:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZeYqMqCWr3awnU4aV768Sc0" target="_blank">Aufsichtsrat der stadtwerker Unternehmensgruppe GmbH</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ratsinfo.bocholt.de/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZeYqMqCWr3awnU4aV768Sc0" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Bocholt</div>
+                        <div class="termin-ort">stadtwerker GmbH / Standort Rhede, 46414 Rhede, Besprechungsraum</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Emsdetten">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://emsdetten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZX7vhNNPzP_zaUVtFatOCl0" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//emsdetten.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZX7vhNNPzP_zaUVtFatOCl0" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Emsdetten</div>
+                        <div class="termin-ort">Rathaus, 48282 Emsdetten, Ratssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Horstmar">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://horstmar.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZU2kiSYVMyYixtjEPHwbBOY" target="_blank">Rat der Stadt Horstmar</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//horstmar.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZU2kiSYVMyYixtjEPHwbBOY" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Horstmar</div>
+                        <div class="termin-ort">Historisches Rathaus, 48612 Horstmar, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Saerbeck">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://saerbeck.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZbH8rfpUOlpWICUPbyhQ2JE" target="_blank">Haupt- und Finanzausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//saerbeck.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZbH8rfpUOlpWICUPbyhQ2JE" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Saerbeck</div>
+                        <div class="termin-ort">Bürgerhaus, 48369 Saerbeck, Bürgersaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Steinfurt">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://steinfurt.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZct8yHBcJQIHUo1CYopM3EI" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//steinfurt.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZct8yHBcJQIHUo1CYopM3EI" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Steinfurt</div>
+                        <div class="termin-ort">Rathaus, 48565 Steinfurt, Bürgersaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Lienen">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://lienen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZaNslX2S19lbjFCT0e8TKBA" target="_blank">Rat der Gemeinde Lienen</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//lienen.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZaNslX2S19lbjFCT0e8TKBA" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Lienen</div>
+                        <div class="termin-ort">Haus des Gastes, 49536 Lienen, Sitzungsraum im Haus des Gastes</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Recke">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://recke.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZUqY-kDNg8sx5lPA2R8Bu48" target="_blank">Haupt- und Finanzausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//recke.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZUqY-kDNg8sx5lPA2R8Bu48" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Recke</div>
+                        <div class="termin-ort">Rathaus Recke, 49509 Recke, Kleiner Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ahlen">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.ahlen.sitzung-online.de/public/si010" target="_blank">Sitzung des Hauptausschusses</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//www.ahlen.sitzung-online.de/public/si010" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ahlen</div>
+                        <div class="termin-ort">Ratssaal des Rathauses</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Gronau">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://gronau.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZcXqn6wxbfHMA0qzZcRzTpg" target="_blank">Rechnungsprüfungsausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//gronau.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZcXqn6wxbfHMA0qzZcRzTpg" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Gronau</div>
+                        <div class="termin-ort">Wirtschaftszentrum Gronau, Fabrikstraße 3, 48599 Gronau, Ratssaal, 1. OG</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Polizeibeirat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Steinfurt">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Fachkommission zur Vergabe des Kulturpreises</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Steinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Telgte">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/telgte/BI/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat der Stadt Telgte</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Telgte</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ladbergen">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ladbergen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZfyREqxUIDn1rbcU2n68KB0" target="_blank">Haupt-, Finanz-, Wirtschaftsförderungs- und Digitalausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ladbergen.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZfyREqxUIDn1rbcU2n68KB0" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ladbergen</div>
+                        <div class="termin-ort">Rathaus, 49549 Ladbergen, Großer Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ahlen">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.ahlen.sitzung-online.de/public/si010" target="_blank">Sitzung des Rates der Stadt Ahlen</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//www.ahlen.sitzung-online.de/public/si010" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ahlen</div>
+                        <div class="termin-ort">Ratssaal des Rathauses</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Nordkirchen">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/nordkirchen/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat der Gemeinde Nordkirchen</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Nordkirchen</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Beckum">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/beckum/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat der Stadt Beckum</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Beckum</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Coesfeld">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Haupt- und Finanzausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Senden">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/gemeinde-senden/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Gemeinderat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Senden</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ostbevern">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.ostbevern.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Gemeinderat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ostbevern</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Oelde">
+                    <div class="termin-zeit">18:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">FDP-Fraktion im Rat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Oelde</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Rosendahl">
+                    <div class="termin-zeit">19:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/rosendahl/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Rosendahl</div>
+                        
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        <div class="datum-gruppe" id="datum-2026-07-10">
+            <div class="datum-header">Fr, 10.07.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="Kreis Warendorf">
+                    <div class="termin-zeit">09:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.kreis-warendorf.de/w1/sessionnet/bi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Sitzung des Kreistages</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Warendorf</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="LWL">
+                    <div class="termin-zeit">10:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://allris.lwl.org/public/si010" target="_blank">3. Sitzung des Kulturausschusses</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//allris.lwl.org/public/si010" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">LWL</div>
+                        <div class="termin-ort">Plenarsaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ibbenbüren">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ibbenbueren.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZd3b9LI2hO_1Vzsz6gd_FRs" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ibbenbueren.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZd3b9LI2hO_1Vzsz6gd_FRs" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ibbenbüren</div>
+                        <div class="termin-ort">Freizeithof Bögel-Windmeyer, Am Sportzentrum 30, 49479 Ibbenbüren</div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        <div class="datum-gruppe" id="datum-2026-07-13">
+            <div class="datum-header">Mo, 13.07.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">09:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Kommunale Seniorenvertretung</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="LWL">
+                    <div class="termin-zeit">10:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://allris.lwl.org/public/si010" target="_blank">2. Sitzung des Ausschusses für Bauen, Klima und Umwelt</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//allris.lwl.org/public/si010" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">LWL</div>
+                        <div class="termin-ort">Tagungssaal (G)</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Raesfeld">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://raesfeld.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZduUkkmx4cSdU8ba6DBi95c" target="_blank">RAT</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//raesfeld.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZduUkkmx4cSdU8ba6DBi95c" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Raesfeld</div>
+                        <div class="termin-ort">Rathaus, 46348 Raesfeld, Großer Sitzungssaal des Rathauses</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Altenberge">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://altenberge.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZThgiyqD85PgRpF-xGKfncM" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//altenberge.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZThgiyqD85PgRpF-xGKfncM" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Altenberge</div>
+                        <div class="termin-ort">Bürgerhaus, 48341 Altenberge, Mehrzwecksaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Schöppingen">
+                    <div class="termin-zeit">16:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://schoeppingen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZXuGtFRxOb5DhjifGfZ1y9Q" target="_blank">Gemeinderat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//schoeppingen.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZXuGtFRxOb5DhjifGfZ1y9Q" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Schöppingen</div>
+                        <div class="termin-ort">&quot;KRAFTWERK&quot;, 48624 Schöppingen, Kulturhalle</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Steinfurt">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Kreistag</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Steinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Borken">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://bi.borken.de/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">SPD-Fraktion</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Oelde">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Oelde</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Beckum">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/beckum/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Fraktion Bündnis 90/Die Grünen im Rat der Stadt Beckum</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Beckum</div>
+                        
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        <div class="datum-gruppe" id="datum-2026-07-14">
+            <div class="datum-header">Di, 14.07.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="Kreis Coesfeld">
+                    <div class="termin-zeit">09:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Ausschuss für Mobilität, Tiefbau, Geoinformation und Kreisentwicklung</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="LWL">
+                    <div class="termin-zeit">10:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://allris.lwl.org/public/si010" target="_blank">2. Sitzung des Personalausschusses</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//allris.lwl.org/public/si010" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">LWL</div>
+                        <div class="termin-ort">Plenarsaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadtlohn">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://stadtlohn.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZV3nZ-mgWNiQXX58I6dC1zE" target="_blank">Bauausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//stadtlohn.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZV3nZ-mgWNiQXX58I6dC1zE" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Stadtlohn</div>
+                        <div class="termin-ort">Rathaus, 48703 Stadtlohn, Großer Sitzungssaal, 1. OG</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Bocholt">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZeaoskczhXy3LT2vKtOwv24" target="_blank">Sportausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ratsinfo.bocholt.de/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZeaoskczhXy3LT2vKtOwv24" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Bocholt</div>
+                        <div class="termin-ort">Schulgebäude am Benölkenplatz, 46395 Bocholt, Mensa</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Neuenkirchen">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://neuenkirchen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZYxEazSUDODdW1PUBqq3b4k" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//neuenkirchen.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZYxEazSUDODdW1PUBqq3b4k" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Neuenkirchen</div>
+                        <div class="termin-ort">Rathaus, 48485 Neuenkirchen, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Coesfeld">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Betriebsausschuss des Abwasserwerkes der Stadt Coesfeld</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Lüdinghausen">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-luedinghausen.de/sessionnet/buergerinfo/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Stadtrat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Lüdinghausen</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Beelen">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/beelen/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">TEO Verwaltungsrat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Beelen</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Drensteinfurt">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/drensteinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">RAT</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Drensteinfurt</div>
+                        
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        <div class="datum-gruppe" id="datum-2026-07-15">
+            <div class="datum-header">Mi, 15.07.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="Bocholt">
+                    <div class="termin-zeit">14:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZaN5bAxXg5nctwa25g6xAfo" target="_blank">Stadtverordnetenversammlung</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ratsinfo.bocholt.de/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZaN5bAxXg5nctwa25g6xAfo" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Bocholt</div>
+                        <div class="termin-ort">Gesamtschule Bocholt, 46395 Bocholt, Mensa</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Hörstel">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://hoerstel.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZSKHsIM6NDMT1MV_SGc-jlc" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//hoerstel.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZSKHsIM6NDMT1MV_SGc-jlc" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Hörstel</div>
+                        <div class="termin-ort">Aula des Rathauses Sünte-Rendel-Straße, 48477 Hörstel, .</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Greven">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://greven.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZbWfoRZYD3zLbQnsRCFHjeY" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//greven.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZbWfoRZYD3zLbQnsRCFHjeY" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Greven</div>
+                        <div class="termin-ort">Rathaus der Stadt Greven, Rathausstraße 6, 48268 Greven, Großer Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Mettingen">
+                    <div class="termin-zeit">15:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://mettingen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZQ5US9T_JqOKn4k3RzwbZv0" target="_blank">Gemeinderat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//mettingen.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZQ5US9T_JqOKn4k3RzwbZv0" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Mettingen</div>
+                        <div class="termin-ort">Rathaus, Markt 6 - 8, 49497 Mettingen, Ratssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Isselburg">
+                    <div class="termin-zeit">15:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://isselburg.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZWGaroOwOjloB-b-_L6Ufjk" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//isselburg.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZWGaroOwOjloB-b-_L6Ufjk" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Isselburg</div>
+                        <div class="termin-ort">Bürgerhalle Herzebocholt, 46419 Isselburg, Saal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Neuenkirchen">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://neuenkirchen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZfR9tWFtvEMkpY2_7RWsWig" target="_blank">Ausschuss für Bildung, Sport und Kultur</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//neuenkirchen.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZfR9tWFtvEMkpY2_7RWsWig" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Neuenkirchen</div>
+                        <div class="termin-ort">Rathaus, 48485 Neuenkirchen, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Heek">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://heek.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZYabiAy5UfRXViykcu409GE" target="_blank">Gemeinderat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//heek.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZYabiAy5UfRXViykcu409GE" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Heek</div>
+                        <div class="termin-ort">Gemeindeverwaltung, 48619 Heek, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Gescher">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://gescher.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZXCJWSzzAlhP7G-W7QrQNDw" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//gescher.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZXCJWSzzAlhP7G-W7QrQNDw" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Gescher</div>
+                        <div class="termin-ort">Rathaus, 48712 Gescher, Großer Sitzungssaal des Rathauses</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Gronau">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://gronau.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZXKWAy4Zf3xPJyQIO9BVbbc" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//gronau.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZXKWAy4Zf3xPJyQIO9BVbbc" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Gronau</div>
+                        <div class="termin-ort">Wirtschaftszentrum Gronau, Fabrikstraße 3, 48599 Gronau, Ratssaal, 1. OG</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Borken">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://bi.borken.de/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat der Stadt Borken</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Rheine">
+                    <div class="termin-zeit">19:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.rheine-buergerinfo.de/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Stadtteilbeirat Bentlage/Wadelheim/Wietesch/Schleupe</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Rheine</div>
+                        
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        <div class="datum-gruppe" id="datum-2026-07-16">
+            <div class="datum-header">Do, 16.07.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="LWL">
+                    <div class="termin-zeit">10:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://allris.lwl.org/public/si010" target="_blank">2. Sitzung des Finanz- und Wirtschaftsausschusses</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//allris.lwl.org/public/si010" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">LWL</div>
+                        <div class="termin-ort">Plenarsaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Bocholt">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZblUwEBy89XUKwTrwMOo7vo" target="_blank">Ausschuss für Klima, Umwelt und Energie</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ratsinfo.bocholt.de/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZblUwEBy89XUKwTrwMOo7vo" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Bocholt</div>
+                        <div class="termin-ort">LernWerk Bocholt, 46395 Bocholt, Raum 1.01 Veranstaltung</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Hopsten">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://hopsten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZU-qsEviZjOgmkLG4l_BX88" target="_blank">Gemeinderat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//hopsten.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZU-qsEviZjOgmkLG4l_BX88" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Hopsten</div>
+                        <div class="termin-ort">Aula im Schulzentrum, 48496 Hopsten, Aula</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Lotte">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://lotte.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZW8RqmAZuFHvzwvagXmaA58" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//lotte.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZW8RqmAZuFHvzwvagXmaA58" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Lotte</div>
+                        <div class="termin-ort">Rathaus, 49504 Lotte, Ratssaal, Westerkappelner Str. 19, 49504 Lotte</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Saerbeck">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://saerbeck.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZZWAUi3G6oJN9qYS61W9Y7w" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//saerbeck.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZZWAUi3G6oJN9qYS61W9Y7w" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Saerbeck</div>
+                        <div class="termin-ort">Bürgerhaus, 48369 Saerbeck, Bürgersaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Recke">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://recke.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZUvujIOK0x1SgBgTZXwWGVg" target="_blank">Rat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//recke.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZUvujIOK0x1SgBgTZXwWGVg" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Recke</div>
+                        <div class="termin-ort">Rathaus Recke, 49509 Recke, Großer Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Gronau">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://gronau.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZYWLAPqK__XQcxHk55tnKt4" target="_blank">Gesellschafterversammlung der Stadtwerke Gronau GmbH</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//gronau.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZYWLAPqK__XQcxHk55tnKt4" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Gronau</div>
+                        <div class="termin-ort">Stadtwerke Gronau, Laubstiege 19, 48599 Gronau, Raum Dinkel (3. OG)</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Warendorf">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/warendorf/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat der Stadt Warendorf</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Warendorf</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ladbergen">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ladbergen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZdHrrOdF2dIbxYCfFFP0nQ8" target="_blank">Rat der Gemeinde Ladbergen</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ladbergen.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZdHrrOdF2dIbxYCfFFP0nQ8" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ladbergen</div>
+                        <div class="termin-ort">Rathaus, 49549 Ladbergen, Großer Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Coesfeld">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat der Stadt Coesfeld</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Beelen">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/beelen/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Gemeinderat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Beelen</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ochtrup">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ochtrup.gremien.info/meeting?id=2026-Rat-110" target="_blank">Sitzung des Rates</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ochtrup.gremien.info/meeting%3Fid%3D2026-Rat-110" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ochtrup</div>
+                        <div class="termin-ort">Gaststätte \&quot;Happens Hof\&quot; (Köllmann)</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Rhede">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://rhede.gremien.info/meeting?id=2026-RAT-156" target="_blank">5. Sitzung des Rates der Stadt Rhede</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//rhede.gremien.info/meeting%3Fid%3D2026-RAT-156" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Rhede</div>
+                        <div class="termin-ort">Rats- u. Kultursaal des Rathauses im 1. OG</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Sendenhorst">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sendenhorst.gremien.info/meeting?id=2026-Rat-26" target="_blank">Sitzung des Rates der Stadt Sendenhorst</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//sendenhorst.gremien.info/meeting%3Fid%3D2026-Rat-26" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Sendenhorst</div>
+                        <div class="termin-ort">Kommunalforum</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ahaus">
+                    <div class="termin-zeit">19:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7" target="_blank">Rat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ahaus</div>
+                        
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        <div class="datum-gruppe" id="datum-2026-07-17">
+            <div class="datum-header">Fr, 17.07.2026</div>
+            <div class="termine-liste">
+        
+                <div class="termin" data-stadt="LWL">
+                    <div class="termin-zeit">10:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://allris.lwl.org/public/si010" target="_blank">4. Sitzung des Landschaftsausschusses</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//allris.lwl.org/public/si010" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">LWL</div>
+                        <div class="termin-ort">Plenarsaal</div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
+        </div>
+        
+        </main>
+
+        <footer>
+            Generiert am 01.05.2026 um 06:00 Uhr<br>
+            Daten aus 65 Ratsinformationssystemen<br>
+            <a href="feed.xml" style="color: var(--accent); text-decoration: none;">&#x25CF; RSS-Feed</a>
+        </footer>
+    </div>
+
+    <script>
+        function filterTermine() {
+            // Alle ausgewählten Städte aus allen Dropdowns sammeln
+            const selects = document.querySelectorAll('.kreis-filter');
+            const gewaehlteStaedte = [];
+
+            selects.forEach(select => {
+                if (select.value) {
+                    gewaehlteStaedte.push(select.value);
+                }
+            });
+
+            // Termine filtern
+            const termine = document.querySelectorAll('.termin');
+            let sichtbar = 0;
+
+            termine.forEach(t => {
+                const zeigen = gewaehlteStaedte.length === 0 ||
+                               gewaehlteStaedte.includes(t.dataset.stadt);
+                t.classList.toggle('hidden', !zeigen);
+                if (zeigen) sichtbar++;
+            });
+
+            document.getElementById('termine-count').textContent = sichtbar;
+
+            // Leere Datum-Gruppen ausblenden
+            document.querySelectorAll('.datum-gruppe').forEach(g => {
+                const sichtbareTermine = g.querySelectorAll('.termin:not(.hidden)');
+                g.classList.toggle('hidden', sichtbareTermine.length === 0);
+            });
+
+            // Aktive Filter als Tags anzeigen
+            updateFilterTags(gewaehlteStaedte);
+        }
+
+        function updateFilterTags(staedte) {
+            const container = document.getElementById('active-filters');
+            if (staedte.length === 0) {
+                container.innerHTML = '';
+                return;
+            }
+            container.innerHTML = staedte.map(stadt =>
+                `<span class="filter-tag">${stadt}<button onclick="removeFilter('${stadt}')">&times;</button></span>`
+            ).join('');
+        }
+
+        function removeFilter(stadt) {
+            // Finde das Dropdown mit dieser Stadt und setze es zurück
+            document.querySelectorAll('.kreis-filter').forEach(select => {
+                if (select.value === stadt) {
+                    select.value = '';
+                }
+            });
+            filterTermine();
+        }
+
+        function resetFilter() {
+            document.querySelectorAll('.kreis-filter').forEach(select => {
+                select.value = '';
+            });
+            document.getElementById('search-input').value = '';
+            filterTermine();
+        }
+
+        function searchTermine() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
+
+            // Wenn Suchfeld leer ist, nutze normale Dropdown-Filter
+            if (searchTerm === '') {
+                filterTermine();
+                return;
+            }
+
+            // Alle Dropdowns zurücksetzen wenn gesucht wird
+            document.querySelectorAll('.kreis-filter').forEach(select => {
+                select.value = '';
+            });
+
+            // Filter nach Suchbegriff
+            const allTermine = document.querySelectorAll('.termin');
+            let visibleCount = 0;
+
+            allTermine.forEach(termin => {
+                const stadt = termin.getAttribute('data-stadt').toLowerCase();
+
+                if (stadt.includes(searchTerm)) {
+                    termin.style.display = '';
+                    visibleCount++;
+                } else {
+                    termin.style.display = 'none';
+                }
+            });
+
+            // Datum-Gruppen ausblenden, wenn alle Termine darin versteckt sind
+            document.querySelectorAll('.datum-gruppe').forEach(gruppe => {
+                const sichtbareTermine = gruppe.querySelectorAll('.termin:not([style*="display: none"])');
+                if (sichtbareTermine.length === 0) {
+                    gruppe.style.display = 'none';
+                } else {
+                    gruppe.style.display = '';
+                }
+            });
+
+            // Zähler aktualisieren
+            const totalCount = allTermine.length;
+            document.getElementById('termine-count').textContent = visibleCount;
+
+            // Active Filter anzeigen (Suchbegriff als Tag)
+            const container = document.getElementById('active-filters');
+            if (searchTerm) {
+                container.innerHTML = `<span class="filter-tag">Suche: ${searchTerm}<button onclick="document.getElementById('search-input').value=''; filterTermine();">&times;</button></span>`;
+            } else {
+                container.innerHTML = '';
+            }
+        }
+
+        // Sticky-Shadow für Filterleiste
+        const filterContainer = document.querySelector('.filter-container');
+        const observer = new IntersectionObserver(
+            ([e]) => filterContainer.classList.toggle('is-sticky', e.intersectionRatio < 1),
+            { threshold: [1] }
+        );
+        observer.observe(filterContainer);
+
+        // Zum heutigen oder nächsten Datum mit Terminen springen (nur wenn kein Anker in der URL)
+        if (!window.location.hash) {
+            const heute = new Date();
+            heute.setHours(0, 0, 0, 0);
+            const gruppen = Array.from(document.querySelectorAll('.datum-gruppe'))
+                .map(el => ({ el, datum: new Date(el.id.replace('datum-', '')) }))
+                .filter(x => x.datum >= heute)
+                .sort((a, b) => a.datum - b.datum);
+            if (gruppen.length > 0) {
+                const ziel = gruppen[0].el;
+                const offset = filterContainer.offsetHeight + 12;
+                const top = ziel.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
