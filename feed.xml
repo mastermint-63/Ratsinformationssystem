@@ -5,7 +5,7 @@
     <link>https://ms-raete.reporter.ruhr/termine_2026_07.html</link>
     <description>Sitzungstermine aus Ratsinformationssystemen im Münsterland</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 17 Jul 2026 06:00:18 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 06:00:20 +0200</lastBuildDate>
     <atom:link href="https://ms-raete.reporter.ruhr/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Hauptausschuss – Stadt Münster</title>
@@ -29,13 +29,6 @@
       <guid isPermaLink="false">Rheine-20260701-17:00 Uhr-Ausschuss für Stadtentwicklung</guid>
     </item>
     <item>
-      <title>Ausschuss für Kinder, Jugendliche und Familien – Beckum</title>
-      <link>https://sessionnet.owl-it.de/beckum/bi/si0057.asp?__ksinr=6272</link>
-      <description>Mi, 01.07.2026, 17:30 Uhr Uhr</description>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Beckum-20260701-17:30 Uhr-Ausschuss für Kinder, Jugendli</guid>
-    </item>
-    <item>
       <title>Ausschuss für Arbeit, Soziales, Pflege, Integration und Demografie – Kreis Steinfurt</title>
       <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8755</link>
       <description>Mi, 01.07.2026, 17:00 Uhr Uhr</description>
@@ -55,6 +48,13 @@
       <description>Mi, 01.07.2026, 17:31 Uhr Uhr</description>
       <pubDate>Wed, 01 Jul 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Oelde-20260701-17:31 Uhr-Planungsausschuss</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Kinder, Jugendliche und Familien – Beckum</title>
+      <link>https://sessionnet.owl-it.de/beckum/bi/si0057.asp?__ksinr=6272</link>
+      <description>Mi, 01.07.2026, 17:30 Uhr Uhr</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Beckum-20260701-17:30 Uhr-Ausschuss für Kinder, Jugendli</guid>
     </item>
     <item>
       <title>Ausschuss für Familie, Jugend, Senioren und Soziales – Drensteinfurt</title>
@@ -99,18 +99,18 @@
       <guid isPermaLink="false">Isselburg-20260701-15:33 Uhr-Ausschuss für Bauen, Umwelt un</guid>
     </item>
     <item>
-      <title>Arbeitskreis Dorfentwicklung – Heiden</title>
-      <link>https://heiden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZbx8jDQi4YhYh9wdoLSirn8</link>
-      <description>Mi, 01.07.2026, 16:00 Uhr Uhr | Rathaus, 46359 Heiden, Sitzungssaal</description>
-      <pubDate>Wed, 01 Jul 2026 16:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Heiden-20260701-16:00 Uhr-Arbeitskreis Dorfentwicklung</guid>
-    </item>
-    <item>
       <title>Ausschuss für Bauen, Planen und Stadtentwicklung – Gescher</title>
       <link>https://gescher.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZQ1dZfAWXgy48U_7khHb6PQ</link>
       <description>Mi, 01.07.2026, 16:00 Uhr Uhr | Rathaus, 48712 Gescher, Großer Sitzungssaal des Rathauses</description>
       <pubDate>Wed, 01 Jul 2026 16:00:00 +0200</pubDate>
       <guid isPermaLink="false">Gescher-20260701-16:00 Uhr-Ausschuss für Bauen, Planen un</guid>
+    </item>
+    <item>
+      <title>Arbeitskreis Dorfentwicklung – Heiden</title>
+      <link>https://heiden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZbx8jDQi4YhYh9wdoLSirn8</link>
+      <description>Mi, 01.07.2026, 16:00 Uhr Uhr | Rathaus, 46359 Heiden, Sitzungssaal</description>
+      <pubDate>Wed, 01 Jul 2026 16:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Heiden-20260701-16:00 Uhr-Arbeitskreis Dorfentwicklung</guid>
     </item>
     <item>
       <title>Haupt- und Finanzausschuss – Gronau</title>
@@ -169,18 +169,18 @@
       <guid isPermaLink="false">Dülmen-20260702-17:16 Uhr-Stadtverordnetenversammlung</guid>
     </item>
     <item>
-      <title>Betriebsausschuss Abwasserwerk – Lüdinghausen</title>
-      <link>https://www.stadt-luedinghausen.de/sessionnet/buergerinfo/si0057.php?__ksinr=2346</link>
-      <description>Do, 02.07.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Thu, 02 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Lüdinghausen-20260702-17:00 Uhr-Betriebsausschuss Abwasserwerk</guid>
-    </item>
-    <item>
       <title>Aufsichtsrat Stadtwerke Rheine GmbH – Rheine</title>
       <link>https://www.rheine-buergerinfo.de/si0046.asp?__cjahr=2026&amp;__cmonat=7</link>
       <description>Do, 02.07.2026, 16:00 Uhr Uhr</description>
       <pubDate>Thu, 02 Jul 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Rheine-20260702-16:00 Uhr-Aufsichtsrat Stadtwerke Rheine</guid>
+    </item>
+    <item>
+      <title>Betriebsausschuss Abwasserwerk – Lüdinghausen</title>
+      <link>https://www.stadt-luedinghausen.de/sessionnet/buergerinfo/si0057.php?__ksinr=2346</link>
+      <description>Do, 02.07.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Lüdinghausen-20260702-17:00 Uhr-Betriebsausschuss Abwasserwerk</guid>
     </item>
     <item>
       <title>Rechnungsprüfungsausschuss – Billerbeck</title>
@@ -190,18 +190,11 @@
       <guid isPermaLink="false">Billerbeck-20260702-18:00 Uhr-Rechnungsprüfungsausschuss</guid>
     </item>
     <item>
-      <title>Haupt-, Finanz- und Digitalausschuss – Beckum</title>
-      <link>https://sessionnet.owl-it.de/beckum/bi/si0057.asp?__ksinr=6273</link>
-      <description>Do, 02.07.2026, 17:30 Uhr Uhr</description>
+      <title>Haupt- und Finanzausschuss – Beelen</title>
+      <link>https://sessionnet.owl-it.de/beelen/bi/si0057.asp?__ksinr=2347</link>
+      <description>Do, 02.07.2026, 18:00 Uhr Uhr</description>
       <pubDate>Thu, 02 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Beckum-20260702-17:30 Uhr-Haupt-, Finanz- und Digitalaus</guid>
-    </item>
-    <item>
-      <title>Kreistag – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=14327</link>
-      <description>Do, 02.07.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Thu, 02 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20260702-17:00 Uhr-Kreistag</guid>
+      <guid isPermaLink="false">Beelen-20260702-18:00 Uhr-Haupt- und Finanzausschuss</guid>
     </item>
     <item>
       <title>Personal- und Gleichstellungsausschuss – Kreis Steinfurt</title>
@@ -211,6 +204,20 @@
       <guid isPermaLink="false">Kreis Steinfurt-20260702-17:00 Uhr-Personal- und Gleichstellungsa</guid>
     </item>
     <item>
+      <title>Betriebsausschuss &quot;Eigenbetriebe&quot; – Ennigerloh</title>
+      <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0057.asp?__ksinr=3613</link>
+      <description>Do, 02.07.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ennigerloh-20260702-18:00 Uhr-Betriebsausschuss "Eigenbetrie</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Bauen und Planung – Nordkirchen</title>
+      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4588</link>
+      <description>Do, 02.07.2026, 17:30 Uhr Uhr</description>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Nordkirchen-20260702-17:30 Uhr-Ausschuss für Bauen und Planun</guid>
+    </item>
+    <item>
       <title>Haupt- und Finanzausschuss – Senden</title>
       <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0057.asp?__ksinr=1551</link>
       <description>Do, 02.07.2026, 18:00 Uhr Uhr</description>
@@ -218,11 +225,11 @@
       <guid isPermaLink="false">Senden-20260702-18:00 Uhr-Haupt- und Finanzausschuss</guid>
     </item>
     <item>
-      <title>Betriebsausschuss &quot;Eigenbetriebe&quot; – Ennigerloh</title>
-      <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0057.asp?__ksinr=3613</link>
-      <description>Do, 02.07.2026, 18:00 Uhr Uhr</description>
+      <title>Kreistag – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=14327</link>
+      <description>Do, 02.07.2026, 17:00 Uhr Uhr</description>
       <pubDate>Thu, 02 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ennigerloh-20260702-18:00 Uhr-Betriebsausschuss "Eigenbetrie</guid>
+      <guid isPermaLink="false">Kreis Borken-20260702-17:00 Uhr-Kreistag</guid>
     </item>
     <item>
       <title>Jugendhilfeausschuss – Oelde</title>
@@ -232,18 +239,11 @@
       <guid isPermaLink="false">Oelde-20260702-17:32 Uhr-Jugendhilfeausschuss</guid>
     </item>
     <item>
-      <title>Haupt- und Finanzausschuss – Beelen</title>
-      <link>https://sessionnet.owl-it.de/beelen/bi/si0057.asp?__ksinr=2347</link>
-      <description>Do, 02.07.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Thu, 02 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Beelen-20260702-18:00 Uhr-Haupt- und Finanzausschuss</guid>
-    </item>
-    <item>
-      <title>Ausschuss für Bauen und Planung – Nordkirchen</title>
-      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4588</link>
+      <title>Haupt-, Finanz- und Digitalausschuss – Beckum</title>
+      <link>https://sessionnet.owl-it.de/beckum/bi/si0057.asp?__ksinr=6273</link>
       <description>Do, 02.07.2026, 17:30 Uhr Uhr</description>
       <pubDate>Thu, 02 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nordkirchen-20260702-17:30 Uhr-Ausschuss für Bauen und Planun</guid>
+      <guid isPermaLink="false">Beckum-20260702-17:30 Uhr-Haupt-, Finanz- und Digitalaus</guid>
     </item>
     <item>
       <title>Ausschuss für Schule, Sport und Kultur – Drensteinfurt</title>
@@ -323,18 +323,18 @@
       <guid isPermaLink="false">Gronau-20260702-16:04 Uhr-Aufsichtsrat der Stadtwerke Gr</guid>
     </item>
     <item>
-      <title>Planungs- und Bauausschuss – Ladbergen</title>
-      <link>https://ladbergen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZVetT-ewWAAVzjp8rBjF63s</link>
-      <description>Do, 02.07.2026, 17:00 Uhr Uhr | Rathaus, 49549 Ladbergen, Großer Sitzungssaal</description>
-      <pubDate>Thu, 02 Jul 2026 17:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ladbergen-20260702-17:00 Uhr-Planungs- und Bauausschuss</guid>
-    </item>
-    <item>
       <title>Rechnungsprüfungsausschuss/Haupt- und Finanzausschuss – Ibbenbüren</title>
       <link>https://ibbenbueren.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZUvGPT92j-MOTNSQ4KfzhHk</link>
       <description>Do, 02.07.2026, 17:00 Uhr Uhr | Freizeithof Bögel-Windmeyer, Am Sportzentrum 30, 49479 Ibbenbüren</description>
       <pubDate>Thu, 02 Jul 2026 17:00:00 +0200</pubDate>
       <guid isPermaLink="false">Ibbenbüren-20260702-17:00 Uhr-Rechnungsprüfungsausschuss/Hau</guid>
+    </item>
+    <item>
+      <title>Planungs- und Bauausschuss – Ladbergen</title>
+      <link>https://ladbergen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZVetT-ewWAAVzjp8rBjF63s</link>
+      <description>Do, 02.07.2026, 17:00 Uhr Uhr | Rathaus, 49549 Ladbergen, Großer Sitzungssaal</description>
+      <pubDate>Thu, 02 Jul 2026 17:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ladbergen-20260702-17:00 Uhr-Planungs- und Bauausschuss</guid>
     </item>
     <item>
       <title>Sitzung des Stadtplanungs- und Bauausschusses – Ahlen</title>
@@ -428,13 +428,6 @@
       <guid isPermaLink="false">Olfen-20260706-16:00 Uhr-St. Vitus-Stift Olfen gGmbH - </guid>
     </item>
     <item>
-      <title>FWG-Fraktion im Rat der Stadt Beckum – Beckum</title>
-      <link>https://sessionnet.owl-it.de/beckum/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7</link>
-      <description>Mo, 06.07.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Mon, 06 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Beckum-20260706-18:00 Uhr-FWG-Fraktion im Rat der Stadt </guid>
-    </item>
-    <item>
       <title>Rat der Stadt Ennigerloh – Ennigerloh</title>
       <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0057.asp?__ksinr=3605</link>
       <description>Mo, 06.07.2026, 18:00 Uhr Uhr</description>
@@ -447,6 +440,13 @@
       <description>Mo, 06.07.2026, 17:30 Uhr Uhr</description>
       <pubDate>Mon, 06 Jul 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Oelde-20260706-17:30 Uhr-Finanzausschuss</guid>
+    </item>
+    <item>
+      <title>FWG-Fraktion im Rat der Stadt Beckum – Beckum</title>
+      <link>https://sessionnet.owl-it.de/beckum/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7</link>
+      <description>Mo, 06.07.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Beckum-20260706-18:00 Uhr-FWG-Fraktion im Rat der Stadt </guid>
     </item>
     <item>
       <title>Haupt-, Finanz- und Wirtschaftsausschuss – Warendorf</title>
@@ -561,18 +561,18 @@
       <guid isPermaLink="false">Ahaus-20260707-19:00 Uhr-Ausschuss für Bildung, Kultur,</guid>
     </item>
     <item>
-      <title>Ausschuss für Bauen und Mobilität – Lüdinghausen</title>
-      <link>https://www.stadt-luedinghausen.de/sessionnet/buergerinfo/si0057.php?__ksinr=2347</link>
-      <description>Di, 07.07.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Tue, 07 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Lüdinghausen-20260707-17:00 Uhr-Ausschuss für Bauen und Mobili</guid>
-    </item>
-    <item>
       <title>Sozialausschuss – Rheine</title>
       <link>https://www.rheine-buergerinfo.de/si0057.asp?__ksinr=7525</link>
       <description>Di, 07.07.2026, 17:00 Uhr Uhr</description>
       <pubDate>Tue, 07 Jul 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Rheine-20260707-17:00 Uhr-Sozialausschuss</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Bauen und Mobilität – Lüdinghausen</title>
+      <link>https://www.stadt-luedinghausen.de/sessionnet/buergerinfo/si0057.php?__ksinr=2347</link>
+      <description>Di, 07.07.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Lüdinghausen-20260707-17:00 Uhr-Ausschuss für Bauen und Mobili</guid>
     </item>
     <item>
       <title>Rat – Nottuln</title>
@@ -778,13 +778,6 @@
       <guid isPermaLink="false">Kreis Steinfurt-20260708-17:00 Uhr-Gesellschafterversammlung der </guid>
     </item>
     <item>
-      <title>Betriebsausschuss – Drensteinfurt</title>
-      <link>https://sessionnet.owl-it.de/drensteinfurt/bi/si0057.asp?__ksinr=777</link>
-      <description>Mi, 08.07.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Wed, 08 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Drensteinfurt-20260708-18:00 Uhr-Betriebsausschuss</guid>
-    </item>
-    <item>
       <title>Rat – Wadersloh</title>
       <link>https://sessionnet.owl-it.de/wadersloh/bi/si0057.asp?__ksinr=2650</link>
       <description>Mi, 08.07.2026, 17:30 Uhr Uhr</description>
@@ -792,18 +785,18 @@
       <guid isPermaLink="false">Wadersloh-20260708-17:30 Uhr-Rat</guid>
     </item>
     <item>
+      <title>Betriebsausschuss – Drensteinfurt</title>
+      <link>https://sessionnet.owl-it.de/drensteinfurt/bi/si0057.asp?__ksinr=777</link>
+      <description>Mi, 08.07.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Drensteinfurt-20260708-18:00 Uhr-Betriebsausschuss</guid>
+    </item>
+    <item>
       <title>Rechnungsprüfungsausschuss – Warendorf</title>
       <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8985</link>
       <description>Mi, 08.07.2026, 17:00 Uhr Uhr</description>
       <pubDate>Wed, 08 Jul 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Warendorf-20260708-17:00 Uhr-Rechnungsprüfungsausschuss</guid>
-    </item>
-    <item>
-      <title>Rat der Gemeinde Heiden – Heiden</title>
-      <link>https://heiden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZXqvZJLMfzKcxpogVls4PDM</link>
-      <description>Mi, 08.07.2026, 15:00 Uhr Uhr | Rathaus, 46359 Heiden, Sitzungssaal</description>
-      <pubDate>Wed, 08 Jul 2026 15:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Heiden-20260708-15:00 Uhr-Rat der Gemeinde Heiden</guid>
     </item>
     <item>
       <title>Ausschuss für Arbeit, Gesundheit, Soziales, Inklusion und Gleichstellung – Bocholt</title>
@@ -818,6 +811,13 @@
       <description>Mi, 08.07.2026, 15:00 Uhr Uhr | Rathaus, 46348 Raesfeld, Großer Sitzungssaal des Rathauses</description>
       <pubDate>Wed, 08 Jul 2026 15:00:00 +0200</pubDate>
       <guid isPermaLink="false">Raesfeld-20260708-15:00 Uhr-Ausschuss für Schule, Bildung,</guid>
+    </item>
+    <item>
+      <title>Rat der Gemeinde Heiden – Heiden</title>
+      <link>https://heiden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZXqvZJLMfzKcxpogVls4PDM</link>
+      <description>Mi, 08.07.2026, 15:00 Uhr Uhr | Rathaus, 46359 Heiden, Sitzungssaal</description>
+      <pubDate>Wed, 08 Jul 2026 15:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Heiden-20260708-15:00 Uhr-Rat der Gemeinde Heiden</guid>
     </item>
     <item>
       <title>Haupt-/Finanz- und Wirtschaftsausschuss – Greven</title>
@@ -869,18 +869,18 @@
       <guid isPermaLink="false">Lengerich-20260708-18:00 Uhr-Stadtrat</guid>
     </item>
     <item>
-      <title>Bau-, Planungs- und Umweltausschuss – Vreden</title>
-      <link>https://vreden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZRJG8LdEWzRGk-Oc0W05h-Q</link>
-      <description>Mi, 08.07.2026, 18:00 Uhr Uhr | Rathaus der Stadt Vreden, 48691 Vreden, Ratssaal</description>
-      <pubDate>Wed, 08 Jul 2026 18:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Vreden-20260708-18:00 Uhr-Bau-, Planungs- und Umweltauss</guid>
-    </item>
-    <item>
       <title>Rat – Stadtlohn</title>
       <link>https://stadtlohn.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZaTsR0rZDJY7Osw3RDpEYMY</link>
       <description>Mi, 08.07.2026, 18:00 Uhr Uhr | Rathaus, 48703 Stadtlohn, Großer Sitzungssaal, 1. OG</description>
       <pubDate>Wed, 08 Jul 2026 18:00:00 +0200</pubDate>
       <guid isPermaLink="false">Stadtlohn-20260708-18:00 Uhr-Rat</guid>
+    </item>
+    <item>
+      <title>Bau-, Planungs- und Umweltausschuss – Vreden</title>
+      <link>https://vreden.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZRJG8LdEWzRGk-Oc0W05h-Q</link>
+      <description>Mi, 08.07.2026, 18:00 Uhr Uhr | Rathaus der Stadt Vreden, 48691 Vreden, Ratssaal</description>
+      <pubDate>Wed, 08 Jul 2026 18:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Vreden-20260708-18:00 Uhr-Bau-, Planungs- und Umweltauss</guid>
     </item>
     <item>
       <title>4. Sitzung des Ausschusses für Stadtentwicklung, Planung und Umwelt – Rhede</title>
@@ -925,18 +925,11 @@
       <guid isPermaLink="false">Rheine-20260709-17:00 Uhr-Bau- und Mobilitätsausschuss</guid>
     </item>
     <item>
-      <title>Rat der Stadt Beckum – Beckum</title>
-      <link>https://sessionnet.owl-it.de/beckum/bi/si0057.asp?__ksinr=6274</link>
+      <title>Rat der Gemeinde Nordkirchen – Nordkirchen</title>
+      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4590</link>
       <description>Do, 09.07.2026, 17:30 Uhr Uhr</description>
       <pubDate>Thu, 09 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Beckum-20260709-17:30 Uhr-Rat der Stadt Beckum</guid>
-    </item>
-    <item>
-      <title>Arbeitskreis für die Gleichstellung von Frau und Mann – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15542</link>
-      <description>Do, 09.07.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20260709-17:00 Uhr-Arbeitskreis für die Gleichste</guid>
+      <guid isPermaLink="false">Nordkirchen-20260709-17:30 Uhr-Rat der Gemeinde Nordkirchen</guid>
     </item>
     <item>
       <title>Gemeinderat – Senden</title>
@@ -946,11 +939,11 @@
       <guid isPermaLink="false">Senden-20260709-18:00 Uhr-Gemeinderat</guid>
     </item>
     <item>
-      <title>Gemeinderat – Ostbevern</title>
-      <link>https://www.ostbevern.de/sessionnet/sessionnetbi/si0057.php?__ksinr=934</link>
-      <description>Do, 09.07.2026, 18:00 Uhr Uhr</description>
+      <title>Arbeitskreis für die Gleichstellung von Frau und Mann – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15542</link>
+      <description>Do, 09.07.2026, 17:00 Uhr Uhr</description>
       <pubDate>Thu, 09 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ostbevern-20260709-18:00 Uhr-Gemeinderat</guid>
+      <guid isPermaLink="false">Kreis Borken-20260709-17:00 Uhr-Arbeitskreis für die Gleichste</guid>
     </item>
     <item>
       <title>Rat – Rosendahl</title>
@@ -960,6 +953,13 @@
       <guid isPermaLink="false">Rosendahl-20260709-19:00 Uhr-Rat</guid>
     </item>
     <item>
+      <title>Gemeinderat – Ostbevern</title>
+      <link>https://www.ostbevern.de/sessionnet/sessionnetbi/si0057.php?__ksinr=934</link>
+      <description>Do, 09.07.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ostbevern-20260709-18:00 Uhr-Gemeinderat</guid>
+    </item>
+    <item>
       <title>FDP-Fraktion im Rat – Oelde</title>
       <link>https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7</link>
       <description>Do, 09.07.2026, 18:30 Uhr Uhr</description>
@@ -967,18 +967,18 @@
       <guid isPermaLink="false">Oelde-20260709-18:30 Uhr-FDP-Fraktion im Rat</guid>
     </item>
     <item>
+      <title>Rat der Stadt Beckum – Beckum</title>
+      <link>https://sessionnet.owl-it.de/beckum/bi/si0057.asp?__ksinr=6274</link>
+      <description>Do, 09.07.2026, 17:30 Uhr Uhr</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Beckum-20260709-17:30 Uhr-Rat der Stadt Beckum</guid>
+    </item>
+    <item>
       <title>Rat der Stadt Telgte – Telgte</title>
       <link>https://sessionnet.owl-it.de/telgte/BI/si0057.asp?__ksinr=1406</link>
       <description>Do, 09.07.2026, 17:01 Uhr Uhr</description>
       <pubDate>Thu, 09 Jul 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Telgte-20260709-17:01 Uhr-Rat der Stadt Telgte</guid>
-    </item>
-    <item>
-      <title>Rat der Gemeinde Nordkirchen – Nordkirchen</title>
-      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4590</link>
-      <description>Do, 09.07.2026, 17:30 Uhr Uhr</description>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nordkirchen-20260709-17:30 Uhr-Rat der Gemeinde Nordkirchen</guid>
     </item>
     <item>
       <title>2. Sitzung des Ausschusses für Gesundheit, Krankenhäuser und Maßregelvollzug – LWL</title>
@@ -1149,13 +1149,6 @@
       <guid isPermaLink="false">Rheine-20260713-17:00 Uhr-Beirat für Menschen mit Behind</guid>
     </item>
     <item>
-      <title>Fraktion Bündnis 90/Die Grünen im Rat der Stadt Beckum – Beckum</title>
-      <link>https://sessionnet.owl-it.de/beckum/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7</link>
-      <description>Mo, 13.07.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Mon, 13 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Beckum-20260713-18:00 Uhr-Fraktion Bündnis 90/Die Grünen</guid>
-    </item>
-    <item>
       <title>Kreistag – Kreis Steinfurt</title>
       <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8727</link>
       <description>Mo, 13.07.2026, 17:00 Uhr Uhr</description>
@@ -1168,6 +1161,13 @@
       <description>Mo, 13.07.2026, 17:32 Uhr Uhr</description>
       <pubDate>Mon, 13 Jul 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Oelde-20260713-17:32 Uhr-Rat</guid>
+    </item>
+    <item>
+      <title>Fraktion Bündnis 90/Die Grünen im Rat der Stadt Beckum – Beckum</title>
+      <link>https://sessionnet.owl-it.de/beckum/bi/si0046.asp?__cjahr=2026&amp;__cmonat=7</link>
+      <description>Mo, 13.07.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Beckum-20260713-18:00 Uhr-Fraktion Bündnis 90/Die Grünen</guid>
     </item>
     <item>
       <title>2. Sitzung des Ausschusses für Bauen, Klima und Umwelt – LWL</title>
@@ -1212,18 +1212,18 @@
       <guid isPermaLink="false">Coesfeld-20260714-18:00 Uhr-Betriebsausschuss des Abwasser</guid>
     </item>
     <item>
-      <title>Stadtrat – Lüdinghausen</title>
-      <link>https://www.stadt-luedinghausen.de/sessionnet/buergerinfo/si0057.php?__ksinr=2348</link>
-      <description>Di, 14.07.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Tue, 14 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Lüdinghausen-20260714-18:00 Uhr-Stadtrat</guid>
-    </item>
-    <item>
       <title>Rat der Stadt Rheine – Rheine</title>
       <link>https://www.rheine-buergerinfo.de/si0057.asp?__ksinr=7558</link>
       <description>Di, 14.07.2026, 17:00 Uhr Uhr</description>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Rheine-20260714-17:00 Uhr-Rat der Stadt Rheine</guid>
+    </item>
+    <item>
+      <title>Stadtrat – Lüdinghausen</title>
+      <link>https://www.stadt-luedinghausen.de/sessionnet/buergerinfo/si0057.php?__ksinr=2348</link>
+      <description>Di, 14.07.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Lüdinghausen-20260714-18:00 Uhr-Stadtrat</guid>
     </item>
     <item>
       <title>RAT – Drensteinfurt</title>
@@ -1266,13 +1266,6 @@
       <description>Mi, 15.07.2026, 16:00 Uhr Uhr</description>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Kreis Warendorf-20260715-16:00 Uhr-Sitzung des Beirates nach dem </guid>
-    </item>
-    <item>
-      <title>Kalender – Ascheberg</title>
-      <link>https://sessionnet.owl-it.de/ascheberg/bi/si0040.asp</link>
-      <description>Mi, 15.07.2026, 7:56 Uhr Uhr</description>
-      <pubDate>Wed, 15 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ascheberg-20260715-7:56 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Betriebsausschuss &quot;Technische Betriebe Rheine&quot; – Rheine</title>
@@ -1368,9 +1361,9 @@
     <item>
       <title>Rat der Stadt Coesfeld – Coesfeld</title>
       <link>https://buergerinfo.coesfeld.de/si0057.php?__ksinr=12667</link>
-      <description>Do, 16.07.2026, 18:00 Uhr Uhr</description>
+      <description>Do, 16.07.2026, 18:03 Uhr Uhr</description>
       <pubDate>Thu, 16 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Coesfeld-20260716-18:00 Uhr-Rat der Stadt Coesfeld</guid>
+      <guid isPermaLink="false">Coesfeld-20260716-18:03 Uhr-Rat der Stadt Coesfeld</guid>
     </item>
     <item>
       <title>Rat – Ahaus</title>
@@ -1385,13 +1378,6 @@
       <description>Do, 16.07.2026, 11:30 Uhr Uhr</description>
       <pubDate>Thu, 16 Jul 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Rheine-20260716-11:30 Uhr-Gesellschafterversammlung Ener</guid>
-    </item>
-    <item>
-      <title>Kalender – Wettringen</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0040.asp</link>
-      <description>Do, 16.07.2026, 17:16 Uhr Uhr</description>
-      <pubDate>Thu, 16 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Wettringen-20260716-17:16 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Gemeinderat – Beelen</title>
@@ -1415,18 +1401,18 @@
       <guid isPermaLink="false">LWL-20260716-10:30 Uhr-3. Sitzung des Finanz- und Wir</guid>
     </item>
     <item>
-      <title>Gemeinderat – Hopsten</title>
-      <link>https://hopsten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZU-qsEviZjOgmkLG4l_BX88</link>
-      <description>Do, 16.07.2026, 15:00 Uhr Uhr | Aula im Schulzentrum, 48496 Hopsten, Aula</description>
-      <pubDate>Thu, 16 Jul 2026 15:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Hopsten-20260716-15:00 Uhr-Gemeinderat</guid>
-    </item>
-    <item>
       <title>Ausschuss für Klima, Umwelt und Energie – Bocholt</title>
       <link>https://ratsinfo.bocholt.de/tops/?__=UGhVM0hpd2NXNFdFcExjZblUwEBy89XUKwTrwMOo7vo</link>
       <description>Do, 16.07.2026, 15:00 Uhr Uhr | LernWerk Bocholt, 46395 Bocholt, Raum 1.01 Veranstaltung</description>
       <pubDate>Thu, 16 Jul 2026 15:00:00 +0200</pubDate>
       <guid isPermaLink="false">Bocholt-20260716-15:00 Uhr-Ausschuss für Klima, Umwelt un</guid>
+    </item>
+    <item>
+      <title>Gemeinderat – Hopsten</title>
+      <link>https://hopsten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZU-qsEviZjOgmkLG4l_BX88</link>
+      <description>Do, 16.07.2026, 15:10 Uhr Uhr | Aula im Schulzentrum, 48496 Hopsten, Aula</description>
+      <pubDate>Thu, 16 Jul 2026 15:10:00 +0200</pubDate>
+      <guid isPermaLink="false">Hopsten-20260716-15:10 Uhr-Gemeinderat</guid>
     </item>
     <item>
       <title>Rat – Lotte</title>
@@ -1464,13 +1450,6 @@
       <guid isPermaLink="false">Lienen-20260716-18:00 Uhr-Rat der Gemeinde Lienen</guid>
     </item>
     <item>
-      <title>Rat – Recke</title>
-      <link>https://recke.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZUvujIOK0x1SgBgTZXwWGVg</link>
-      <description>Do, 16.07.2026, 18:00 Uhr Uhr | Rathaus Recke, 49509 Recke, Großer Sitzungssaal</description>
-      <pubDate>Thu, 16 Jul 2026 18:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Recke-20260716-18:00 Uhr-Rat</guid>
-    </item>
-    <item>
       <title>5. Sitzung des Rates der Stadt Rhede – Rhede</title>
       <link>https://rhede.gremien.info/meeting?id=2026-RAT-156</link>
       <description>Do, 16.07.2026, 18:00 Uhr Uhr | Forum der Gesamtschule Rhede</description>
@@ -1490,6 +1469,27 @@
       <description>Do, 16.07.2026, 18:00 Uhr Uhr | Kommunalforum</description>
       <pubDate>Thu, 16 Jul 2026 18:00:00 +0200</pubDate>
       <guid isPermaLink="false">Sendenhorst-20260716-18:00 Uhr-Sitzung des Rates der Stadt Se</guid>
+    </item>
+    <item>
+      <title>Rat – Recke</title>
+      <link>https://recke.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZUvujIOK0x1SgBgTZXwWGVg</link>
+      <description>Do, 16.07.2026, 19:10 Uhr Uhr | Rathaus Recke, 49509 Recke, Großer Sitzungssaal</description>
+      <pubDate>Thu, 16 Jul 2026 19:10:00 +0200</pubDate>
+      <guid isPermaLink="false">Recke-20260716-19:10 Uhr-Rat</guid>
+    </item>
+    <item>
+      <title>Kalender – Wettringen</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0040.asp</link>
+      <description>Fr, 17.07.2026, 10:22 Uhr Uhr</description>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Wettringen-20260717-10:22 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Ascheberg</title>
+      <link>https://sessionnet.owl-it.de/ascheberg/bi/si0040.asp</link>
+      <description>Fr, 17.07.2026, 5:29 Uhr Uhr</description>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ascheberg-20260717-5:29 Uhr-Kalender</guid>
     </item>
     <item>
       <title>4. Sitzung des Landschaftsausschusses – LWL</title>
