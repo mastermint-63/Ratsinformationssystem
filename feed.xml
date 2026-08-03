@@ -5,7 +5,7 @@
     <link>https://ms-raete.reporter.ruhr/termine_2026_08.html</link>
     <description>Sitzungstermine aus Ratsinformationssystemen im Münsterland</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 02 Aug 2026 06:00:20 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 06:00:19 +0200</lastBuildDate>
     <atom:link href="https://ms-raete.reporter.ruhr/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Kalender – Drensteinfurt</title>
@@ -43,18 +43,18 @@
       <guid isPermaLink="false">Ascheberg-20260731-10:07 Uhr-Kalender</guid>
     </item>
     <item>
-      <title>Kalender – Wettringen</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0040.asp</link>
-      <description>Fr, 31.07.2026, 8:37 Uhr Uhr</description>
-      <pubDate>Fri, 31 Jul 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Wettringen-20260731-8:37 Uhr-Kalender</guid>
-    </item>
-    <item>
       <title>Kalender – Kreis Steinfurt</title>
       <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0040.asp</link>
       <description>Fr, 31.07.2026, 8:37 Uhr Uhr</description>
       <pubDate>Fri, 31 Jul 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Kreis Steinfurt-20260731-8:37 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Wettringen</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0040.asp</link>
+      <description>Fr, 31.07.2026, 8:37 Uhr Uhr</description>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Wettringen-20260731-8:37 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Telgte</title>
@@ -66,30 +66,30 @@
     <item>
       <title>Kalender – Kreis Warendorf</title>
       <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0040.php</link>
-      <description>Sa, 01.08.2026, 21:20 Uhr Uhr</description>
-      <pubDate>Sat, 01 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Warendorf-20260801-21:20 Uhr-Kalender</guid>
+      <description>So, 02.08.2026, 21:20 Uhr Uhr</description>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Warendorf-20260802-21:20 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Nottuln</title>
       <link>https://www.nottuln.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>Sa, 01.08.2026, 18:32 Uhr Uhr</description>
-      <pubDate>Sat, 01 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nottuln-20260801-18:32 Uhr-Kalender</guid>
+      <description>So, 02.08.2026, 18:31 Uhr Uhr</description>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Nottuln-20260802-18:31 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Sassenberg</title>
       <link>https://session.sassenberg.de/sessionnet/bi/si0040.php</link>
-      <description>Sa, 01.08.2026, 19:02 Uhr Uhr</description>
-      <pubDate>Sat, 01 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Sassenberg-20260801-19:02 Uhr-Kalender</guid>
+      <description>So, 02.08.2026, 19:02 Uhr Uhr</description>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Sassenberg-20260802-19:02 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Ostbevern</title>
       <link>https://www.ostbevern.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>So, 02.08.2026, 05:09 Uhr Uhr</description>
-      <pubDate>Sun, 02 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ostbevern-20260802-05:09 Uhr-Kalender</guid>
+      <description>Mo, 03.08.2026, 05:09 Uhr Uhr</description>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ostbevern-20260803-05:09 Uhr-Kalender</guid>
     </item>
     <item>
       <title>BEIRAT Ü60 – Emsdetten</title>
