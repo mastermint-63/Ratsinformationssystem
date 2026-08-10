@@ -5,7 +5,7 @@
     <link>https://ms-raete.reporter.ruhr/termine_2026_08.html</link>
     <description>Sitzungstermine aus Ratsinformationssystemen im Münsterland</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 09 Aug 2026 06:00:17 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 06:00:17 +0200</lastBuildDate>
     <atom:link href="https://ms-raete.reporter.ruhr/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>BEIRAT Ü60 – Emsdetten</title>
@@ -50,18 +50,18 @@
       <guid isPermaLink="false">Stadt Münster-20260807-20:04 Uhr-Kalender</guid>
     </item>
     <item>
-      <title>Kalender – Senden</title>
-      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0040.asp</link>
-      <description>Fr, 07.08.2026, 9:05 Uhr Uhr</description>
-      <pubDate>Fri, 07 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Senden-20260807-9:05 Uhr-Kalender</guid>
-    </item>
-    <item>
       <title>Kalender – Kreis Steinfurt</title>
       <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0040.asp</link>
       <description>Fr, 07.08.2026, 10:45 Uhr Uhr</description>
       <pubDate>Fri, 07 Aug 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Kreis Steinfurt-20260807-10:45 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Senden</title>
+      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0040.asp</link>
+      <description>Fr, 07.08.2026, 9:05 Uhr Uhr</description>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Senden-20260807-9:05 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Telgte</title>
@@ -80,30 +80,30 @@
     <item>
       <title>Kalender – Kreis Warendorf</title>
       <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0040.php</link>
-      <description>Sa, 08.08.2026, 21:19 Uhr Uhr</description>
-      <pubDate>Sat, 08 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Warendorf-20260808-21:19 Uhr-Kalender</guid>
+      <description>So, 09.08.2026, 21:22 Uhr Uhr</description>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Warendorf-20260809-21:22 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Nottuln</title>
       <link>https://www.nottuln.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>Sa, 08.08.2026, 18:32 Uhr Uhr</description>
-      <pubDate>Sat, 08 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nottuln-20260808-18:32 Uhr-Kalender</guid>
+      <description>So, 09.08.2026, 18:32 Uhr Uhr</description>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Nottuln-20260809-18:32 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Sassenberg</title>
       <link>https://session.sassenberg.de/sessionnet/bi/si0040.php</link>
-      <description>Sa, 08.08.2026, 19:02 Uhr Uhr</description>
-      <pubDate>Sat, 08 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Sassenberg-20260808-19:02 Uhr-Kalender</guid>
+      <description>So, 09.08.2026, 19:02 Uhr Uhr</description>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Sassenberg-20260809-19:02 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Ostbevern</title>
       <link>https://www.ostbevern.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>So, 09.08.2026, 05:09 Uhr Uhr</description>
-      <pubDate>Sun, 09 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ostbevern-20260809-05:09 Uhr-Kalender</guid>
+      <description>Mo, 10.08.2026, 05:09 Uhr Uhr</description>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ostbevern-20260810-05:09 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Haupt- und Finanzausschuss – Isselburg</title>
