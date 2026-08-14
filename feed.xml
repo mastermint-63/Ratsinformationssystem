@@ -5,7 +5,7 @@
     <link>https://ms-raete.reporter.ruhr/termine_2026_08.html</link>
     <description>Sitzungstermine aus Ratsinformationssystemen im Münsterland</description>
     <language>de-de</language>
-    <lastBuildDate>Thu, 13 Aug 2026 06:00:17 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 06:00:17 +0200</lastBuildDate>
     <atom:link href="https://ms-raete.reporter.ruhr/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>BEIRAT Ü60 – Emsdetten</title>
@@ -29,60 +29,11 @@
       <guid isPermaLink="false">Ascheberg-20260809-13:10 Uhr-Kalender</guid>
     </item>
     <item>
-      <title>Kalender – Stadt Münster</title>
-      <link>https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>Mi, 12.08.2026, 20:04 Uhr Uhr</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Stadt Münster-20260812-20:04 Uhr-Kalender</guid>
-    </item>
-    <item>
-      <title>Kalender – Kreis Warendorf</title>
-      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0040.php</link>
-      <description>Mi, 12.08.2026, 21:21 Uhr Uhr</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Warendorf-20260812-21:21 Uhr-Kalender</guid>
-    </item>
-    <item>
-      <title>Kalender – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0040.asp</link>
-      <description>Mi, 12.08.2026, 15:02 Uhr Uhr</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260812-15:02 Uhr-Kalender</guid>
-    </item>
-    <item>
-      <title>Kalender – Nottuln</title>
-      <link>https://www.nottuln.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>Mi, 12.08.2026, 18:32 Uhr Uhr</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nottuln-20260812-18:32 Uhr-Kalender</guid>
-    </item>
-    <item>
       <title>Kalender – Drensteinfurt</title>
       <link>https://sessionnet.owl-it.de/drensteinfurt/bi/si0040.asp?__cmandant=2</link>
       <description>Mi, 12.08.2026, 11:26 Uhr Uhr</description>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Drensteinfurt-20260812-11:26 Uhr-Kalender</guid>
-    </item>
-    <item>
-      <title>Kalender – Sassenberg</title>
-      <link>https://session.sassenberg.de/sessionnet/bi/si0040.php</link>
-      <description>Mi, 12.08.2026, 19:02 Uhr Uhr</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Sassenberg-20260812-19:02 Uhr-Kalender</guid>
-    </item>
-    <item>
-      <title>Kalender – Wettringen</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0040.asp</link>
-      <description>Mi, 12.08.2026, 15:02 Uhr Uhr</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Wettringen-20260812-15:02 Uhr-Kalender</guid>
-    </item>
-    <item>
-      <title>Kalender – Wadersloh</title>
-      <link>https://sessionnet.owl-it.de/wadersloh/bi/si0040.asp</link>
-      <description>Mi, 12.08.2026, 13:59 Uhr Uhr</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Wadersloh-20260812-13:59 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Telgte</title>
@@ -92,18 +43,67 @@
       <guid isPermaLink="false">Telgte-20260812-12:56 Uhr-Kalender</guid>
     </item>
     <item>
+      <title>Kalender – Kreis Warendorf</title>
+      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0040.php</link>
+      <description>Do, 13.08.2026, 21:23 Uhr Uhr</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Warendorf-20260813-21:23 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Stadt Münster</title>
+      <link>https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0040.php</link>
+      <description>Do, 13.08.2026, 20:04 Uhr Uhr</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Stadt Münster-20260813-20:04 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Nottuln</title>
+      <link>https://www.nottuln.de/sessionnet/sessionnetbi/si0040.php</link>
+      <description>Do, 13.08.2026, 18:32 Uhr Uhr</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Nottuln-20260813-18:32 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0040.asp</link>
+      <description>Do, 13.08.2026, 10:59 Uhr Uhr</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Steinfurt-20260813-10:59 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Wettringen</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0040.asp</link>
+      <description>Do, 13.08.2026, 10:59 Uhr Uhr</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Wettringen-20260813-10:59 Uhr-Kalender</guid>
+    </item>
+    <item>
       <title>Kalender – Senden</title>
       <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0040.asp</link>
-      <description>Mi, 12.08.2026, 9:56 Uhr Uhr</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Senden-20260812-9:56 Uhr-Kalender</guid>
+      <description>Do, 13.08.2026, 12:41 Uhr Uhr</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Senden-20260813-12:41 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Sassenberg</title>
+      <link>https://session.sassenberg.de/sessionnet/bi/si0040.php</link>
+      <description>Do, 13.08.2026, 19:02 Uhr Uhr</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Sassenberg-20260813-19:02 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Wadersloh</title>
+      <link>https://sessionnet.owl-it.de/wadersloh/bi/si0040.asp</link>
+      <description>Do, 13.08.2026, 15:16 Uhr Uhr</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Wadersloh-20260813-15:16 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Ostbevern</title>
       <link>https://www.ostbevern.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>Do, 13.08.2026, 05:10 Uhr Uhr</description>
-      <pubDate>Thu, 13 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ostbevern-20260813-05:10 Uhr-Kalender</guid>
+      <description>Fr, 14.08.2026, 05:09 Uhr Uhr</description>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ostbevern-20260814-05:09 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Haupt- und Finanzausschuss – Isselburg</title>
