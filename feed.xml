@@ -5,7 +5,7 @@
     <link>https://ms-raete.reporter.ruhr/termine_2026_08.html</link>
     <description>Sitzungstermine aus Ratsinformationssystemen im Münsterland</description>
     <language>de-de</language>
-    <lastBuildDate>Fri, 21 Aug 2026 06:00:16 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 06:00:18 +0200</lastBuildDate>
     <atom:link href="https://ms-raete.reporter.ruhr/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>BEIRAT Ü60 – Emsdetten</title>
@@ -24,23 +24,9 @@
     <item>
       <title>Haupt- und Finanzausschuss – Isselburg</title>
       <link>https://isselburg.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZbuMWFuDtrVd0T1bJp5VaXM</link>
-      <description>Mi, 19.08.2026, 17:30 Uhr Uhr | Bürgerhalle Herzebocholt, 46419 Isselburg, Saal</description>
-      <pubDate>Wed, 19 Aug 2026 17:30:00 +0200</pubDate>
-      <guid isPermaLink="false">Isselburg-20260819-17:30 Uhr-Haupt- und Finanzausschuss</guid>
-    </item>
-    <item>
-      <title>Kalender – Stadt Münster</title>
-      <link>https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>Do, 20.08.2026, 20:04 Uhr Uhr</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Stadt Münster-20260820-20:04 Uhr-Kalender</guid>
-    </item>
-    <item>
-      <title>Kalender – Kreis Warendorf</title>
-      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0040.php</link>
-      <description>Do, 20.08.2026, 21:22 Uhr Uhr</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Warendorf-20260820-21:22 Uhr-Kalender</guid>
+      <description>Mi, 19.08.2026, 19:46 Uhr Uhr | Bürgerhalle Herzebocholt, 46419 Isselburg, Saal</description>
+      <pubDate>Wed, 19 Aug 2026 19:46:00 +0200</pubDate>
+      <guid isPermaLink="false">Isselburg-20260819-19:46 Uhr-Haupt- und Finanzausschuss</guid>
     </item>
     <item>
       <title>Stadtteilbeirat Dutum/Dorenkamp – Rheine</title>
@@ -50,34 +36,6 @@
       <guid isPermaLink="false">Rheine-20260820-19:30 Uhr-Stadtteilbeirat Dutum/Dorenkam</guid>
     </item>
     <item>
-      <title>Kalender – Nottuln</title>
-      <link>https://www.nottuln.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>Do, 20.08.2026, 18:31 Uhr Uhr</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nottuln-20260820-18:31 Uhr-Kalender</guid>
-    </item>
-    <item>
-      <title>Kalender – Wettringen</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0040.asp</link>
-      <description>Do, 20.08.2026, 16:39 Uhr Uhr</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Wettringen-20260820-16:39 Uhr-Kalender</guid>
-    </item>
-    <item>
-      <title>Kalender – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0040.asp</link>
-      <description>Do, 20.08.2026, 16:39 Uhr Uhr</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260820-16:39 Uhr-Kalender</guid>
-    </item>
-    <item>
-      <title>Kalender – Senden</title>
-      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0040.asp</link>
-      <description>Do, 20.08.2026, 16:06 Uhr Uhr</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Senden-20260820-16:06 Uhr-Kalender</guid>
-    </item>
-    <item>
       <title>Kalender – Ascheberg</title>
       <link>https://sessionnet.owl-it.de/ascheberg/bi/si0040.asp</link>
       <description>Do, 20.08.2026, 13:55 Uhr Uhr</description>
@@ -85,39 +43,81 @@
       <guid isPermaLink="false">Ascheberg-20260820-13:55 Uhr-Kalender</guid>
     </item>
     <item>
-      <title>Kalender – Sassenberg</title>
-      <link>https://session.sassenberg.de/sessionnet/bi/si0040.php</link>
-      <description>Do, 20.08.2026, 19:02 Uhr Uhr</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Sassenberg-20260820-19:02 Uhr-Kalender</guid>
+      <title>Kalender – Kreis Warendorf</title>
+      <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0040.php</link>
+      <description>Fr, 21.08.2026, 21:21 Uhr Uhr</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Warendorf-20260821-21:21 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Stadt Münster</title>
+      <link>https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0040.php</link>
+      <description>Fr, 21.08.2026, 20:03 Uhr Uhr</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Stadt Münster-20260821-20:03 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0040.asp</link>
+      <description>Fr, 21.08.2026, 12:23 Uhr Uhr</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Steinfurt-20260821-12:23 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Nottuln</title>
+      <link>https://www.nottuln.de/sessionnet/sessionnetbi/si0040.php</link>
+      <description>Fr, 21.08.2026, 18:32 Uhr Uhr</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Nottuln-20260821-18:32 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Senden</title>
+      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0040.asp</link>
+      <description>Fr, 21.08.2026, 8:53 Uhr Uhr</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Senden-20260821-8:53 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Wettringen</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0040.asp</link>
+      <description>Fr, 21.08.2026, 12:23 Uhr Uhr</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Wettringen-20260821-12:23 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Drensteinfurt</title>
       <link>https://sessionnet.owl-it.de/drensteinfurt/bi/si0040.asp?__cmandant=2</link>
-      <description>Do, 20.08.2026, 12:14 Uhr Uhr</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Drensteinfurt-20260820-12:14 Uhr-Kalender</guid>
+      <description>Fr, 21.08.2026, 10:51 Uhr Uhr</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Drensteinfurt-20260821-10:51 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Sassenberg</title>
+      <link>https://session.sassenberg.de/sessionnet/bi/si0040.php</link>
+      <description>Fr, 21.08.2026, 19:02 Uhr Uhr</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Sassenberg-20260821-19:02 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Telgte</title>
       <link>https://sessionnet.owl-it.de/telgte/BI/si0040.asp</link>
-      <description>Do, 20.08.2026, 15:49 Uhr Uhr</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Telgte-20260820-15:49 Uhr-Kalender</guid>
+      <description>Fr, 21.08.2026, 8:19 Uhr Uhr</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Telgte-20260821-8:19 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Wadersloh</title>
       <link>https://sessionnet.owl-it.de/wadersloh/bi/si0040.asp</link>
-      <description>Do, 20.08.2026, 15:49 Uhr Uhr</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Wadersloh-20260820-15:49 Uhr-Kalender</guid>
+      <description>Fr, 21.08.2026, 10:15 Uhr Uhr</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Wadersloh-20260821-10:15 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Ostbevern</title>
       <link>https://www.ostbevern.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>Fr, 21.08.2026, 05:08 Uhr Uhr</description>
-      <pubDate>Fri, 21 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ostbevern-20260821-05:08 Uhr-Kalender</guid>
+      <description>Sa, 22.08.2026, 05:06 Uhr Uhr</description>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ostbevern-20260822-05:06 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Seniorenbeirat – Rheine</title>
