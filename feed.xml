@@ -5,7 +5,7 @@
     <link>https://ms-raete.reporter.ruhr/termine_2026_08.html</link>
     <description>Sitzungstermine aus Ratsinformationssystemen im Münsterland</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 23 Aug 2026 06:00:16 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 06:00:16 +0200</lastBuildDate>
     <atom:link href="https://ms-raete.reporter.ruhr/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>BEIRAT Ü60 – Emsdetten</title>
@@ -94,30 +94,23 @@
     <item>
       <title>Kalender – Kreis Warendorf</title>
       <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0040.php</link>
-      <description>Sa, 22.08.2026, 21:21 Uhr Uhr</description>
-      <pubDate>Sat, 22 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Warendorf-20260822-21:21 Uhr-Kalender</guid>
+      <description>So, 23.08.2026, 21:22 Uhr Uhr</description>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Warendorf-20260823-21:22 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Nottuln</title>
       <link>https://www.nottuln.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>Sa, 22.08.2026, 18:31 Uhr Uhr</description>
-      <pubDate>Sat, 22 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nottuln-20260822-18:31 Uhr-Kalender</guid>
+      <description>So, 23.08.2026, 18:32 Uhr Uhr</description>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Nottuln-20260823-18:32 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Sassenberg</title>
       <link>https://session.sassenberg.de/sessionnet/bi/si0040.php</link>
-      <description>Sa, 22.08.2026, 19:02 Uhr Uhr</description>
-      <pubDate>Sat, 22 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Sassenberg-20260822-19:02 Uhr-Kalender</guid>
-    </item>
-    <item>
-      <title>Kalender – Ostbevern</title>
-      <link>https://www.ostbevern.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>So, 23.08.2026, 05:07 Uhr Uhr</description>
+      <description>So, 23.08.2026, 19:02 Uhr Uhr</description>
       <pubDate>Sun, 23 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ostbevern-20260823-05:07 Uhr-Kalender</guid>
+      <guid isPermaLink="false">Sassenberg-20260823-19:02 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Seniorenbeirat – Rheine</title>
@@ -125,6 +118,13 @@
       <description>Mo, 24.08.2026, 10:00 Uhr Uhr</description>
       <pubDate>Mon, 24 Aug 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Rheine-20260824-10:00 Uhr-Seniorenbeirat</guid>
+    </item>
+    <item>
+      <title>Kalender – Ostbevern</title>
+      <link>https://www.ostbevern.de/sessionnet/sessionnetbi/si0040.php</link>
+      <description>Mo, 24.08.2026, 05:08 Uhr Uhr</description>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ostbevern-20260824-05:08 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Sitzung der Arbeitsgruppe &quot;Integrierte Schulentwicklungsplanung - Rechtsanspruch auf offenen Ganztag – Ahlen</title>
