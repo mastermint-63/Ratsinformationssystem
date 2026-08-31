@@ -5,7 +5,7 @@
     <link>https://ms-raete.reporter.ruhr/termine_2026_08.html</link>
     <description>Sitzungstermine aus Ratsinformationssystemen im Münsterland</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 30 Aug 2026 06:00:16 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 06:00:20 +0200</lastBuildDate>
     <atom:link href="https://ms-raete.reporter.ruhr/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>BEIRAT Ü60 – Emsdetten</title>
@@ -106,11 +106,11 @@
       <guid isPermaLink="false">Senden-20260828-8:57 Uhr-Kalender</guid>
     </item>
     <item>
-      <title>Kalender – Drensteinfurt</title>
-      <link>https://sessionnet.owl-it.de/drensteinfurt/bi/si0040.asp?__cmandant=2</link>
-      <description>Fr, 28.08.2026, 15:22 Uhr Uhr</description>
+      <title>Kalender – Wadersloh</title>
+      <link>https://sessionnet.owl-it.de/wadersloh/bi/si0040.asp</link>
+      <description>Fr, 28.08.2026, 9:23 Uhr Uhr</description>
       <pubDate>Fri, 28 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Drensteinfurt-20260828-15:22 Uhr-Kalender</guid>
+      <guid isPermaLink="false">Wadersloh-20260828-9:23 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Telgte</title>
@@ -120,39 +120,32 @@
       <guid isPermaLink="false">Telgte-20260828-5:41 Uhr-Kalender</guid>
     </item>
     <item>
-      <title>Kalender – Wadersloh</title>
-      <link>https://sessionnet.owl-it.de/wadersloh/bi/si0040.asp</link>
-      <description>Fr, 28.08.2026, 9:23 Uhr Uhr</description>
-      <pubDate>Fri, 28 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Wadersloh-20260828-9:23 Uhr-Kalender</guid>
-    </item>
-    <item>
       <title>Kalender – Kreis Warendorf</title>
       <link>https://www.kreis-warendorf.de/w1/sessionnet/bi/si0040.php</link>
-      <description>Sa, 29.08.2026, 21:23 Uhr Uhr</description>
-      <pubDate>Sat, 29 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Warendorf-20260829-21:23 Uhr-Kalender</guid>
+      <description>So, 30.08.2026, 21:21 Uhr Uhr</description>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Warendorf-20260830-21:21 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Nottuln</title>
       <link>https://www.nottuln.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>Sa, 29.08.2026, 18:32 Uhr Uhr</description>
-      <pubDate>Sat, 29 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nottuln-20260829-18:32 Uhr-Kalender</guid>
+      <description>So, 30.08.2026, 18:32 Uhr Uhr</description>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Nottuln-20260830-18:32 Uhr-Kalender</guid>
+    </item>
+    <item>
+      <title>Kalender – Drensteinfurt</title>
+      <link>https://sessionnet.owl-it.de/drensteinfurt/bi/si0040.asp?__cmandant=2</link>
+      <description>So, 30.08.2026, 6:39 Uhr Uhr</description>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Drensteinfurt-20260830-6:39 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Kalender – Sassenberg</title>
       <link>https://session.sassenberg.de/sessionnet/bi/si0040.php</link>
-      <description>Sa, 29.08.2026, 19:02 Uhr Uhr</description>
-      <pubDate>Sat, 29 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Sassenberg-20260829-19:02 Uhr-Kalender</guid>
-    </item>
-    <item>
-      <title>Kalender – Ostbevern</title>
-      <link>https://www.ostbevern.de/sessionnet/sessionnetbi/si0040.php</link>
-      <description>So, 30.08.2026, 05:07 Uhr Uhr</description>
+      <description>So, 30.08.2026, 19:03 Uhr Uhr</description>
       <pubDate>Sun, 30 Aug 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ostbevern-20260830-05:07 Uhr-Kalender</guid>
+      <guid isPermaLink="false">Sassenberg-20260830-19:03 Uhr-Kalender</guid>
     </item>
     <item>
       <title>Seniorenbeirat – Havixbeck</title>
@@ -167,6 +160,13 @@
       <description>Mo, 31.08.2026, 18:00 Uhr Uhr</description>
       <pubDate>Mon, 31 Aug 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Beckum-20260831-18:00 Uhr-CDU-Fraktion im Rat der Stadt </guid>
+    </item>
+    <item>
+      <title>Kalender – Ostbevern</title>
+      <link>https://www.ostbevern.de/sessionnet/sessionnetbi/si0040.php</link>
+      <description>Mo, 31.08.2026, 05:08 Uhr Uhr</description>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ostbevern-20260831-05:08 Uhr-Kalender</guid>
     </item>
   </channel>
 </rss>
