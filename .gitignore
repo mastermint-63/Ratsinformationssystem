@@ -3,5 +3,6 @@ __pycache__/
 launchd.log
 .DS_Store
 staedte_ohne_termine.txt
+venv/
 .env
 .env.local

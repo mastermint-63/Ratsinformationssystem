@@ -22,6 +22,7 @@ from zoneinfo import ZoneInfo
 
 from config import STAEDTE, SystemTyp, Kreis, get_staedte_nach_typ
 from scraper import SessionNetScraper, RatsinfoScraper, AllrisScraper, GremienInfoScraper, Termin
+from scraper.waf_browser import vorab_abrufen
 
 
 def dateiname_fuer_monat(jahr: int, monat: int) -> str:
@@ -926,6 +927,11 @@ def main():
     basis_pfad = os.path.dirname(__file__)
     erster_dateiname = None
     alle_fehler = []
+
+    # SD.NET-RIM-Kommunen hinter der rescaled-WAF einmal per Browser abrufen
+    # (die Monatsschleife liest danach aus dem Zwischenspeicher)
+    vorab_abrufen([RatsinfoScraper(s.name, s.url).ical_url
+                   for s in get_staedte_nach_typ(SystemTyp.RATSINFO)])
 
     for idx, (j, m) in enumerate(monate_liste):
         monatsnamen = ['', 'Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun',

@@ -27,6 +27,14 @@ class RatsinfoScraper(BaseScraper):
 
     def hole_termine(self, jahr: int, monat: int) -> list[Termin]:
         """Holt alle Termine für einen bestimmten Monat aus dem iCal-Feed."""
+        # Hinter der WAF: vorab per Browser geholt (siehe waf_browser.py)
+        from .waf_browser import ICS_CACHE
+        vorab = ICS_CACHE.get(self.ical_url)
+        if isinstance(vorab, Exception):
+            raise vorab
+        if isinstance(vorab, str):
+            return self._parse_ical(vorab, jahr, monat)
+
         response = requests.get(self.ical_url, headers=self.HEADERS, timeout=30)
         response.raise_for_status()
         response.encoding = 'utf-8'

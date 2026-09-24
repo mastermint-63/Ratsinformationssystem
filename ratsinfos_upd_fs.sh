@@ -10,7 +10,15 @@ echo "Aktualisierung gestartet: $(date)"
 echo "=========================================="
 
 # Termine abrufen
-OUTPUT=$(/Library/Frameworks/Python.framework/Versions/3.14/bin/python3 app.py --no-browser 2>&1)
+# venv mit Playwright: SD.NET-RIM-Kommunen hinter der rescaled-WAF werden per
+# echtem Chromium-Fenster abgerufen (scraper/waf_browser.py). Browser liegen auf
+# der externen SSD (cleanup-system.sh leert ~/Library/Caches/ms-playwright).
+export PLAYWRIGHT_BROWSERS_PATH="/Volumes/ki/tools/ms-playwright"
+if [ ! -x venv/bin/python ]; then
+    echo "FEHLER: venv fehlt ($(pwd)/venv) - Terminlauf abgebrochen"
+    exit 1
+fi
+OUTPUT=$(venv/bin/python app.py --no-browser 2>&1)
 echo "$OUTPUT"
 
 # Anzahl Termine aus Output extrahieren

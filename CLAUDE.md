@@ -27,7 +27,9 @@ tail -20 launchd.log              # Letzte Aktualisierungen anzeigen
 
 - **launchd-Job:** `de.ratstermine.update` – täglich 06:00 Uhr
 - **Plist:** `~/Library/LaunchAgents/de.ratstermine.update.plist`
-- **Python:** `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3`
+- **Python:** `venv/bin/python` (eigenes venv mit Playwright, seit 09/2026; vorher System-Python 3.14)
+- **Browser:** Chromium in `/Volumes/ki/tools/ms-playwright` (`PLAYWRIGHT_BROWSERS_PATH`, gesetzt in `ratsinfos_upd_fs.sh`)
+- **WAF:** 34 von 35 SD.NET-RIM-Kommunen stehen seit 24.09.2026 hinter der rescaled-WAF (JS-Browserprüfung). `scraper/waf_browser.py` holt deren iCal-Feeds einmal pro Lauf per echtem Chromium-Fenster außerhalb des Bildschirms, nacheinander mit 3 s Pause (~4-5 min). Headless-Chromium löst eine IP-Sperre pro Kommune aus - nicht verwenden. Braucht eine angemeldete GUI-Sitzung auf dem Mac mini.
 - **terminal-notifier:** `/opt/homebrew/bin/terminal-notifier`
 - **Warum lokal?** Ratsinfomanagement.net blockiert bestimmte Cloud-IPs (GitHub Actions/Azure → 503; Hetzner Falkenstein war 04/2026 OK – kann sich ändern)
 
