@@ -5,7 +5,7 @@
     <link>https://ms-raete.reporter.ruhr/termine_2026_09.html</link>
     <description>Sitzungstermine aus Ratsinformationssystemen im Münsterland</description>
     <language>de-de</language>
-    <lastBuildDate>Sun, 27 Sep 2026 06:04:54 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 06:04:54 +0200</lastBuildDate>
     <atom:link href="https://ms-raete.reporter.ruhr/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Stadtteilbeirat Eschendorf – Rheine</title>
@@ -29,13 +29,6 @@
       <guid isPermaLink="false">Gronau-20260901-18:12 Uhr-Aufsichtsrat der Wirtschaftsfö</guid>
     </item>
     <item>
-      <title>Umlegungsausschuss – Ahaus</title>
-      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
-      <description>Mi, 02.09.2026, 15:00 Uhr Uhr</description>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ahaus-20260902-15:00 Uhr-Umlegungsausschuss</guid>
-    </item>
-    <item>
       <title>Integrationsbeirat – Havixbeck</title>
       <link>https://www.ris-havixbeck.de/bi/si0046.php?__cjahr=2026&amp;__cmonat=9</link>
       <description>Mi, 02.09.2026, 18:30 Uhr Uhr</description>
@@ -43,11 +36,11 @@
       <guid isPermaLink="false">Havixbeck-20260902-18:30 Uhr-Integrationsbeirat</guid>
     </item>
     <item>
-      <title>Fachkommission für strategische Finanzplanung – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
-      <description>Mi, 02.09.2026, 17:00 Uhr Uhr</description>
+      <title>Umlegungsausschuss – Ahaus</title>
+      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
+      <description>Mi, 02.09.2026, 15:00 Uhr Uhr</description>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260902-17:00 Uhr-Fachkommission für strategisch</guid>
+      <guid isPermaLink="false">Ahaus-20260902-15:00 Uhr-Umlegungsausschuss</guid>
     </item>
     <item>
       <title>Stadtteilbeirat Mesum – Rheine</title>
@@ -55,6 +48,13 @@
       <description>Mi, 02.09.2026, 19:30 Uhr Uhr</description>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Rheine-20260902-19:30 Uhr-Stadtteilbeirat Mesum</guid>
+    </item>
+    <item>
+      <title>Fachkommission für strategische Finanzplanung – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
+      <description>Mi, 02.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Steinfurt-20260902-17:00 Uhr-Fachkommission für strategisch</guid>
     </item>
     <item>
       <title>SPD-Fraktion – Ennigerloh</title>
@@ -183,18 +183,18 @@
       <guid isPermaLink="false">Oelde-20260907-18:00 Uhr-Fraktion Volt Oelde im Rat</guid>
     </item>
     <item>
-      <title>Ausschuss für Stadtentwicklung, Umwelt, Bauen und Verkehr – Ennigerloh</title>
-      <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0057.asp?__ksinr=3618</link>
-      <description>Mo, 07.09.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Mon, 07 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ennigerloh-20260907-18:00 Uhr-Ausschuss für Stadtentwicklung</guid>
-    </item>
-    <item>
       <title>Ausschuss für Schule, Kultur und Sport – Wadersloh</title>
       <link>https://sessionnet.owl-it.de/wadersloh/bi/si0057.asp?__ksinr=2663</link>
       <description>Mo, 07.09.2026, 17:30 Uhr Uhr</description>
       <pubDate>Mon, 07 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Wadersloh-20260907-17:30 Uhr-Ausschuss für Schule, Kultur u</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Stadtentwicklung, Umwelt, Bauen und Verkehr – Ennigerloh</title>
+      <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0057.asp?__ksinr=3618</link>
+      <description>Mo, 07.09.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ennigerloh-20260907-18:00 Uhr-Ausschuss für Stadtentwicklung</guid>
     </item>
     <item>
       <title>FWG-Fraktion im Rat der Stadt Beckum – Beckum</title>
@@ -302,13 +302,6 @@
       <guid isPermaLink="false">Havixbeck-20260908-17:03 Uhr-Rechnungsprüfungsausschuss</guid>
     </item>
     <item>
-      <title>Konferenz der Hauptverwaltungsbeamtinnen und Hauptverwaltungsbeamten – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
-      <description>Di, 08.09.2026, 09:30 Uhr Uhr</description>
-      <pubDate>Tue, 08 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260908-09:30 Uhr-Konferenz der Hauptverwaltungs</guid>
-    </item>
-    <item>
       <title>Haupt-, Digital- und Finanzausschuss – Rheine</title>
       <link>https://www.rheine-buergerinfo.de/si0057.asp?__ksinr=7593</link>
       <description>Di, 08.09.2026, 17:00 Uhr Uhr</description>
@@ -321,6 +314,13 @@
       <description>Di, 08.09.2026, 16:30 Uhr Uhr</description>
       <pubDate>Tue, 08 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Kreis Coesfeld-20260908-16:30 Uhr-Ausschuss für Kultur, Sport un</guid>
+    </item>
+    <item>
+      <title>Konferenz der Hauptverwaltungsbeamtinnen und Hauptverwaltungsbeamten – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
+      <description>Di, 08.09.2026, 09:30 Uhr Uhr</description>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Steinfurt-20260908-09:30 Uhr-Konferenz der Hauptverwaltungs</guid>
     </item>
     <item>
       <title>Haupt- und Finanzausschuss – Wettringen</title>
@@ -344,18 +344,18 @@
       <guid isPermaLink="false">Sassenberg-20260908-17:00 Uhr-Sozial-, Jugend-, Kultur-, Spo</guid>
     </item>
     <item>
-      <title>Bezirksausschuss Einen-Müssingen/Milte – Warendorf</title>
-      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8987</link>
-      <description>Di, 08.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Tue, 08 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Warendorf-20260908-17:00 Uhr-Bezirksausschuss Einen-Müssing</guid>
-    </item>
-    <item>
       <title>CDU-Fraktion – Ennigerloh</title>
       <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
       <description>Di, 08.09.2026, 19:00 Uhr Uhr</description>
       <pubDate>Tue, 08 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Ennigerloh-20260908-19:00 Uhr-CDU-Fraktion</guid>
+    </item>
+    <item>
+      <title>Bezirksausschuss Einen-Müssingen/Milte – Warendorf</title>
+      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8987</link>
+      <description>Di, 08.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Warendorf-20260908-17:00 Uhr-Bezirksausschuss Einen-Müssing</guid>
     </item>
     <item>
       <title>3. Sitzung des Ausschusses für IT und Digitales – LWL</title>
@@ -435,13 +435,6 @@
       <guid isPermaLink="false">Havixbeck-20260909-19:00 Uhr-Ausschuss für Umwelt- und Klim</guid>
     </item>
     <item>
-      <title>Ausschuss für Gesundheit und Bevölkerungsschutz – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8760</link>
-      <description>Mi, 09.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260909-17:00 Uhr-Ausschuss für Gesundheit und B</guid>
-    </item>
-    <item>
       <title>Spendenausschuss – Rheine</title>
       <link>https://www.rheine-buergerinfo.de/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
       <description>Mi, 09.09.2026, 10:00 Uhr Uhr</description>
@@ -456,11 +449,18 @@
       <guid isPermaLink="false">Kreis Coesfeld-20260909-14:30 Uhr-Unterausschuss ÖPNV</guid>
     </item>
     <item>
-      <title>Bezirksausschuss Freckenhorst-Hoetmar – Warendorf</title>
-      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8988</link>
+      <title>Ausschuss für Gesundheit und Bevölkerungsschutz – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8760</link>
       <description>Mi, 09.09.2026, 17:00 Uhr Uhr</description>
       <pubDate>Wed, 09 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Warendorf-20260909-17:00 Uhr-Bezirksausschuss Freckenhorst-</guid>
+      <guid isPermaLink="false">Kreis Steinfurt-20260909-17:00 Uhr-Ausschuss für Gesundheit und B</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Umwelt, Energie und Landschaft – Wadersloh</title>
+      <link>https://sessionnet.owl-it.de/wadersloh/bi/si0057.asp?__ksinr=2655</link>
+      <description>Mi, 09.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Wadersloh-20260909-17:00 Uhr-Ausschuss für Umwelt, Energie </guid>
     </item>
     <item>
       <title>Rechnungsprüfungsausschuss – Ennigerloh</title>
@@ -470,11 +470,11 @@
       <guid isPermaLink="false">Ennigerloh-20260909-17:00 Uhr-Rechnungsprüfungsausschuss</guid>
     </item>
     <item>
-      <title>Ausschuss für Umwelt, Energie und Landschaft – Wadersloh</title>
-      <link>https://sessionnet.owl-it.de/wadersloh/bi/si0057.asp?__ksinr=2655</link>
+      <title>Bezirksausschuss Freckenhorst-Hoetmar – Warendorf</title>
+      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8988</link>
       <description>Mi, 09.09.2026, 17:00 Uhr Uhr</description>
       <pubDate>Wed, 09 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Wadersloh-20260909-17:00 Uhr-Ausschuss für Umwelt, Energie </guid>
+      <guid isPermaLink="false">Warendorf-20260909-17:00 Uhr-Bezirksausschuss Freckenhorst-</guid>
     </item>
     <item>
       <title>3. Sitzung des Sozialausschusses – LWL</title>
@@ -575,13 +575,6 @@
       <guid isPermaLink="false">Coesfeld-20260910-18:00 Uhr-Ausschuss für Familie, Seniore</guid>
     </item>
     <item>
-      <title>Ausschuss für Digitalisierung, Wirtschaft, Marketing und Tourismus – Ahaus</title>
-      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0057.asp?__ksinr=1746</link>
-      <description>Do, 10.09.2026, 19:00 Uhr Uhr</description>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ahaus-20260910-19:00 Uhr-Ausschuss für Digitalisierung,</guid>
-    </item>
-    <item>
       <title>Ausschuss für Soziales, Bildung, Wohnen, Sport und Kultur – Havixbeck</title>
       <link>https://www.ris-havixbeck.de/bi/si0057.php?__ksinr=4315</link>
       <description>Do, 10.09.2026, 19:00 Uhr Uhr</description>
@@ -589,11 +582,11 @@
       <guid isPermaLink="false">Havixbeck-20260910-19:00 Uhr-Ausschuss für Soziales, Bildun</guid>
     </item>
     <item>
-      <title>Verwaltungsrat jobcenter Kreis Steinfurt AöR – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
-      <description>Do, 10.09.2026, 17:00 Uhr Uhr</description>
+      <title>Ausschuss für Digitalisierung, Wirtschaft, Marketing und Tourismus – Ahaus</title>
+      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0057.asp?__ksinr=1746</link>
+      <description>Do, 10.09.2026, 19:00 Uhr Uhr</description>
       <pubDate>Thu, 10 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260910-17:00 Uhr-Verwaltungsrat jobcenter Kreis</guid>
+      <guid isPermaLink="false">Ahaus-20260910-19:00 Uhr-Ausschuss für Digitalisierung,</guid>
     </item>
     <item>
       <title>Aufsichtsrat EWG Entwicklungs- und Wirtschaftsförderungsgesellschaft für Rheine mbH – Rheine</title>
@@ -610,11 +603,11 @@
       <guid isPermaLink="false">Kreis Coesfeld-20260910-16:30 Uhr-Ausschuss für Bildung, Schule </guid>
     </item>
     <item>
-      <title>Rat – Rosendahl</title>
-      <link>https://sessionnet.owl-it.de/rosendahl/bi/si0057.asp?__ksinr=4545</link>
-      <description>Do, 10.09.2026, 19:00 Uhr Uhr</description>
+      <title>Verwaltungsrat jobcenter Kreis Steinfurt AöR – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
+      <description>Do, 10.09.2026, 17:00 Uhr Uhr</description>
       <pubDate>Thu, 10 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Rosendahl-20260910-19:00 Uhr-Rat</guid>
+      <guid isPermaLink="false">Kreis Steinfurt-20260910-17:00 Uhr-Verwaltungsrat jobcenter Kreis</guid>
     </item>
     <item>
       <title>Umweltausschuss – Billerbeck</title>
@@ -624,18 +617,18 @@
       <guid isPermaLink="false">Billerbeck-20260910-18:00 Uhr-Umweltausschuss</guid>
     </item>
     <item>
-      <title>Ausschuss für IT und Digitalisierung – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15478</link>
-      <description>Do, 10.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20260910-17:00 Uhr-Ausschuss für IT und Digitalis</guid>
-    </item>
-    <item>
       <title>Ausschuss für Bauen, Planen und Umwelt – Beelen</title>
       <link>https://sessionnet.owl-it.de/beelen/bi/si0057.asp?__ksinr=2355</link>
       <description>Do, 10.09.2026, 18:00 Uhr Uhr</description>
       <pubDate>Thu, 10 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Beelen-20260910-18:00 Uhr-Ausschuss für Bauen, Planen un</guid>
+    </item>
+    <item>
+      <title>Rat – Rosendahl</title>
+      <link>https://sessionnet.owl-it.de/rosendahl/bi/si0057.asp?__ksinr=4545</link>
+      <description>Do, 10.09.2026, 19:00 Uhr Uhr</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Rosendahl-20260910-19:00 Uhr-Rat</guid>
     </item>
     <item>
       <title>CDU-Fraktion im Rat – Oelde</title>
@@ -645,18 +638,25 @@
       <guid isPermaLink="false">Oelde-20260910-18:30 Uhr-CDU-Fraktion im Rat</guid>
     </item>
     <item>
-      <title>Sozialausschuss – Warendorf</title>
-      <link>https://sessionnet.owl-it.de/warendorf/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
-      <description>Do, 10.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Warendorf-20260910-17:00 Uhr-Sozialausschuss</guid>
-    </item>
-    <item>
       <title>fwg-Fraktion – Ennigerloh</title>
       <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
       <description>Do, 10.09.2026, 20:00 Uhr Uhr</description>
       <pubDate>Thu, 10 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Ennigerloh-20260910-20:00 Uhr-fwg-Fraktion</guid>
+    </item>
+    <item>
+      <title>Ausschuss für IT und Digitalisierung – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15478</link>
+      <description>Do, 10.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Borken-20260910-17:00 Uhr-Ausschuss für IT und Digitalis</guid>
+    </item>
+    <item>
+      <title>Sozialausschuss – Warendorf</title>
+      <link>https://sessionnet.owl-it.de/warendorf/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
+      <description>Do, 10.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Warendorf-20260910-17:00 Uhr-Sozialausschuss</guid>
     </item>
     <item>
       <title>Haupt-, Finanz- und Digitalausschuss – Beckum</title>
@@ -827,18 +827,18 @@
       <guid isPermaLink="false">Kreis Coesfeld-20260914-16:30 Uhr-Ausschuss für Arbeit, Soziales</guid>
     </item>
     <item>
-      <title>Jugendhilfeausschuss – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15445</link>
-      <description>Mo, 14.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Mon, 14 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20260914-17:00 Uhr-Jugendhilfeausschuss</guid>
-    </item>
-    <item>
       <title>SPD-Fraktion im Rat – Oelde</title>
       <link>https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
       <description>Mo, 14.09.2026, 18:30 Uhr Uhr</description>
       <pubDate>Mon, 14 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Oelde-20260914-18:30 Uhr-SPD-Fraktion im Rat</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Jugend, Familie, Soziales und Inklusion – Wadersloh</title>
+      <link>https://sessionnet.owl-it.de/wadersloh/bi/si0057.asp?__ksinr=2667</link>
+      <description>Mo, 14.09.2026, 17:30 Uhr Uhr</description>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Wadersloh-20260914-17:30 Uhr-Ausschuss für Jugend, Familie,</guid>
     </item>
     <item>
       <title>Hauptausschuss – Ennigerloh</title>
@@ -848,11 +848,11 @@
       <guid isPermaLink="false">Ennigerloh-20260914-18:00 Uhr-Hauptausschuss</guid>
     </item>
     <item>
-      <title>Ausschuss für Jugend, Familie, Soziales und Inklusion – Wadersloh</title>
-      <link>https://sessionnet.owl-it.de/wadersloh/bi/si0057.asp?__ksinr=2667</link>
-      <description>Mo, 14.09.2026, 17:30 Uhr Uhr</description>
+      <title>Jugendhilfeausschuss – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15445</link>
+      <description>Mo, 14.09.2026, 17:00 Uhr Uhr</description>
       <pubDate>Mon, 14 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Wadersloh-20260914-17:30 Uhr-Ausschuss für Jugend, Familie,</guid>
+      <guid isPermaLink="false">Kreis Borken-20260914-17:00 Uhr-Jugendhilfeausschuss</guid>
     </item>
     <item>
       <title>FWG-Fraktion im Rat der Stadt Beckum – Beckum</title>
@@ -953,20 +953,6 @@
       <guid isPermaLink="false">Billerbeck-20260915-18:00 Uhr-Ausschuss für Generationen und</guid>
     </item>
     <item>
-      <title>Bezirksausschuss Ottmarsbocholt – Senden</title>
-      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0057.asp?__ksinr=1521</link>
-      <description>Di, 15.09.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Senden-20260915-18:00 Uhr-Bezirksausschuss Ottmarsbochol</guid>
-    </item>
-    <item>
-      <title>Ausschuss für Soziales, Gesundheit und Integration – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15460</link>
-      <description>Di, 15.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20260915-17:00 Uhr-Ausschuss für Soziales, Gesund</guid>
-    </item>
-    <item>
       <title>Kultur- und Sozialausschuss – Beelen</title>
       <link>https://sessionnet.owl-it.de/beelen/bi/si0057.asp?__ksinr=2364</link>
       <description>Di, 15.09.2026, 18:00 Uhr Uhr</description>
@@ -988,13 +974,6 @@
       <guid isPermaLink="false">Oelde-20260915-17:30 Uhr-Betriebsausschuss "Forum Oelde</guid>
     </item>
     <item>
-      <title>Kultur- und Schulausschuss – Warendorf</title>
-      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8990</link>
-      <description>Di, 15.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Warendorf-20260915-17:00 Uhr-Kultur- und Schulausschuss</guid>
-    </item>
-    <item>
       <title>CDU-Fraktion – Ennigerloh</title>
       <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
       <description>Di, 15.09.2026, 19:00 Uhr Uhr</description>
@@ -1002,11 +981,32 @@
       <guid isPermaLink="false">Ennigerloh-20260915-19:00 Uhr-CDU-Fraktion</guid>
     </item>
     <item>
+      <title>Ausschuss für Soziales, Gesundheit und Integration – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15460</link>
+      <description>Di, 15.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Borken-20260915-17:00 Uhr-Ausschuss für Soziales, Gesund</guid>
+    </item>
+    <item>
+      <title>Kultur- und Schulausschuss – Warendorf</title>
+      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8990</link>
+      <description>Di, 15.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Warendorf-20260915-17:00 Uhr-Kultur- und Schulausschuss</guid>
+    </item>
+    <item>
       <title>Ausschuss für Stadtentwicklung – Beckum</title>
       <link>https://sessionnet.owl-it.de/beckum/bi/si0057.asp?__ksinr=6277</link>
       <description>Di, 15.09.2026, 17:30 Uhr Uhr</description>
       <pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Beckum-20260915-17:30 Uhr-Ausschuss für Stadtentwicklung</guid>
+    </item>
+    <item>
+      <title>Bezirksausschuss Ottmarsbocholt – Senden</title>
+      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0057.asp?__ksinr=1521</link>
+      <description>Di, 15.09.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Senden-20260915-18:00 Uhr-Bezirksausschuss Ottmarsbochol</guid>
     </item>
     <item>
       <title>3. Sitzung des Ausschusses für Pflegezentren und Wohnverbünde – LWL</title>
@@ -1135,6 +1135,13 @@
       <guid isPermaLink="false">Ahaus-20260916-19:00 Uhr-Finanzausschuss</guid>
     </item>
     <item>
+      <title>Ausschuss für Umwelt, Klimaschutz, öffentliche Sicherheit und Ordnung – Kreis Coesfeld</title>
+      <link>https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0057.asp?__ksinr=3466</link>
+      <description>Mi, 16.09.2026, 16:35 Uhr Uhr</description>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Coesfeld-20260916-16:35 Uhr-Ausschuss für Umwelt, Klimasch</guid>
+    </item>
+    <item>
       <title>Ausschuss Kultur, Sport und Ehrenamt – Nottuln</title>
       <link>https://www.nottuln.de/sessionnet/sessionnetbi/si0057.php?__ksinr=3493</link>
       <description>Mi, 16.09.2026, 19:00 Uhr Uhr</description>
@@ -1142,11 +1149,11 @@
       <guid isPermaLink="false">Nottuln-20260916-19:00 Uhr-Ausschuss Kultur, Sport und Eh</guid>
     </item>
     <item>
-      <title>Ausschuss für Umwelt, Klimaschutz, öffentliche Sicherheit und Ordnung – Kreis Coesfeld</title>
-      <link>https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0057.asp?__ksinr=3466</link>
-      <description>Mi, 16.09.2026, 16:35 Uhr Uhr</description>
+      <title>St. Vitus-Stift Olfen gGmbH - Aufsichtsrat – Olfen</title>
+      <link>https://ratsinfo.olfen.de/bi/si0057.asp?__ksinr=5179</link>
+      <description>Mi, 16.09.2026, 18:00 Uhr Uhr</description>
       <pubDate>Wed, 16 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Coesfeld-20260916-16:35 Uhr-Ausschuss für Umwelt, Klimasch</guid>
+      <guid isPermaLink="false">Olfen-20260916-18:00 Uhr-St. Vitus-Stift Olfen gGmbH - </guid>
     </item>
     <item>
       <title>Ver- und Entsorgungsausschuss – Rosendahl</title>
@@ -1156,32 +1163,11 @@
       <guid isPermaLink="false">Rosendahl-20260916-19:00 Uhr-Ver- und Entsorgungsausschuss</guid>
     </item>
     <item>
-      <title>Beirat bei der Unteren Naturschutzbehörde – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15485</link>
-      <description>Mi, 16.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20260916-17:00 Uhr-Beirat bei der Unteren Natursc</guid>
-    </item>
-    <item>
       <title>Planungsausschuss – Oelde</title>
       <link>https://sessionnet.owl-it.de/oelde/bi/si0057.asp?__ksinr=4230</link>
       <description>Mi, 16.09.2026, 17:30 Uhr Uhr</description>
       <pubDate>Wed, 16 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Oelde-20260916-17:30 Uhr-Planungsausschuss</guid>
-    </item>
-    <item>
-      <title>Umwelt- und Mobilitätsausschuss – Warendorf</title>
-      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8991</link>
-      <description>Mi, 16.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Warendorf-20260916-17:00 Uhr-Umwelt- und Mobilitätsausschus</guid>
-    </item>
-    <item>
-      <title>Die Linke - Fraktion – Ennigerloh</title>
-      <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
-      <description>Mi, 16.09.2026, 18:30 Uhr Uhr</description>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ennigerloh-20260916-18:30 Uhr-Die Linke - Fraktion</guid>
     </item>
     <item>
       <title>Bau-, Planungs- und Strukturausschuss – Wadersloh</title>
@@ -1191,11 +1177,25 @@
       <guid isPermaLink="false">Wadersloh-20260916-17:00 Uhr-Bau-, Planungs- und Strukturau</guid>
     </item>
     <item>
-      <title>St. Vitus-Stift Olfen gGmbH - Aufsichtsrat – Olfen</title>
-      <link>https://ratsinfo.olfen.de/bi/si0057.asp?__ksinr=5179</link>
-      <description>Mi, 16.09.2026, 18:00 Uhr Uhr</description>
+      <title>Die Linke - Fraktion – Ennigerloh</title>
+      <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
+      <description>Mi, 16.09.2026, 18:30 Uhr Uhr</description>
       <pubDate>Wed, 16 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Olfen-20260916-18:00 Uhr-St. Vitus-Stift Olfen gGmbH - </guid>
+      <guid isPermaLink="false">Ennigerloh-20260916-18:30 Uhr-Die Linke - Fraktion</guid>
+    </item>
+    <item>
+      <title>Beirat bei der Unteren Naturschutzbehörde – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15485</link>
+      <description>Mi, 16.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Borken-20260916-17:00 Uhr-Beirat bei der Unteren Natursc</guid>
+    </item>
+    <item>
+      <title>Umwelt- und Mobilitätsausschuss – Warendorf</title>
+      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8991</link>
+      <description>Mi, 16.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Warendorf-20260916-17:00 Uhr-Umwelt- und Mobilitätsausschus</guid>
     </item>
     <item>
       <title>Ausschuss für Bauen, Umwelt, Klimaschutz, Energie und Vergaben – Beckum</title>
@@ -1331,13 +1331,6 @@
       <guid isPermaLink="false">Havixbeck-20260917-17:30 Uhr-Rechnungsprüfungsausschuss</guid>
     </item>
     <item>
-      <title>Naturschutzbeirat – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8798</link>
-      <description>Do, 17.09.2026, 15:00 Uhr Uhr</description>
-      <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260917-15:00 Uhr-Naturschutzbeirat</guid>
-    </item>
-    <item>
       <title>Stadtteilbeirat Rodde/Kanalhafen – Rheine</title>
       <link>https://www.rheine-buergerinfo.de/si0057.asp?__ksinr=7448</link>
       <description>Do, 17.09.2026, 19:30 Uhr Uhr</description>
@@ -1352,6 +1345,20 @@
       <guid isPermaLink="false">Kreis Coesfeld-20260917-16:33 Uhr-Ausschuss für Finanzen, Liegen</guid>
     </item>
     <item>
+      <title>Naturschutzbeirat – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8798</link>
+      <description>Do, 17.09.2026, 15:00 Uhr Uhr</description>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Steinfurt-20260917-15:00 Uhr-Naturschutzbeirat</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Familie, Bildung, Ehrenamt und Soziales – Nordkirchen</title>
+      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4634</link>
+      <description>Do, 17.09.2026, 17:30 Uhr Uhr</description>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Nordkirchen-20260917-17:30 Uhr-Ausschuss für Familie, Bildung</guid>
+    </item>
+    <item>
       <title>Planungs-, Bau- und Umweltausschuss – Rosendahl</title>
       <link>https://sessionnet.owl-it.de/rosendahl/bi/si0057.asp?__ksinr=4547</link>
       <description>Do, 17.09.2026, 19:00 Uhr Uhr</description>
@@ -1359,18 +1366,11 @@
       <guid isPermaLink="false">Rosendahl-20260917-19:00 Uhr-Planungs-, Bau- und Umweltauss</guid>
     </item>
     <item>
-      <title>Ausschuss für Klimaschutz, Umwelt und Mobilität – Senden</title>
-      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0057.asp?__ksinr=1534</link>
-      <description>Do, 17.09.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Senden-20260917-18:00 Uhr-Ausschuss für Klimaschutz, Umw</guid>
-    </item>
-    <item>
-      <title>Ausschuss für Sicherheit und Ordnung – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15463</link>
+      <title>Haupt- und Wirtschaftsförderungsausschuss – Telgte</title>
+      <link>https://sessionnet.owl-it.de/telgte/BI/si0057.asp?__ksinr=1395</link>
       <description>Do, 17.09.2026, 17:00 Uhr Uhr</description>
       <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20260917-17:00 Uhr-Ausschuss für Sicherheit und O</guid>
+      <guid isPermaLink="false">Telgte-20260917-17:00 Uhr-Haupt- und Wirtschaftsförderun</guid>
     </item>
     <item>
       <title>Bau- und Infrastrukturausschuss – Everswinkel</title>
@@ -1387,11 +1387,18 @@
       <guid isPermaLink="false">Oelde-20260917-17:30 Uhr-Jugendhilfeausschuss</guid>
     </item>
     <item>
-      <title>Haupt- und Wirtschaftsförderungsausschuss – Telgte</title>
-      <link>https://sessionnet.owl-it.de/telgte/BI/si0057.asp?__ksinr=1395</link>
+      <title>Betriebsausschuss &quot;Eigenbetriebe&quot; – Ennigerloh</title>
+      <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0057.asp?__ksinr=3621</link>
+      <description>Do, 17.09.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ennigerloh-20260917-18:00 Uhr-Betriebsausschuss "Eigenbetrie</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Sicherheit und Ordnung – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15463</link>
       <description>Do, 17.09.2026, 17:00 Uhr Uhr</description>
       <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Telgte-20260917-17:00 Uhr-Haupt- und Wirtschaftsförderun</guid>
+      <guid isPermaLink="false">Kreis Borken-20260917-17:00 Uhr-Ausschuss für Sicherheit und O</guid>
     </item>
     <item>
       <title>Stadtentwicklungsausschuss – Warendorf</title>
@@ -1401,18 +1408,11 @@
       <guid isPermaLink="false">Warendorf-20260917-17:00 Uhr-Stadtentwicklungsausschuss</guid>
     </item>
     <item>
-      <title>Betriebsausschuss &quot;Eigenbetriebe&quot; – Ennigerloh</title>
-      <link>https://sessionnet.owl-it.de/ennigerloh/bi/si0057.asp?__ksinr=3621</link>
+      <title>Ausschuss für Klimaschutz, Umwelt und Mobilität – Senden</title>
+      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0057.asp?__ksinr=1534</link>
       <description>Do, 17.09.2026, 18:00 Uhr Uhr</description>
       <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ennigerloh-20260917-18:00 Uhr-Betriebsausschuss "Eigenbetrie</guid>
-    </item>
-    <item>
-      <title>Ausschuss für Familie, Bildung, Ehrenamt und Soziales – Nordkirchen</title>
-      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4634</link>
-      <description>Do, 17.09.2026, 17:30 Uhr Uhr</description>
-      <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nordkirchen-20260917-17:30 Uhr-Ausschuss für Familie, Bildung</guid>
+      <guid isPermaLink="false">Senden-20260917-18:00 Uhr-Ausschuss für Klimaschutz, Umw</guid>
     </item>
     <item>
       <title>Seniorenbeirat – Bocholt</title>
@@ -1562,13 +1562,6 @@
       <guid isPermaLink="false">Ahaus-20260921-18:00 Uhr-Ältestenrat</guid>
     </item>
     <item>
-      <title>Inklusionsbeirat – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8813</link>
-      <description>Mo, 21.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Mon, 21 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260921-17:00 Uhr-Inklusionsbeirat</guid>
-    </item>
-    <item>
       <title>Betriebsausschuss &quot;Stadtkultur Rheine&quot; – Rheine</title>
       <link>https://www.rheine-buergerinfo.de/si0057.asp?__ksinr=7639</link>
       <description>Mo, 21.09.2026, 17:03 Uhr Uhr</description>
@@ -1583,18 +1576,18 @@
       <guid isPermaLink="false">Kreis Coesfeld-20260921-16:30 Uhr-Jugendhilfeausschuss</guid>
     </item>
     <item>
+      <title>Inklusionsbeirat – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8813</link>
+      <description>Mo, 21.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Steinfurt-20260921-17:00 Uhr-Inklusionsbeirat</guid>
+    </item>
+    <item>
       <title>Gemeinderat Wettringen – Wettringen</title>
       <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0057.asp?__ksinr=8901</link>
       <description>Mo, 21.09.2026, 18:00 Uhr Uhr</description>
       <pubDate>Mon, 21 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Wettringen-20260921-18:00 Uhr-Gemeinderat Wettringen</guid>
-    </item>
-    <item>
-      <title>Ausschuss für Verkehr und Bauen – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15467</link>
-      <description>Mo, 21.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Mon, 21 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20260921-17:00 Uhr-Ausschuss für Verkehr und Baue</guid>
     </item>
     <item>
       <title>Ausschuss für Stadtentwicklung, Bau und Umwelt – Drensteinfurt</title>
@@ -1618,11 +1611,11 @@
       <guid isPermaLink="false">Oelde-20260921-17:30 Uhr-Finanzausschuss</guid>
     </item>
     <item>
-      <title>Haupt-, Finanz- und Wirtschaftsausschuss – Warendorf</title>
-      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=10067</link>
-      <description>Mo, 21.09.2026, 17:00 Uhr Uhr</description>
+      <title>Rechnungsprüfungsausschuss – Wadersloh</title>
+      <link>https://sessionnet.owl-it.de/wadersloh/bi/si0057.asp?__ksinr=2673</link>
+      <description>Mo, 21.09.2026, 17:30 Uhr Uhr</description>
       <pubDate>Mon, 21 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Warendorf-20260921-17:00 Uhr-Haupt-, Finanz- und Wirtschaft</guid>
+      <guid isPermaLink="false">Wadersloh-20260921-17:30 Uhr-Rechnungsprüfungsausschuss</guid>
     </item>
     <item>
       <title>Rat der Stadt Ennigerloh – Ennigerloh</title>
@@ -1632,11 +1625,18 @@
       <guid isPermaLink="false">Ennigerloh-20260921-18:00 Uhr-Rat der Stadt Ennigerloh</guid>
     </item>
     <item>
-      <title>Rechnungsprüfungsausschuss – Wadersloh</title>
-      <link>https://sessionnet.owl-it.de/wadersloh/bi/si0057.asp?__ksinr=2673</link>
-      <description>Mo, 21.09.2026, 17:30 Uhr Uhr</description>
+      <title>Ausschuss für Verkehr und Bauen – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15467</link>
+      <description>Mo, 21.09.2026, 17:00 Uhr Uhr</description>
       <pubDate>Mon, 21 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Wadersloh-20260921-17:30 Uhr-Rechnungsprüfungsausschuss</guid>
+      <guid isPermaLink="false">Kreis Borken-20260921-17:00 Uhr-Ausschuss für Verkehr und Baue</guid>
+    </item>
+    <item>
+      <title>Haupt-, Finanz- und Wirtschaftsausschuss – Warendorf</title>
+      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=10067</link>
+      <description>Mo, 21.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Warendorf-20260921-17:00 Uhr-Haupt-, Finanz- und Wirtschaft</guid>
     </item>
     <item>
       <title>FWG-Fraktion im Rat der Stadt Beckum – Beckum</title>
@@ -1758,13 +1758,6 @@
       <guid isPermaLink="false">Rheine-20260922-17:02 Uhr-Ausschuss für Schule, Bildung </guid>
     </item>
     <item>
-      <title>Ausschuss Planen und Bauen – Nottuln</title>
-      <link>https://www.nottuln.de/sessionnet/sessionnetbi/si0057.php?__ksinr=3494</link>
-      <description>Di, 22.09.2026, 19:00 Uhr Uhr</description>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nottuln-20260922-19:00 Uhr-Ausschuss Planen und Bauen</guid>
-    </item>
-    <item>
       <title>Kreisausschuss – Kreis Coesfeld</title>
       <link>https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0057.asp?__ksinr=3468</link>
       <description>Di, 22.09.2026, 16:30 Uhr Uhr</description>
@@ -1772,18 +1765,18 @@
       <guid isPermaLink="false">Kreis Coesfeld-20260922-16:30 Uhr-Kreisausschuss</guid>
     </item>
     <item>
-      <title>Bezirksausschuss Bösensell – Senden</title>
-      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0057.asp?__ksinr=1522</link>
-      <description>Di, 22.09.2026, 18:00 Uhr Uhr</description>
+      <title>Ausschuss Planen und Bauen – Nottuln</title>
+      <link>https://www.nottuln.de/sessionnet/sessionnetbi/si0057.php?__ksinr=3494</link>
+      <description>Di, 22.09.2026, 19:00 Uhr Uhr</description>
       <pubDate>Tue, 22 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Senden-20260922-18:00 Uhr-Bezirksausschuss Bösensell</guid>
+      <guid isPermaLink="false">Nottuln-20260922-19:00 Uhr-Ausschuss Planen und Bauen</guid>
     </item>
     <item>
-      <title>Ausschuss für Bildung und Schule – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15456</link>
-      <description>Di, 22.09.2026, 17:00 Uhr Uhr</description>
+      <title>Ausschuss für Wirtschaft, Energie, Tourismus, Umwelt und gemeindliche Entwicklung – Nordkirchen</title>
+      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4635</link>
+      <description>Di, 22.09.2026, 17:30 Uhr Uhr</description>
       <pubDate>Tue, 22 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20260922-17:00 Uhr-Ausschuss für Bildung und Schu</guid>
+      <guid isPermaLink="false">Nordkirchen-20260922-17:30 Uhr-Ausschuss für Wirtschaft, Ener</guid>
     </item>
     <item>
       <title>Ausschuss für Familie, Jugend, Senioren und Soziales – Drensteinfurt</title>
@@ -1791,6 +1784,13 @@
       <description>Di, 22.09.2026, 18:00 Uhr Uhr</description>
       <pubDate>Tue, 22 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Drensteinfurt-20260922-18:00 Uhr-Ausschuss für Familie, Jugend,</guid>
+    </item>
+    <item>
+      <title>St. Vitus-Stift Olfen gGmbH - Gesellschafterversammlung – Olfen</title>
+      <link>https://ratsinfo.olfen.de/bi/si0057.asp?__ksinr=5180</link>
+      <description>Di, 22.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Olfen-20260922-17:00 Uhr-St. Vitus-Stift Olfen gGmbH - </guid>
     </item>
     <item>
       <title>Haupt- und Finanzausschuss – Beelen</title>
@@ -1821,11 +1821,11 @@
       <guid isPermaLink="false">Ennigerloh-20260922-18:00 Uhr-Hauptausschuss</guid>
     </item>
     <item>
-      <title>St. Vitus-Stift Olfen gGmbH - Gesellschafterversammlung – Olfen</title>
-      <link>https://ratsinfo.olfen.de/bi/si0057.asp?__ksinr=5180</link>
+      <title>Ausschuss für Bildung und Schule – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15456</link>
       <description>Di, 22.09.2026, 17:00 Uhr Uhr</description>
       <pubDate>Tue, 22 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Olfen-20260922-17:00 Uhr-St. Vitus-Stift Olfen gGmbH - </guid>
+      <guid isPermaLink="false">Kreis Borken-20260922-17:00 Uhr-Ausschuss für Bildung und Schu</guid>
     </item>
     <item>
       <title>Betriebsausschuss – Beckum</title>
@@ -1835,11 +1835,11 @@
       <guid isPermaLink="false">Beckum-20260922-17:30 Uhr-Betriebsausschuss</guid>
     </item>
     <item>
-      <title>Ausschuss für Wirtschaft, Energie, Tourismus, Umwelt und gemeindliche Entwicklung – Nordkirchen</title>
-      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4635</link>
-      <description>Di, 22.09.2026, 17:30 Uhr Uhr</description>
+      <title>Bezirksausschuss Bösensell – Senden</title>
+      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0057.asp?__ksinr=1522</link>
+      <description>Di, 22.09.2026, 18:00 Uhr Uhr</description>
       <pubDate>Tue, 22 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nordkirchen-20260922-17:30 Uhr-Ausschuss für Wirtschaft, Ener</guid>
+      <guid isPermaLink="false">Senden-20260922-18:00 Uhr-Bezirksausschuss Bösensell</guid>
     </item>
     <item>
       <title>3. Sitzung des Schulausschusses – LWL</title>
@@ -1982,13 +1982,6 @@
       <guid isPermaLink="false">Ahaus-20260923-19:00 Uhr-Ausschuss für Verkehr, Umwelt </guid>
     </item>
     <item>
-      <title>Jugendhilfeausschuss – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8743</link>
-      <description>Mi, 23.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Wed, 23 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260923-17:00 Uhr-Jugendhilfeausschuss</guid>
-    </item>
-    <item>
       <title>Ausschuss für Jugend und Familie (Jugendhilfeausschuss) – Dülmen</title>
       <link>https://sessionweb.duelmen.de/bi/si0057.asp?__ksinr=5231</link>
       <description>Mi, 23.09.2026, 17:15 Uhr Uhr</description>
@@ -2008,6 +2001,13 @@
       <description>Mi, 23.09.2026, 19:01 Uhr Uhr</description>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Nottuln-20260923-19:01 Uhr-Ausschuss Umwelt und Mobilität</guid>
+    </item>
+    <item>
+      <title>Jugendhilfeausschuss – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8743</link>
+      <description>Mi, 23.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Steinfurt-20260923-17:00 Uhr-Jugendhilfeausschuss</guid>
     </item>
     <item>
       <title>Sozialausschuss – Oelde</title>
@@ -2178,25 +2178,11 @@
       <guid isPermaLink="false">Lüdinghausen-20260924-18:00 Uhr-Stadtrat</guid>
     </item>
     <item>
-      <title>Rechnungsprüfungsausschuss – Rosendahl</title>
-      <link>https://sessionnet.owl-it.de/rosendahl/bi/si0057.asp?__ksinr=4548</link>
-      <description>Do, 24.09.2026, 19:00 Uhr Uhr</description>
+      <title>Ausschuss für Bauen und Planung – Nordkirchen</title>
+      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4593</link>
+      <description>Do, 24.09.2026, 17:30 Uhr Uhr</description>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Rosendahl-20260924-19:00 Uhr-Rechnungsprüfungsausschuss</guid>
-    </item>
-    <item>
-      <title>Ausschuss für Bildung und Sport – Senden</title>
-      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0057.asp?__ksinr=1627</link>
-      <description>Do, 24.09.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Senden-20260924-18:00 Uhr-Ausschuss für Bildung und Spor</guid>
-    </item>
-    <item>
-      <title>Arbeitskreis für die Gleichstellung von Frau und Mann – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15543</link>
-      <description>Do, 24.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20260924-17:00 Uhr-Arbeitskreis für die Gleichste</guid>
+      <guid isPermaLink="false">Nordkirchen-20260924-17:30 Uhr-Ausschuss für Bauen und Planun</guid>
     </item>
     <item>
       <title>Ausschuss für Schule, Sport und Kultur – Drensteinfurt</title>
@@ -2213,18 +2199,18 @@
       <guid isPermaLink="false">Beelen-20260924-18:00 Uhr-Gemeinderat</guid>
     </item>
     <item>
+      <title>Rechnungsprüfungsausschuss – Rosendahl</title>
+      <link>https://sessionnet.owl-it.de/rosendahl/bi/si0057.asp?__ksinr=4548</link>
+      <description>Do, 24.09.2026, 19:00 Uhr Uhr</description>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Rosendahl-20260924-19:00 Uhr-Rechnungsprüfungsausschuss</guid>
+    </item>
+    <item>
       <title>Infrastrukturausschuss – Sassenberg</title>
       <link>https://session.sassenberg.de/sessionnet/bi/si0057.php?__ksinr=922</link>
       <description>Do, 24.09.2026, 17:00 Uhr Uhr</description>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Sassenberg-20260924-17:00 Uhr-Infrastrukturausschuss</guid>
-    </item>
-    <item>
-      <title>Ausschuss für Planung, Umwelt- u. Klimaschutz – Everswinkel</title>
-      <link>https://www.everswinkel.de/sessionnet/www/buergerinfo/si0057.asp?__ksinr=868</link>
-      <description>Do, 24.09.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Everswinkel-20260924-18:00 Uhr-Ausschuss für Planung, Umwelt-</guid>
     </item>
     <item>
       <title>Bildungs-, Generationen- und Sozialausschuss – Ostbevern</title>
@@ -2241,6 +2227,20 @@
       <guid isPermaLink="false">Telgte-20260924-17:00 Uhr-Ausschuss für Planen, Bauen un</guid>
     </item>
     <item>
+      <title>Ausschuss für Planung, Umwelt- u. Klimaschutz – Everswinkel</title>
+      <link>https://www.everswinkel.de/sessionnet/www/buergerinfo/si0057.asp?__ksinr=868</link>
+      <description>Do, 24.09.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Everswinkel-20260924-18:00 Uhr-Ausschuss für Planung, Umwelt-</guid>
+    </item>
+    <item>
+      <title>Arbeitskreis für die Gleichstellung von Frau und Mann – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15543</link>
+      <description>Do, 24.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Borken-20260924-17:00 Uhr-Arbeitskreis für die Gleichste</guid>
+    </item>
+    <item>
       <title>Schul-, Kultur- und Sportausschuss – Beckum</title>
       <link>https://sessionnet.owl-it.de/beckum/bi/si0057.asp?__ksinr=6281</link>
       <description>Do, 24.09.2026, 17:30 Uhr Uhr</description>
@@ -2248,11 +2248,11 @@
       <guid isPermaLink="false">Beckum-20260924-17:30 Uhr-Schul-, Kultur- und Sportaussc</guid>
     </item>
     <item>
-      <title>Ausschuss für Bauen und Planung – Nordkirchen</title>
-      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4593</link>
-      <description>Do, 24.09.2026, 17:30 Uhr Uhr</description>
+      <title>Ausschuss für Bildung und Sport – Senden</title>
+      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0057.asp?__ksinr=1627</link>
+      <description>Do, 24.09.2026, 18:00 Uhr Uhr</description>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nordkirchen-20260924-17:30 Uhr-Ausschuss für Bauen und Planun</guid>
+      <guid isPermaLink="false">Senden-20260924-18:00 Uhr-Ausschuss für Bildung und Spor</guid>
     </item>
     <item>
       <title>Stadtrat – Tecklenburg</title>
@@ -2549,13 +2549,6 @@
       <guid isPermaLink="false">Ahaus-20260929-19:00 Uhr-Rat</guid>
     </item>
     <item>
-      <title>Ausschuss für Schule, Kultur, Sport und Tourismus – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8765</link>
-      <description>Di, 29.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Tue, 29 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260929-17:00 Uhr-Ausschuss für Schule, Kultur, </guid>
-    </item>
-    <item>
       <title>Kulturausschuss – Dülmen</title>
       <link>https://sessionweb.duelmen.de/bi/si0057.asp?__ksinr=5233</link>
       <description>Di, 29.09.2026, 17:15 Uhr Uhr</description>
@@ -2584,32 +2577,18 @@
       <guid isPermaLink="false">Nottuln-20260929-19:00 Uhr-Haupt- und Finanzausschuss</guid>
     </item>
     <item>
-      <title>Sozialausschuss – Senden</title>
-      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0057.asp?__ksinr=1535</link>
-      <description>Di, 29.09.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Tue, 29 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Senden-20260929-18:00 Uhr-Sozialausschuss</guid>
-    </item>
-    <item>
-      <title>Ausschuss für Kultur und Sport – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15452</link>
+      <title>Ausschuss für Schule, Kultur, Sport und Tourismus – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8765</link>
       <description>Di, 29.09.2026, 17:00 Uhr Uhr</description>
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20260929-17:00 Uhr-Ausschuss für Kultur und Sport</guid>
+      <guid isPermaLink="false">Kreis Steinfurt-20260929-17:00 Uhr-Ausschuss für Schule, Kultur, </guid>
     </item>
     <item>
-      <title>Hauptausschuss – Everswinkel</title>
-      <link>https://www.everswinkel.de/sessionnet/www/buergerinfo/si0057.asp?__ksinr=869</link>
-      <description>Di, 29.09.2026, 18:00 Uhr Uhr</description>
+      <title>Haupt- und Finanzausschuss – Nordkirchen</title>
+      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4594</link>
+      <description>Di, 29.09.2026, 17:30 Uhr Uhr</description>
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Everswinkel-20260929-18:00 Uhr-Hauptausschuss</guid>
-    </item>
-    <item>
-      <title>Rechnungsprüfungsausschuss – Telgte</title>
-      <link>https://sessionnet.owl-it.de/telgte/BI/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
-      <description>Di, 29.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Tue, 29 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Telgte-20260929-17:00 Uhr-Rechnungsprüfungsausschuss</guid>
+      <guid isPermaLink="false">Nordkirchen-20260929-17:30 Uhr-Haupt- und Finanzausschuss</guid>
     </item>
     <item>
       <title>Bau- und Umweltausschuss – Olfen</title>
@@ -2619,6 +2598,27 @@
       <guid isPermaLink="false">Olfen-20260929-18:00 Uhr-Bau- und Umweltausschuss</guid>
     </item>
     <item>
+      <title>Rechnungsprüfungsausschuss – Telgte</title>
+      <link>https://sessionnet.owl-it.de/telgte/BI/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
+      <description>Di, 29.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Telgte-20260929-17:00 Uhr-Rechnungsprüfungsausschuss</guid>
+    </item>
+    <item>
+      <title>Hauptausschuss – Everswinkel</title>
+      <link>https://www.everswinkel.de/sessionnet/www/buergerinfo/si0057.asp?__ksinr=869</link>
+      <description>Di, 29.09.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Everswinkel-20260929-18:00 Uhr-Hauptausschuss</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Kultur und Sport – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15452</link>
+      <description>Di, 29.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Borken-20260929-17:00 Uhr-Ausschuss für Kultur und Sport</guid>
+    </item>
+    <item>
       <title>Ausschuss für Inklusion, Gleichstellung, Soziales, Wohnen und Ehrenamt – Beckum</title>
       <link>https://sessionnet.owl-it.de/beckum/bi/si0057.asp?__ksinr=6282</link>
       <description>Di, 29.09.2026, 17:30 Uhr Uhr</description>
@@ -2626,11 +2626,11 @@
       <guid isPermaLink="false">Beckum-20260929-17:30 Uhr-Ausschuss für Inklusion, Gleic</guid>
     </item>
     <item>
-      <title>Haupt- und Finanzausschuss – Nordkirchen</title>
-      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4594</link>
-      <description>Di, 29.09.2026, 17:30 Uhr Uhr</description>
+      <title>Sozialausschuss – Senden</title>
+      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0057.asp?__ksinr=1535</link>
+      <description>Di, 29.09.2026, 18:00 Uhr Uhr</description>
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nordkirchen-20260929-17:30 Uhr-Haupt- und Finanzausschuss</guid>
+      <guid isPermaLink="false">Senden-20260929-18:00 Uhr-Sozialausschuss</guid>
     </item>
     <item>
       <title>3. Sitzung des Personalausschusses – LWL</title>
@@ -2752,13 +2752,6 @@
       <guid isPermaLink="false">Stadt Münster-20260930-17:00 Uhr-Polizeibeirat</guid>
     </item>
     <item>
-      <title>Ausschuss für Landwirtschaft, Forsten, Ernährung und Verbraucherschutz – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8771</link>
-      <description>Mi, 30.09.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20260930-17:00 Uhr-Ausschuss für Landwirtschaft, </guid>
-    </item>
-    <item>
       <title>Beirat Bildungscampus – Dülmen</title>
       <link>https://sessionweb.duelmen.de/bi/si0046.asp?__cjahr=2026&amp;__cmonat=9</link>
       <description>Mi, 30.09.2026, 19:00 Uhr Uhr</description>
@@ -2778,6 +2771,13 @@
       <description>Mi, 30.09.2026, 16:30 Uhr Uhr</description>
       <pubDate>Wed, 30 Sep 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Kreis Coesfeld-20260930-16:30 Uhr-Kreistag</guid>
+    </item>
+    <item>
+      <title>Ausschuss für Landwirtschaft, Forsten, Ernährung und Verbraucherschutz – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8771</link>
+      <description>Mi, 30.09.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Steinfurt-20260930-17:00 Uhr-Ausschuss für Landwirtschaft, </guid>
     </item>
     <item>
       <title>Verbandsversammlung Schulzweckverband Beckum Ennigerloh – Ennigerloh</title>
