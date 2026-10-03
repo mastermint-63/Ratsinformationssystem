@@ -25,17 +25,18 @@ tail -20 launchd.log              # Letzte Aktualisierungen anzeigen
 
 ## Automatische Aktualisierung
 
-- **launchd-Job:** `de.ratstermine.update` – täglich 06:00 Uhr
-- **Plist:** `~/Library/LaunchAgents/de.ratstermine.update.plist`
-- **Python:** `venv/bin/python` (eigenes venv mit Playwright, seit 09/2026; vorher System-Python 3.14)
-- **Browser:** Chromium in `/Volumes/ki/tools/ms-playwright` (`PLAYWRIGHT_BROWSERS_PATH`, gesetzt in `ratsinfos_upd_fs.sh`)
+- **launchd-Job:** `de.fs.prod.politikradar.ms` (`politikradar-ms`) – täglich 06:00 Uhr, aus dem Manifest `~/ki/infra/launchd/jobs.toml` (seit Mac-mini-Neuaufbau 03.10.2026; vorher `de.ratstermine.update`)
+- **Ablage:** Entwicklung `~/ki/dev/politikradar/ms`, Produktion `~/ki/prod/politikradar/ms` (Clone, committet und pusht selbst). Code-Änderungen: dev → Push → `~/ki/infra/bin/deploy politikradar-ms`
+- **Python:** `venv/` im Checkout, gebaut aus `requirements.lock` (gepinnt, mit Playwright; `requirements.txt` ist nur die Wunschliste)
+- **Browser:** Chromium in `~/ki/tools/ms-playwright` (`PLAYWRIGHT_BROWSERS_PATH`, Manifest bzw. Standard in `ratsinfos_upd_fs.sh`)
+- **Log:** `~/Library/Logs/ki/politikradar/ms.log`
 - **WAF:** 34 von 35 SD.NET-RIM-Kommunen stehen seit 24.09.2026 hinter der rescaled-WAF (JS-Browserprüfung). `scraper/waf_browser.py` holt deren iCal-Feeds einmal pro Lauf per echtem Chromium-Fenster außerhalb des Bildschirms, nacheinander mit 3 s Pause (~4-5 min). Headless-Chromium löst eine IP-Sperre pro Kommune aus - nicht verwenden. Braucht eine angemeldete GUI-Sitzung auf dem Mac mini.
 - **terminal-notifier:** `/opt/homebrew/bin/terminal-notifier`
 - **Warum lokal?** Ratsinfomanagement.net blockiert bestimmte Cloud-IPs (GitHub Actions/Azure → 503; Hetzner Falkenstein war 04/2026 OK – kann sich ändern)
 
 ```bash
-launchctl list | grep ratstermine          # Status prüfen
-launchctl start de.ratstermine.update      # Manuell auslösen
+~/ki/infra/bin/jobs status politikradar-ms   # Status prüfen
+~/ki/infra/bin/jobs kick politikradar-ms     # Manuell über launchd auslösen
 gh run list --workflow=deploy.yml          # Deployment-Status prüfen
 ```
 

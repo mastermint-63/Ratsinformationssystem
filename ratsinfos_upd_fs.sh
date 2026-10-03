@@ -2,7 +2,7 @@
 # Ratstermine Dashboard - Automatische Aktualisierung mit GitHub Push
 
 cd "$(dirname "$0")"
-LOGFILE="$(pwd)/launchd.log"
+LOGFILE="${LOGFILE:-$HOME/Library/Logs/ki/politikradar/ms.log}"
 DATUM=$(date +%Y-%m-%d)
 
 echo "=========================================="
@@ -11,14 +11,15 @@ echo "=========================================="
 
 # Termine abrufen
 # venv mit Playwright: SD.NET-RIM-Kommunen hinter der rescaled-WAF werden per
-# echtem Chromium-Fenster abgerufen (scraper/waf_browser.py). Browser liegen auf
-# der externen SSD (cleanup-system.sh leert ~/Library/Caches/ms-playwright).
-export PLAYWRIGHT_BROWSERS_PATH="/Volumes/ki/tools/ms-playwright"
-if [ ! -x venv/bin/python ]; then
-    echo "FEHLER: venv fehlt ($(pwd)/venv) - Terminlauf abgebrochen"
+# echtem Chromium-Fenster abgerufen (scraper/waf_browser.py). Browser gemeinsam
+# unter ~/ki/tools/ms-playwright (setzt auch das launchd-Manifest in ~/ki/infra).
+export PLAYWRIGHT_BROWSERS_PATH="${PLAYWRIGHT_BROWSERS_PATH:-$HOME/ki/tools/ms-playwright}"
+PY="${PYTHON:-venv/bin/python}"
+if [ ! -x "$PY" ]; then
+    echo "FEHLER: Python fehlt ($PY) - Terminlauf abgebrochen"
     exit 1
 fi
-OUTPUT=$(venv/bin/python app.py --no-browser 2>&1)
+OUTPUT=$("$PY" app.py --no-browser 2>&1)
 echo "$OUTPUT"
 
 # Anzahl Termine aus Output extrahieren
@@ -32,6 +33,8 @@ else
     echo "Änderungen gefunden - pushe zu GitHub..."
     git add termine_*.html index.html feed.xml 2>/dev/null
     git commit -m "Termine aktualisiert $DATUM" 2>&1
+    # Code-Commits aus dev (Push, dann infra/bin/deploy) nicht überholen: vor dem Push rebasen.
+    git pull --rebase --autostash 2>&1
 
     if git push 2>&1; then
         echo "Push erfolgreich!"
