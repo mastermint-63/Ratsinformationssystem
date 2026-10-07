@@ -5,28 +5,14 @@
     <link>https://ms-raete.reporter.ruhr/termine_2026_10.html</link>
     <description>Sitzungstermine aus Ratsinformationssystemen im Münsterland</description>
     <language>de-de</language>
-    <lastBuildDate>Tue, 06 Oct 2026 06:04:58 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 06:05:03 +0200</lastBuildDate>
     <atom:link href="https://ms-raete.reporter.ruhr/feed.xml" rel="self" type="application/rss+xml"/>
-    <item>
-      <title>Ausschuss für Natur, Umwelt und Landwirtschaft – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15471</link>
-      <description>Do, 01.10.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20261001-18:00 Uhr-Ausschuss für Natur, Umwelt un</guid>
-    </item>
     <item>
       <title>Rat der Stadt Coesfeld – Coesfeld</title>
       <link>https://buergerinfo.coesfeld.de/si0057.php?__ksinr=12677</link>
       <description>Do, 01.10.2026, 18:02 Uhr Uhr</description>
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Coesfeld-20261001-18:02 Uhr-Rat der Stadt Coesfeld</guid>
-    </item>
-    <item>
-      <title>Ausschuss für Soziales, Senioren, Arbeit, Integration und Gleichstellung – Ahaus</title>
-      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0057.asp?__ksinr=1751</link>
-      <description>Do, 01.10.2026, 19:00 Uhr Uhr</description>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ahaus-20261001-19:00 Uhr-Ausschuss für Soziales, Senior</guid>
     </item>
     <item>
       <title>Beirat bei der unteren Naturschutzbehörde – Kreis Coesfeld</title>
@@ -36,11 +22,32 @@
       <guid isPermaLink="false">Kreis Coesfeld-20261001-16:30 Uhr-Beirat bei der unteren Natursc</guid>
     </item>
     <item>
+      <title>Ausschuss für Soziales, Senioren, Arbeit, Integration und Gleichstellung – Ahaus</title>
+      <link>https://sessionnet.owl-it.de/stadt-ahaus/bi/si0057.asp?__ksinr=1751</link>
+      <description>Do, 01.10.2026, 19:00 Uhr Uhr</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ahaus-20261001-19:00 Uhr-Ausschuss für Soziales, Senior</guid>
+    </item>
+    <item>
       <title>Betriebsausschuss &quot;Technische Betriebe Rheine&quot; – Rheine</title>
       <link>https://www.rheine-buergerinfo.de/si0057.asp?__ksinr=7638</link>
       <description>Do, 01.10.2026, 17:00 Uhr Uhr</description>
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Rheine-20261001-17:00 Uhr-Betriebsausschuss "Technische </guid>
+    </item>
+    <item>
+      <title>Ausschuss für Natur, Umwelt und Landwirtschaft – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15471</link>
+      <description>Do, 01.10.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Borken-20261001-18:00 Uhr-Ausschuss für Natur, Umwelt un</guid>
+    </item>
+    <item>
+      <title>Bau- und Planungsausschuss – Ascheberg</title>
+      <link>https://sessionnet.owl-it.de/ascheberg/bi/si0057.asp?__ksinr=689</link>
+      <description>Do, 01.10.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ascheberg-20261001-18:00 Uhr-Bau- und Planungsausschuss</guid>
     </item>
     <item>
       <title>Betriebsausschuss Abwasserwerk – Lüdinghausen</title>
@@ -57,18 +64,11 @@
       <guid isPermaLink="false">Dülmen-20261001-17:15 Uhr-Ausschuss für Schule und Bildu</guid>
     </item>
     <item>
-      <title>Bau- und Planungsausschuss – Ascheberg</title>
-      <link>https://sessionnet.owl-it.de/ascheberg/bi/si0057.asp?__ksinr=689</link>
+      <title>Bau- und Planungsausschuss – Senden</title>
+      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0057.asp?__ksinr=1536</link>
       <description>Do, 01.10.2026, 18:00 Uhr Uhr</description>
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ascheberg-20261001-18:00 Uhr-Bau- und Planungsausschuss</guid>
-    </item>
-    <item>
-      <title>Rat der Gemeinde Nordkirchen – Nordkirchen</title>
-      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4595</link>
-      <description>Do, 01.10.2026, 17:30 Uhr Uhr</description>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Nordkirchen-20261001-17:30 Uhr-Rat der Gemeinde Nordkirchen</guid>
+      <guid isPermaLink="false">Senden-20261001-18:00 Uhr-Bau- und Planungsausschuss</guid>
     </item>
     <item>
       <title>Haupt- und Finanzausschuss – Sassenberg</title>
@@ -78,32 +78,11 @@
       <guid isPermaLink="false">Sassenberg-20261001-17:00 Uhr-Haupt- und Finanzausschuss</guid>
     </item>
     <item>
-      <title>Ausschuss für Umwelt, Klima, Naturschutz, Energie und Entsorgung – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8776</link>
-      <description>Do, 01.10.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20261001-17:00 Uhr-Ausschuss für Umwelt, Klima, N</guid>
-    </item>
-    <item>
-      <title>Bau- und Planungsausschuss – Senden</title>
-      <link>https://sessionnet.owl-it.de/gemeinde-senden/bi/si0057.asp?__ksinr=1536</link>
-      <description>Do, 01.10.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Senden-20261001-18:00 Uhr-Bau- und Planungsausschuss</guid>
-    </item>
-    <item>
       <title>Gemeinderat – Everswinkel</title>
       <link>https://www.everswinkel.de/sessionnet/www/buergerinfo/si0057.asp?__ksinr=870</link>
       <description>Do, 01.10.2026, 18:00 Uhr Uhr</description>
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Everswinkel-20261001-18:00 Uhr-Gemeinderat</guid>
-    </item>
-    <item>
-      <title>Fraktion Volt Oelde im Rat – Oelde</title>
-      <link>https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=10</link>
-      <description>Do, 01.10.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Oelde-20261001-18:00 Uhr-Fraktion Volt Oelde im Rat</guid>
     </item>
     <item>
       <title>Ältestenrat – Ennigerloh</title>
@@ -113,11 +92,25 @@
       <guid isPermaLink="false">Ennigerloh-20261001-17:00 Uhr-Ältestenrat</guid>
     </item>
     <item>
-      <title>Rat der Stadt Warendorf – Warendorf</title>
-      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8994</link>
+      <title>Ausschuss für Umwelt, Klima, Naturschutz, Energie und Entsorgung – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8776</link>
       <description>Do, 01.10.2026, 17:00 Uhr Uhr</description>
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Warendorf-20261001-17:00 Uhr-Rat der Stadt Warendorf</guid>
+      <guid isPermaLink="false">Kreis Steinfurt-20261001-17:00 Uhr-Ausschuss für Umwelt, Klima, N</guid>
+    </item>
+    <item>
+      <title>Fraktion Volt Oelde im Rat – Oelde</title>
+      <link>https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=10</link>
+      <description>Do, 01.10.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Oelde-20261001-18:00 Uhr-Fraktion Volt Oelde im Rat</guid>
+    </item>
+    <item>
+      <title>Rat der Gemeinde Nordkirchen – Nordkirchen</title>
+      <link>https://sessionnet.owl-it.de/nordkirchen/bi/si0057.asp?__ksinr=4595</link>
+      <description>Do, 01.10.2026, 17:30 Uhr Uhr</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Nordkirchen-20261001-17:30 Uhr-Rat der Gemeinde Nordkirchen</guid>
     </item>
     <item>
       <title>Klimabeirat – Beckum</title>
@@ -125,6 +118,13 @@
       <description>Do, 01.10.2026, 17:35 Uhr Uhr</description>
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Beckum-20261001-17:35 Uhr-Klimabeirat</guid>
+    </item>
+    <item>
+      <title>Rat der Stadt Warendorf – Warendorf</title>
+      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8994</link>
+      <description>Do, 01.10.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Warendorf-20261001-17:00 Uhr-Rat der Stadt Warendorf</guid>
     </item>
     <item>
       <title>Ausschuss für Umwelt, Klimaschutz und Nachhaltigkeit – Tecklenburg</title>
@@ -220,9 +220,9 @@
     <item>
       <title>Jugendrat – Stadt Münster</title>
       <link>https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0057.php?__ksinr=14494</link>
-      <description>Mo, 05.10.2026, 17:00 Uhr Uhr</description>
+      <description>Mo, 05.10.2026, 17:03 Uhr Uhr</description>
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Stadt Münster-20261005-17:00 Uhr-Jugendrat</guid>
+      <guid isPermaLink="false">Stadt Münster-20261005-17:03 Uhr-Jugendrat</guid>
     </item>
     <item>
       <title>Seniorenbeirat – Havixbeck</title>
@@ -232,11 +232,11 @@
       <guid isPermaLink="false">Havixbeck-20261005-15:00 Uhr-Seniorenbeirat</guid>
     </item>
     <item>
-      <title>Fachkommission IT und Digitales – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=10</link>
-      <description>Mo, 05.10.2026, 17:00 Uhr Uhr</description>
+      <title>SPD-Fraktion – Borken</title>
+      <link>https://sessionnet.owl-it.de/borken/bi/si0046.asp?__cjahr=2026&amp;__cmonat=10</link>
+      <description>Mo, 05.10.2026, 17:30 Uhr Uhr</description>
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20261005-17:00 Uhr-Fachkommission IT und Digitale</guid>
+      <guid isPermaLink="false">Borken-20261005-17:30 Uhr-SPD-Fraktion</guid>
     </item>
     <item>
       <title>Haupt- und Finanzausschuss – Drensteinfurt</title>
@@ -246,11 +246,11 @@
       <guid isPermaLink="false">Drensteinfurt-20261005-18:00 Uhr-Haupt- und Finanzausschuss</guid>
     </item>
     <item>
-      <title>SPD-Fraktion – Borken</title>
-      <link>https://sessionnet.owl-it.de/borken/bi/si0046.asp?__cjahr=2026&amp;__cmonat=10</link>
-      <description>Mo, 05.10.2026, 17:30 Uhr Uhr</description>
+      <title>Fachkommission IT und Digitales – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=10</link>
+      <description>Mo, 05.10.2026, 17:00 Uhr Uhr</description>
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Borken-20261005-17:30 Uhr-SPD-Fraktion</guid>
+      <guid isPermaLink="false">Kreis Steinfurt-20261005-17:00 Uhr-Fachkommission IT und Digitale</guid>
     </item>
     <item>
       <title>Rechnungsprüfungsausschuss – Oelde</title>
@@ -297,9 +297,9 @@
     <item>
       <title>Sitzung des Rates der Stadt Ahlen – Ahlen</title>
       <link>https://www.ahlen.sitzung-online.de/public/to010?SILFDNR=1001080&amp;refresh=false</link>
-      <description>Mo, 05.10.2026, 17:00 Uhr Uhr | Ratssaal des Rathauses</description>
-      <pubDate>Mon, 05 Oct 2026 17:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ahlen-20261005-17:00 Uhr-Sitzung des Rates der Stadt Ah</guid>
+      <description>Mo, 05.10.2026, 17:01 Uhr Uhr | Ratssaal des Rathauses</description>
+      <pubDate>Mon, 05 Oct 2026 17:01:00 +0200</pubDate>
+      <guid isPermaLink="false">Ahlen-20261005-17:01 Uhr-Sitzung des Rates der Stadt Ah</guid>
     </item>
     <item>
       <title>Stadtrat – Velen</title>
@@ -337,6 +337,13 @@
       <guid isPermaLink="false">Ahaus-20261006-19:00 Uhr-Hauptausschuss</guid>
     </item>
     <item>
+      <title>Jugend-, Senioren-, Sozial- und Sportausschuss – Ascheberg</title>
+      <link>https://sessionnet.owl-it.de/ascheberg/bi/si0057.asp?__ksinr=690</link>
+      <description>Di, 06.10.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ascheberg-20261006-18:00 Uhr-Jugend-, Senioren-, Sozial- un</guid>
+    </item>
+    <item>
       <title>Haupt- und Finanzausschuss – Billerbeck</title>
       <link>https://ratsinfo.billerbeck.de/bi/si0057.asp?__ksinr=2694</link>
       <description>Di, 06.10.2026, 18:00 Uhr Uhr</description>
@@ -351,25 +358,11 @@
       <guid isPermaLink="false">Dülmen-20261006-17:15 Uhr-Ausschuss für Wirtschaftsförde</guid>
     </item>
     <item>
-      <title>Jugend-, Senioren-, Sozial- und Sportausschuss – Ascheberg</title>
-      <link>https://sessionnet.owl-it.de/ascheberg/bi/si0057.asp?__ksinr=690</link>
-      <description>Di, 06.10.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ascheberg-20261006-18:00 Uhr-Jugend-, Senioren-, Sozial- un</guid>
-    </item>
-    <item>
       <title>Rat der Stadt Olfen – Olfen</title>
       <link>https://ratsinfo.olfen.de/bi/si0057.asp?__ksinr=5165</link>
       <description>Di, 06.10.2026, 18:00 Uhr Uhr</description>
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Olfen-20261006-18:00 Uhr-Rat der Stadt Olfen</guid>
-    </item>
-    <item>
-      <title>Ausschuss für Wirtschaft, Bauen, Verkehr, Wohnen und Digitales – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8748</link>
-      <description>Di, 06.10.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20261006-17:00 Uhr-Ausschuss für Wirtschaft, Baue</guid>
     </item>
     <item>
       <title>Ausschuss für Wirtschaftsförderung, Digitalisierung, Kultur und Tourismus – Senden</title>
@@ -379,6 +372,13 @@
       <guid isPermaLink="false">Senden-20261006-18:00 Uhr-Ausschuss für Wirtschaftsförde</guid>
     </item>
     <item>
+      <title>Rechnungsprüfungsausschuss – Borken</title>
+      <link>https://sessionnet.owl-it.de/borken/bi/si0057.asp?__ksinr=5331</link>
+      <description>Di, 06.10.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Borken-20261006-17:00 Uhr-Rechnungsprüfungsausschuss</guid>
+    </item>
+    <item>
       <title>Betriebsausschuss – Drensteinfurt</title>
       <link>https://sessionnet.owl-it.de/drensteinfurt/bi/si0057.asp?__ksinr=783</link>
       <description>Di, 06.10.2026, 18:00 Uhr Uhr</description>
@@ -386,11 +386,11 @@
       <guid isPermaLink="false">Drensteinfurt-20261006-18:00 Uhr-Betriebsausschuss</guid>
     </item>
     <item>
-      <title>Rechnungsprüfungsausschuss – Borken</title>
-      <link>https://sessionnet.owl-it.de/borken/bi/si0057.asp?__ksinr=5331</link>
+      <title>Ausschuss für Wirtschaft, Bauen, Verkehr, Wohnen und Digitales – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8748</link>
       <description>Di, 06.10.2026, 17:00 Uhr Uhr</description>
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Borken-20261006-17:00 Uhr-Rechnungsprüfungsausschuss</guid>
+      <guid isPermaLink="false">Kreis Steinfurt-20261006-17:00 Uhr-Ausschuss für Wirtschaft, Baue</guid>
     </item>
     <item>
       <title>Bezirksausschuss Sünninghausen – Oelde</title>
@@ -400,18 +400,18 @@
       <guid isPermaLink="false">Oelde-20261006-17:30 Uhr-Bezirksausschuss Sünninghausen</guid>
     </item>
     <item>
-      <title>Sport-, Vereinswesen-, Ehrenamts- und Bürgerbeteiligungsausschuss – Warendorf</title>
-      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=10101</link>
-      <description>Di, 06.10.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Warendorf-20261006-17:00 Uhr-Sport-, Vereinswesen-, Ehrenam</guid>
-    </item>
-    <item>
       <title>Ausschuss für Klimaschutz, Nachhaltigkeit und Mobilität – Telgte</title>
       <link>https://sessionnet.owl-it.de/telgte/BI/si0057.asp?__ksinr=1386</link>
       <description>Di, 06.10.2026, 17:00 Uhr Uhr</description>
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Telgte-20261006-17:00 Uhr-Ausschuss für Klimaschutz, Nac</guid>
+    </item>
+    <item>
+      <title>Sport-, Vereinswesen-, Ehrenamts- und Bürgerbeteiligungsausschuss – Warendorf</title>
+      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=10101</link>
+      <description>Di, 06.10.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Warendorf-20261006-17:00 Uhr-Sport-, Vereinswesen-, Ehrenam</guid>
     </item>
     <item>
       <title>Rechnungsprüfungsausschuss – Hörstel</title>
@@ -433,13 +433,6 @@
       <description>Di, 06.10.2026, 17:00 Uhr Uhr | LernWerk Bocholt, 46395 Bocholt, Raum 1.01 Veranstaltung</description>
       <pubDate>Tue, 06 Oct 2026 17:00:00 +0200</pubDate>
       <guid isPermaLink="false">Bocholt-20261006-17:00 Uhr-Ausschuss für Kultur, Musik un</guid>
-    </item>
-    <item>
-      <title>Inklusionsbeirat – Emsdetten</title>
-      <link>https://emsdetten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZeQ9PKxq8n4PIi_kC0NQUks</link>
-      <description>Di, 06.10.2026, 18:00 Uhr Uhr | Rathaus, 48282 Emsdetten, Raum 101</description>
-      <pubDate>Tue, 06 Oct 2026 18:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Emsdetten-20261006-18:00 Uhr-Inklusionsbeirat</guid>
     </item>
     <item>
       <title>Betriebsausschuss – Horstmar</title>
@@ -475,6 +468,13 @@
       <description>Di, 06.10.2026, 18:00 Uhr Uhr | Rathaus, 48565 Steinfurt, Bürgersaal</description>
       <pubDate>Tue, 06 Oct 2026 18:00:00 +0200</pubDate>
       <guid isPermaLink="false">Steinfurt-20261006-18:00 Uhr-Ausschuss für Stadtentwicklung</guid>
+    </item>
+    <item>
+      <title>Inklusionsbeirat – Emsdetten</title>
+      <link>https://emsdetten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZeQ9PKxq8n4PIi_kC0NQUks</link>
+      <description>Di, 06.10.2026, 18:00 Uhr Uhr | Rathaus, 48282 Emsdetten, Raum 101</description>
+      <pubDate>Tue, 06 Oct 2026 18:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Emsdetten-20261006-18:00 Uhr-Inklusionsbeirat</guid>
     </item>
     <item>
       <title>Sitzung des Haupt- und Finanzausschusses des Rates der Stadt Sendenhorst – Sendenhorst</title>
@@ -596,13 +596,6 @@
       <guid isPermaLink="false">Gronau-20261007-18:00 Uhr-Haupt- und Finanzausschuss</guid>
     </item>
     <item>
-      <title>Kreisausschuss – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15357</link>
-      <description>Do, 08.10.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20261008-17:00 Uhr-Kreisausschuss</guid>
-    </item>
-    <item>
       <title>Bezirksausschuss – Coesfeld</title>
       <link>https://buergerinfo.coesfeld.de/si0057.php?__ksinr=12678</link>
       <description>Do, 08.10.2026, 18:00 Uhr Uhr</description>
@@ -615,6 +608,20 @@
       <description>Do, 08.10.2026, 17:00 Uhr Uhr</description>
       <pubDate>Thu, 08 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Rheine-20261008-17:00 Uhr-Aufsichtsrat RheiNet GmbH</guid>
+    </item>
+    <item>
+      <title>Kreisausschuss – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15357</link>
+      <description>Do, 08.10.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Borken-20261008-17:00 Uhr-Kreisausschuss</guid>
+    </item>
+    <item>
+      <title>Nachhaltigkeits- und Mobilitätsausschuss – Ascheberg</title>
+      <link>https://sessionnet.owl-it.de/ascheberg/bi/si0057.asp?__ksinr=699</link>
+      <description>Do, 08.10.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ascheberg-20261008-18:00 Uhr-Nachhaltigkeits- und Mobilität</guid>
     </item>
     <item>
       <title>Haupt- und Finanzausschuss – Lüdinghausen</title>
@@ -631,25 +638,11 @@
       <guid isPermaLink="false">Dülmen-20261008-17:15 Uhr-Bauausschuss</guid>
     </item>
     <item>
-      <title>Nachhaltigkeits- und Mobilitätsausschuss – Ascheberg</title>
-      <link>https://sessionnet.owl-it.de/ascheberg/bi/si0057.asp?__ksinr=699</link>
-      <description>Do, 08.10.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ascheberg-20261008-18:00 Uhr-Nachhaltigkeits- und Mobilität</guid>
-    </item>
-    <item>
       <title>Rat – Rosendahl</title>
       <link>https://sessionnet.owl-it.de/rosendahl/bi/si0057.asp?__ksinr=4549</link>
       <description>Do, 08.10.2026, 19:00 Uhr Uhr</description>
       <pubDate>Thu, 08 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Rosendahl-20261008-19:00 Uhr-Rat</guid>
-    </item>
-    <item>
-      <title>Personal- und Gleichstellungsausschuss – Kreis Steinfurt</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8738</link>
-      <description>Do, 08.10.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Steinfurt-20261008-17:00 Uhr-Personal- und Gleichstellungsa</guid>
     </item>
     <item>
       <title>Gemeinderat – Ostbevern</title>
@@ -664,6 +657,13 @@
       <description>Do, 08.10.2026, 18:00 Uhr Uhr</description>
       <pubDate>Thu, 08 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Ennigerloh-20261008-18:00 Uhr-Ausschuss für Soziales, Kultur</guid>
+    </item>
+    <item>
+      <title>Personal- und Gleichstellungsausschuss – Kreis Steinfurt</title>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8738</link>
+      <description>Do, 08.10.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Kreis Steinfurt-20261008-17:00 Uhr-Personal- und Gleichstellungsa</guid>
     </item>
     <item>
       <title>Ausschuss für Generationen und Soziales – Telgte</title>
@@ -792,25 +792,11 @@
       <guid isPermaLink="false">Wettringen-20261012-18:00 Uhr-Bau- und Planungsausschuss</guid>
     </item>
     <item>
-      <title>RAT – Drensteinfurt</title>
-      <link>https://sessionnet.owl-it.de/drensteinfurt/bi/si0057.asp?__ksinr=784</link>
-      <description>Mo, 12.10.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Mon, 12 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Drensteinfurt-20261012-18:00 Uhr-RAT</guid>
-    </item>
-    <item>
       <title>SPD-Fraktion – Borken</title>
       <link>https://sessionnet.owl-it.de/borken/bi/si0046.asp?__cjahr=2026&amp;__cmonat=10</link>
       <description>Mo, 12.10.2026, 17:30 Uhr Uhr</description>
       <pubDate>Mon, 12 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Borken-20261012-17:30 Uhr-SPD-Fraktion</guid>
-    </item>
-    <item>
-      <title>Rat – Wadersloh</title>
-      <link>https://sessionnet.owl-it.de/wadersloh/bi/si0057.asp?__ksinr=2651</link>
-      <description>Mo, 12.10.2026, 17:30 Uhr Uhr</description>
-      <pubDate>Mon, 12 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Wadersloh-20261012-17:30 Uhr-Rat</guid>
     </item>
     <item>
       <title>Hauptausschuss – Ennigerloh</title>
@@ -820,11 +806,25 @@
       <guid isPermaLink="false">Ennigerloh-20261012-18:00 Uhr-Hauptausschuss</guid>
     </item>
     <item>
+      <title>RAT – Drensteinfurt</title>
+      <link>https://sessionnet.owl-it.de/drensteinfurt/bi/si0057.asp?__ksinr=784</link>
+      <description>Mo, 12.10.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Drensteinfurt-20261012-18:00 Uhr-RAT</guid>
+    </item>
+    <item>
       <title>FWG-Fraktion im Rat der Stadt Beckum – Beckum</title>
       <link>https://sessionnet.owl-it.de/beckum/bi/si0046.asp?__cjahr=2026&amp;__cmonat=10</link>
       <description>Mo, 12.10.2026, 18:00 Uhr Uhr</description>
       <pubDate>Mon, 12 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Beckum-20261012-18:00 Uhr-FWG-Fraktion im Rat der Stadt </guid>
+    </item>
+    <item>
+      <title>Rat – Wadersloh</title>
+      <link>https://sessionnet.owl-it.de/wadersloh/bi/si0057.asp?__ksinr=2651</link>
+      <description>Mo, 12.10.2026, 17:30 Uhr Uhr</description>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Wadersloh-20261012-17:30 Uhr-Rat</guid>
     </item>
     <item>
       <title>Rat – Altenberge</title>
@@ -841,13 +841,6 @@
       <guid isPermaLink="false">Neuenkirchen-20261012-16:00 Uhr-Haupt- und Finanzausschuss</guid>
     </item>
     <item>
-      <title>BEIRAT Ü60 – Emsdetten</title>
-      <link>https://emsdetten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZeyz5Y7y9xWIAOqjgzyM1xQ</link>
-      <description>Mo, 12.10.2026, 16:30 Uhr Uhr | Rathaus, 48282 Emsdetten, Raum 101</description>
-      <pubDate>Mon, 12 Oct 2026 16:30:00 +0200</pubDate>
-      <guid isPermaLink="false">Emsdetten-20261012-16:30 Uhr-BEIRAT Ü60</guid>
-    </item>
-    <item>
       <title>Gemeinderat – Metelen</title>
       <link>https://metelen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZbfSDhifs4QnNC37uY3RUHE</link>
       <description>Mo, 12.10.2026, 16:30 Uhr Uhr | Altes Amtshaus, 48629 Metelen, Sitzungssaal</description>
@@ -855,11 +848,11 @@
       <guid isPermaLink="false">Metelen-20261012-16:30 Uhr-Gemeinderat</guid>
     </item>
     <item>
-      <title>Rat – Emsdetten</title>
-      <link>https://emsdetten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZYcaNkId2J8SwbeQOfebwK4</link>
-      <description>Mo, 12.10.2026, 18:00 Uhr Uhr | Rathaus, 48282 Emsdetten, Ratssaal</description>
-      <pubDate>Mon, 12 Oct 2026 18:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Emsdetten-20261012-18:00 Uhr-Rat</guid>
+      <title>BEIRAT Ü60 – Emsdetten</title>
+      <link>https://emsdetten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZeyz5Y7y9xWIAOqjgzyM1xQ</link>
+      <description>Mo, 12.10.2026, 16:30 Uhr Uhr | Rathaus, 48282 Emsdetten, Raum 101</description>
+      <pubDate>Mon, 12 Oct 2026 16:30:00 +0200</pubDate>
+      <guid isPermaLink="false">Emsdetten-20261012-16:30 Uhr-BEIRAT Ü60</guid>
     </item>
     <item>
       <title>CDU-Fraktion – Stadtlohn</title>
@@ -881,6 +874,13 @@
       <description>Mo, 12.10.2026, 18:00 Uhr Uhr | Rathaus, 48703 Stadtlohn, Raum 125, Raum Zumbusch im 1. OG</description>
       <pubDate>Mon, 12 Oct 2026 18:00:00 +0200</pubDate>
       <guid isPermaLink="false">Stadtlohn-20261012-18:00 Uhr-FDP-Fraktion</guid>
+    </item>
+    <item>
+      <title>Rat – Emsdetten</title>
+      <link>https://emsdetten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZYcaNkId2J8SwbeQOfebwK4</link>
+      <description>Mo, 12.10.2026, 18:00 Uhr Uhr | Rathaus, 48282 Emsdetten, Ratssaal</description>
+      <pubDate>Mon, 12 Oct 2026 18:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Emsdetten-20261012-18:00 Uhr-Rat</guid>
     </item>
     <item>
       <title>Gemeinderat – Schöppingen</title>
@@ -905,7 +905,7 @@
     </item>
     <item>
       <title>Bezirksvertretung Münster-Südost – Stadt Münster</title>
-      <link>https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=10</link>
+      <link>https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0057.php?__ksinr=14585</link>
       <description>Di, 13.10.2026, 17:00 Uhr Uhr</description>
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Stadt Münster-20261013-17:00 Uhr-Bezirksvertretung Münster-Südo</guid>
@@ -923,6 +923,13 @@
       <description>Di, 13.10.2026, 17:00 Uhr Uhr</description>
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Rheine-20261013-17:00 Uhr-Rechnungsprüfungsausschuss</guid>
+    </item>
+    <item>
+      <title>Haupt-, Finanz- und Wirtschaftsförderungsausschuss – Ascheberg</title>
+      <link>https://sessionnet.owl-it.de/ascheberg/bi/si0057.asp?__ksinr=676</link>
+      <description>Di, 13.10.2026, 18:00 Uhr Uhr</description>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Ascheberg-20261013-18:00 Uhr-Haupt-, Finanz- und Wirtschaft</guid>
     </item>
     <item>
       <title>Umweltausschuss – Lüdinghausen</title>
@@ -953,15 +960,8 @@
       <guid isPermaLink="false">Dülmen-20261013-17:15 Uhr-Hauptausschuss</guid>
     </item>
     <item>
-      <title>Haupt-, Finanz- und Wirtschaftsförderungsausschuss – Ascheberg</title>
-      <link>https://sessionnet.owl-it.de/ascheberg/bi/si0057.asp?__ksinr=676</link>
-      <description>Di, 13.10.2026, 18:00 Uhr Uhr</description>
-      <pubDate>Tue, 13 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Ascheberg-20261013-18:00 Uhr-Haupt-, Finanz- und Wirtschaft</guid>
-    </item>
-    <item>
       <title>Haupt- und Finanzausschuss – Wettringen</title>
-      <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0046.asp?__cjahr=2026&amp;__cmonat=10</link>
+      <link>https://sessionnet.owl-it.de/kreis_steinfurt/wettringen/bi/si0057.asp?__ksinr=8903</link>
       <description>Di, 13.10.2026, 18:00 Uhr Uhr</description>
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Wettringen-20261013-18:00 Uhr-Haupt- und Finanzausschuss</guid>
@@ -1016,13 +1016,6 @@
       <guid isPermaLink="false">Stadtlohn-20261013-17:00 Uhr-Ausschuss für Wirtschaftsförde</guid>
     </item>
     <item>
-      <title>Rechnungsprüfungsausschuss – Emsdetten</title>
-      <link>https://emsdetten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZY3Mp0JDlX6DEPzNetey_T4</link>
-      <description>Di, 13.10.2026, 18:00 Uhr Uhr | Rathaus, 48282 Emsdetten, Ratssaal</description>
-      <pubDate>Tue, 13 Oct 2026 18:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Emsdetten-20261013-18:00 Uhr-Rechnungsprüfungsausschuss</guid>
-    </item>
-    <item>
       <title>Ausschuss für Schule und Kultur – Lengerich</title>
       <link>https://lengerich.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZVjSVk2lXxn5HAguA29KkrE</link>
       <description>Di, 13.10.2026, 18:00 Uhr Uhr | Stadtverwaltung, 49525 Lengerich, Sitzungsraum 141</description>
@@ -1044,6 +1037,13 @@
       <guid isPermaLink="false">Gronau-20261013-18:00 Uhr-Ausschuss für Schule, Bildung </guid>
     </item>
     <item>
+      <title>Rechnungsprüfungsausschuss – Emsdetten</title>
+      <link>https://emsdetten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZY3Mp0JDlX6DEPzNetey_T4</link>
+      <description>Di, 13.10.2026, 18:00 Uhr Uhr | Rathaus, 48282 Emsdetten, Ratssaal</description>
+      <pubDate>Tue, 13 Oct 2026 18:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Emsdetten-20261013-18:00 Uhr-Rechnungsprüfungsausschuss</guid>
+    </item>
+    <item>
       <title>Rat – Nordwalde</title>
       <link>https://nordwalde.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZYWxsA80RiX876squng6-ys</link>
       <description>Di, 13.10.2026, 18:30 Uhr Uhr | Bürgerzentrum, 48356 Nordwalde, Bürgersaal inkl. Foyer</description>
@@ -1052,7 +1052,7 @@
     </item>
     <item>
       <title>Umweltausschuss – Coesfeld</title>
-      <link>https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=10</link>
+      <link>https://buergerinfo.coesfeld.de/si0057.php?__ksinr=12679</link>
       <description>Mi, 14.10.2026, 18:00 Uhr Uhr</description>
       <pubDate>Wed, 14 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Coesfeld-20261014-18:00 Uhr-Umweltausschuss</guid>
@@ -1065,18 +1065,18 @@
       <guid isPermaLink="false">Rheine-20261014-19:30 Uhr-Stadtteilbeirat Bentlage/Wadel</guid>
     </item>
     <item>
+      <title>Ausschuss für Planen und Bauen – Borken</title>
+      <link>https://sessionnet.owl-it.de/borken/bi/si0057.asp?__ksinr=5328</link>
+      <description>Mi, 14.10.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Borken-20261014-17:00 Uhr-Ausschuss für Planen und Bauen</guid>
+    </item>
+    <item>
       <title>Kommunale Konferenz Alter und Pflege – Kreis Steinfurt</title>
       <link>https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8822</link>
       <description>Mi, 14.10.2026, 17:00 Uhr Uhr</description>
       <pubDate>Wed, 14 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Kreis Steinfurt-20261014-17:00 Uhr-Kommunale Konferenz Alter und </guid>
-    </item>
-    <item>
-      <title>Ausschuss für Planen und Bauen – Borken</title>
-      <link>https://sessionnet.owl-it.de/borken/bi/si0046.asp?__cjahr=2026&amp;__cmonat=10</link>
-      <description>Mi, 14.10.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Borken-20261014-17:00 Uhr-Ausschuss für Planen und Bauen</guid>
     </item>
     <item>
       <title>Umwelt- und Mobilitätsausschuss – Warendorf</title>
@@ -1191,15 +1191,8 @@
       <guid isPermaLink="false">Steinfurt-20261014-19:00 Uhr-Ausschuss für Bauwesen, Infras</guid>
     </item>
     <item>
-      <title>Kreistag – Kreis Borken</title>
-      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15358</link>
-      <description>Do, 15.10.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Kreis Borken-20261015-17:00 Uhr-Kreistag</guid>
-    </item>
-    <item>
       <title>Ausschuss für Planen und Bauen – Coesfeld</title>
-      <link>https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=10</link>
+      <link>https://buergerinfo.coesfeld.de/si0057.php?__ksinr=12680</link>
       <description>Do, 15.10.2026, 18:00 Uhr Uhr</description>
       <pubDate>Thu, 15 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Coesfeld-20261015-18:00 Uhr-Ausschuss für Planen und Bauen</guid>
@@ -1212,11 +1205,11 @@
       <guid isPermaLink="false">Rheine-20261015-17:00 Uhr-Jugendhilfeausschuss</guid>
     </item>
     <item>
-      <title>Stadtverordnetenversammlung – Dülmen</title>
-      <link>https://sessionweb.duelmen.de/bi/si0057.asp?__ksinr=5240</link>
-      <description>Do, 15.10.2026, 17:45 Uhr Uhr</description>
+      <title>Kreistag – Kreis Borken</title>
+      <link>https://secure.kreis-borken.de/BI/si0056.asp?__ksinr=15358</link>
+      <description>Do, 15.10.2026, 17:00 Uhr Uhr</description>
       <pubDate>Thu, 15 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Dülmen-20261015-17:45 Uhr-Stadtverordnetenversammlung</guid>
+      <guid isPermaLink="false">Kreis Borken-20261015-17:00 Uhr-Kreistag</guid>
     </item>
     <item>
       <title>Rat der Gemeinde Ascheberg – Ascheberg</title>
@@ -1226,11 +1219,11 @@
       <guid isPermaLink="false">Ascheberg-20261015-18:00 Uhr-Rat der Gemeinde Ascheberg</guid>
     </item>
     <item>
-      <title>Rat der Stadt Sassenberg – Sassenberg</title>
-      <link>https://session.sassenberg.de/sessionnet/bi/si0057.php?__ksinr=924</link>
-      <description>Do, 15.10.2026, 17:00 Uhr Uhr</description>
+      <title>Stadtverordnetenversammlung – Dülmen</title>
+      <link>https://sessionweb.duelmen.de/bi/si0057.asp?__ksinr=5240</link>
+      <description>Do, 15.10.2026, 17:45 Uhr Uhr</description>
       <pubDate>Thu, 15 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Sassenberg-20261015-17:00 Uhr-Rat der Stadt Sassenberg</guid>
+      <guid isPermaLink="false">Dülmen-20261015-17:45 Uhr-Stadtverordnetenversammlung</guid>
     </item>
     <item>
       <title>Gemeinderat – Senden</title>
@@ -1240,18 +1233,18 @@
       <guid isPermaLink="false">Senden-20261015-18:00 Uhr-Gemeinderat</guid>
     </item>
     <item>
+      <title>Rat der Stadt Sassenberg – Sassenberg</title>
+      <link>https://session.sassenberg.de/sessionnet/bi/si0057.php?__ksinr=924</link>
+      <description>Do, 15.10.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Sassenberg-20261015-17:00 Uhr-Rat der Stadt Sassenberg</guid>
+    </item>
+    <item>
       <title>Betriebsausschuss &quot;Forum Oelde&quot; – Oelde</title>
       <link>https://sessionnet.owl-it.de/oelde/bi/si0057.asp?__ksinr=4393</link>
       <description>Do, 15.10.2026, 17:30 Uhr Uhr</description>
       <pubDate>Thu, 15 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Oelde-20261015-17:30 Uhr-Betriebsausschuss "Forum Oelde</guid>
-    </item>
-    <item>
-      <title>Stadtentwicklungsausschuss – Warendorf</title>
-      <link>https://sessionnet.owl-it.de/warendorf/bi/si0046.asp?__cjahr=2026&amp;__cmonat=10</link>
-      <description>Do, 15.10.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Warendorf-20261015-17:00 Uhr-Stadtentwicklungsausschuss</guid>
     </item>
     <item>
       <title>Rat der Stadt Telgte – Telgte</title>
@@ -1266,6 +1259,13 @@
       <description>Do, 15.10.2026, 17:30 Uhr Uhr</description>
       <pubDate>Thu, 15 Oct 2026 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">Beckum-20261015-17:30 Uhr-Haupt-, Finanz- und Digitalaus</guid>
+    </item>
+    <item>
+      <title>Stadtentwicklungsausschuss – Warendorf</title>
+      <link>https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=8996</link>
+      <description>Do, 15.10.2026, 17:00 Uhr Uhr</description>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Warendorf-20261015-17:00 Uhr-Stadtentwicklungsausschuss</guid>
     </item>
     <item>
       <title>Ausschuss für Soziales, Senioren und Integration – Tecklenburg</title>
@@ -1308,13 +1308,6 @@
       <description>Do, 15.10.2026, 17:00 Uhr Uhr | Rathaus, 48734 Reken, Sitzungszimmer</description>
       <pubDate>Thu, 15 Oct 2026 17:00:00 +0200</pubDate>
       <guid isPermaLink="false">Reken-20261015-17:00 Uhr-Haupt- und Finanzausschuss</guid>
-    </item>
-    <item>
-      <title>Haupt-, Finanz- und Steuerungsausschuss – Emsdetten</title>
-      <link>https://emsdetten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZXNlz9vcAeWs4bPKUDnK7PQ</link>
-      <description>Do, 15.10.2026, 18:00 Uhr Uhr | Rathaus, 48282 Emsdetten, Ratssaal</description>
-      <pubDate>Thu, 15 Oct 2026 18:00:00 +0200</pubDate>
-      <guid isPermaLink="false">Emsdetten-20261015-18:00 Uhr-Haupt-, Finanz- und Steuerungs</guid>
     </item>
     <item>
       <title>Wirtschaft, Dorfentwicklung und Digitales – Hopsten</title>
@@ -1366,6 +1359,13 @@
       <guid isPermaLink="false">Vreden-20261015-18:00 Uhr-Bau-, Planungs- und Umweltauss</guid>
     </item>
     <item>
+      <title>Haupt-, Finanz- und Steuerungsausschuss – Emsdetten</title>
+      <link>https://emsdetten.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZXNlz9vcAeWs4bPKUDnK7PQ</link>
+      <description>Do, 15.10.2026, 18:00 Uhr Uhr | Rathaus, 48282 Emsdetten, Ratssaal</description>
+      <pubDate>Thu, 15 Oct 2026 18:00:00 +0200</pubDate>
+      <guid isPermaLink="false">Emsdetten-20261015-18:00 Uhr-Haupt-, Finanz- und Steuerungs</guid>
+    </item>
+    <item>
       <title>Sitzung des Rates der Stadt Sendenhorst – Sendenhorst</title>
       <link>https://sendenhorst.gremien.info/meeting?id=2026-Rat-27</link>
       <description>Do, 15.10.2026, 18:00 Uhr Uhr | Kommunalforum</description>
@@ -1413,13 +1413,6 @@
       <description>Mo, 26.10.2026, 16:00 Uhr Uhr | Sitzungssaal II des Rathauses</description>
       <pubDate>Mon, 26 Oct 2026 16:00:00 +0100</pubDate>
       <guid isPermaLink="false">Ahlen-20261026-16:00 Uhr-Beirat der Stadt Ahlen für Men</guid>
-    </item>
-    <item>
-      <title>Steuerungsgruppe Sportentwicklung – Borken</title>
-      <link>https://sessionnet.owl-it.de/borken/bi/si0046.asp?__cjahr=2026&amp;__cmonat=10</link>
-      <description>Di, 27.10.2026, 17:00 Uhr Uhr</description>
-      <pubDate>Tue, 27 Oct 2026 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">Borken-20261027-17:00 Uhr-Steuerungsgruppe Sportentwickl</guid>
     </item>
     <item>
       <title>Fachbeirat für Digitalisierung – Emsdetten</title>
