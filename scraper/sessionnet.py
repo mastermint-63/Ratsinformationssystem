@@ -55,12 +55,23 @@ class SessionNetScraper(BaseScraper):
         termine = []
 
         # Suche nach Tabellen mit Sitzungsdaten
+        datum_pattern = re.compile(r'\d{2}\.\d{2}\.\d{4}')
+        zeit_pattern = re.compile(r'\d{1,2}:\d{2}')
         for table in soup.find_all('table'):
             rows = table.find_all('tr')
+            # SessionNet schreibt das Datum nur in die erste Zeile eines Tages.
+            # Weitere Sitzungen am selben Tag (z. B. Rat nach Hauptausschuss)
+            # stehen in Folgezeilen ohne Datum und übernehmen das letzte Datum.
+            letztes_datum = None
             for row in rows:
                 cells = row.find_all(['td', 'th'])
                 if len(cells) >= 3:
                     text = ' '.join(c.get_text(strip=True) for c in cells)
+                    datum_match = datum_pattern.search(text)
+                    if datum_match:
+                        letztes_datum = datum_match.group(0)
+                    elif letztes_datum and zeit_pattern.search(text):
+                        text = f"{letztes_datum} {text}"
                     termin = self._extrahiere_termin_aus_text(text, row, jahr, monat)
                     if termin:
                         termine.append(termin)
