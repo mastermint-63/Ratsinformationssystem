@@ -16,12 +16,14 @@ import calendar
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import quote
+from xml.sax.saxutils import escape as xml_escape
 
 from email.utils import format_datetime
 from zoneinfo import ZoneInfo
 
 from config import STAEDTE, SystemTyp, Kreis, get_staedte_nach_typ
 from scraper import SessionNetScraper, RatsinfoScraper, AllrisScraper, GremienInfoScraper, Termin
+from scraper.base import sicherer_link
 from scraper.waf_browser import vorab_abrufen
 
 
@@ -159,17 +161,22 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
 
             # KI-Analyse-Button nur bei spezifischen Sitzungs-URLs (nicht si0046-Monatsübersichten)
             ki_button = ''
-            if t.link and t.link.strip() and 'si0046' not in t.link:
-                ki_url = f"https://ratsinfo-lesen.reporter.ruhr/?url={quote(t.link)}"
+            link = sicherer_link(t.link)
+            if link and 'si0046' not in link:
+                ki_url = f"https://ratsinfo-lesen.reporter.ruhr/?url={quote(link)}"
                 ki_button = f'<a href="{ki_url}" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>'
 
             esc = html_mod.escape
+            if link:
+                gremium_html = f'<a href="{esc(link)}" target="_blank">{esc(gremium_clean)}</a>'
+            else:
+                gremium_html = esc(gremium_clean)
             termine_html += f'''
                 <div class="termin{abgesagt_class}" data-stadt="{esc(t.stadt)}">
                     <div class="termin-zeit">{esc(t.uhrzeit)}</div>
                     <div class="termin-info">
                         <div class="termin-gremium">
-                            <a href="{esc(t.link)}" target="_blank">{esc(gremium_clean)}</a>
+                            {gremium_html}
                             {ki_button}
                         </div>
                         <div class="termin-stadt">{esc(t.stadt)}</div>
@@ -189,7 +196,7 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
         """Generiert ein einzelnes Filter-Dropdown."""
         options = f'<option value="">{label}</option>'
         for stadt in sorted(staedte):
-            options += f'<option value="{stadt}">{stadt}</option>'
+            options += f'<option value="{html_mod.escape(stadt)}">{html_mod.escape(stadt)}</option>'
         return f'''
             <div class="filter-group">
                 <label class="filter-label">{label}</label>
@@ -739,9 +746,22 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
                 container.innerHTML = '';
                 return;
             }}
-            container.innerHTML = staedte.map(stadt =>
-                `<span class="filter-tag">${{stadt}}<button onclick="removeFilter('${{stadt}}')">&times;</button></span>`
-            ).join('');
+            container.replaceChildren(...staedte.map(stadt =>
+                filterTag(stadt, () => removeFilter(stadt))
+            ));
+        }}
+
+        // Filter-Tag per DOM statt innerHTML: Stadt und Suchbegriff landen nur
+        // als Text im Dokument (Audit 10.10.2026, Befund #12).
+        function filterTag(text, onRemove) {{
+            const tag = document.createElement('span');
+            tag.className = 'filter-tag';
+            tag.textContent = text;
+            const button = document.createElement('button');
+            button.textContent = '\u00d7';
+            button.addEventListener('click', onRemove);
+            tag.appendChild(button);
+            return tag;
         }}
 
         function removeFilter(stadt) {{
@@ -808,7 +828,10 @@ def generiere_html(termine: list[Termin], jahr: int, monat: int,
             // Active Filter anzeigen (Suchbegriff als Tag)
             const container = document.getElementById('active-filters');
             if (searchTerm) {{
-                container.innerHTML = `<span class="filter-tag">Suche: ${{searchTerm}}<button onclick="document.getElementById('search-input').value=''; filterTermine();">&times;</button></span>`;
+                container.replaceChildren(filterTag('Suche: ' + searchTerm, () => {{
+                    document.getElementById('search-input').value = '';
+                    filterTermine();
+                }}));
             }} else {{
                 container.innerHTML = '';
             }}
@@ -863,18 +886,15 @@ def generiere_rss(alle_termine: list[Termin], jahr: int, monat: int) -> str:
         beschreibung = f"{t.datum_formatiert()}, {t.uhrzeit} Uhr"
         if t.ort:
             beschreibung += f" | {t.ort}"
-        # XML-Escaping
-        for char, esc in [('&', '&amp;'), ('<', '&lt;'), ('>', '&gt;'), ('"', '&quot;')]:
-            title = title.replace(char, esc)
-            beschreibung = beschreibung.replace(char, esc)
-        link_esc = t.link.replace('&', '&amp;')
+        link = sicherer_link(t.link)
+        link_zeile = f"      <link>{xml_escape(link)}</link>\n" if link else ""
+        guid = f"{t.stadt}-{t.datum.strftime('%Y%m%d')}-{t.uhrzeit}-{gremium_clean[:30]}"
 
         items += f"""    <item>
-      <title>{title}</title>
-      <link>{link_esc}</link>
-      <description>{beschreibung}</description>
+      <title>{xml_escape(title)}</title>
+{link_zeile}      <description>{xml_escape(beschreibung)}</description>
       <pubDate>{pub_date}</pubDate>
-      <guid isPermaLink="false">{t.stadt}-{t.datum.strftime('%Y%m%d')}-{t.uhrzeit}-{gremium_clean[:30].replace('&', '&amp;')}</guid>
+      <guid isPermaLink="false">{xml_escape(guid)}</guid>
     </item>
 """
 
