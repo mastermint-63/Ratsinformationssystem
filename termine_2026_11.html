@@ -460,7 +460,7 @@
             <div class="filter-group">
                 <label class="filter-label">Münsterland</label>
                 <select class="kreis-filter" id="filter-muenster" onchange="filterTermine()">
-                    <option value="">Münsterland</option><option value="Kreis Borken">Kreis Borken</option><option value="Kreis Steinfurt">Kreis Steinfurt</option><option value="LWL">LWL</option>
+                    <option value="">Münsterland</option><option value="Kreis Borken">Kreis Borken</option><option value="Kreis Coesfeld">Kreis Coesfeld</option><option value="Kreis Steinfurt">Kreis Steinfurt</option><option value="LWL">LWL</option><option value="Stadt Münster">Stadt Münster</option>
                 </select>
             </div>
             <div class="filter-group">
@@ -478,20 +478,20 @@
             <div class="filter-group">
                 <label class="filter-label">Kreis Coesfeld</label>
                 <select class="kreis-filter" id="filter-coesfeld" onchange="filterTermine()">
-                    <option value="">Kreis Coesfeld</option><option value="Ascheberg">Ascheberg</option><option value="Billerbeck">Billerbeck</option><option value="Dülmen">Dülmen</option><option value="Nordkirchen">Nordkirchen</option><option value="Olfen">Olfen</option><option value="Rosendahl">Rosendahl</option><option value="Senden">Senden</option>
+                    <option value="">Kreis Coesfeld</option><option value="Ascheberg">Ascheberg</option><option value="Billerbeck">Billerbeck</option><option value="Coesfeld">Coesfeld</option><option value="Dülmen">Dülmen</option><option value="Nordkirchen">Nordkirchen</option><option value="Olfen">Olfen</option><option value="Rosendahl">Rosendahl</option><option value="Senden">Senden</option>
                 </select>
             </div>
             <div class="filter-group">
                 <label class="filter-label">Kreis Warendorf</label>
                 <select class="kreis-filter" id="filter-warendorf" onchange="filterTermine()">
-                    <option value="">Kreis Warendorf</option><option value="Ahlen">Ahlen</option><option value="Beckum">Beckum</option><option value="Beelen">Beelen</option><option value="Drensteinfurt">Drensteinfurt</option><option value="Ennigerloh">Ennigerloh</option><option value="Everswinkel">Everswinkel</option><option value="Oelde">Oelde</option><option value="Sendenhorst">Sendenhorst</option><option value="Telgte">Telgte</option><option value="Wadersloh">Wadersloh</option><option value="Warendorf">Warendorf</option>
+                    <option value="">Kreis Warendorf</option><option value="Ahlen">Ahlen</option><option value="Beckum">Beckum</option><option value="Beelen">Beelen</option><option value="Drensteinfurt">Drensteinfurt</option><option value="Ennigerloh">Ennigerloh</option><option value="Everswinkel">Everswinkel</option><option value="Oelde">Oelde</option><option value="Ostbevern">Ostbevern</option><option value="Sassenberg">Sassenberg</option><option value="Sendenhorst">Sendenhorst</option><option value="Telgte">Telgte</option><option value="Wadersloh">Wadersloh</option><option value="Warendorf">Warendorf</option>
                 </select>
             </div>
             </div>
             <div class="filter-stats">
                 <div class="active-filters" id="active-filters"></div>
                 <div class="stats">
-                    <span id="termine-count">415</span> von 415 Terminen
+                    <span id="termine-count">473</span> von 473 Terminen
                 </div>
             </div>
         </div>
@@ -502,6 +502,18 @@
             <div class="datum-header">Mo, 02.11.2026</div>
             <div class="termine-liste">
         
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">09:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Kommunale Seniorenvertretung</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Ahlen">
                     <div class="termin-zeit">16:00 Uhr</div>
                     <div class="termin-info">
@@ -518,10 +530,22 @@
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
                         <div class="termin-gremium">
-                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Kreistag</a>
-                            
+                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8728" target="_blank">Kreistag</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp%3F__ksinr%3D8728" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
                         </div>
                         <div class="termin-stadt">Kreis Steinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Jugendrat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
                         
                     </div>
                 </div>
@@ -598,6 +622,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Raesfeld">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://raesfeld.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZYmEC1HgGMKYqq1KkyknArQ" target="_blank">Bau- und Umweltausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//raesfeld.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZYmEC1HgGMKYqq1KkyknArQ" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Raesfeld</div>
+                        <div class="termin-ort">Rathaus, 46348 Raesfeld, Großer Sitzungssaal des Rathauses</div>
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Velen">
                     <div class="termin-zeit">17:30 Uhr</div>
                     <div class="termin-info">
@@ -646,18 +682,6 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Ennigerloh">
-                    <div class="termin-zeit">18:00 Uhr</div>
-                    <div class="termin-info">
-                        <div class="termin-gremium">
-                            <a href="https://sessionnet.owl-it.de/ennigerloh/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Rat der Stadt Ennigerloh</a>
-                            
-                        </div>
-                        <div class="termin-stadt">Ennigerloh</div>
-                        
-                    </div>
-                </div>
-            
                 <div class="termin" data-stadt="Beckum">
                     <div class="termin-zeit">18:00 Uhr</div>
                     <div class="termin-info">
@@ -690,6 +714,18 @@
                             
                         </div>
                         <div class="termin-stadt">Beckum</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ennigerloh">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/ennigerloh/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Rat der Stadt Ennigerloh</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ennigerloh</div>
                         
                     </div>
                 </div>
@@ -730,15 +766,15 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Raesfeld">
+                <div class="termin" data-stadt="Ochtrup">
                     <div class="termin-zeit">18:00 Uhr</div>
                     <div class="termin-info">
                         <div class="termin-gremium">
-                            <a href="https://raesfeld.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZYmEC1HgGMKYqq1KkyknArQ" target="_blank">Bau- und Umweltausschuss</a>
-                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//raesfeld.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZYmEC1HgGMKYqq1KkyknArQ" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                            <a href="https://ochtrup.gremien.info/meeting?id=2026-AussPlaBau-95" target="_blank">Sitzung des Ausschusses für Planen und Bauen</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ochtrup.gremien.info/meeting%3Fid%3D2026-AussPlaBau-95" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
                         </div>
-                        <div class="termin-stadt">Raesfeld</div>
-                        <div class="termin-ort">Rathaus, 46348 Raesfeld, Großer Sitzungssaal des Rathauses</div>
+                        <div class="termin-stadt">Ochtrup</div>
+                        <div class="termin-ort">Rathaus II</div>
                     </div>
                 </div>
             
@@ -751,18 +787,6 @@
                         </div>
                         <div class="termin-stadt">Ahlen</div>
                         <div class="termin-ort">Ratssaal des Rathauses</div>
-                    </div>
-                </div>
-            
-                <div class="termin" data-stadt="Ochtrup">
-                    <div class="termin-zeit">18:00 Uhr</div>
-                    <div class="termin-info">
-                        <div class="termin-gremium">
-                            <a href="https://ochtrup.gremien.info/meeting?id=2026-AussPlaBau-95" target="_blank">Sitzung des Ausschusses für Planen und Bauen</a>
-                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ochtrup.gremien.info/meeting%3Fid%3D2026-AussPlaBau-95" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
-                        </div>
-                        <div class="termin-stadt">Ochtrup</div>
-                        <div class="termin-ort">Rathaus II</div>
                     </div>
                 </div>
             
@@ -834,6 +858,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Kreis Borken">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://secure.kreis-borken.de/BI/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Jugendhilfeausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Borken</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Rheine">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
@@ -846,14 +882,26 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Kreis Borken">
+                <div class="termin" data-stadt="Stadt Münster">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
                         <div class="termin-gremium">
-                            <a href="https://secure.kreis-borken.de/BI/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Jugendhilfeausschuss</a>
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Bauwerke Münster GmbH, Aufsichtsrat</a>
                             
                         </div>
-                        <div class="termin-stadt">Kreis Borken</div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0057.php?__ksinr=14580" target="_blank">Betriebsausschuss der citeq</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//www.stadt-muenster.de/sessionnet/sessionnetbi/si0057.php%3F__ksinr%3D14580" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
                         
                     </div>
                 </div>
@@ -890,7 +938,7 @@
                             <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//raesfeld.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZVxGa_xz1YLGnnpIKBCTN7k" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
                         </div>
                         <div class="termin-stadt">Raesfeld</div>
-                        <div class="termin-ort">Rathaus, 46348 Raesfeld, Großer Sitzungssaal des Rathauses</div>
+                        <div class="termin-ort">Schloss Raesfeld, 46348 Raesfeld, unteres Turmzimmer</div>
                     </div>
                 </div>
             
@@ -990,18 +1038,6 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Gronau">
-                    <div class="termin-zeit">18:00 Uhr</div>
-                    <div class="termin-info">
-                        <div class="termin-gremium">
-                            <a href="https://gronau.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZd99AtwzwTrWUaSDYJrivKI" target="_blank">Ausschuss für Mobilität, Umwelt und Klimaschutz</a>
-                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//gronau.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZd99AtwzwTrWUaSDYJrivKI" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
-                        </div>
-                        <div class="termin-stadt">Gronau</div>
-                        <div class="termin-ort">Wirtschaftszentrum Gronau, Fabrikstraße 3, 48599 Gronau, Ratssaal, 1. OG</div>
-                    </div>
-                </div>
-            
                 <div class="termin" data-stadt="Ochtrup">
                     <div class="termin-zeit">18:00 Uhr</div>
                     <div class="termin-info">
@@ -1038,6 +1074,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Rheine">
+                    <div class="termin-zeit">19:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.rheine-buergerinfo.de/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Familienbeirat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Rheine</div>
+                        
+                    </div>
+                </div>
+            
             </div>
             <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
         </div>
@@ -1058,6 +1106,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Kreis Coesfeld">
+                    <div class="termin-zeit">16:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0057.asp?__ksinr=3470" target="_blank">Kreistag</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0057.asp%3F__ksinr%3D3470" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Kreis Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Bocholt">
                     <div class="termin-zeit">16:30 Uhr</div>
                     <div class="termin-info">
@@ -1070,18 +1130,6 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Kreis Steinfurt">
-                    <div class="termin-zeit">17:00 Uhr</div>
-                    <div class="termin-info">
-                        <div class="termin-gremium">
-                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Kommunale Gesundheitskonferenz</a>
-                            
-                        </div>
-                        <div class="termin-stadt">Kreis Steinfurt</div>
-                        
-                    </div>
-                </div>
-            
                 <div class="termin" data-stadt="Kreis Borken">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
@@ -1090,6 +1138,54 @@
                             
                         </div>
                         <div class="termin-stadt">Kreis Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Steinfurt">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp?__ksinr=8820" target="_blank">Kommunale Gesundheitskonferenz</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//sessionnet.owl-it.de/kreis_steinfurt/bi/si0057.asp%3F__ksinr%3D8820" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Kreis Steinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0057.php?__ksinr=14564" target="_blank">Beirat für kommunale Entwicklungszusammenarbeit</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//www.stadt-muenster.de/sessionnet/sessionnetbi/si0057.php%3F__ksinr%3D14564" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Kommission zur Förderung der Inklusion von Menschen mit Behinderung</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Betriebsausschuss Münster Marketing</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
                         
                     </div>
                 </div>
@@ -1139,6 +1235,18 @@
                         </div>
                         <div class="termin-stadt">Reken</div>
                         <div class="termin-ort">RekenForum, 48734 Reken, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ochtrup">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://ochtrup.gremien.info/meeting?id=2026-Rat-112" target="_blank">Sitzung des Rates</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ochtrup.gremien.info/meeting%3Fid%3D2026-Rat-112" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Ochtrup</div>
+                        <div class="termin-ort">Feuerwache Ochtrup</div>
                     </div>
                 </div>
             
@@ -1214,18 +1322,6 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Ochtrup">
-                    <div class="termin-zeit">18:00 Uhr</div>
-                    <div class="termin-info">
-                        <div class="termin-gremium">
-                            <a href="https://ochtrup.gremien.info/meeting?id=2026-Rat-112" target="_blank">Sitzung des Rates</a>
-                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ochtrup.gremien.info/meeting%3Fid%3D2026-Rat-112" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
-                        </div>
-                        <div class="termin-stadt">Ochtrup</div>
-                        <div class="termin-ort">Feuerwache Ochtrup</div>
-                    </div>
-                </div>
-            
                 <div class="termin" data-stadt="Südlohn">
                     <div class="termin-zeit">18:00 Uhr</div>
                     <div class="termin-info">
@@ -1282,6 +1378,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Schulbaukommission</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Borken">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
@@ -1290,6 +1398,18 @@
                             
                         </div>
                         <div class="termin-stadt">Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Sassenberg">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://session.sassenberg.de/sessionnet/bi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Haupt- und Finanzausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Sassenberg</div>
                         
                     </div>
                 </div>
@@ -1346,10 +1466,22 @@
                     <div class="termin-zeit">17:30 Uhr</div>
                     <div class="termin-info">
                         <div class="termin-gremium">
-                            <a href="https://sessionnet.owl-it.de/warendorf/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Sozialausschuss</a>
-                            
+                            <a href="https://sessionnet.owl-it.de/warendorf/bi/si0057.asp?__ksinr=10103" target="_blank">Sozialausschuss</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//sessionnet.owl-it.de/warendorf/bi/si0057.asp%3F__ksinr%3D10103" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
                         </div>
                         <div class="termin-stadt">Warendorf</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Coesfeld">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Rat der Stadt Coesfeld</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Coesfeld</div>
                         
                     </div>
                 </div>
@@ -1474,18 +1606,6 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Rosendahl">
-                    <div class="termin-zeit">19:00 Uhr</div>
-                    <div class="termin-info">
-                        <div class="termin-gremium">
-                            <a href="https://sessionnet.owl-it.de/rosendahl/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Rat</a>
-                            
-                        </div>
-                        <div class="termin-stadt">Rosendahl</div>
-                        
-                    </div>
-                </div>
-            
                 <div class="termin" data-stadt="Emsdetten">
                     <div class="termin-zeit">19:00 Uhr</div>
                     <div class="termin-info">
@@ -1550,18 +1670,6 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Rheine">
-                    <div class="termin-zeit">17:00 Uhr</div>
-                    <div class="termin-info">
-                        <div class="termin-gremium">
-                            <a href="https://www.rheine-buergerinfo.de/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Beirat für Menschen mit Behinderung</a>
-                            
-                        </div>
-                        <div class="termin-stadt">Rheine</div>
-                        
-                    </div>
-                </div>
-            
                 <div class="termin" data-stadt="Kreis Borken">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
@@ -1570,6 +1678,18 @@
                             
                         </div>
                         <div class="termin-stadt">Kreis Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Rheine">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.rheine-buergerinfo.de/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Beirat für Menschen mit Behinderung</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Rheine</div>
                         
                     </div>
                 </div>
@@ -1730,6 +1850,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Sassenberg">
+                    <div class="termin-zeit">19:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://session.sassenberg.de/sessionnet/bi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ortsausschuss Füchtorf</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Sassenberg</div>
+                        
+                    </div>
+                </div>
+            
             </div>
             <div class="zurueck-link"><a href="#kalender">↑ Kalender</a></div>
         </div>
@@ -1750,14 +1882,14 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Rheine">
-                    <div class="termin-zeit">17:00 Uhr</div>
+                <div class="termin" data-stadt="Kreis Coesfeld">
+                    <div class="termin-zeit">16:30 Uhr</div>
                     <div class="termin-info">
                         <div class="termin-gremium">
-                            <a href="https://www.rheine-buergerinfo.de/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Sozialausschuss</a>
-                            
+                            <a href="https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0057.asp?__ksinr=3573" target="_blank">Teilhabebeirat</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0057.asp%3F__ksinr%3D3573" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
                         </div>
-                        <div class="termin-stadt">Rheine</div>
+                        <div class="termin-stadt">Kreis Coesfeld</div>
                         
                     </div>
                 </div>
@@ -1770,6 +1902,42 @@
                             
                         </div>
                         <div class="termin-stadt">Kreis Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Rheine">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.rheine-buergerinfo.de/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Sozialausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Rheine</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Einwohner*innen-Beteiligung</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Bezirksvertretung Münster-Nord</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
                         
                     </div>
                 </div>
@@ -1914,6 +2082,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">CeNTech GmbH, Aufsichtsrat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Borken">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
@@ -1974,6 +2154,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Technologieförderung Münster GmbH, Aufsichtsrat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Lengerich">
                     <div class="termin-zeit">18:00 Uhr</div>
                     <div class="termin-info">
@@ -2007,18 +2199,6 @@
                         </div>
                         <div class="termin-stadt">Heek</div>
                         <div class="termin-ort">Gemeindeverwaltung, 48619 Heek, Sitzungssaal</div>
-                    </div>
-                </div>
-            
-                <div class="termin" data-stadt="Ochtrup">
-                    <div class="termin-zeit">18:00 Uhr</div>
-                    <div class="termin-info">
-                        <div class="termin-gremium">
-                            <a href="https://ochtrup.gremien.info/meeting?id=2026-ASozGleInt-10" target="_blank">Sitzung des Ausschusses für Soziales, Gesundheit, Gleichstellung und Integration</a>
-                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//ochtrup.gremien.info/meeting%3Fid%3D2026-ASozGleInt-10" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
-                        </div>
-                        <div class="termin-stadt">Ochtrup</div>
-                        <div class="termin-ort">Rathaus II</div>
                     </div>
                 </div>
             
@@ -2086,6 +2266,66 @@
                             
                         </div>
                         <div class="termin-stadt">Kreis Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Bezirksvertretung Münster-Ost</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Bezirksvertretung Münster-West</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Bezirksvertretung Münster-Hiltrup</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Gleichstellung</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Sassenberg">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://session.sassenberg.de/sessionnet/bi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Infrastrukturausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Sassenberg</div>
                         
                     </div>
                 </div>
@@ -2198,18 +2438,6 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Oelde">
-                    <div class="termin-zeit">17:30 Uhr</div>
-                    <div class="termin-info">
-                        <div class="termin-gremium">
-                            <a href="https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Sozialausschuss</a>
-                            
-                        </div>
-                        <div class="termin-stadt">Oelde</div>
-                        
-                    </div>
-                </div>
-            
                 <div class="termin" data-stadt="Wadersloh">
                     <div class="termin-zeit">17:30 Uhr</div>
                     <div class="termin-info">
@@ -2222,14 +2450,14 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Ahaus">
-                    <div class="termin-zeit">18:00 Uhr</div>
+                <div class="termin" data-stadt="Oelde">
+                    <div class="termin-zeit">17:30 Uhr</div>
                     <div class="termin-info">
                         <div class="termin-gremium">
-                            <a href="https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Ältestenrat</a>
+                            <a href="https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Sozialausschuss</a>
                             
                         </div>
-                        <div class="termin-stadt">Ahaus</div>
+                        <div class="termin-stadt">Oelde</div>
                         
                     </div>
                 </div>
@@ -2246,6 +2474,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Ahaus">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Ältestenrat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ahaus</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Billerbeck">
                     <div class="termin-zeit">18:00 Uhr</div>
                     <div class="termin-info">
@@ -2254,6 +2494,18 @@
                             
                         </div>
                         <div class="termin-stadt">Billerbeck</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ostbevern">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.ostbevern.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Wirtschaft, Digitales und Beteiligungen</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ostbevern</div>
                         
                     </div>
                 </div>
@@ -2498,18 +2750,6 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Oelde">
-                    <div class="termin-zeit">17:30 Uhr</div>
-                    <div class="termin-info">
-                        <div class="termin-gremium">
-                            <a href="https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Finanzausschuss</a>
-                            
-                        </div>
-                        <div class="termin-stadt">Oelde</div>
-                        
-                    </div>
-                </div>
-            
                 <div class="termin" data-stadt="Wadersloh">
                     <div class="termin-zeit">17:30 Uhr</div>
                     <div class="termin-info">
@@ -2518,6 +2758,18 @@
                             
                         </div>
                         <div class="termin-stadt">Wadersloh</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Oelde">
+                    <div class="termin-zeit">17:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/oelde/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Finanzausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Oelde</div>
                         
                     </div>
                 </div>
@@ -2710,6 +2962,18 @@
             <div class="datum-header">Di, 17.11.2026</div>
             <div class="termine-liste">
         
+                <div class="termin" data-stadt="Kreis Coesfeld">
+                    <div class="termin-zeit">16:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Kultur, Sport und Ehrenamt</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Rheine">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
@@ -2734,6 +2998,42 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Bezirksvertretung Münster-Südost</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Sportausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Bezirksvertretung Münster-Mitte</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Olfen">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
@@ -2742,6 +3042,18 @@
                             
                         </div>
                         <div class="termin-stadt">Olfen</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Sassenberg">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://session.sassenberg.de/sessionnet/bi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Rat der Stadt Sassenberg</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Sassenberg</div>
                         
                     </div>
                 </div>
@@ -2818,18 +3130,6 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Dülmen">
-                    <div class="termin-zeit">17:15 Uhr</div>
-                    <div class="termin-info">
-                        <div class="termin-gremium">
-                            <a href="https://sessionweb.duelmen.de/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Arbeit, Soziales, Ehrenamt und Senioren</a>
-                            
-                        </div>
-                        <div class="termin-stadt">Dülmen</div>
-                        
-                    </div>
-                </div>
-            
                 <div class="termin" data-stadt="Kreis Borken">
                     <div class="termin-zeit">17:30 Uhr</div>
                     <div class="termin-info">
@@ -2866,18 +3166,6 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Ahaus">
-                    <div class="termin-zeit">18:00 Uhr</div>
-                    <div class="termin-info">
-                        <div class="termin-gremium">
-                            <a href="https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Arbeitskreis Musikschule</a>
-                            
-                        </div>
-                        <div class="termin-stadt">Ahaus</div>
-                        
-                    </div>
-                </div>
-            
                 <div class="termin" data-stadt="Wettringen">
                     <div class="termin-zeit">18:00 Uhr</div>
                     <div class="termin-info">
@@ -2902,6 +3190,30 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Ahaus">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/stadt-ahaus/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Arbeitskreis Musikschule</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ahaus</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Coesfeld">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Jugendhilfeausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Senden">
                     <div class="termin-zeit">18:00 Uhr</div>
                     <div class="termin-info">
@@ -2922,6 +3234,18 @@
                             
                         </div>
                         <div class="termin-stadt">Olfen</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ostbevern">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.ostbevern.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Bildungs-, Generationen- und Sozialausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ostbevern</div>
                         
                     </div>
                 </div>
@@ -3066,6 +3390,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Kreis Coesfeld">
+                    <div class="termin-zeit">14:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Unterausschuss ÖPNV</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Heiden">
                     <div class="termin-zeit">16:00 Uhr</div>
                     <div class="termin-info">
@@ -3075,6 +3411,18 @@
                         </div>
                         <div class="termin-stadt">Heiden</div>
                         <div class="termin-ort">Rathaus, 46359 Heiden, Sitzungssaal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Coesfeld">
+                    <div class="termin-zeit">16:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Mobilität, Tiefbau, Geoinformation und Kreisentwicklung</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Coesfeld</div>
+                        
                     </div>
                 </div>
             
@@ -3098,6 +3446,30 @@
                             
                         </div>
                         <div class="termin-stadt">Kreis Steinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Soziales, Gesundheit, Arbeit und Migration</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Beirat nach dem Landesnaturschutzgesetz</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
                         
                     </div>
                 </div>
@@ -3195,6 +3567,18 @@
                         </div>
                         <div class="termin-stadt">Isselburg</div>
                         <div class="termin-ort">Bürgerhalle Herzebocholt, 46419 Isselburg, Saal</div>
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Coesfeld">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Kultur, Schule und Sport</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Coesfeld</div>
+                        
                     </div>
                 </div>
             
@@ -3362,6 +3746,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Kreis Borken">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://secure.kreis-borken.de/BI/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Natur, Umwelt und Landwirtschaft</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Borken</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Rheine">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
@@ -3386,14 +3782,26 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Kreis Borken">
+                <div class="termin" data-stadt="Stadt Münster">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
                         <div class="termin-gremium">
-                            <a href="https://secure.kreis-borken.de/BI/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Natur, Umwelt und Landwirtschaft</a>
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Wirtschaftsförderung Münster GmbH, Aufsichtsrat</a>
                             
                         </div>
-                        <div class="termin-stadt">Kreis Borken</div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Interfraktionelle Arbeitsgruppe Internationales</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
                         
                     </div>
                 </div>
@@ -3514,6 +3922,18 @@
                             
                         </div>
                         <div class="termin-stadt">Ascheberg</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Coesfeld">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Familie, Senioren und Soziales</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Coesfeld</div>
                         
                     </div>
                 </div>
@@ -3714,14 +4134,26 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Kreis Steinfurt">
-                    <div class="termin-zeit">17:00 Uhr</div>
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">16:00 Uhr</div>
                     <div class="termin-info">
                         <div class="termin-gremium">
-                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Inklusionsbeirat</a>
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Theaterhaus Pumpenhaus gGmbH, Beirat</a>
                             
                         </div>
-                        <div class="termin-stadt">Kreis Steinfurt</div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Coesfeld">
+                    <div class="termin-zeit">16:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Bildung, Schule und Integration</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Coesfeld</div>
                         
                     </div>
                 </div>
@@ -3734,6 +4166,18 @@
                             
                         </div>
                         <div class="termin-stadt">Kreis Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Steinfurt">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Inklusionsbeirat</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Steinfurt</div>
                         
                     </div>
                 </div>
@@ -3854,6 +4298,18 @@
                             
                         </div>
                         <div class="termin-stadt">Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Coesfeld">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Verbandsversammlung des Zweckverbandes &quot;Musikschule der Gemeinden Billerbeck, Coesfeld und Rosendahl</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Coesfeld</div>
                         
                     </div>
                 </div>
@@ -4038,6 +4494,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Metelen">
+                    <div class="termin-zeit">18:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://metelen.ratsinfomanagement.net/tops/?__=UGhVM0hpd2NXNFdFcExjZenARGJiLQcxIWBfRZJNz0A" target="_blank">Betriebsausschuss des Abwasserwerkes</a>
+                            <a href="https://ratsinfo-lesen.reporter.ruhr/?url=https%3A//metelen.ratsinfomanagement.net/tops/%3F__%3DUGhVM0hpd2NXNFdFcExjZenARGJiLQcxIWBfRZJNz0A" class="ki-btn" title="Dokumente mit KI analysieren" target="_blank">🔍</a>
+                        </div>
+                        <div class="termin-stadt">Metelen</div>
+                        <div class="termin-ort">Altes Amtshaus, 48629 Metelen, Sitzungssaal</div>
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Stadtlohn">
                     <div class="termin-zeit">18:30 Uhr</div>
                     <div class="termin-info">
@@ -4118,14 +4586,26 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Kreis Steinfurt">
-                    <div class="termin-zeit">17:00 Uhr</div>
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">14:30 Uhr</div>
                     <div class="termin-info">
                         <div class="termin-gremium">
-                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Schule, Kultur, Sport und Tourismus</a>
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">AirportPark FMO GmbH, Aufsichtsrat</a>
                             
                         </div>
-                        <div class="termin-stadt">Kreis Steinfurt</div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Coesfeld">
+                    <div class="termin-zeit">16:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Arbeit, Soziales, Senioren und Gesundheit</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Coesfeld</div>
                         
                     </div>
                 </div>
@@ -4142,6 +4622,54 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Rheine">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.rheine-buergerinfo.de/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Betriebsausschuss &quot;Technische Betriebe Rheine&quot;</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Rheine</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Steinfurt">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://sessionnet.owl-it.de/kreis_steinfurt/bi/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Schule, Kultur, Sport und Tourismus</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Steinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Umweltschutz, Klimaschutz und Bauwesen</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Kulturausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Borken">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
@@ -4150,6 +4678,18 @@
                             
                         </div>
                         <div class="termin-stadt">Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Sassenberg">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://session.sassenberg.de/sessionnet/bi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Sozial-, Jugend-, Kultur-, Sport- und Schulausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Sassenberg</div>
                         
                     </div>
                 </div>
@@ -4322,6 +4862,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Coesfeld">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Fachausschuss für Angelegenheiten der Weiterbildung (VHS)</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Billerbeck">
                     <div class="termin-zeit">18:00 Uhr</div>
                     <div class="termin-info">
@@ -4354,6 +4906,18 @@
                             
                         </div>
                         <div class="termin-stadt">Drensteinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Ostbevern">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.ostbevern.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Umwelt- und Planungsausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Ostbevern</div>
                         
                     </div>
                 </div>
@@ -4558,6 +5122,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">16:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Beirat für Stadtgestaltung</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Heiden">
                     <div class="termin-zeit">16:00 Uhr</div>
                     <div class="termin-info">
@@ -4570,6 +5146,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Kreis Coesfeld">
+                    <div class="termin-zeit">16:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Jugendhilfeausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Kreis Steinfurt">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
@@ -4578,6 +5166,18 @@
                             
                         </div>
                         <div class="termin-stadt">Kreis Steinfurt</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Verkehr und Mobilität</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
                         
                     </div>
                 </div>
@@ -4750,6 +5350,18 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Chancengerechtigkeit und Integration</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Ibbenbüren">
                     <div class="termin-zeit">18:00 Uhr</div>
                     <div class="termin-info">
@@ -4914,6 +5526,42 @@
                     </div>
                 </div>
             
+                <div class="termin" data-stadt="Kreis Coesfeld">
+                    <div class="termin-zeit">15:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Unterausschuss Klimaschutz</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Coesfeld">
+                    <div class="termin-zeit">16:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Umwelt, Klimaschutz, öffentliche Sicherheit und Ordnung</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Kreis Borken">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://secure.kreis-borken.de/BI/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Wirtschaft, Kreisentwicklung und Klimaschutz</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Borken</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Rheine">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
@@ -4938,14 +5586,26 @@
                     </div>
                 </div>
             
-                <div class="termin" data-stadt="Kreis Borken">
+                <div class="termin" data-stadt="Stadt Münster">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
                         <div class="termin-gremium">
-                            <a href="https://secure.kreis-borken.de/BI/si0046.asp?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Wirtschaft, Kreisentwicklung und Klimaschutz</a>
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Kinder, Jugendliche und Familien</a>
                             
                         </div>
-                        <div class="termin-stadt">Kreis Borken</div>
+                        <div class="termin-stadt">Stadt Münster</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Stadt Münster">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.stadt-muenster.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Rechnungsprüfungsausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Stadt Münster</div>
                         
                     </div>
                 </div>
@@ -4958,6 +5618,18 @@
                             
                         </div>
                         <div class="termin-stadt">Borken</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Sassenberg">
+                    <div class="termin-zeit">17:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://session.sassenberg.de/sessionnet/bi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Betriebsausschuss für das Wasserwerk und das Abwasserwerk</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Sassenberg</div>
                         
                     </div>
                 </div>
@@ -5102,6 +5774,18 @@
                             
                         </div>
                         <div class="termin-stadt">Ascheberg</div>
+                        
+                    </div>
+                </div>
+            
+                <div class="termin" data-stadt="Coesfeld">
+                    <div class="termin-zeit">18:00 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://buergerinfo.coesfeld.de/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Haupt- und Finanzausschuss</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Coesfeld</div>
                         
                     </div>
                 </div>
@@ -5354,6 +6038,18 @@
             <div class="datum-header">Mo, 30.11.2026</div>
             <div class="termine-liste">
         
+                <div class="termin" data-stadt="Kreis Coesfeld">
+                    <div class="termin-zeit">16:30 Uhr</div>
+                    <div class="termin-info">
+                        <div class="termin-gremium">
+                            <a href="https://www.kreis-coesfeld.de/sessionnet/sessionnetbi/si0046.php?__cjahr=2026&amp;__cmonat=11" target="_blank">Ausschuss für Finanzen, Liegenschaften, Wirtschaftsförderung und Digitalisierung</a>
+                            
+                        </div>
+                        <div class="termin-stadt">Kreis Coesfeld</div>
+                        
+                    </div>
+                </div>
+            
                 <div class="termin" data-stadt="Kreis Steinfurt">
                     <div class="termin-zeit">17:00 Uhr</div>
                     <div class="termin-info">
@@ -5649,8 +6345,8 @@
         </main>
 
         <footer>
-            Generiert am 22.10.2026 um 06:06 Uhr<br>
-            Daten aus 60 Ratsinformationssystemen<br>
+            Generiert am 23.10.2026 um 06:06 Uhr<br>
+            Daten aus 65 Ratsinformationssystemen<br>
             <a href="feed.xml" style="color: var(--accent); text-decoration: none;">&#x25CF; RSS-Feed</a>
         </footer>
     </div>
